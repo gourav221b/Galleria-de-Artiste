@@ -27,6 +27,24 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Artists</title>
 </head>
+<style>
+    @media screen and (min-width: 980px) {
+        .container_sub {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 980px) {
+        .laptop {
+            display: none;
+        }
+        .image {
+            width: 95%;
+            margin: 1%;
+            border-radius: 7px;
+        }
+    }
+</style>
 
 <body>
     <section class="navbar">
@@ -46,37 +64,66 @@
     <div class="container-fluid col-xs-2" style="margin-left: -2px;">
         <h1 id="art" style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Artists:</h1>
     </div>
+    <section class="laptop">
+        <div class="container-fluid col-sm-12 ">
+            <figure class="image" id="Width">
+                <a href="img_ghosal.html"><img src="./img/ghosal.png" class="img-responsive img-thumbnail"></a>
+                <figcaption class="content">
+                    <p><a href="img_ghosal.html">Gourav</a></p>
+                </figcaption>
+            </figure>
+            <figure class="image" id="Width">
+                <a href="img_varier.html"><img src="./img/varier1.png" class="img-responsive img-thumbnail"></a>
+                <figcaption class="content">
+                    <p><a href="img_varier.html">Hridya</a></p>
+                </figcaption>
+            </figure>
 
-    <div class="container-fluid col-sm-12 ">
-        <figure class="image" id="Width">
-            <a href="img_ghosal.html"><img src="./img/ghosal.png" class="img-responsive img-thumbnail"></a>
-            <figcaption class="content">
-                <p><a href="img_ghosal.html">Gourav</a></p>
-            </figcaption>
-        </figure>
-        <figure class="image" id="Width">
-            <a href="img_varier.html"><img src="./img/varier1.png" class="img-responsive img-thumbnail"></a>
-            <figcaption class="content">
-                <p><a href="img_varier.html">Hridya</a></p>
-            </figcaption>
-        </figure>
+        </div>
 
-    </div>
+        <div class="container-fluid col-sm-12 ">
+            <figure class="image" id="Width">
+                <a href="img_nag.html"><img src="./img/nag.png" class="img-responsive img-thumbnail"></a>
+                <figcaption class="content">
+                    <p><a href="img_nag.html">Arjo</a></p>
+                </figcaption>
+            </figure>
+            <figure class="image" id="Width">
+                <a href="img_kumar.html"><img src="./img/kumar.png" class="img-responsive img-thumbnail"></a>
+                <figcaption class="content">
+                    <p><a href="img_kumar.html">Aayush</a></p>
+                </figcaption>
+            </figure>
 
-    <div class="container-fluid col-sm-12 ">
-        <figure class="image" id="Width">
-            <a href="img_nag.html"><img src="./img/nag.png" class="img-responsive img-thumbnail"></a>
-            <figcaption class="content">
-                <p><a href="img_nag.html">Arjo</a></p>
-            </figcaption>
-        </figure>
-        <figure class="image" id="Width">
-            <a href="img_kumar.html"><img src="./img/kumar.png" class="img-responsive img-thumbnail"></a>
-            <figcaption class="content">
-                <p><a href="img_kumar.html">Aayush</a></p>
-            </figcaption>
-        </figure>
+        </div>
+    </section>
+    <div class="container_sub" style="margin: 2%; left: 1%;">
+        <div class="row">
+            <div class="column">
+                <figure class="image nohover"><img src="./img/ghosal.png" style="width:100%">
+                    <figcaption>
+                        <p style="font-size: 90%;">Gourav </p>
+                    </figcaption>
+                </figure>
+                <figure class="image nohover"> <img src="./img/varier.png" style="width:100%">
+                    <figcaption>
+                        <p style="font-size: 90%;">Hridya </p>
+                    </figcaption>
+                </figure>
+                <figure class="image nohover"><img src="./img/nag.png" style="width:100%">
+                    <figcaption>
+                        <p style="font-size: 90%;">Arjo </p>
+                    </figcaption>
+                </figure>
+                <figure class="image nohover"><img src="./img/kumar.png" style="width:100%">
+                    <figcaption>
+                        <p style="font-size: 90%;">Aayush </p>
+                    </figcaption>
+                </figure>
 
+            </div>
+
+        </div>
     </div>
 
     <br>
