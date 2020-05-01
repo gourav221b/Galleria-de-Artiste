@@ -152,7 +152,7 @@ figure figcaption {
     -ms-flex: 70%;
     /* IE10 */
     flex: 70%;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.158);
     padding: 20px;
 }
 
@@ -210,6 +210,36 @@ figure figcaption {
     display: block;
     border-radius: 5px;
     margin: 5%;
+}
+
+.row_name ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+}
+
+.row_name ul a:hover {
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.row_name ul li:hover a .fa-facebook {
+    color: #3b5998;
+    transition: 0.7s;
+}
+
+.row_name ul li:hover a .fa-instagram {
+    background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+
+
+/* about */
+
+.about1 {
+    display: block;
 }
 
 

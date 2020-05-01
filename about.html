@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
@@ -13,68 +16,115 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Home Page</title>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    /* Create four equal columns that sits next to each other */
+    
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border: 2px solid black;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 90%;
+            max-width: 100%;
+        }
+    }
+</style>
 
 <body>
-
     <section class="navbar">
         <a href="about.html" class="active">About</a>
         <a href=" gallery.html ">Gallery</a>
         <a href="artist.html ">Artists</a>
         <a href="index.html ">Home</a>
-    </section>
 
+    </section>
     <!-- Header -->
     <div class="header">
         <br>
         <h1><b>Galleria de Artiste</b></h1>
-
     </div>
-    <br>
-    <br>
+    <div class="container_main" style="margin: 1%;">
+        <div class="row">
+            <div class="column">
+                <img src="./img/about1.jpg" style="width:100%">
+
+                <img src="./img/mother_in_laws_tongue.jpg" style="width:100%">
+
+            </div>
+        </div>
+    </div>
+    <br><br>
     <footer>
         <div id="left-footer">
             <h3>Quick Links</h3>
+
             <p>
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="artist.html">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist.html">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </p>
-        </div>
 
+        </div><br>
         <div id="right-footer">
             <h3>Follow us on</h3>
             <div id="social-media-footer">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                        </a>
-                    </li>
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
-
 </body>
 
 </html>
