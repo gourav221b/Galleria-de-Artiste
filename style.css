@@ -313,7 +313,7 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
 @media screen and (max-width: 480px) {
     /* start of phone styles */
     .navbar {
-        width: 80%;
+        width: 100%;
         display: block;
     }
     .navbar a {
