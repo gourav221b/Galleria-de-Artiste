@@ -360,6 +360,9 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
     #btn {
         margin-top: 76%;
     }
+    footer #social-media-footer a .fa-facebook {
+        color: black;
+    }
 }
 
 @media screen and (max-width: 700px) {
