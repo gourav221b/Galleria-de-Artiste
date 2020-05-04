@@ -50,9 +50,9 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">Registration Info</h2>
-                <form method="POST">
+                <form action="index.html">
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        <input class="input--style-3" type="text" placeholder="Name" name="name" required>
                     </div>
                     <div class="input-group">
                         <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
@@ -74,7 +74,8 @@
                     </div>
 
                     <div class="p-t-10">
-                        <a href="about.html"><button class="btn btn--pill btn--green" disabled=true type="submit">Submit</button></a>
+                        <button class="btn btn--pill btn--green" type="submit" onclick="alert('Your feedback was recorded. Thank you .Returning to Home Page.');">Submit
+                        </button>
 
                     </div>
                 </form>
