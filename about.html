@@ -17,6 +17,119 @@
     <title>About Us</title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Metrophobic&family=Permanent+Marker&family=Ubuntu:wght@300&family=Walter+Turncoat&family=Yanone+Kaffeesatz:wght@300&display=swap');
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 40%;
+        border-radius: 5px;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .container1 {
+        padding: 2px 16px;
+    }
+    
+    .container1 a {
+        text-decoration: none;
+        transform: scale(1.2);
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .container {
+        padding: 64px;
+    }
+    
+    .container1 h2 {
+        text-transform: uppercase;
+        font-family: 'Permanent Marker', cursive;
+        word-wrap: normal;
+    }
+    
+    .container1 h4 {
+        font-size: 130%;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        text-transform: capitalize;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+    
+    .column-66 {
+        float: left;
+        width: 66.66666%;
+        padding: 15px;
+        font-family: 'Metrophobic', sans-serif;
+    }
+    
+    .column-33 {
+        float: left;
+        width: 33.33333%;
+        padding: 15px;
+    }
+    
+    .large-font {
+        font-size: 48px;
+    }
+    
+    .xlarge-font {
+        font-size: 64px
+    }
+    
+    .button {
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        opacity: 0.8;
+    }
+    
+    .button:hover {
+        opacity: 1;
+        transition: 0.4s ease-in-out;
+    }
+    
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .xlarge-font {
+        font-family: 'Walter Turncoat', cursive;
+    }
+    
+    .large-font {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .column-66,
+        .column-33 {
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            margin: auto;
+        }
+    }
+    
     * {
         box-sizing: border-box;
     }
@@ -89,33 +202,115 @@
         <br>
         <h1><b>Galleria de Artiste</b></h1>
     </div>
-    <a href="about (2).html" target="_blank"><button class="btn btn-lg btn-success"> Click here to give Feedback</button></a>
-    <br><br>
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
 
-            <p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallerymain.html">Gallery</a></li>
-                    <li><a href="about.html">Contact</a></li>
-                </ul>
-            </p>
+    <body>
 
-        </div><br>
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                </ul>
+
+        <!-- First Section -->
+        <div class="container">
+            <div class="row">
+                <div class="column-66">
+                    <h1 class="xlarge-font"><b>The Initiaion</b></h1>
+                    <h1 class="large-font" style="color:rgb(19, 143, 245); "><b>How did it Begin?</b></h1>
+                    <p>
+
+                        This all started on a warm Sunny morning during quarantine, when I was bored and was searching through my Stuff. I glanced upon my sketches, and wondered if it was any use, or if it would make any difference. To be Honest <em>I thought it wouldn't</em>.
+                        However, since I had no-one to help me, I decided to rather build a platform for myself and other interested, young talents</p>
+
+                </div>
+
+                <div class="card column-33">
+                    <img src="./img/Graphic Design Club.jpg" alt="Avatar" style="width:100%">
+                    <div class="container1">
+                        <h2><b>The idea:</b></h2>
+                        <h4>The goal was to bring under one roof, various talents, everyone is trying to showcase.</h4>
+                    </div>
+                </div>
             </div>
-            <p>This website is developed by Gourav Ghosal.</p>
         </div>
-    </footer>
-</body>
+
+        <!-- Second Section -->
+        <div class="container" style="background-color:#f1ecec; opacity: 0.9; border-radius: 20px;">
+            <div class="row">
+                <div class="card column-33">
+                    <img src="./img/Illustrations by Tom Haugomat.jpg" alt="Avatar" style="width:100%">
+                    <div class="container1">
+                        <h2><b>Featured Items</b></h2>
+                        <h4>Showcasing various talents, we start with sketches, paintings, Photography and Coming up in a few days, Creative writings.</h4>
+                    </div>
+                </div>
+                <div class="column-66">
+                    <h1 class="xlarge-font"><b>Talents</b></h1>
+                    <h1 class="large-font" style="color:red;"><b>Ignored? Never Again?</b></h1>
+                    <p><span style="font-size:24px">A revolution in Talent showcasing</span> Every school, college student or anyone who does, what they love and is willing to showcase the talents, are welcome to contact. We won't leave you on seen <em> "unlike you ex XD"</em>.
+                        <br> We would be happy to see you featured on this site, and feel free to talk, anytime you want.</p>
+                    <a href="mailto:slggourav@gmail.com"><button class="button" style="background-color:rgb(250, 15, 74); border-radius: 10px; ">Email here</button></a>
+                    <p> In Case you aren't able to send, Email here
+                        <em>slggourav@gmail.com</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Section -->
+        <div class="container">
+            <div class="row">
+                <div class="column-66">
+                    <h1 class="xlarge-font"><b>Developer</b></h1>
+                    <h1 class="large-font" style="color:rgb(111, 15, 236);"><b>Gourav Ghosal</b></h1>
+                    <p><span style="font-size:36px">I</span> was learning Web Development for quite some time, and I was at rock bottom <em> What to make as a project</em>. After almost two weeks of having zero idea, A random thought popped up in my mind.
+                        A gallery sort of site, featuring one of my friend's Ugly pics. I shared the thought with another friend. Thus began this site. A gallery aimed for a prank, gave birth to a beautiful gallery that it is today. Hope you guys find
+                        this site awesome and any feedback is Welcome.
+                    </p>
+                    <a href="about (2).html" target="_blank"><button class=" button btn btn-lg btn-success"> Click here to give Feedback</button></a>
+                </div>
+                <div class="card column-33">
+                    <img src="./img/ghosal.jpg" alt="Avatar" style="width:100%">
+                    <div class="container1">
+                        <h2><b>Gourav</b></h2>
+                        <h4>Contact:</h4>
+                        <ul style="list-style: none;">
+                            <li><a href="https://www.facebook.com/profile.php?id=100007994386888" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Gourav Ghosal</a></li>
+                            <li><a href="https://www.instagram.com/g.o.u.r.a.v_221b/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @g.o.u.r.a.v221_b</a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/gourav-ghosal/" target="_blank">
+                                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>Gourav Ghosal</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br><br>
+        <footer>
+            <div id="left-footer">
+                <h3>Quick Links</h3>
+
+                <p>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallerymain.html">Gallery</a></li>
+                        <li><a href="about.html">Contact</a></li>
+                    </ul>
+                </p>
+
+
+                <br>
+                <div id="right-footer">
+                    <h3>Follow us on</h3>
+                    <div id="social-media-footer">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>This website is developed by Gourav Ghosal.</p>
+                </div>
+        </footer>
+    </body>
 
 </html>
