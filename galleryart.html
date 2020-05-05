@@ -44,7 +44,7 @@
     .column img {
         margin-top: 8px;
         vertical-align: middle;
-        transform: scale(0.98);
+        transform: scale(0.9);
         -webkit-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
         -moz-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
         box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
@@ -72,6 +72,10 @@
         -webkit-text-fill-color: transparent;
         transition: 0.5s;
     }
+    
+    .noscale {
+        width: 40%;
+    }
     /* Responsive layout - makes a two column-layout instead of four columns */
     
     @media screen and (max-width: 800px) {
@@ -79,6 +83,10 @@
             -ms-flex: 50%;
             flex: 50%;
             max-width: 50%;
+        }
+        .noscale {
+            width: 100%;
+            height: auto;
         }
     }
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -111,87 +119,113 @@
     <!-- Photo Grid -->
     <div class="container_main" style="margin: 1%;">
         <div class="row">
-
+            <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Drawings by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Gourav Ghosal </span></div>
             <div class="column">
                 <img src="./img/1.png" style="width:100%">
                 <img src="./img/2.png" style="width:100%">
                 <img src="./img/3.png" style="width:100%">
                 <img src="./img/4.png" style="width:100%">
                 <img src="./img/5.png" style="width:100%">
-                <img src="./img/6.png" style="width:100%">
-                <img src="./img/7.png" style="width:100%">
+                <img src="./img/6.png" style="width:100%;transform: scale(0.8);">
+                <img src="./img/7.png" style="width:100% ; transform: scale(0.8);">
             </div>
             <div class="column">
                 <img src="./img/8.png" style="width:100%">
                 <img src="./img/9.png" style="width:100%">
                 <img src="./img/10.png" style="width:100%">
+
                 <img src="./img/11.png" style="width:100%">
                 <img src="./img/12.png" style="width:100%">
-                <img src="./img/hridya1.png" style="width:100%">
+
             </div>
+            <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Drawings by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Hridya Varier </span></div>
             <div class="column">
-                <img src="./img/hridya2.png" style="width:100%">
+                <img src="./img/hridya1.png" style="width:100%">
+                <img src="./img/hridya2.png" style="width:100%"></div>
+            <div class="column">
                 <img src="./img/hridya3.png" style="width:100%">
                 <img src="./img/hridya4.png" style="width:100%">
+
+            </div>
+            <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Drawings by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Aayush Kumar </span></div>
+            <div class="column">
                 <img src="./img/kumar1.jpg" style="width:100%">
                 <img src="./img/kumar2.jpg" style="width:100%">
-                <img src="./img/kumar 3.jpg" style="width:100%">
-                <img src="./img/kumar 4.jpg" style="width:100%">
             </div>
             <div class="column">
+                <img src="./img/kumar 3.jpg" style="width:100%">
+                <img src="./img/kumar 4.jpg" style="width:100%"></div>
+            <div class="column">
+                <img class="noscale" src="./img/kumar 5.jpg">
+                <img class="noscale" src="./img/kumar6.png">
+
+
+            </div>
+            <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Drawings by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Sayandip Saha </span></div>
+            <div class="column">
+                <img class="noscale" src="./img/sandi1.jpeg">
+                <img class="noscale" src="./img/sandi2.jpeg">
+                <!-- <img src="./img/kumar 4.jpg" style="width:100%">
                 <img src="./img/kumar 5.jpg" style="width:100%">
-                <img src="./img/kumar6.png" style="width:100%">
-                <img src="./img/hridya4.png" style="width:100%">
-                <img src="./img/hridya1.png" style="width:100%">
-                <img src="./img/hridya2.png" style="width:100%">
-                <img src="./img/hridya3.png" style="width:100%">
+                <img src="./img/kumar6.png" style="width:100%">  -->
+
+
+            </div>
+            <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Drawings by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Riyanka Kundu </span></div>
+            <div class="column">
+                <img class="noscale" src="./img/riyanka1.jpeg">
+                <!-- <img src="./img/kumar2.jpg" style="width:100%">
+                <img src="./img/kumar 3.jpg" style="width:100%">
+                <img src="./img/kumar 4.jpg" style="width:100%">
+                <img src="./img/kumar 5.jpg" style="width:100%">
+                <img src="./img/kumar6.png" style="width:100%"> -->
+
+
+            </div>
+        </div>
+
+        <a href="#top"><button class="btn btn-primary btn-lg"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to Top</button></a>
+        <br>
+        <br>
+        <footer>
+            <div id="left-footer">
+                <h3>Quick Links</h3>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="gallerymain.html">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </p>
             </div>
 
-        </div>
-    </div>
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
 
-    <a href="#top"><button class="btn btn-primary btn-lg"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to Top</button></a>
-    <br>
-    <br>
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
-            <p>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="gallerymain.html">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                </ul>
+                    </ul>
+                </div>
+                <p>This website is developed by Gourav Ghosal.</p>
             </div>
-            <p>This website is developed by Gourav Ghosal.</p>
-        </div>
-    </footer>
+        </footer>
 
 
 </body>
