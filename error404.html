@@ -19,11 +19,28 @@
     
     .image img {
         margin-left: 40%;
+        animation: rotate 10s infinite;
     }
     
-    .image img:hover {
-        transform: rotate(45deg);
-        transition: 0.5s;
+    @keyframes rotate {
+        0% {
+            transform: rotate(1800deg) scale(0);
+        }
+        10% {
+            transform: rotate(1800deg) scale(0.2);
+        }
+        45% {
+            transform: rotate(360deg)scale(1);
+        }
+        55% {
+            transform: rotate(1800deg) scale(0.6);
+        }
+        85% {
+            transform: rotate(1800deg) scale(0.6);
+        }
+        100% {
+            transform: rotate(1800deg) scale(0);
+        }
     }
     
     .content {
