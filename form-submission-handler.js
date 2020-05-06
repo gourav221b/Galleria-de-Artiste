@@ -76,6 +76,7 @@
                 var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
                     thankYouMessage.style.display = "block";
+                    alert(" Thanks for contacting us! We will get back to you soon!");
                 }
             }
         };

@@ -6,7 +6,7 @@
  }
  
  body {
-     background: #F2F3EB;
+     background: rgb(238, 240, 227);
  }
  
  button {
@@ -36,7 +36,7 @@
  }
  
  #container {
-     border: solid 3px #474544;
+     border: solid 3px #000000;
      max-width: 768px;
      margin: 60px auto;
      position: relative;
@@ -47,7 +47,8 @@
      margin: 50px 0;
  }
  
- h1 {
+ .h1 {
+     margin-top: 4%;
      color: #474544;
      font-size: 32px;
      font-weight: 700;
@@ -58,8 +59,8 @@
  
  .underline {
      border-bottom: solid 2px #474544;
-     margin: -0.512em auto;
-     width: 80px;
+     margin: -0.508em auto;
+     width: 100px;
  }
  
  .icon_wrapper {
