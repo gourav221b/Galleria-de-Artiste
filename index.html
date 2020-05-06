@@ -17,90 +17,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Galleria-de-Artiste</title>
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Metrophobic&family=Permanent+Marker&family=Ubuntu:wght@300&family=Walter+Turncoat&family=Yanone+Kaffeesatz:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shadows+Into+Light&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
-    .main h2 {
-        font-family: 'Bad Script', cursive;
-        font-size: 2em;
-        text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(255, 255, 255);
-    }
-    
-    form {
-        border: 3px solid #050505;
-        font-family: Arial;
-    }
-    
-    .container {
-        padding: 20px;
-        background-color: #f1f1f1;
-    }
-    
-    input[type=text],
-    input[type=submit] {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 3px solid black box-sizing: border-box;
-    }
-    
-    input[type=checkbox] {
-        margin-top: 16px;
-        size: 120%;
-    }
-    
-    input[type=submit] {
-        background-color: rgb(4, 183, 238);
-        color: white;
-        border: none;
-        opacity: 0.8;
-    }
-    
-    input[type=submit]:hover {
-        opacity: 1;
-    }
-    
-    .contain {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        -webkit-box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
-        box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
-        /* Center it */
-    }
-    
-    .contain .content {
-        position: absolute;
-        top: 15%;
-        color: #000000;
-        width: 100%;
-        padding: 20px;
-        font-size: 200%;
-    }
-    
-    .contain .content p {
-        font-family: 'Shadows Into Light', cursive;
-    }
-    
-    .contain .content h1 {
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    
-    @media screen and (max-width: 480px) {
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Metrophobic&family=Permanent+Marker&family=Ubuntu:wght@300&family=Walter+Turncoat&family=Yanone+Kaffeesatz:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shadows+Into+Light&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+        .main h2 {
+            font-family: 'Bad Script', cursive;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(255, 255, 255);
+        }
+        
+        form {
+            border: 3px solid #050505;
+            font-family: Arial;
+        }
+        
+        .container {
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        
+        input[type=text],
+        input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid black;
+            box-sizing: border-box;
+        }
+        
+        input[type=checkbox] {
+            margin-top: 16px;
+            size: 120%;
+        }
+        
+        input[type=submit] {
+            background-color: rgb(4, 183, 238);
+            color: white;
+            border: none;
+            opacity: 0.8;
+        }
+        
+        input[type=submit]:hover {
+            opacity: 1;
+        }
+        
+        .contain {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            -webkit-box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 3px 21px 7px rgba(0, 0, 0, 0.75);
+            /* Center it */
+        }
+        
+        .contain .content {
+            position: absolute;
+            top: 15%;
+            color: #000000;
+            width: 100%;
+            padding: 20px;
+            font-size: 200%;
+        }
+        
         .contain .content p {
-            font-size: 0.6em;
             font-family: 'Shadows Into Light', cursive;
         }
+        
         .contain .content h1 {
-            font-size: 0.8em;
             font-family: 'Josefin Sans', sans-serif;
         }
-    }
-</style>
+        
+        @media screen and (max-width: 480px) {
+            .contain .content p {
+                font-size: 0.6em;
+                font-family: 'Shadows Into Light', cursive;
+            }
+            .contain .content h1 {
+                font-size: 0.8em;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        }
+    </style>
+</head>
 
 <body>
 

@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleabout.css">
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- <link rel="stylesheet" href="styleabout.css"> -->
+    <link rel="stylesheet" href="cards.css">
+    <link rel=" icon " type="image/png " href="./img/favicon.png ">
     <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="apple-touch-icon " type="image/png " href="./img/favicon.png " />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap " rel="stylesheet ">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet " href="path/to/font-awesome/css/font-awesome.min.css ">
     <title>Creative Writing</title>
 </head>
 <style>
@@ -69,49 +70,144 @@
             max-width: 100%;
         }
     }
+    
+    .made_by {
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 35px;
+        text-align: center;
+    }
 </style>
 
 <body>
+
     <section class="navbar">
         <a href="about.html">About</a>
         <a href="gallerymain.html">Gallery</a>
         <a href="work.html" class="active">Our Work</a>
-        <a href="index.html ">Home</a>
-
+        <a href="index.html">Home</a>
     </section>
+
     <!-- Header -->
     <div class="header">
         <br>
         <h1><b>Galleria de Artiste</b></h1>
+
     </div>
-    <br>
-    <p class="code"> Arriving Soon</p>
-    <br><br>
-    <footer style="width: 100%; border: 2px solid white;">
+    <ul class="cards">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/typewriter.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Stories</h2>
+                    <p class="card_text">Browse through the collection of stories of various genres and immerse yourself into the world of escape - <em>fiction</em><br> <br></p>
+                    <br><a href="htmlwr/stories.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/pen.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Poems</h2>
+                    <p class="card_text"><q style="font-size: 110%;">Genuine poetry can communicate before it is understood.</q>
+                        <br><cite>T.S. Eliot</cite> <br> Walk through the graceful Journey that a <b>Poem</b> is.</p><br>
+                    <a href="htmlwr/poems.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/article.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Articles</h2>
+                    <p class="card_text">Life is not just a bed of roses. The article section brings to light<br> some of the talked, and some <em>less talked</em> issues. Find out more</p><br><br>
+                    <a href="htmlwr/articles.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/desk.jpg"></div>
+                <div class="card_content" style="height: 100%;">
+                    <h2 class="card_title">Quotes</h2>
+                    <p class="card_text">Sometimes, when long paragraphs don't provide the help, The short quotations, words of wisdom,speak louder.</p>
+                    <a href="htmlwr/quotes.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/abstract.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Abstracts</h2>
+                    <p class="card_text">Life always doesnot have to be meaningful. Sometimes it can be just a bunch of unorganized thoughts, provoking happiness. We present the <em><b>Abstracts Section</b></em></p>
+                    <a href="htmlwr/abstract.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="./img/submission.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Submit Your Entries</h2>
+                    <p class="card_text">Want to See your Writing Published?<br> <em><b>This is </b></em> the Place to GO!!</p>
+                    <a href="htmlwr/entry.html" style="text-decoration: none;"><button class="btn card_btn" >Read More</button></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+    <footer>
         <div id="left-footer">
             <h3>Quick Links</h3>
-
             <p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallerymain.html">Gallery</a></li>
-                    <li><a href="about.html">Contact</a></li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="gallerymain.html">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">Contact</a>
+                    </li>
                 </ul>
             </p>
+        </div>
 
-        </div><br>
         <div id="right-footer">
             <h3>Follow us on</h3>
             <div id="social-media-footer">
                 <ul>
-                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
+    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 </html>
