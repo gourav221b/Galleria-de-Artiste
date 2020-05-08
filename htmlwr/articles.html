@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styleabout.css">
+
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <!-- For apple devices -->
     <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Articles</title>
+    <title>Articles| Galleria-de-Artiste</title>
 </head>
 <style>
     @media screen and (min-width: 980px) {
@@ -33,6 +33,174 @@
             border-radius: 7px;
         }
     }
+    
+    * {
+        box-sizing: border-box;
+    }
+    /* Add a gray background color with some padding */
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    
+    .leftcolumn {
+        float: left;
+        width: 75%;
+    }
+    
+    #str2 {
+        padding-top: 2%;
+    }
+    /* Right column */
+    
+    .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+    }
+    /* columns */
+    
+    .columns {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #col-left,
+    #col-right {
+        margin: 2%;
+        width: 47%;
+        text-align: justify;
+    }
+    
+    .hr {
+        width: 100%;
+    }
+    
+    .hr img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .top {
+        display: none;
+    }
+    /* Fake image */
+    
+    .fakeimg {
+        width: 100%;
+        margin: 1rem auto;
+    }
+    
+    .fakeimg img,
+    .fakeimg a {
+        width: 100%;
+        margin: 1rem auto;
+        -webkit-box-shadow: 1px 0px 12px 3px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 1px 0px 12px 3px rgba(0, 0, 0, 1);
+        box-shadow: 1px 0px 12px 3px rgba(0, 0, 0, 1);
+    }
+    
+    .rightcolumn .fakeimg img:hover {
+        transform: scale(1.1);
+        transition: 0.6s ease-in-out;
+        border-radius: 10px;
+    }
+    /* Add a card effect for articles */
+    
+    .card {
+        background: rgba(218, 214, 214, 0.555);
+        margin: 4%;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Footer */
+    
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+    }
+    
+    .avatar {
+        width: 10%;
+        height: auto;
+        display: inline;
+        vertical-align: middle;
+        border-radius: 50%;
+    }
+    
+    .card h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .card span {
+        font-size: 1.4em;
+    }
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 800px) {
+        .leftcolumn {
+            width: 100%;
+            padding: 0;
+        }
+        .columns {
+            display: flex;
+            flex-direction: column;
+        }
+        #col-left,
+        #col-right {
+            width: 95%;
+            margin: 0 auto;
+        }
+        .avatar {
+            width: 20%;
+            height: auto;
+            display: inline;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        .avatar:active {
+            border-radius: 0px;
+            transform: scale(2);
+            position: absolute;
+        }
+    }
+    
+    @media screen and (max-width: 1226px) {
+        .rightcolumn {
+            display: none;
+        }
+        .leftcolumn {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .leftcolumn h1 {
+            font-size: 200%;
+            margin-bottom: 1rem;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+        }
+        .top .fakeimg {
+            margin-bottom: .2rem;
+        }
+        #str2 {
+            margin-top: inherit;
+        }
+        body {
+            margin: 0;
+        }
+    }
 </style>
 
 
@@ -49,8 +217,255 @@
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <br><br>
-    <p class="code"> Arriving Soon</p>
+    <div class="top">
+
+        <div class="card">
+            <h3>Popular Authors</h3>
+            <div class="fakeimg">Gourav </div>
+            <br>
+            <div class="fakeimg">Author2</div><br>
+            <div class="fakeimg">Author3</div>
+        </div>
+        <div class="card">
+            <h3> Other Works</h3>
+            <div class="fakeimg">
+                <a href="stories.html"><img src="../images/typewriter - Copy.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+
+            </div><br>
+
+            <div class="fakeimg">
+                <a href="poems.html"><img src="../images/pen.jpeg" alt="abstract" style="width: inherit; height: auto;"></a>
+            </div><br>
+            <div class="fakeimg">
+                <a href="abstract.html"><img src="../images/abstract.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+            </div>
+            <br>
+            <div class="fakeimg">
+                <a href="quotes.html"><img src="../images/desk.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+            </div><br>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h1>Schizophrenia</h1>
+                <span> <img src="../images/gourab.png" class="avatar" style=" ">
+               Gourav Ghosal&emsp;May 7, 2020</span>
+                <div class="fakeimg" style="height:auto;">
+                    <img src="../images/schizophrenia.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
+                </div>
+                <div class="columns">
+                    <div id="col-left">
+                        <br>
+                        <p><b><em>Schizophrenia</em></b> is a <em>chronic and severe</em> mental disorder that affects how a person thinks, feels, and behaves. People with schizophrenia may seem like they have lost touch with reality. How many of us are
+                            aware of what really goes on inside our brain? Very few people, I guess. </p>
+                        <p> For us, mental health is something that we “should not talk about”. Taboo. Just because something is not visible to the eye, does not mean that it is a myth. Our physical health is important. And so is our Mental Health. But why
+                            don’t we talk about it? Simple- “Society”. Our parents were the last generation who were unaware and ignorant of various things and hence, for them, various stuffs are unorthodox or unnatural. But what about us? Do we not know
+                            about things? Are we really that stupid? Joaquin Phoenix’s Joker movie has created a recent outburst of awareness of mental health issues. Heart warming isn’t it? The harsh truth of life reflected through one of the greatest
+                            characters of all times. But what we must take from this, is that, We should look out, look for signs , help those in need.</p>
+                        <p> Schizophrenia is technically like any other mental disorder, but this particular one has a far more impact than anything else. People start imagining things, maybe an entire different person totally.</p>
+                    </div>
+                    <div id="col-right">
+                        <p><br> Doctors often describe schizophrenia as a type of psychosis. This means the person may not always be able to distinguish their own thoughts and ideas from reality. This was not meant to be another normal trivia page, but surely
+                            here are some symptoms of it, that you can always look for : hallucinations – hearing or seeing things that do not exist muddled thoughts based on hallucinations or delusions losing interest in everyday activities not caring
+                            about your personal hygiene wanting to avoid people, including friends But here is some myth vs reality stuff.. A person suffering from Schizophrenia doesnot become violent. And moreover they donot possess split personality
+                            disorder.
+                        </p>
+                        <p>So, no matter what any visual content show you, remember there exists another thing called "creative liberty" All we ask for is giving the needy person a hand of help and not just another “Get a life bro!”. We never know who we
+                            push towards insanity, towards destruction. For all we know, we can create a demon that will destroy us only.</p>
+                        <p> <em>SO STAY AWARE, STAY HUMBLE.</em> We donot want to live in such a society where mentally ill people are ignored and left for themselves. A mother cannot stand to see her child die. A father would loose his soul , A brother may
+                            never be the same ever again. SO before doing anything, Think, Then Act. That is the whole point of it.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="rightcolumn">
+
+            <div class="card">
+
+                <h3>Popular Authors</h3>
+                <div class="fakeimg">Gourav </div>
+                <br>
+                <div class="fakeimg">Author2</div><br>
+                <div class="fakeimg">Author3</div>
+            </div>
+            <div class="card">
+                <h3> Our Other Works</h3>
+                <div class="fakeimg">
+                    <a href="stories.html"><img src="../images/typewriter - Copy.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+
+                </div><br>
+
+                <div class="fakeimg">
+                    <a href="poems.html"><img src="../images/pen.jpeg" alt="abstract" style="width: inherit; height: auto;"></a>
+                </div><br>
+                <div class="fakeimg">
+                    <a href="abstract.html"><img src="../images/abstract.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+                </div>
+                <br>
+                <div class="fakeimg">
+                    <a href="quotes.html"><img src="../images/desk.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
+                </div><br>
+                <div class="share_side">
+
+                    <h1 style="font-family: 'Tulpen One', cursive;"><b> Share Our website And Help Us Grow </b></h1>
+
+                    <div id="share-buttons">
+                        <a href="mailto:?Subject=Galleria De Artiste Buttons&amp;Body=I%20saw%20this%20and%20thought%20you%20would%20love%20it!%20 https://galleria-de-artiste.netlify.app/" title="Mail">
+                            <img src="https://img.icons8.com/plasticine/100/000000/gmail.png" alt="Mail" />
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="http://www.facebook.com/sharer.php?u=https://galleria-de-artiste.netlify.app/" target="_blank" title="Facebook">
+                            <img src="https://img.icons8.com/bubbles/200/000000/facebook-new.png" alt="Facebook" />
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://galleria-de-artiste.netlify.app/" target="_blank" title="LinkedIn">
+                            <img src="https://img.icons8.com/plasticine/100/000000/linkedin.png" alt="LinkedIn" />
+                        </a>
+                        <a href="http://www.stumbleupon.com/submit?url=https://galleria-de-artiste.netlify.app/&amp;title=Galleria-De-Artiste" target="_blank" title="StumbleUpon">
+                            <img src="https://img.icons8.com/plasticine/100/000000/stumbleupon.png" alt="StumbleUpon" />
+                        </a>
+
+                        <!-- Tumblr-->
+                        <a href="http://www.tumblr.com/share/link?url=https://galleria-de-artiste.netlify.app/&amp;title=Simple Share Buttons" target="_blank" title="Tumblr">
+                            <img src="https://img.icons8.com/plasticine/100/000000/tumblr.png" alt="Tumblr" />
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/share?url=https://galleria-de-artiste.netlify.app/&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" title="Twitter">
+                            <img src="https://img.icons8.com/plasticine/200/000000/twitter.png" alt="Twitter" />
+                        </a>
+
+                        <!-- Whatsapp -->
+                        <a href="whatsapp://send?text=A place where Artists of every stage, format are welcome. Find differernt sketches, digital arts, and don't forget to browse through the writing section" data-action="share/whatsapp/share" title="Twitter">
+                            <img src="https://img.icons8.com/plasticine/100/000000/whatsapp.png" alt="whatsapp" /></a>
+                        <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" title="Whatsapp">
+                            <img src="https://img.icons8.com/bubbles/200/000000/reddit.png" alt="Reddit" />
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="leftcolumn" id="str2">
+            <div class="card">
+                <h1>Depression!</h1>
+                <span> <img src="../images/gourab.png" class="avatar" alt=" header">
+                    Gourav Ghosal&emsp;May 7, 2020</span>
+                <div class="fakeimg" style="height:auto;">
+                    <img src="../images/depression.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
+                </div>
+                <div class="columns">
+                    <div id="col-left">
+
+                        <p> “Hey, whats up?” a person 1 asks.</p>
+
+                        <p>“Nothing. Just feeling low for a few days”. Person 2 says</p>
+
+                        <p>“Oh comeon man. You need to get some action. You’ll be just fine” person 2 says.</p>
+
+                        <p>The film JOKER brought about a wave of reactions , posts, memes, all sort of stuffs. While there are people criticizing it, there are people, upholding it, romanticizing it. There are a few categories of memes or posts ,up on social
+                            media. </p>
+
+                        <ol>
+                            <li>Spreading awareness that The Joker is not something worth romanticizing because it is a demon and we don’t want that.</li>
+                            <li>People relating to Joaquin Phoenix’s Joker.</li>
+                        </ol>
+                        But what is actually the reality? We are not the Joker who brings chaos to the society. We are the society that creates the joker. Isn’t that right? We see people sad, depressed, what do we tell them? “Don’t be depressed”. Wow , like they haven’t thought
+                        of that! Depression is that stage in life that brings about a transformation in people. Some people become stronger than ever. Some get crippled under it. Depression is inevitable. People will always fall into it once in their
+                        life atleast.
+                        <p> <br>It doesnot make sense to say “you are just doing it for attention”. What does make sense is helping the one suffering from depression.</div>
+                    <div id="col-right">
+                        <p>There are always scenarios where we ourselves cannot help someone, <br><br>but what we can do, is get them to a psychologist , or at the very least, ensure we don’t hurt them more. Not everyone is strong. There are people for whom,
+                            society’s acceptance matters more than their own selves’. How can we know , if someone is strong?
+                        </p>
+                        We maybe the reason someone lives or dies. Because, when we think about it really, “We are all suicidal people, telling other suicidal people that suicide is not the answer”. Curing depression– this doesnot exist. There is no OFF button. People don’t
+                        choose to be depressed. So instead of harassing them more, ensure that they get the required help. And for people who are depressed, I know what you guys go through, and trust me you are strong. But you also have to be willing
+                        to help yourselves, because unless you are willing to accept help, nothing will be okay.
+                        <p>Talk to someone. That’s the very basic thing you can do. First talk to someone you trust. Then consult a psychologist. This is one of the very basic thing you can do. Depression is different for different people, so a particular
+                            way of treatment won’t work for many people.</p>
+                        <p> What you can do, is find what makes you happy, or atleast keeps you interested. The world is not a good place, but that doesnot mean we cannot try and be strong. Because, the weak donot choose how they die. So, people, no matter,
+                            what is happening around, you are strong. No matter who says what, you are doing great. Just look at yourself and get up, Workout. Physical exercise helps a lot. Hardcore Gym. That is something you can try. Take your time,
+                            but do see the beautiful side of yourself. You will love it.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="leftcolumn">
+            <div class="card">
+                <h1>Teenage Depression</h1>
+                <span> <img src="../images/gourab.png" class="avatar" alt=" header">
+                    Gourav Ghosal&emsp;May 7, 2020</span>
+                <div class="fakeimg" style="height:auto;">
+                    <img src="../images/teenagedepression.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
+                </div>
+                <div class="columns">
+                    <div id="col-left">
+                        <p>This is not another narrative, but rather, consider this as a non-verbal account of what teenage depression somewhat looks like.</p>
+
+                        <p>The thing, is very real. Maybe, just because you aren’t a victim, doesn’t really mean that it is non-existent. All those parents out there, and all those “lovely relatives” who say ‘ Depression in kids doesn’t exist, what can a
+                            kid be depressed about!’. You really want to know what one has to be sad about? </p>
+                        <ol>
+                            <li><b>Your constant criticisms:</b> If you donot have faith in us, stop giving us freedom. But NOO! You people will give us the key to the lock, and expect us to return it to you! -_-.</li><br>
+
+                            <li><b>Hitting us , when we are low:</b>
+                                <p>When nothing goes right, when nothing seems valid, all we expect are some soft talks, some good advices, and someone who listens to us. I won’t say we don’t get them, few of us do, but most of us? “ You’re good for nothing”
+                                    or “ Only it’s you who fall down like this, look at others, they don’t over-react like you” , and you expect us to be ‘encouraged’ by these words.</p>
+                            </li>
+
+                            <br>
+                            <li><b>“Friends”:</b>
+                                <p>Ah, the good old folks who know your secrets, life, weaknesses more than parents. Lets take an example. There are two people in your circle, who you spend most time with, who you trust the most. You are way too closer with
+                                    person A , than with person B. Person A is a toxic guy, and you are somewhat ignorant of it, while person B is someone who is really a nice guy. You tend to like person A more because he/she’s fancier, extrovert sort
+                                    of person and person B is more of a non-socializing guy. Sounds familiar? You know the rest.</p>
+                                <p>Things happen, you are down, maybe even depressed, the first friend leaves your side, hurts you more and says ‘ maybe you are really such a wuss’. Person B just stands at a distance, and comes to comfort you, after the
+                                    first guy, is gone for good. We donot deserve toxic friends in life, but what’s more important, is to find out who the toxic guy is, and get the hell out of there.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="col-right">
+                        <ol start="4">
+                            <li><b>“Pyaar dewana hota hai, mastaana hota hai”:</b>
+                                <p> We all know what failing in love can do, and maybe this is for someday later. 🙂</p>
+                            </li>
+
+                            <li><b>“The follow-up effects”:</b>
+                                <p>So after a long day, the night sky is upon us. The pressure, workload of the day is still very much omnipresent. Serotonin starts kicking in, tears start rolling out, and boom, brain sets off to “ Its flashback time”. Constant
+                                    exposure to the negative side of life, makes us feel worthless. “maybe what they say is right, maybe I am a loser”- is what we think. We think, combine, process and filter out all inside the damn skull.</p>
+                                <p>The end product contains 10% positivity and 90% negativity. We would be so happy if it stopped there. Like the villains in the hindi tv serials, our brain plays a small little game called “ haveee you started over thinking?”.</p>
+                                <p> Tears, silent screams, agony, pain, more tears, swollen eyes, silent mouth, all become common. Arises an omnipresent, yet un-acknowledged situation- DEPRESSION.</p>
+                                <p>Some parents are very good enough to help their children through this demonic phase, and others just “help” with one simple line: “ Tum abhi baccha hai, tumhare life mein itna dukh kaise hai? We provide you with everything.
+                                    Hamare saath to aisa nahi hua kabhi, tum kaise in sab cheezo mein aa gaye”
+                                </p>
+                            </li>
+                            <div class="hr">
+                                <img src="../images/hr-removebg-preview.png" alt="horizontal line">
+                            </div>
+                            <p>P.s : I wrote this one fine evening, when I was angry. There were certain occurrences and things turned out pretty bad. Anyhow, I fought alone. All alone. I found this piece of work in an old notebook, and it has been a year
+                                or so since the event, and when I look back, I just try to remember the good stuff only. 🙂 Stay happy, because not everyone wants you to be happy.</p>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
     <a href="../creative.html"><button class="btn btn-primary btn-lg"> Back one page </button></a>
     <a href="entry.html"><button class="btn btn-primary btn-lg"> Send Your Work Here </button></a>
@@ -69,7 +484,7 @@
                         <a href="/gallerymain.html">Gallery</a>
                     </li>
                     <li>
-                        <a href="/creative.html.html">Writings</a>
+                        <a href="/creative.html">Writings</a>
                     </li>
 
                     <li>

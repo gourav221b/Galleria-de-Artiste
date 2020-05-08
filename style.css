@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Metrophobic&family=Permanent+Marker&family=Ubuntu:wght@300&family=Walter+Turncoat&family=Yanone+Kaffeesatz:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     box-sizing: border-box;
@@ -192,6 +196,17 @@ figure figcaption {
 }
 
 
+/* SHARE BUTTONS */
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}
+
+
 /* banner */
 
 .banner {
@@ -321,6 +336,21 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
     color: black;
 }
 
+
+/* SAHRE */
+
+.share_side {
+    margin-left: 2%;
+}
+
+#share-buttons img {
+    width: 100px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}
+
 @media screen and (max-width: 480px) {
     /* start of phone styles */
     .navbar {
@@ -378,7 +408,7 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
 
 @media screen and (max-width: 700px) {
     .row {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .header h1:hover {
         text-shadow: 2px 2px 3px black, 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(2, 2, 39);
@@ -391,5 +421,9 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
         background: -ms-linear-gradient(top, #3b5998, #2b4170);
         background: -webkit-linear-gradient(top, #3b5998, #2b4170);
         transition: 0.7s;
+    }
+    .share_side img {
+        width: 25%;
+        height: auto;
     }
 }

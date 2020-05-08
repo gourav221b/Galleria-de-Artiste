@@ -5,39 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styleabout.css">
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="styleabout.css"> -->
+    <link rel="stylesheet" href="/cards.css">
+    <link rel=" icon " type="image/png " href="../img/favicon.png ">
     <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon " type="image/png " href="../img/favicon.png " />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap " rel="stylesheet ">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet " href="path/to/font-awesome/css/font-awesome.min.css ">
     <title>Quotes</title>
 </head>
 <style>
-    @media screen and (min-width: 980px) {
-        .container_sub {
-            display: none;
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    /* Create four equal columns that sits next to each other */
+    
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border: 2px solid black;
+    }
+    
+    .btns {
+        background-color: white;
+        border: 10px solid inherit;
+        color: black;
+        text-align: center;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+        .footer {
+            border: 1px solid black;
+        }
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 90%;
+            max-width: 100%;
         }
     }
     
-    @media screen and (max-width: 980px) {
-        .laptop {
-            display: none;
-        }
-        .image {
-            width: 95%;
-            margin: 1%;
-            border-radius: 7px;
-        }
+    .made_by {
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 35px;
+        text-align: center;
     }
 </style>
 
-
 <body>
-    <section class="navbar" id="top">
+
+    <section class="navbar">
         <a href="/about.html">About</a>
         <a href="/gallerymain.html">Gallery</a>
         <a href="/work.html" class="active">Our Work</a>
@@ -45,32 +96,275 @@
     </section>
 
     <!-- Header -->
-    <div class="header"><br>
+    <div class="header">
+        <br>
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <br><br>
-    <p class="code"> Arriving Soon</p>
 
-    <a href="../creative.html"><button class="btn btn-primary btn-lg"> Back one page </button></a>
-    <a href="entry.html"><button class="btn btn-primary btn-lg"> Send Your Work Here </button></a>
-    <br>
-    <br>
 
+    <ul class="cards">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/1.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/3.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/4.jpg"></div>
+
+            </div>
+        </li>
+
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/5.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/6.webp" alt="6"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/7.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/8.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/9.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/10.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/11.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/12.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/13.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/14.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/15.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/16.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/18.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/19.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/20.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/21.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/22.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/23.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/24.webp "></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/25.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/26.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/27.jpg "></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/28.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/29.webp "></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/30.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/31.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/32.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/33.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/34.webp"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/35.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/36.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/37.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/38.webp"></div>
+
+            </div>
+        </li>
+
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/raj2.png "></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/raj3.jpg"></div>
+
+            </div>
+        </li>
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="../quotes/raj4.jpg"></div>
+
+            </div>
+        </li>
+
+    </ul>
+    </div>
+    <div class="container-fluid">
+        <a href="#top"><button class="btns btn-primary btn-lg col-xs-6"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="artist.html"><button class="btns btn-success btn-lg col-xs-6"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+    </div>
+    <br>
     <footer>
         <div id="left-footer">
             <h3>Quick Links</h3>
             <p>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="/index.html">Home</a>
                     </li>
                     <li>
-                        <a href="gallerymain.html">Artists</a>
+                        <a href="/gallerymain.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/creative.html">Writing </a>
                     </li>
 
                     <li>
-                        <a href="about.html">Contact</a>
+                        <a href="/about.html">Contact</a>
                     </li>
                 </ul>
             </p>
@@ -82,13 +376,12 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <i class="fa fa-facebook" style="@media screen and (max-width: 700px;) {color: black;}"></i>
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
                         </a>
                     </li>
-
                     <li>
-                        <a href="https://www.instagram.com/arjoo0/">
-                            <i class="fa fa-instagram"></i>
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
@@ -100,11 +393,15 @@
             </div>
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
-
     </footer>
+    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="main.js"></script>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 </html>
