@@ -29,6 +29,19 @@
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .btns {
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btns:hover {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+        }
+    </style>
 </head>
 
 <body>
@@ -74,7 +87,7 @@
                     </div>
 
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit" onclick="alert('Your feedback is being recorded, kindly wait while we process your answer.Thank you !');">Submit
+                        <button class="btns btn--pill btn--blue" type="submit" onclick="alert('Your feedback is being recorded, kindly wait while we process your answer.Thank you !');">Submit
                         </button>
                         <div style="display:none" class="thankyou_message">
                             <!-- You can customize the thankyou message by editing the code below -->
@@ -89,7 +102,11 @@
     </div>
     <!-- </div> -->
     <!-- go back -->
-    <a href="index.html" style="text-decoration: none; font-family: serif;"><button class="btn btn-lg " style="border-radius: 10px; background-color: black; color: white; "> Go back to Home page</button></a>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <a href="index.html" style="text-decoration: none; font-family: serif;"><button class="btns_arr  " style="border-radius: 10px; background-color: black; color: white; "> Go back to Home page</button></a>
+    </div>
     <br>
     <br>
     <footer>

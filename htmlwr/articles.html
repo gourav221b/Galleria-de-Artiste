@@ -120,6 +120,11 @@
     }
     /* Footer */
     
+    .hr {
+        width: inherit;
+        margin: 0 auto;
+    }
+    
     .footer {
         padding: 20px;
         text-align: center;
@@ -144,6 +149,31 @@
     
     .card span {
         font-size: 1.4em;
+    }
+    
+    .share_side img:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+    
+    .btns {
+        margin: 0 auto;
+        width: 120%;
+        border: 3px solid;
+        text-align: center;
+        height: 130%;
+        padding: 0.55em;
+        border-radius: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .btns:hover {
+        background-color: turquoise;
+        color: white;
+        border: 3px solid black;
+        transition: 0.25s ease-in-out;
+        padding-left: 0.85em;
+        background: linear-gradient(to right, #7b4397, #dc2430);
     }
     /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
     
@@ -172,6 +202,23 @@
             border-radius: 0px;
             transform: scale(2);
             position: absolute;
+        }
+        .btns {
+            width: 120px;
+            height: auto;
+            padding: 0.5em;
+            margin-left: 5px;
+            margin-right: 10px;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            border: 1px solid black;
+            color: white;
+        }
+        .btns:hover {
+            color: white;
+            border: 2px solid black;
+            transition: 0.25s ease-in-out;
+            padding-left: 0.85em;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
         }
     }
     
@@ -213,7 +260,7 @@
     </section>
 
     <!-- Header -->
-    <div class="header"><br>
+    <div class="header" id="top"> <br>
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
@@ -221,10 +268,11 @@
 
         <div class="card">
             <h3>Popular Authors</h3>
-            <div class="fakeimg">Gourav </div>
+            <div class="fakeimg">Gourav
+                <a href="#Gourav"><img src="../img/ghosal.jpg" alt="Gourav" style="width: 100%; height: auto;"></a>
+            </div>
             <br>
-            <div class="fakeimg">Author2</div><br>
-            <div class="fakeimg">Author3</div>
+
         </div>
         <div class="card">
             <h3> Other Works</h3>
@@ -251,8 +299,8 @@
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <h1>Schizophrenia</h1>
-                <span> <img src="../images/gourab.png" class="avatar" style=" ">
+                <h1 id="gourav">Schizophrenia</h1>
+                <span> <img src="../images/gourab - Copy.png" class="avatar" style=" ">
                Gourav Ghosal&emsp;May 7, 2020</span>
                 <div class="fakeimg" style="height:auto;">
                     <img src="../images/schizophrenia.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
@@ -288,10 +336,11 @@
             <div class="card">
 
                 <h3>Popular Authors</h3>
-                <div class="fakeimg">Gourav </div>
+                <div class="fakeimg">Gourav
+                    <img src="../img/ghosal.jpg" alt="horizontal line">
+                </div>
                 <br>
-                <div class="fakeimg">Author2</div><br>
-                <div class="fakeimg">Author3</div>
+
             </div>
             <div class="card">
                 <h3> Our Other Works</h3>
@@ -310,56 +359,19 @@
                 <div class="fakeimg">
                     <a href="quotes.html"><img src="../images/desk.jpg" alt="abstract" style="width: inherit; height: auto;"></a>
                 </div><br>
-                <div class="share_side">
 
-                    <h1 style="font-family: 'Tulpen One', cursive;"><b> Share Our website And Help Us Grow </b></h1>
-
-                    <div id="share-buttons">
-                        <a href="mailto:?Subject=Galleria De Artiste Buttons&amp;Body=I%20saw%20this%20and%20thought%20you%20would%20love%20it!%20 https://galleria-de-artiste.netlify.app/" title="Mail">
-                            <img src="https://img.icons8.com/plasticine/100/000000/gmail.png" alt="Mail" />
-                        </a>
-
-                        <!-- Facebook -->
-                        <a href="http://www.facebook.com/sharer.php?u=https://galleria-de-artiste.netlify.app/" target="_blank" title="Facebook">
-                            <img src="https://img.icons8.com/bubbles/200/000000/facebook-new.png" alt="Facebook" />
-                        </a>
-
-                        <!-- LinkedIn -->
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://galleria-de-artiste.netlify.app/" target="_blank" title="LinkedIn">
-                            <img src="https://img.icons8.com/plasticine/100/000000/linkedin.png" alt="LinkedIn" />
-                        </a>
-                        <a href="http://www.stumbleupon.com/submit?url=https://galleria-de-artiste.netlify.app/&amp;title=Galleria-De-Artiste" target="_blank" title="StumbleUpon">
-                            <img src="https://img.icons8.com/plasticine/100/000000/stumbleupon.png" alt="StumbleUpon" />
-                        </a>
-
-                        <!-- Tumblr-->
-                        <a href="http://www.tumblr.com/share/link?url=https://galleria-de-artiste.netlify.app/&amp;title=Simple Share Buttons" target="_blank" title="Tumblr">
-                            <img src="https://img.icons8.com/plasticine/100/000000/tumblr.png" alt="Tumblr" />
-                        </a>
-
-                        <!-- Twitter -->
-                        <a href="https://twitter.com/share?url=https://galleria-de-artiste.netlify.app/&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" title="Twitter">
-                            <img src="https://img.icons8.com/plasticine/200/000000/twitter.png" alt="Twitter" />
-                        </a>
-
-                        <!-- Whatsapp -->
-                        <a href="whatsapp://send?text=A place where Artists of every stage, format are welcome. Find differernt sketches, digital arts, and don't forget to browse through the writing section" data-action="share/whatsapp/share" title="Twitter">
-                            <img src="https://img.icons8.com/plasticine/100/000000/whatsapp.png" alt="whatsapp" /></a>
-                        <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" title="Whatsapp">
-                            <img src="https://img.icons8.com/bubbles/200/000000/reddit.png" alt="Reddit" />
-                        </a>
-                    </div>
-                </div>
 
 
             </div>
         </div>
-
+        <div class="hr">
+            <img src="../images/hr-removebg-preview.png" alt="horizontal line">
+        </div>
 
         <div class="leftcolumn" id="str2">
             <div class="card">
                 <h1>Depression!</h1>
-                <span> <img src="../images/gourab.png" class="avatar" alt=" header">
+                <span> <img src="../images/gourab - Copy.png" class="avatar" alt=" header">
                     Gourav Ghosal&emsp;May 7, 2020</span>
                 <div class="fakeimg" style="height:auto;">
                     <img src="../images/depression.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
@@ -403,12 +415,14 @@
             </div>
 
         </div>
-
+        <div class="hr">
+            <img src="../images/hr-removebg-preview.png" alt="horizontal line">
+        </div>
 
         <div class="leftcolumn">
             <div class="card">
                 <h1>Teenage Depression</h1>
-                <span> <img src="../images/gourab.png" class="avatar" alt=" header">
+                <span> <img src="../images/gourab - Copy.png" class="avatar" alt=" header">
                     Gourav Ghosal&emsp;May 7, 2020</span>
                 <div class="fakeimg" style="height:auto;">
                     <img src="../images/teenagedepression.jpg" alt="schizophrenia" style="width: 100%; height: auto;">
@@ -466,9 +480,50 @@
 
         </div>
     </div>
+    <div class="share_side">
 
-    <a href="../creative.html"><button class="btn btn-primary btn-lg"> Back one page </button></a>
-    <a href="entry.html"><button class="btn btn-primary btn-lg"> Send Your Work Here </button></a>
+        <h1 style="font-family: 'Tulpen One', cursive;"><b> Share Our website And Help Us Grow </b></h1>
+
+        <div id="share-buttons">
+            <a href="mailto:?Subject=Galleria De Artiste Buttons&amp;Body=I%20saw%20this%20and%20thought%20you%20would%20love%20it!%20 https://galleria-de-artiste.netlify.app/" title="Mail">
+                <img src="https://img.icons8.com/plasticine/100/000000/gmail.png" alt="Mail" />
+            </a>
+
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=https://galleria-de-artiste.netlify.app/" target="_blank" title="Facebook">
+                <img src="https://img.icons8.com/bubbles/200/000000/facebook-new.png" alt="Facebook" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://galleria-de-artiste.netlify.app/" target="_blank" title="LinkedIn">
+                <img src="https://img.icons8.com/plasticine/100/000000/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="http://www.stumbleupon.com/submit?url=https://galleria-de-artiste.netlify.app/&amp;title=Galleria-De-Artiste" target="_blank" title="StumbleUpon">
+                <img src="https://img.icons8.com/plasticine/100/000000/stumbleupon.png" alt="StumbleUpon" />
+            </a>
+
+            <!-- Tumblr-->
+            <a href="http://www.tumblr.com/share/link?url=https://galleria-de-artiste.netlify.app/&amp;title=Simple Share Buttons" target="_blank" title="Tumblr">
+                <img src="https://img.icons8.com/plasticine/100/000000/tumblr.png" alt="Tumblr" />
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url=https://galleria-de-artiste.netlify.app/&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" title="Twitter">
+                <img src="https://img.icons8.com/plasticine/200/000000/twitter.png" alt="Twitter" />
+            </a>
+
+            <!-- Whatsapp -->
+            <a href="whatsapp://send?text=A place where Artists of every stage, format are welcome. Find differernt sketches, digital arts, and don't forget to browse through the writing section" data-action="share/whatsapp/share" title="Whatsapp">
+                <img src="https://img.icons8.com/plasticine/100/000000/whatsapp.png" alt="whatsapp" /></a>
+            <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" title="Reddit">
+                <img src="https://img.icons8.com/bubbles/200/000000/reddit.png" alt="Reddit" />
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <a href="#top"><button class="btns "><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="/creative.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+    </div>
     <br>
     <br>
 

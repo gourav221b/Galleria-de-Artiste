@@ -13,6 +13,9 @@ body {
     font-family: 'Baloo Tamma 2', cursive;
     background-image: url(./img/back.jpg);
     background-size: 100%;
+    -webkit-box-shadow: inset 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
 }
 
 .header {
@@ -20,20 +23,23 @@ body {
     text-align: center;
     background: url(./img/banner.jpg);
     color: white;
-    opacity: 3;
+    opacity: 1;
+    -webkit-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
     height: 50%;
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .header h1 {
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(199, 195, 196), 0 0 5px rgb(37, 3, 22);
     font-family: 'Megrim', cursive;
     font-size: 550%;
 }
 
 .header h1:hover {
-    text-shadow: 2px 2px 3px black, 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(2, 2, 39);
+    text-shadow: 2px 2px 3px black, 0 0 25px rgb(250, 250, 255), 0 0 10px rgb(2, 2, 39);
     font-size: 600%;
     font-family: 'Megrim', cursive;
     transition: 0.9s ease-in-out;
@@ -132,6 +138,13 @@ figure figcaption {
     /* IE 10 */
     flex-wrap: wrap;
     padding: 0 4px;
+}
+
+.name_header a {
+    text-decoration: none;
+    font-family: cursive;
+    color: whitesmoke;
+    padding: 0.5em;
 }
 
 
@@ -351,6 +364,51 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
     display: inline;
 }
 
+#share-buttons img:hover {
+    transform: scale(1.08);
+    transition: 0.3s linear;
+}
+
+.btns {
+    margin: 0 auto;
+    width: 120%;
+    border: 3px solid;
+    text-align: center;
+    height: 130%;
+    padding: 0.55em;
+    background-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btns:hover {
+    background-color: turquoise;
+    color: white;
+    border: 3px solid black;
+    transition: 0.35s ease-in-out;
+    padding-left: 0.85em;
+}
+
+.btns_arr {
+    margin: 0 auto;
+    width: 120%;
+    border: 3px solid white;
+    text-align: center;
+    height: 130%;
+    padding: 0.55em;
+    background-color: transparent;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btns_arr:hover {
+    background-color: turquoise;
+    color: black;
+    border: 3px solid black;
+    background-color: white;
+    transition: 0.35s ease-in-out;
+    padding-left: 0.85em;
+}
+
 @media screen and (max-width: 480px) {
     /* start of phone styles */
     .navbar {
@@ -425,5 +483,43 @@ footer #social-media-footer ul li:hover a .fa-reddit-alien {
     .share_side img {
         width: 25%;
         height: auto;
+    }
+    .btns {
+        width: 120px;
+        height: auto;
+        padding: 0.5em;
+        margin-left: 5px;
+        margin-right: 10px;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+        border: 1px solid black;
+        border-radius: 20px;
+        color: white;
+    }
+    .btns:hover {
+        color: white;
+        border: 2px solid black;
+        transition: 0.25s ease-in-out;
+        padding-left: 0.85em;
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+    }
+    .btns_arr {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        border: 3px solid white;
+        text-align: center;
+        height: 130%;
+        padding: 0.55em;
+        background-color: transparent;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .btns_arr:hover {
+        background-color: turquoise;
+        color: black;
+        border: 3px solid black;
+        background-color: white;
+        transition: 0.35s ease-in-out;
+        padding-left: 0.85em;
     }
 }
