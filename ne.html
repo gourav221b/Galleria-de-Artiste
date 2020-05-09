@@ -19,11 +19,10 @@
         
         body {
             font-family: Arial;
-            background: #f1f1f1;
+            /* background: #f1f1f1; */
             margin: 1%;
             padding: 1%;
         }
-        /* Header/Blog Title */
         /* Create two unequal columns that floats next to each other */
         /* Left column */
         
@@ -41,16 +40,17 @@
         /* Fake image */
         
         .fakeimg {
-            background-color: rgb(75, 70, 70);
+            border: 2px solid black;
             width: 100%;
-            padding: 20px;
+            margin: 1rem auto;
         }
         /* Add a card effect for articles */
         
         .card {
-            background-color: white transparent;
-            padding: 20px;
-            margin-top: 20px;
+            background: rgba(218, 214, 214, 0.123);
+            margin: 4%;
+            padding: 1rem;
+            border-radius: 20px;
         }
         /* Clear floats after the columns */
         
@@ -98,6 +98,13 @@
             .columns {
                 display: inline;
             }
+            .avatar {
+                width: 20%;
+                height: auto;
+                display: inline;
+                vertical-align: middle;
+                border-radius: 50%;
+            }
         }
         
         .columns {
@@ -119,9 +126,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin: 0,1%; ">
+<body style="margin: 0,1%; background: #ffffff;">
 
-    <section class="navbar">
+    <section class="navbar" style="margin-top: 2%;">
         <a href="about.html">About</a>
         <a href="gallerymain.html">Gallery</a>
         <a href="work.html">Our Work</a>
@@ -143,8 +150,8 @@
                     <img src="./images/wireframe1.png" alt="schizophrenia" style="width: 100%; height: 40%;">
                 </div>
                 <div class="columns">
-                    <p>Schizophrenia is a chronic and severe mental disorder that affects how a person thinks, feels, and behaves. People with schizophrenia may seem like they have lost touch with reality. How many of us are aware of what really goes on
-                        inside our brain? Very few people, I guess. </p>
+                    <p><b><em>Schizophrenia</em></b> is a <em>chronic and severe</em> mental disorder that affects how a person thinks, feels, and behaves. People with schizophrenia may seem like they have lost touch with reality. How many of us are aware
+                        of what really goes on inside our brain? Very few people, I guess. </p>
                     <p> For us, mental health is something that we “should not talk about”. Taboo. Just because something is not visible to the eye, does not mean that it is a myth. Our physical health is important. And so is our Mental Health. But why don’t
                         we talk about it? Simple- “Society”. Our parents were the last generation who were unaware and ignorant of various things and hence, for them, various stuffs are unorthodox or unnatural. But what about us? Do we not know about
                         things? Are we really that stupid? Joaquin Phoenix’s Joker movie has created a recent outburst of awareness of mental health issues. Heart warming isn’t it? The harsh truth of life reflected through one of the greatest characters
@@ -153,10 +160,11 @@
 
                     <p><br> Doctors often describe schizophrenia as a type of psychosis. This means the person may not always be able to distinguish their own thoughts and ideas from reality. This was not meant to be another normal trivia page, but surely
                         here are some symptoms of it, that you can always look for : hallucinations – hearing or seeing things that do not exist muddled thoughts based on hallucinations or delusions losing interest in everyday activities not caring about
-                        your personal hygiene wanting to avoid people, including friends But here is some myth vs reality stuff.. A person suffering from Schizophrenia doesnot become violent. And moreover they donot possess split personality disorder.
-                        So, no matter what any visual content show you, remember there exists another thing called ” creative liberty” All we ask for is giving the needy person a hand of help and not just another “Get a life bro!”. We never know who we
-                        push towards insanity, towards destruction. For all we know, we can create a demon that will destroy us only. SO STAY AWARE, STAY HUMBLE. We donot want to live in such a society where mentally ill people are ignored and left for
-                        themselves. A mother cannot stand to see her child die. A father would loose his soul , A brother may never be the same ever again. SO before doing anything, Think, Then Act. That is the whole point of it.</p>
+                        your personal hygiene wanting to avoid people, including friends But here is some myth vs reality stuff.. A person suffering from Schizophrenia doesnot become violent. And moreover they donot possess split personality disorder.</p>
+                    <p>So, no matter what any visual content show you, remember there exists another thing called "creative liberty" All we ask for is giving the needy person a hand of help and not just another “Get a life bro!”. We never know who we push
+                        towards insanity, towards destruction. For all we know, we can create a demon that will destroy us only.</p>
+                    <p> <em>SO STAY AWARE, STAY HUMBLE.</em> We donot want to live in such a society where mentally ill people are ignored and left for themselves. A mother cannot stand to see her child die. A father would loose his soul , A brother may never
+                        be the same ever again. SO before doing anything, Think, Then Act. That is the whole point of it.</p>
                 </div>
             </div>
 
@@ -244,14 +252,15 @@
                     <p>The thing, is very real. Maybe, just because you aren’t a victim, doesn’t really mean that it is non-existent. All those parents out there, and all those “lovely relatives” who say ‘ Depression in kids doesn’t exist, what can a kid
                         be depressed about!’. You really want to know what one has to be sad about? </p>
                     <ol>
-                        <li><b>Your constant criticisms:</b> If you donot have faith in us, stop giving us freedom. But NOO! You people will give us the key to the lock, and expect us to return it to you! -_-.</li>
+                        <li><b>Your constant criticisms:</b> If you donot have faith in us, stop giving us freedom. But NOO! You people will give us the key to the lock, and expect us to return it to you! -_-.</li><br>
 
-                        <li><br><b>Hitting us , when we are low:</b>
+                        <li><b>Hitting us , when we are low:</b>
                             <p>When nothing goes right, when nothing seems valid, all we expect are some soft talks, some good advices, and someone who listens to us. I won’t say we don’t get them, few of us do, but most of us? “ You’re good for nothing”
                                 or “ Only it’s you who fall down like this, look at others, they don’t over-react like you” , and you expect us to be ‘encouraged’ by these words.</p>
                         </li>
 
-                        <li><br><b>“Friends”:</b>
+                        <br>
+                        <li><b>“Friends”:</b>
                             <p>Ah, the good old folks who know your secrets, life, weaknesses more than parents. Lets take an example. There are two people in your circle, who you spend most time with, who you trust the most. You are way too closer with
                                 person A , than with person B. Person A is a toxic guy, and you are somewhat ignorant of it, while person B is someone who is really a nice guy. You tend to like person A more because he/she’s fancier, extrovert sort of
                                 person and person B is more of a non-socializing guy. Sounds familiar? You know the rest.</p>
@@ -332,3 +341,126 @@
 </body>
 
 </html>
+
+
+<div class="wrapper">
+    <div class="column1">
+        <div class="card">
+            <div class="heading">
+                <h1>A note for you</h1>
+            </div>
+            <div class="content-col">
+                <div class="id">
+                    <span> <img src="../images/avatar2.png" class="avatar" style=" ">
+                        <p>Gourav Ghosal,<br>May 7, 2020</p></span>
+                </div>
+                <div class="content">
+                    <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
+
+                    <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
+
+                    <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
+
+                    <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
+
+                    <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
+
+                    <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="column1">
+                <div class="heading">
+                    <h1>A note for you</h1>
+                </div>
+
+                <div class="content-col">
+                    <div class="id">
+                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
+                            Gourav Ghosal,<br>May 7, 2020</span>
+                    </div>
+                    <div class="content">
+                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
+
+                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
+
+                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
+
+                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
+
+                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
+
+                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="column1">
+                <div class="heading">
+                    <h1>A note for you</h1>
+                </div>
+
+                <div class="content-col">
+                    <div class="id">
+                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
+                            Gourav Ghosal,<br>May 7, 2020</span>
+                    </div>
+                    <div class="content">
+                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
+
+                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
+
+                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
+
+                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
+
+                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
+
+                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="column1">
+                <div class="heading">
+                    <h1>A note for you</h1>
+                </div>
+
+                <div class="content-col">
+                    <div class="id">
+                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
+                            Gourav Ghosal,<br>May 7, 2020</span>
+                    </div>
+                    <div class="content">
+                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
+
+                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
+
+                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
+
+                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
+
+                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
+
+                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="column2">
+
+
+    </div>
+</div>
