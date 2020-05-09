@@ -52,14 +52,22 @@
     
     .ulwrap a {
         text-decoration: none;
-        font-family: cursive;
-        color: whitesmoke;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
         padding: 0.5em;
+    }
+    
+    .ulwrap li {
+        float: left;
+        text-align: left;
+        margin: 0.6% 2.5%;
+        font-size: 1.3em;
     }
     
     .ulwrap a:hover {
         text-decoration: underline;
-        color: white;
+        color: rgb(17, 17, 17);
+        transition: ease-in-out;
     }
     
     .row_name ul a {
@@ -131,19 +139,16 @@
     <!-- Photo Grid -->
     <div class="container_main" style="margin: 1%;">
         <div class="row">
-            <div class="name_header" style="width: 100%; background-color: black; height:auto; color: white; font-family: 'Times New Roman', cursive;  ">
+            <div class="name_header" style="width: 100%; height:auto; color: rgb(0, 0, 0); font-family: 'Times New Roman', cursive;  ">
                 <h3>&emsp;Go-To-Artist:</h3> <br>
-                <div class="ulwrap" style="display:flex; flex-direction: row;">
+                <div class="ulwrap" style="display:inline;">
                     <ul style="list-style:square">
                         <li><a href="#gourav">Gourav Ghosal</a></li>
                         <li><a href="#hridya">Hridya Varier</a></li>
                         <li><a href="#kumar">Aayush Kumar</a></li>
-                    </ul>
-                    <ul start="IV" style="list-style:square">
                         <li><a href="#sandi">Sayandip Saha</a></li>
                         <li><a href="#riyanka">Riyanka Kundu</a></li>
                         <li><a href="#ssd">Swastik Swarup Das</a></li>
-
                     </ul>
                 </div>
             </div>
