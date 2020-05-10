@@ -1,466 +1,68 @@
 <!DOCTYPE html>
 <html>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    form {
+        border: 3px solid #f1f1f1;
+        font-family: Arial;
+    }
+    
+    .container {
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
+    
+    input[type=text],
+    input[type=submit] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    input[type=checkbox] {
+        margin-top: 16px;
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+    }
+    
+    input[type=submit]:hover {
+        opacity: 0.8;
+    }
+</style>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+<body>
 
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        /* Add a gray background color with some padding */
-        
-        body {
-            font-family: Arial;
-            /* background: #f1f1f1; */
-            margin: 1%;
-            padding: 1%;
-        }
-        /* Create two unequal columns that floats next to each other */
-        /* Left column */
-        
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
-        /* Right column */
-        
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
-        }
-        /* Fake image */
-        
-        .fakeimg {
-            border: 2px solid black;
-            width: 100%;
-            margin: 1rem auto;
-        }
-        /* Add a card effect for articles */
-        
-        .card {
-            background: rgba(218, 214, 214, 0.123);
-            margin: 4%;
-            padding: 1rem;
-            border-radius: 20px;
-        }
-        /* Clear floats after the columns */
-        
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        /* Footer */
-        
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background: #ddd;
-            margin-top: 20px;
-        }
-        
-        .avatar {
-            width: 10%;
-            height: auto;
-            display: inline;
-            vertical-align: middle;
-            border-radius: 50%;
-        }
-        
-        .card h1 {
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 3rem;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        
-        @media screen and (max-width: 800px) {
-            .leftcolumn {
-                width: 100%;
-                padding: 0;
-            }
-            .columns {
-                column-count: 0;
-            }
-            .rightcolumn {
-                display: none;
-            }
-            .columns {
-                display: inline;
-            }
-            .avatar {
-                width: 20%;
-                height: auto;
-                display: inline;
-                vertical-align: middle;
-                border-radius: 50%;
-            }
-        }
-        
-        .columns {
-            padding: 10px;
-            -webkit-column-count: 2;
-            /* Chrome, Safari, Opera */
-            -moz-column-count: 2;
-            /* Firefox */
-            column-count: 2;
-            -webkit-column-gap: 40px;
-            /* Chrome, Safari, Opera */
-            -moz-column-gap: 40px;
-            /* Firefox */
-            column-gap: 40px;
-            text-align: justify;
-            font-family: sans-serif;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <h2>CSS Newsletter</h2>
 
-<body style="margin: 0,1%; background: #ffffff;">
-
-    <section class="navbar" style="margin-top: 2%;">
-        <a href="about.html">About</a>
-        <a href="gallerymain.html">Gallery</a>
-        <a href="work.html">Our Work</a>
-        <a href="index.html" class="active">Home</a>
-    </section>
-
-    <div class="header">
-        <br>
-        <h1><b>Galleria de Artiste</b></h1>
-    </div>
-
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h1>Story no.1</h1>
-                <span> <img src="./images/avatar2.png" class="avatar" style=" ">
-                Author101( link to author's ), Dec 7, 2017</span>
-                <div class="fakeimg" style="height:auto;">
-                    <img src="./images/wireframe1.png" alt="schizophrenia" style="width: 100%; height: 40%;">
-                </div>
-                <div class="columns">
-                    <p><b><em>Schizophrenia</em></b> is a <em>chronic and severe</em> mental disorder that affects how a person thinks, feels, and behaves. People with schizophrenia may seem like they have lost touch with reality. How many of us are aware
-                        of what really goes on inside our brain? Very few people, I guess. </p>
-                    <p> For us, mental health is something that we “should not talk about”. Taboo. Just because something is not visible to the eye, does not mean that it is a myth. Our physical health is important. And so is our Mental Health. But why don’t
-                        we talk about it? Simple- “Society”. Our parents were the last generation who were unaware and ignorant of various things and hence, for them, various stuffs are unorthodox or unnatural. But what about us? Do we not know about
-                        things? Are we really that stupid? Joaquin Phoenix’s Joker movie has created a recent outburst of awareness of mental health issues. Heart warming isn’t it? The harsh truth of life reflected through one of the greatest characters
-                        of all times. But what we must take from this, is that, We should look out, look for signs , help those in need.</p>
-                    <p> Schizophrenia is technically like any other mental disorder, but this particular one has a far more impact than anything else. People start imagining things, maybe an entire different person totally.</p>
-
-                    <p><br> Doctors often describe schizophrenia as a type of psychosis. This means the person may not always be able to distinguish their own thoughts and ideas from reality. This was not meant to be another normal trivia page, but surely
-                        here are some symptoms of it, that you can always look for : hallucinations – hearing or seeing things that do not exist muddled thoughts based on hallucinations or delusions losing interest in everyday activities not caring about
-                        your personal hygiene wanting to avoid people, including friends But here is some myth vs reality stuff.. A person suffering from Schizophrenia doesnot become violent. And moreover they donot possess split personality disorder.</p>
-                    <p>So, no matter what any visual content show you, remember there exists another thing called "creative liberty" All we ask for is giving the needy person a hand of help and not just another “Get a life bro!”. We never know who we push
-                        towards insanity, towards destruction. For all we know, we can create a demon that will destroy us only.</p>
-                    <p> <em>SO STAY AWARE, STAY HUMBLE.</em> We donot want to live in such a society where mentally ill people are ignored and left for themselves. A mother cannot stand to see her child die. A father would loose his soul , A brother may never
-                        be the same ever again. SO before doing anything, Think, Then Act. That is the whole point of it.</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About Me</h2>
-                <div class="fakeimg" style="height:100px;">Image</div>
-                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            </div>
-            <div class="card">
-                <h3>Popular Authors</h3>
-                <div class="fakeimg">Author1</div><br>
-                <div class="fakeimg">Author2</div><br>
-                <div class="fakeimg">Author3</div>
-            </div>
-            <div class="card">
-                <h3>Follow More Sections</h3>
-                <div class="fakeimg">Poems</div><br>
-                <div class="fakeimg">Abstracts</div><br>
-                <div class="fakeimg">Quotes</div><br>
-                <div class="fakeimg">Article</div><br>
-
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h1>Story no.2</h1>
-                <span> <img src="./images/avatar.png" class="avatar" alt=" header">
-                Author101( link to author's ), Dec 7, 2017</span>
-                <div class="fakeimg" style="height:auto;">
-                    <img src="./images/wireframe1.png" alt="schizophrenia" style="width: 100%; height: 40%;">
-                </div>
-                <div class="columns">
-                    <p> “Hey, whats up?” a person 1 asks.</p>
-
-                    <p>“Nothing. Just feeling low for a few days”. Person 2 says</p>
-
-                    <p>“Oh comeon man. You need to get some action. You’ll be just fine” person 2 says.</p>
-
-                    <p>The film JOKER brought about a wave of reactions , posts, memes, all sort of stuffs. While there are people criticizing it, there are people, upholding it, romanticizing it. There are a few categories of memes or posts ,up on social
-                        media. </p>
-
-                    <ol>
-                        <li>Spreading awareness that The Joker is not something worth romanticizing because it is a demon and we don’t want that.</li>
-                        <li>People relating to Joaquin Phoenix’s Joker.</li>
-                    </ol>
-                    But what is actually the reality? We are not the Joker who brings chaos to the society. We are the society that creates the joker. Isn’t that right? We see people sad, depressed, what do we tell them? “Don’t be depressed”. Wow , like they haven’t thought
-                    of that! Depression is that stage in life that brings about a transformation in people. Some people become stronger than ever. Some get crippled under it. Depression is inevitable. People will always fall into it once in their life
-                    atleast.
-                    <p> <br>It doesnot make sense to say “you are just doing it for attention”. What does make sense is helping the one suffering from depression. There are always scenarios where we ourselves cannot help someone, <br><br>sbut what we can
-                        do, is get them to a psychologist , or at the very least, ensure we don’t hurt them more. Not everyone is strong. There are people for whom, society’s acceptance matters more than their own selves’. How can we know , if someone
-                        is strong?
-                    </p>
-                    We maybe the reason someone lives or dies. Because, when we think about it really, “We are all suicidal people, telling other suicidal people that suicide is not the answer”. Curing depression– this doesnot exist. There is no OFF button. People don’t
-                    choose to be depressed. So instead of harassing them more, ensure that they get the required help. And for people who are depressed, I know what you guys go through, and trust me you are strong. But you also have to be willing to help
-                    yourselves, because unless you are willing to accept help, nothing will be okay.
-                    <p>Talk to someone. That’s the very basic thing you can do. First talk to someone you trust. Then consult a psychologist. This is one of the very basic thing you can do. Depression is different for different people, so a particular way
-                        of treatment won’t work for many people.</p>
-                    <p> What you can do, is find what makes you happy, or atleast keeps you interested. The world is not a good place, but that doesnot mean we cannot try and be strong. Because, the weak donot choose how they die. So, people, no matter, what
-                        is happening around, you are strong. No matter who says what, you are doing great. Just look at yourself and get up, Workout. Physical exercise helps a lot. Hardcore Gym. That is something you can try. Take your time, but do see
-                        the beautiful side of yourself. You will love it.</p>
-
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h1>Story no.3</h1>
-                <span> <img src="./images/avatar3.jpg" class="avatar" alt=" header">
-                Author103( link to author's ), Dec 7, 2017</span>
-                <div class="fakeimg" style="height:auto;">
-                    <img src="./images/wireframe1.png" alt="schizophrenia" style="width: 100%; height: 40%;">
-                </div>
-                <div class="columns">
-                    <p>This is not another narrative, but rather, consider this as a non-verbal account of what teenage depression somewhat looks like.</p>
-
-                    <p>The thing, is very real. Maybe, just because you aren’t a victim, doesn’t really mean that it is non-existent. All those parents out there, and all those “lovely relatives” who say ‘ Depression in kids doesn’t exist, what can a kid
-                        be depressed about!’. You really want to know what one has to be sad about? </p>
-                    <ol>
-                        <li><b>Your constant criticisms:</b> If you donot have faith in us, stop giving us freedom. But NOO! You people will give us the key to the lock, and expect us to return it to you! -_-.</li><br>
-
-                        <li><b>Hitting us , when we are low:</b>
-                            <p>When nothing goes right, when nothing seems valid, all we expect are some soft talks, some good advices, and someone who listens to us. I won’t say we don’t get them, few of us do, but most of us? “ You’re good for nothing”
-                                or “ Only it’s you who fall down like this, look at others, they don’t over-react like you” , and you expect us to be ‘encouraged’ by these words.</p>
-                        </li>
-
-                        <br>
-                        <li><b>“Friends”:</b>
-                            <p>Ah, the good old folks who know your secrets, life, weaknesses more than parents. Lets take an example. There are two people in your circle, who you spend most time with, who you trust the most. You are way too closer with
-                                person A , than with person B. Person A is a toxic guy, and you are somewhat ignorant of it, while person B is someone who is really a nice guy. You tend to like person A more because he/she’s fancier, extrovert sort of
-                                person and person B is more of a non-socializing guy. Sounds familiar? You know the rest.</p>
-                            <p>Things happen, you are down, maybe even depressed, the first friend leaves your side, hurts you more and says ‘ maybe you are really such a wuss’. Person B just stands at a distance, and comes to comfort you, after the first
-                                guy, is gone for good. We donot deserve toxic friends in life, but what’s more important, is to find out who the toxic guy is, and get the hell out of there.</p>
-                        </li>
-
-                        <li><b>“Pyaar dewana hota hai, mastaana hota hai”:</b>
-                            <p> We all know what failing in love can do, and maybe this is for someday later. 🙂</p>
-                        </li>
-
-                        <li><b>“The follow-up effects”:</b>
-                            <p>So after a long day, the night sky is upon us. The pressure, workload of the day is still very much omnipresent. Serotonin starts kicking in, tears start rolling out, and boom, brain sets off to “ Its flashback time”. Constant
-                                exposure to the negative side of life, makes us feel worthless. “maybe what they say is right, maybe I am a loser”- is what we think. We think, combine, process and filter out all inside the damn skull.</p>
-                            <p>The end product contains 10% positivity and 90% negativity. We would be so happy if it stopped there. Like the villains in the hindi tv serials, our brain plays a small little game called “ haveee you started over thinking?”.</p>
-                            <p> Tears, silent screams, agony, pain, more tears, swollen eyes, silent mouth, all become common. Arises an omnipresent, yet un-acknowledged situation- DEPRESSION.</p>
-                            <p>Some parents are very good enough to help their children through this demonic phase, and others just “help” with one simple line: “ Tum abhi baccha hai, tumhare life mein itna dukh kaise hai? We provide you with everything.
-                                Hamare saath to aisa nahi hua kabhi, tum kaise in sab cheezo mein aa gaye”
-                            </p>
-                        </li>
-
-                        P.s : I wrote this one fine evening, when I was angry. There were certain occurrences and things turned out pretty bad. Anyhow, I fought alone. All alone. I found this piece of work in an old notebook, and it has been a year or so since the event, and
-                        when I look back, I just try to remember the good stuff only. 🙂 Stay happy, because not everyone wants you to be happy.
-
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
-            <p>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="gallerymain.html">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">Contact</a>
-                    </li>
-                </ul>
-            </p>
+    <form class="gform" action="https://script.google.com/macros/s/AKfycbwUf6Eo2qVGjji0BJjw6k2ZV-oHwgJfXf_H6oi9miGL9n5A9EY/exec">
+        <div class="container">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
         </div>
 
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <p>This website is developed by Gourav Ghosal.</p>
+        <div class="container" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
         </div>
-    </footer>
+
+        <div class="container">
+            <input type="submit" value="Subscribe">
+        </div>
+    </form>
+
 </body>
 
 </html>
-
-
-<div class="wrapper">
-    <div class="column1">
-        <div class="card">
-            <div class="heading">
-                <h1>A note for you</h1>
-            </div>
-            <div class="content-col">
-                <div class="id">
-                    <span> <img src="../images/avatar2.png" class="avatar" style=" ">
-                        <p>Gourav Ghosal,<br>May 7, 2020</p></span>
-                </div>
-                <div class="content">
-                    <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
-
-                    <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
-
-                    <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
-
-                    <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
-
-                    <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
-
-                    <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
-                        <br>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="card">
-            <div class="column1">
-                <div class="heading">
-                    <h1>A note for you</h1>
-                </div>
-
-                <div class="content-col">
-                    <div class="id">
-                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
-                            Gourav Ghosal,<br>May 7, 2020</span>
-                    </div>
-                    <div class="content">
-                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
-
-                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
-
-                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
-
-                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
-
-                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
-
-                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
-                            <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="column1">
-                <div class="heading">
-                    <h1>A note for you</h1>
-                </div>
-
-                <div class="content-col">
-                    <div class="id">
-                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
-                            Gourav Ghosal,<br>May 7, 2020</span>
-                    </div>
-                    <div class="content">
-                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
-
-                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
-
-                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
-
-                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
-
-                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
-
-                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
-                            <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="column1">
-                <div class="heading">
-                    <h1>A note for you</h1>
-                </div>
-
-                <div class="content-col">
-                    <div class="id">
-                        <span> <img src="../images/avatar2.png" class="avatar" style=" ">
-                            Gourav Ghosal,<br>May 7, 2020</span>
-                    </div>
-                    <div class="content">
-                        <p>As I sit here, thinking about you,<br> time flies by and asks me to stop.<br> My mind has a thought,<br> My heart- an emotion.<br> Caught up in this ,is me, over again.<br></p>
-
-                        <p> They say, you use me. I dont care,<br> Even if you do, I know why.<br> I dont blame you. Though you can.<br> Writing poems is not the way,<br> To tell you about that .<br></p>
-
-                        <p>My writings are my canvas,<br> My pen-my brush and the ink-<br> The blush of colours.<br></p>
-
-                        <p> You turn me down, always<br> And take me for granted.<br> Beware of the day, I start standing against.<br></p>
-
-                        <p>I dont blame you for what you did.<br> Maybe because I want to help you,<br> Or maybe because I still care for you.<br></p>
-
-                        <p>Beware of who you make your enemy,<br> For he maybe the one who can liberate you,<br> Truly!!
-                            <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-    <div class="column2">
-
-
-    </div>
-</div>
