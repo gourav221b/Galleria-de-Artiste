@@ -77,7 +77,7 @@
                 if (thankYouMessage) {
                     thankYouMessage.style.display = "block";
                     typeWriter();
-                    alert(" Thanks for contacting us! We will get back to you soon!");
+                    alert(" Thanks for contacting us! We will get back to you soon! :)");
                 }
             }
         };
