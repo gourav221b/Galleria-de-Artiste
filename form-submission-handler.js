@@ -76,10 +76,22 @@
                 var thankYouMessage = form.querySelector(".thankyou_message");
                 if (thankYouMessage) {
                     thankYouMessage.style.display = "block";
+                    typeWriter();
                     alert(" Thanks for contacting us! We will get back to you soon!");
                 }
             }
         };
+        var i = 0;
+        var txt = 'Thank You for contacting us! We will get back to you soon!';
+        var speed = 60;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
         // url encode form data for sending as post data
         var encoded = Object.keys(data).map(function(k) {
             return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
