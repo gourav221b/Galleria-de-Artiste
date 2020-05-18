@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <!-- For apple devices -->
     <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
@@ -32,6 +32,83 @@
             border-radius: 7px;
         }
     }
+    
+    footer {
+        background: black;
+        padding: 8px;
+        color: #eee;
+        display: flex;
+    }
+    
+    footer a {
+        color: white;
+    }
+    
+    footer #left-footer {
+        flex: 1;
+        border-right: 1px solid rgb(0, 243, 223);
+        padding-left: 32px;
+    }
+    
+    footer #left-footer ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.5;
+    }
+    
+    footer #right-footer {
+        flex: 2;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    footer #social-media-footer a .fa-facebook,
+    footer #social-media-footer a .fa-youtube,
+    footer #social-media-footer a .fa-twitter {
+        color: white;
+        transition: 0.4s;
+    }
+    
+    footer #social-media-footer ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    footer #social-media-footer ul li {
+        font-size: 48px;
+        padding: 16px;
+        transition: 0.5s;
+    }
+    
+    footer #social-media-footer ul li:hover a .fa-twitter {
+        color: rgb(4, 128, 243);
+    }
+    
+    footer #social-media-footer ul li:hover a .fa-facebook {
+        color: #3b5998;
+        transition: 0.7s;
+    }
+    
+    footer #social-media-footer ul li:hover a .fa-instagram {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s;
+    }
+    
+    footer #social-media-footer ul li:hover a .fa-facebook {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.7s;
+    }
+    
+    footer #social-media-footer ul li:hover a .fa-reddit-alien {
+        color: #FF5700;
+        transition: 0.5s;
+    }
 </style>
 
 
@@ -52,20 +129,20 @@
         <section>
             <div class="container-fluid">
                 <figure class="image">
-                    <a href="./img/godhuli1.jpeg" target="new"><img src="./img/godhuli1.jpeg" class="img-responsive img-thumbnail"></a>
+                    <a href="img/godhuli1.jpeg" target="new"><img src="./img/godhuli1.jpeg" class="img-responsive img-thumbnail"></a>
                     <!-- <figcaption class="content">
                         <p>Broken Soul</p> <br>
 
                     </figcaption> -->
                 </figure>
                 <figure class="image">
-                    <a href="./img/godhuli2.jpeg" target="new" "><img src="./img/godhuli2.jpeg " class="img-responsive img-thumbnail "></a>
+                    <a href="img/godhuli2.jpeg" target="new" "><img src="./img/godhuli2.jpeg " class="img-responsive img-thumbnail "></a>
                     <!-- <figcaption class="content ">
                         <p>Pink Flyod</p>
                     </figcaption> -->
                 </figure>
                 <figure class="image ">
-                    <a href="./img/godhuli3.jpeg " target="new "><img src="./img/godhuli3.jpeg " class="img-responsive img-thumbnail "></a>
+                    <a href="img/godhuli3.jpeg " target="new "><img src="./img/godhuli3.jpeg " class="img-responsive img-thumbnail "></a>
                     <!-- <figcaption class="content ">
                         <p>Lost in the stars</p>
                     </figcaption> -->
@@ -75,13 +152,13 @@
         <section>
             <div class="container-fluid ">
                 <figure class="image ">
-                    <a href="./img/godhuli4.jpeg " target="new "><img src="./img/godhuli4.jpeg " class="img-responsive img-thumbnail "></a>
+                    <a href="img/godhuli4.jpeg " target="new "><img src="./img/godhuli4.jpeg " class="img-responsive img-thumbnail "></a>
                     <!-- <figcaption class="content ">
                         <p>Doodles</p>
                     </figcaption> -->
                 </figure>
                 <figure class="image ">
-                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " class="img-responsive img-thumbnail "></a>
+                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " class="img-responsive img-thumbnail "></a>
                     <!-- <figcaption class="content ">
                         <p>Contrast</p>
                     </figcaption> -->
@@ -97,19 +174,22 @@
         <section>
             <div class="container-fluid ">
                 <figure class="image ">
-                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " class="img-responsive img-thumbnail "></a>
+                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " class="img-responsive img-thumbnail "></a>
                     <!-- <figcaption class="content ">
                         <p>Contemplation</p>
                     </figcaption> -->
                 </figure>
-                
+
+            </div>
+        </section>
+
     </section>
     <div class="container_sub " style="margin: 2%; left: 1%; ">
         <div class="row ">
             <div class="column ">
                 <figure class="image nohover ">
-                    <a href="img/godhuli1.jpeg " target="new "><img src="./img/godhuli1.jpeg " style="width:100% ">
-                      <!-- </a>  <figcaption>
+                    <a href="img/godhuli1.jpeg " target="new "><img src="./img/godhuli1.jpeg " style="width:100% "></a>
+                    <!-- <figcaption>
                     
                     <p style="font-size: 90%; ">Broken Glass </p>
                     </figcaption> -->
@@ -138,7 +218,7 @@
             </div>
             <div class="column ">
                 <figure class="image nohover ">
-                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " style="width:100% ">
+                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " style="width:100% ">
                     </a>
                     <!-- <figcaption>
                         <p style="font-size: 90%; ">Contrast </p>
@@ -152,13 +232,14 @@
                     </figcaption> -->
                 </figure>
                 <figure class="image nohover ">
-                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " style="width:100% ">
+                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " style="width:100% ">
                     </a>
                     <!-- <figcaption>
                         <p style="font-size: 90%; ">Contemplation </p>
                     </figcaption> -->
                 </figure>
-                
+
+
             </div>
 
         </div>
@@ -166,20 +247,20 @@
     <div class="row_name " style="width: 100%; ">
         <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Drawings: <br>&copy; Godhuli Mondal</h5>
         <br>
-        <ul>
-            
-            <li><a href="https://www.instagram.com/godhulove25/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @godhulove25</a></li>           
-            
+        <ul style="list-style: none; ">
+
+            <li><a href="https://www.instagram.com/godhulove25/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @godhulove25</a></li>
+
         </ul>
     </div>
     <div class="container-fluid ">
         <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
         <a href="artist.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
     </div>
-    </section>
+
     <br>
     <br>
-    <footer>
+    <footer >
         <div id="left-footer ">
             <h3>Quick Links</h3>
             <p>
@@ -197,34 +278,14 @@
                         <a href="about.html ">Contact</a>
                     </li>
                 </ul>
-            </p>
-        </div>
-
-        <div id="right-footer ">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer ">
-                <ul>
-                    <li>
-                        <a href="# ">
-                            <i class="fa fa-facebook "></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="# ">
-                            <i class="fa fa-instagram "></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="# ">
-                            <i class="fa fa-reddit-alien " aria-hidden="true "></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            </p> 
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
-    </footer>
+
+        
+           
+        
+            </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
