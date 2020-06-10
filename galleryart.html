@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="icon" type="image/png" href=" ./img/favicon.png">
     <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href=" ./img/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
@@ -33,6 +33,23 @@
     .header {
         text-align: center;
         padding: 32px;
+    }
+    
+    .columnwrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 90%;
+    }
+    
+    .column>img {
+        width: 50%;
+        height: auto;
     }
     
     .column {
@@ -121,11 +138,11 @@
     
     @media screen and (max-width: 800px) {
         .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .noscale {
+        .column>img {
             width: 100%;
             height: auto;
         }
@@ -187,200 +204,225 @@
             </div>
         </div>
         <br><br>
+        <!-- Gourav -->
         <div class="row ">
             <div class="name_header " id="gourav" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
                 'Shadows Into Light',cursive; "> Gourav Ghosal 
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img src="./img/1.png " style="width:100% ">
-                <img src="./img/2.png " style="width:100% ">
-                <img src="./img/3.png " style="width:100% ">
-                <img src="./img/4.png " style="width:100% ">
-                <img src="./img/5.png " style="width:100% ">
-                <img src="./img/6.png " style="width:100%;transform: scale(0.8); ">
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/1.png" alt="">
+                    <img src="./img/2.png " alt="">
+                    <img src="./img/3.png " alt="">
+                    <img src="./img/4.png " alt="">
+                    <img src="./img/5.png " alt="">
+                    <img src="./img/6.png " alt="">
 
-            </div>
-            <div class="column ">
-                <img src="./img/8.png " style="width:100% ">
-                <img src="./img/9.png " style="width:100% ">
-                <img src="./img/10.png " style="width:100% ">
-                <img src="./img/7.png " style="width:100% ; transform: scale(0.8); ">
-                <img src="./img/11.png " style="width:100% ">
-                <img src="./img/12.png " style="width:100% ">
 
+                    <img src="./img/8.png " alt="">
+                    <img src="./img/9.png " alt="">
+                    <img src="./img/10.png " alt="">
+                    <img src="./img/7.png " alt="">
+                    <img src="./img/11.png " alt="">
+                    <img src="./img/12.png " alt="">
+
+                </div>
             </div>
+        </div>
+        <!-- hridya -->
+        <div class="row ">
             <div class="name_header " id="hridya" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
-                'Shadows Into Light',cursive; "> Hridya Varier 
+                'Shadows Into Light',cursive; "> Hridya Varier
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img src="./img/hridya1.png " style="width:100%">
-                <img src="./img/hridya2.png " style="width:100% "></div>
-            <div class="column ">
-                <img src="./img/hridya3.png " style="width:100% ">
-                <img src="./img/hridya4.png " style="width:100% ">
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/hridya1.png" alt="">
+                    <img src="./img/hridya2.png " alt="">
+                    <img src="./img/hridya3.png " alt="">
+                    <img src="./img/hridya4.png" alt="">
 
+
+                </div>
             </div>
+        </div>
+        <!-- Kumar -->
+        <div class="row ">
             <div class="name_header " id="kumar" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
                 'Shadows Into Light',cursive; "> Aayush Kumar
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img src="./img/kumar1.jpg " style="width:100% ">
-                <img src="./img/kumar2.jpg " style="width:100% ">
-            </div>
-            <div class="column ">
-                <img src="./img/kumar 3.jpg " style="width:100% ">
-                <img src="./img/kumar 4.jpg " style="width:100% "></div>
-            <div class="column ">
-                <img class="noscale " src="./img/kumar 5.jpg ">
-                <img class="noscale " src="./img/kumar6.png ">
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/kumar1.jpg " alt="">
+                    <img src=" ./img/kumar2.jpg " alt="">
+                    <img src=" ./img/kumar 3.jpg " alt="">
+                    <img src=" ./img/kumar 4.jpg " alt="">
+                    <img src=" ./img/kumar 5.jpg " alt="">
+                    <img src=" ./img/kumar6.png " alt="">
 
-
+                </div>
             </div>
+        </div>
+        <!-- sandy -->
+        <div class="row ">
             <div class="name_header " id="sandi" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
                 'Shadows Into Light',cursive; "> Sayandip Saha
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img class="noscale " src="./img/sandi1.jpeg ">
-                <img class="noscale " src="./img/sandi2.jpeg ">
-                <!-- <img src="./img/kumar 4.jpg " style="width:100% ">
-                <img src="./img/kumar 5.jpg " style="width:100% ">
-                <img src="./img/kumar6.png " style="width:100% ">  -->
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/sandi1.jpeg" alt="">
+                    <img src=" ./img/sandi2.jpeg " alt="">
 
-
+                </div>
             </div>
-            <div class="name_header " id="riyanka" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white;
-                font-family: 'Shadows Into Light',cursive; "> Riyanka Kundu 
+        </div>
+        <!-- Riyanka -->
+        <div class="row ">
+            <div class="name_header " id="riyanka" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Riyanka Kundu
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img class="noscale " src="./img/riyanka1.jpeg ">
-                <!-- <img src="./img/kumar2.jpg " style="width:100% ">
-                <img src="./img/kumar 3.jpg " style="width:100% ">
-                <img src="./img/kumar 4.jpg " style="width:100% ">
-                <img src="./img/kumar 5.jpg " style="width:100% ">
-                <img src="./img/kumar6.png " style="width:100% "> -->
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/riyanka1.jpeg">
 
-
+                </div>
             </div>
+        </div>
+        <!-- Swastik -->
+        <div class="row ">
             <div class="name_header " id="ssd" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
                 'Shadows Into Light',cursive; "> Swastik Swarup Das
                 &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <div class="column ">
-                <img src="./img/CyberElon.jpg " style="width:100% ">
-                <img src="./img/BlackAdam1.jpg " style="width:100% "></div>
-            <div class="column ">
-                <img src="./img/Symbiote_vs_Virus.png " style="width:100% ">
-                <img src="./img/FalconAndWinter.jpg " style="width:100% ">
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/CyberElon.jpg " alt="">
+                    <img src=" ./img/Symbiote_vs_Virus.png" alt="">
+                    <img src=" ./img/FalconAndWinter.jpg " alt="">
+                    <img src=" ./img/BlackAdam1.jpg " alt="">
+
+
+                </div>
             </div>
         </div>
-        <div class="name_header " id="arya" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white;
-            font-family: 'Shadows Into Light',cursive; "> Arya Nag
-            &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
-        </div>
-        <div class="column ">
-            <img class="noscale " src="./img/arjo1.jpeg ">
-            <!-- <img src="./img/kumar2.jpg " style="width:100% ">
-            <img src="./img/kumar 3.jpg " style="width:100% ">
-            <img src="./img/kumar 4.jpg " style="width:100% ">
-            <img src="./img/kumar 5.jpg " style="width:100% ">
-            <img src="./img/kumar6.png " style="width:100% "> -->
-
-
-        </div>
-
-        <div class="name_header " id="anupama" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
-            'Shadows Into Light',cursive; "> Anupama Dey
-            &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
-        </div>
-        <div class="column ">
-            <img src="./img/anu1.jpeg " style="width:45% ">
-            <img src="./img/anu2.jpeg " style="width:45% "></div>
-        <div class="column ">
-            <img src="./img/anu3.jpeg " style="width:45% ">
-            <img src="./img/anu4.jpeg " style="width:45% ">
-        </div>
-        <div class="column ">
-            <img src="./img/anu5.jpeg " style="width:45% ">
-            <img src="./img/anu6.jpeg " style="width:45% ">
-            <img src="./img/anu7.jpeg " style="width:45% ">
-
-        </div>
-        <div class="name_header " id="godhuli" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
-            'Shadows Into Light',cursive; "> Godhuli Mondal
-            &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
-        </div>
-        <div class="column ">
-            <img src="./img/godhuli1.jpeg " style="width:45% ">
-            <img src="./img/godhuli2.jpeg " style="width:45% "></div>
-        <div class="column ">
-            <img src="./img/godhuli7.jpeg " style="width:45% ">
-            <img src="./img/godhuli4.jpeg" style="width:45% ">
-        </div>
-        <div class="column ">
-            <img src="./img/godhuli5.jpeg " style="width:45% ">
-            <img src="./img/godhuli6.jpeg " style="width:45% ">
-            <img src="./img/godhuli3.jpeg " style="width:45% ">
-
-        </div>
-    </div>
-    <div class="container-fluid ">
-        <a href="#top "><button class="btns " style="background: #3b5998; color: #fff; "><i class="fa fa-long-arrow-up " aria-hidden="true "></i>Back to Top</button></a>
-
-    </div>
-    <br>
-    <br>
-
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
-            <p>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="gallerymain.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="creative.html">Writing </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">Contact</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
+        <!-- Arya -->
+        <div class="row ">
+            <div class="name_header " id="arya" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Arya Nag
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
             </div>
-            <p>This website is developed by Gourav Ghosal.</p>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/arjo1.jpeg">
+
+                </div>
+            </div>
         </div>
-    </footer>
+        <!-- Anupama -->
+        <div class="row ">
+            <div class="name_header " id="anupama" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Anupama Dey
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/anu1.jpeg " alt="">
+                    <img src=" ./img/anu2.jpeg " alt="">
+                    <img src=" ./img/anu3.jpeg " alt="">
+                    <img src=" ./img/anu4.jpeg " alt="">
+                    <img src=" ./img/anu5.jpeg " alt="">
+                    <img src=" ./img/anu6.jpeg " alt="">
+
+
+                    <img src=" ./img/anu7.jpeg " alt="">
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Godhuli -->
+        <div class="row ">
+            <div class="name_header " id="godhuli" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Godhuli Mondal 
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src=" ./img/godhuli1.jpeg" alt="">
+                    <img src=" ./img/godhuli2.jpeg " alt="">
+                    <img src=" ./img/godhuli3.jpeg " alt="">
+                    <img src=" ./img/godhuli4.jpeg " alt="">
+                    <img src=" ./img/godhuli5.jpeg " alt="">
+                    <img src=" ./img/godhuli6.jpeg" alt="">
+
+
+                    <img src=" ./img/godhuli7.jpeg " alt="">
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid ">
+            <a href="#top "><button class="btns " style="background: #3b5998; color: #fff; "><i class="fa fa-long-arrow-up " aria-hidden="true "></i>Back to Top</button></a>
+
+        </div>
+        <br>
+        <br>
+
+        <footer>
+            <div id="left-footer">
+                <h3>Quick Links</h3>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="gallerymain.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="creative.html">Writing </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">Contact</a>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>This website is developed by Gourav Ghosal.</p>
+            </div>
+        </footer>
 
 
 </body>
