@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Art Gallery|Galleria-de-Artiste</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shadows+Into+Light&display=swap');
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .columnwrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 90%;
+    }
+    
+    .column>img {
+        width: 50%;
+        height: auto;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        transform: scale(0.9);
+        -webkit-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+        -moz-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+        box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+    }
+    
+    .name_header1 {
+        width: 100%;
+        height: auto;
+        color: rgb(0, 0, 0);
+        font-family: 'Times New Roman', cursive;
+        -webkit-box-shadow: inset 0px 3px 19px 3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset 0px 3px 19px 3px rgba(0, 0, 0, 0.75);
+        box-shadow: inset 0px 3px 19px 3px rgba(0, 0, 0, 0.75);
+        background: rgb(245, 245, 245);
+        background: linear-gradient(90deg, #2bc0e4, #eaecc6);
+        margin-top: 0;
+        padding: 0;
+        color: rgb(0, 0, 0);
+    }
+    
+    .ulwrap {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ulwrap a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(0, 0, 0);
+        padding: 0.5em;
+    }
+    
+    .ulwrap li {
+        float: left;
+        text-align: left;
+        margin: 0.6% 2.5%;
+        font-size: 1.3em;
+    }
+    
+    .ulwrap a:hover {
+        text-decoration: underline;
+        color: rgb(17, 17, 17);
+        transition: ease-in-out;
+    }
+    
+    .row_name ul a {
+        text-decoration: none;
+        list-style: none;
+        color: #000000;
+    }
+    
+    .row_name ul a:hover {
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+    
+    .row_name ul li:hover a .fa-facebook {
+        color: #3b5998;
+        transition: 0.7s;
+    }
+    
+    .row_name ul li:hover a .fa-instagram {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s;
+    }
+    
+    .noscale {
+        width: 40%;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .column>img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 90%;
+            max-width: 100%;
+        }
+        .ulwrap,
+        .ulwrap li {
+            display: block;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <section class="navbar" id="top">
+        <a href="about.html">About</a>
+        <a href="gallerymain.html" class="active">Gallery</a>
+        <a href="work.html">Catalogue</a>
+        <a href="index.html">Home</a>
+    </section>
+
+    <!-- Header -->
+    <div class="header"><br><br><br>
+        <h1><b>Galleria de Artiste</b></h1>
+        <br><br><br><br>
+    </div>
+
+    <br>
+
+    <!-- Photo Grid -->
+    <div class="container_main" style="margin: 1%;">
+        <div class="row">
+            <div class="name_header1">
+                <br>
+                <h3>&emsp;Go-To-Artist:</h3> <br>
+                <div class=" ulwrap ">
+                    <ul style="list-style:square ">
+                        <li><a href="#gourav">Gourav Ghosal</a></li>
+                        <li><a href="#hridya">Hridya Varier</a></li>
+                        <li><a href="#kumar">Aayush Kumar</a></li>
+                        <li><a href="#sandi">Sayandip Saha</a></li>
+                    </ul>
+                    <ul style="list-style:square ">
+                        <li><a href="#riyanka">Riyanka Kundu</a></li>
+                        <li><a href="#ssd">Swastik Swarup Das</a></li>
+                        <li><a href="#arya">Arya Nag</a></li>
+                        <li><a href="#anupama">Anupama Dey</a></li>
+                    </ul>
+                    <ul style="list-style:square ">
+                        <li><a href="#godhuli">Godhuli Mondal</a></li>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <!-- Gourav -->
+        <div class="row ">
+            <div class="name_header " id="gourav" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Gourav Ghosal 
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="https://galleria-de-artiste.netlify.app/img/1.png" alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/2.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/3.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/4.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/5.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/6.png " alt="">
+
+
+                    <img src="https://galleria-de-artiste.netlify.app/img/8.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/9.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/10.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/7.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/11.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/12.png " alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- hridya -->
+        <div class="row ">
+            <div class="name_header " id="hridya" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Hridya Varier
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="https://galleria-de-artiste.netlify.app/img/hridya1.png" alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/hridya2.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/hridya3.png " alt="">
+                    <img src="https://galleria-de-artiste.netlify.app/img/hridya4.png" alt="">
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Kumar -->
+        <div class="row ">
+            <div class="name_header " id="kumar" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Aayush Kumar
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/kumar1.jpg " alt="">
+                    <img src="./img/kumar2.jpg " alt="">
+                    <img src="./img/kumar 3.jpg " alt="">
+                    <img src="./img/kumar 4.jpg " alt="">
+                    <img src="./img/kumar 5.jpg " alt="">
+                    <img src="./img/kumar6.png " alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- sandy -->
+        <div class="row ">
+            <div class="name_header " id="sandi" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Sayandip Saha
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/sandi1.jpeg" alt="">
+                    <img src="./img/sandi2.jpeg " alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- Riyanka -->
+        <div class="row ">
+            <div class="name_header " id="riyanka" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Riyanka Kundu
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/riyanka1.jpeg">
+
+                </div>
+            </div>
+        </div>
+        <!-- Swastik -->
+        <div class="row ">
+            <div class="name_header " id="ssd" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Swastik Swarup Das
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/CyberElon.jpg " alt="">
+                    <img src="./img/Symbiote_vs_Virus.png" alt="">
+                    <img src="./img/FalconAndWinter.jpg " alt="">
+                    <img src="./img/BlackAdam1.jpg " alt="">
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Arya -->
+        <div class="row ">
+            <div class="name_header " id="arya" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Arya Nag
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/arjo1.jpeg">
+
+                </div>
+            </div>
+        </div>
+        <!-- Anupama -->
+        <div class="row ">
+            <div class="name_header " id="anupama" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Anupama Dey
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/anu1.jpeg " alt="">
+                    <img src="./img/anu2.jpeg " alt="">
+                    <img src="./img/anu3.jpeg " alt="">
+                    <img src="./img/anu4.jpeg " alt="">
+                    <img src="./img/anu5.jpeg " alt="">
+                    <img src="./img/anu6.jpeg " alt="">
+
+
+                    <img src="./img/anu7.jpeg " alt="">
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Godhuli -->
+        <div class="row ">
+            <div class="name_header " id="godhuli" style="width: 100%; background-color: black; height: auto; color: white; font-family: 'Times New Roman', cursive; vertical-align: middle; "> &nbsp &nbspDrawings by: &copy<span style="color: white; font-family:
+                'Shadows Into Light',cursive; "> Godhuli Mondal 
+                &nbsp;&nbsp;<a href="#top " style="float: right; text-align: center; font-family: 'Times New Roman', cursive; "> &nbsp;<i class="fa fa-long-arrow-up "></i> Click To go to top&nbsp;&nbsp; </a> <br>&nbsp;</span>
+            </div>
+            <div class="columnwrapper">
+                <div class="column ">
+                    <img src="./img/godhuli1.jpeg" alt="">
+                    <img src="./img/godhuli2.jpeg " alt="">
+                    <img src="./img/godhuli3.jpeg " alt="">
+                    <img src="./img/godhuli4.jpeg " alt="">
+                    <img src="./img/godhuli5.jpeg " alt="">
+                    <img src="./img/godhuli6.jpeg" alt="">
+
+
+                    <img src="./img/godhuli7.jpeg " alt="">
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid ">
+            <a href="#top "><button class="btns " style="background: #3b5998; color: #fff; "><i class="fa fa-long-arrow-up " aria-hidden="true "></i>Back to Top</button></a>
+
+        </div>
+        <br>
+        <br>
+
+        <footer>
+            <div id="left-footer">
+                <h3>Quick Links</h3>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="gallerymain.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="creative.html">Writing </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">Contact</a>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>This website is developed by Gourav Ghosal.</p>
+            </div>
+        </footer>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+</html>
