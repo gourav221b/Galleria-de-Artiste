@@ -1,209 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./img/favicon.png">
-    <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Our Work|Galleria-de-Artiste</title>
-</head>
 
-<style>
-    a {
-        color: black;
-    }
-    
-    section a:hover {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .image:hover {
-        transform: scale(1.1);
-    }
-    
-    @media screen and (min-width: 980px) {
-        .container_sub {
-            display: none;
-        }
-    }
-    
-    @media screen and (max-width: 980px) {
-        .laptop {
-            display: none;
-        }
-        .image {
-            width: 95%;
-            margin: 1%;
-            border-radius: 7px;
-            padding-bottom: 4%;
-        }
-        .image:hover {
-            transform: scale(0.9);
-        }
-    }
-</style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="swiper.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="./img/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- For apple devices -->
+        <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <title>Our Work|Galleria-de-Artiste</title>
 
-<body>
-    <section class="navbar">
-        <a href="about.html">About</a>
-        <a href="gallerymain.html">Gallery</a>
-        <a href="work.html" class="active">Catalogue</a>
-        <a href="index.html">Home</a>
-    </section>
+        <style>
+            body {
+                background: linear-gradient(#000000, #000000);
+            }
+            
+            .details {
+                vertical-align: middle;
+                top: 1%;
+            }
+            
+            .details a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .swiper-text {
+                margin: 2%;
+                color: whitesmoke;
+            }
+        </style>
 
-    <!-- Header -->
-    <div class="header"><br><br><br>
-        <h1><b>Galleria de Artiste</b></h1>
-        <br><br><br><br>
-    </div>
 
-    <br>
-    <section class="laptop">
-        <div class="container-fluid col-sm-12 ">
-            <figure class="image" id="Width">
-                <a href="artist.html"><img src="./images/paint.jpg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="artist.html">Art Section</a></p>
-                </figcaption>
-            </figure>
-            <figure class="image" id="Width">
-                <a href="Photographer.html"><img src="./images/camera.jpeg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="Photographer.html">Photography Section</a></p>
-                </figcaption>
-            </figure>
 
+    </head>
+
+
+
+    <body>
+        <section class="navbar">
+            <a href="about.html">About</a>
+            <a href="gallerymain.html">Gallery</a>
+            <a href="work.html" class="active">Catalogue</a>
+            <a href="index.html">Home</a>
+        </section>
+
+        <!-- Header -->
+        <div class="header"><br><br><br>
+            <h1><b>Galleria de Artiste</b></h1>
+            <br><br><br><br>
         </div>
+        <h3 class="swiper-text"> Swipe to Browse <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>
+        <div class="swiper-container">
 
-        <div class="container-fluid col-sm-12 ">
-            <figure class="image" id="Width">
-                <a href="gallerymain.html"><img src="./images/gallery.jpg" class="img-responsive img-thumbnail"></a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img src="./images/paint.jpg" alt="brush">
+                    </div>
+                    <div class="details">
+                        <h3>Art Section</h3><span>Sketches, drawings, digital art </span>
+                        <br><br>
+                        <a style="text-align: center;" href="artist.html">SEE MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img src="./images/camera.jpeg" alt="camera">
+                    </div>
+                    <div class="details">
+                        <h3>Photography Section</h3><span>Moments captured by the lens</span>
+                        <br><br>
+                        <a style="text-align: center;" href="Photographer.html">SEE MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img src="./images/typewriter - Copy.jpeg" alt="writing">
+                    </div>
+                    <div class="details">
+                        <h3>writing Section</h3><span>Stories, poems, articles, quotes and many more </span>
+                        <br><br>
+                        <a style="text-align: center;" href="creative.html">SEE MORE</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img src="./images/gallery.jpg" alt="gallery">
+                    </div>
+                    <div class="details">
+                        <h3>Gallery</h3><span>Art and Photo gallery </span>
+                        <br><br>
+                        <a style="text-align: center;" href="gallerymain.html">SEE MORE</a>
+                    </div>
+                </div>
 
-                <figcaption class="content">
-                    <p><a href="gallerymain.html">Gallery </a></p>
-                </figcaption>
-            </figure>
-            <figure class="image" id="Width">
-                <a href="creative.html"><img src="./img/typewriter.jpeg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="creative.html">Writing Section</a></p>
-                </figcaption>
-            </figure>
-
-        </div>
-    </section>
-
-    <div class="container_sub" style="margin: 2%; left: 1%;">
-        <div class="row">
-            <div class="column">
-                <figure class="image nohover">
-                    <a href="artist.html"><img src="./images/paint.jpg" style="width:100%"></a>
-                    <figcaption>
-
-                        <a href="artist.html">
-                            <p style="font-size: 90%;">Art Section </p>
-                        </a>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="Photographer.html"><img src="./images/camera.jpeg" style="width:100%"></a>
-                    <figcaption>
-
-                        <a href="Photographer.html">
-                            <p style="font-size: 90%;">Photography </p>
-                        </a>
-
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="gallerymain.html"><img src="./images/gallery.jpg" style="width:100%"></a>
-                    <figcaption>
-
-                        <a href="gallerymain.html">
-                            <p style="font-size: 90%;">Gallery </p>
-                        </a>
-
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="creative.html"><img src="./img/typewriter.jpeg" style="width:100%"></a>
-                    <figcaption>
-
-                        <a href="creative.html">
-                            <p style="font-size: 90%;">Writing Section </p>
-                        </a>
-                    </figcaption>
-                </figure>
+                <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img src="./images/submission.jpeg" alt="submission">
+                    </div>
+                    <div class="details">
+                        <h3>Submission Page</h3><span>Submit your works and get a chance to be featured here </span>
+                        <br><br>
+                        <a style="text-align: center;" href="/htmlwr/entry.html">SEE MORE</a>
+                    </div>
+                </div>
 
             </div>
-
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-    </div>
-
-    <a href="#top"><button class="btn btn-primary btn-lg"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to Top</button></a>
-    <br>
-    <br>
-    <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
-            <p>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="gallerymain.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="creative.html">Writing </a>
-                    </li>
-                    <li>
-                        <a href="about.html">Contact</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
+        <br>
+        <footer>
+            <div id="left-footer">
+                <h3>Quick Links</h3>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="gallerymain.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="creative.html">Writing </a>
+                        </li>
+                        <li>
+                            <a href="about.html">Contact</a>
+                        </li>
+                    </ul>
+                </p>
             </div>
-            <p>This website is developed by Gourav Ghosal.</p>
-        </div>
-    </footer>
-    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-</body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>This website is developed by Gourav Ghosal.</p>
+            </div>
+        </footer>
+        <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    </body>
+    <script type="text/javascript" src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 60,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    </body>
 
 </html>
