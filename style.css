@@ -156,6 +156,13 @@ figure figcaption {
 
 /* Create two equal columns that sits next to each other */
 
+.card_image img {
+    border: 2px solid black;
+    -webkit-box-shadow: 4px 3px 16px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 16px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 3px 16px -2px rgba(0, 0, 0, 0.75);
+}
+
 
 /* Sidebar/left column */
 

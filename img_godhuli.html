@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <!-- For apple devices -->
     <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
@@ -125,125 +126,58 @@
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <section class="laptop">
-        <section>
-            <div class="container-fluid">
-                <figure class="image">
-                    <a href="img/godhuli1.jpeg" target="new"><img src="./img/godhuli1.jpeg" class="img-responsive img-thumbnail"></a>
-                    <!-- <figcaption class="content">
-                        <p>Broken Soul</p> <br>
+    <ul class="cards">
+        <li class="cards_item">
 
-                    </figcaption> -->
-                </figure>
-                <figure class="image">
-                    <a href="img/godhuli2.jpeg" target="new" "><img src="./img/godhuli2.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Pink Flyod</p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image ">
-                    <a href="img/godhuli3.jpeg " target="new "><img src="./img/godhuli3.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Lost in the stars</p>
-                    </figcaption> -->
-                </figure>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid ">
-                <figure class="image ">
-                    <a href="img/godhuli4.jpeg " target="new "><img src="./img/godhuli4.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Doodles</p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image ">
-                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Contrast</p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image ">
-                    <a href="img/godhuli6.jpeg " target="new "><img src="./img/godhuli6.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Depressed</p>
-                    </figcaption> -->
-                </figure>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid ">
-                <figure class="image ">
-                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " class="img-responsive img-thumbnail "></a>
-                    <!-- <figcaption class="content ">
-                        <p>Contemplation</p>
-                    </figcaption> -->
-                </figure>
-
-            </div>
-        </section>
-
-    </section>
-    <div class="container_sub " style="margin: 2%; left: 1%; ">
-        <div class="row ">
-            <div class="column ">
-                <figure class="image nohover ">
-                    <a href="img/godhuli1.jpeg " target="new "><img src="./img/godhuli1.jpeg " style="width:100% "></a>
-                    <!-- <figcaption>
-                    
-                    <p style="font-size: 90%; ">Broken Glass </p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/godhuli2.jpeg " target="new "><img src="./img/godhuli2.jpeg " style="width:100% ">
-                    </a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Pink Flyod </p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/godhuli3.jpeg " target="new "><img src="./img/godhuli3.jpeg " style="width:100% "></a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Lost in the stars </p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/godhuli4.jpeg " target="new "><img src="./img/godhuli4.jpeg " style="width:100% ">
-                    </a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Doodles </p>
-                    </figcaption> -->
-                </figure>
-
-            </div>
-            <div class="column ">
-                <figure class="image nohover ">
-                    <a href="img/godhuli5.jpeg " target="new "><img src="./img/godhuli5.jpeg " style="width:100% ">
-                    </a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Contrast </p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/godhuli6.jpeg " target="new "><img src="./img/godhuli6.jpeg " style="width:100% ">
-                    </a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Depressed </p>
-                    </figcaption> -->
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/godhuli7.jpeg " target="new "><img src="./img/godhuli7.jpeg " style="width:100% ">
-                    </a>
-                    <!-- <figcaption>
-                        <p style="font-size: 90%; ">Contemplation </p>
-                    </figcaption> -->
-                </figure>
-
-
+            <div class="card_image" id="godhuli">
+                <a href="./img/godhuli1.jpeg" target="new"><img src="./img/godhuli1.jpeg"></a>
             </div>
 
-        </div>
-    </div>
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/godhuli2.jpeg" target="new"><img src="./img/godhuli2.jpeg"></a>
+            </div>
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image" id="godhuli">
+                <a href="./img/godhuli3.jpeg" target="new"><img src="./img/godhuli3.jpeg"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/godhuli4.jpeg" target="new"><img src="./img/godhuli4.jpeg"></a>
+            </div>
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image" id="godhuli">
+                <a href="./img/godhuli5.jpeg" target="new"><img src="./img/godhuli5.jpeg"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/godhuli6.jpeg" target="new"><img src="./img/godhuli6.jpeg"></a>
+            </div>
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/godhuli7.jpeg" target="new"><img src="./img/godhuli7.jpeg"></a>
+            </div>
+        </li>
+
+
+    </ul>
     <div class="row_name " style="width: 100%; ">
         <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Drawings: <br>&copy; Godhuli Mondal</h5>
         <br>
@@ -260,7 +194,7 @@
 
     <br>
     <br>
-    <footer >
+    <footer>
         <div id="left-footer ">
             <h3>Quick Links</h3>
             <p>
@@ -268,7 +202,7 @@
                     <li>
                         <a href="index.html ">Home</a>
                     </li>
-                    
+
                     <li>
                         <a href="creative.html ">Writing </a>
                     </li>
@@ -276,14 +210,14 @@
                         <a href="about.html ">Contact</a>
                     </li>
                 </ul>
-            </p> 
+            </p>
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
 
-        
-           
-        
-            </footer>
+
+
+
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>

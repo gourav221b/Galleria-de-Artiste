@@ -6,301 +6,367 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- <link rel="stylesheet" href="styleabout.css"> -->
+    <link rel="stylesheet" href="cards.css">
+    <link rel=" icon " type="image/png " href="./img/favicon.png ">
     <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon " type="image/png " href="../img/favicon.png " />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap " rel="stylesheet ">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet " href="path/to/font-awesome/css/font-awesome.min.css ">
+    <title>Gourav| Galleria-de-Artiste</title>
 </head>
-<title>Gourav|Galleria-de-Artiste</title>
 <style>
-    @media screen and (min-width: 980px) {
-        .container_sub {
-            display: none;
-        }
+    .header {
+        text-align: center;
+        padding: 32px;
     }
     
-    @media screen and (max-width: 980px) {
-        .laptop {
-            display: none;
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    /* Create four equal columns that sits next to each other */
+    
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border: 2px solid black;
+    }
+    /* .card img {
+        -webkit-box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+        opacity: 0.9;
+    } */
+    
+    .card_image img {
+        height: 100%;
+        -webkit-box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -2px 3px 20px 1px rgba(0, 0, 0, 0.75);
+    }
+    
+    .cards_item:hover {
+        transform: scale(1.04);
+        transition: 0.5s ease-in-out;
+        opacity: 1;
+    }
+    
+    .btns {
+        margin: 0 auto;
+        width: 120%;
+        border: 3px solid;
+        text-align: center;
+        height: 130%;
+        padding: 0.55em;
+        background-color: transparent;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .btns:hover {
+        background-color: turquoise;
+        color: white;
+        border: 3px solid black;
+        transition: 0.35s ease-in-out;
+        padding-left: 0.85em;
+    }
+    
+    .name_header {
+        -webkit-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #2b5876, #4e4376);
+        /* background: url("../gg/starry-sky.png"); */
+        width: 100%;
+        height: auto;
+        justify-content: space-evenly;
+        color: white;
+    }
+    
+    .name_header>.cards,
+    .name_header>h3 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .name_header>.cards {
+        transform: scale(0.69);
+    }
+    
+    .card_image img {
+        -webkit-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        border-radius: 5px;
+        height: auto;
+        border: 2px solid black;
+    }
+    
+    .card_content {
+        background: linear-gradient(to right, #000000, #434343);
+    }
+    
+    .name_header .card_title {
+        font-size: 1.3em;
+        color: whitesmoke;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
         }
-        .image {
-            width: 95%;
-            margin: 1%;
-            border-radius: 7px;
+        .footer {
+            border: 1px solid black;
+        }
+        .btns {
+            width: 120px;
+            height: auto;
+            padding: 0.5em;
+            margin-left: 5px;
+            margin-right: 10px;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            border: 1px solid black;
+            border-radius: 20px;
+            color: white;
+        }
+        .btns:hover {
+            color: white;
+            border: 2px solid black;
+            transition: 0.25s ease-in-out;
+            padding-left: 0.85em;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+        }
+        .name_header .card_title {
+            font-size: 0.6em;
+        }
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 90%;
+            max-width: 100%;
+        }
+        .name_header {
+            height: auto;
         }
     }
 </style>
 
-
 <body>
+
     <section class="navbar">
         <a href="about.html">About</a>
-        <a href="gallerymain.html">Gallery</a>
-        <a href="work.html">Catalogue</a>
-        <a href="index.html" class="active">Home</a>
+
+        <a href="work.html" class="active">Catalogue</a>
+        <a href="index.html">Home</a>
     </section>
 
     <!-- Header -->
-    <div class="header"><br>
+    <div class="header">
+        <br>
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <section class="laptop">
-        <section>
-            <div class="container-fluid">
-                <figure class="image">
-                    <a href="img/1.png" target="new"><img src="./img/1.png" class="img-responsive img-thumbnail"></a>
-                    <figcaption class="content">
-                        <p>Broken Soul</p> <br>
 
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <a href="img/2.png" target="new" "><img src="./img/2.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Pink Flyod</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/3.png " target="new "><img src="./img/3.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Lost in the stars</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid ">
-                <figure class="image ">
-                    <a href="img/4.png " target="new "><img src="./img/4.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Doodles</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/5.png " target="new "><img src="./img/5.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Contrast</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/6.png " target="new "><img src="./img/6.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Depressed</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid ">
-                <figure class="image ">
-                    <a href="img/7.png " target="new "><img src="./img/7.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Contemplation</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/8.png " target="new "><img src="./img/8.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Smokes All Away</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/9.png " target="new "><img src="./img/9.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Excelsior</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid ">
-                <figure class="image ">
-                    <a href="img/10.png " target="new "><img src="./img/10.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Comfort</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/11.png " target="new "><img src="./img/11.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content ">
-                        <p>Alone</p>
-                    </figcaption>
-                </figure>
-                <figure class="image ">
-                    <a href="img/12.png " target="new "><img src="./img/12.png " class="img-responsive img-thumbnail "></a>
-                    <figcaption class="content " style="font-size: 2em; ">
-                        <p>Robot</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-    </section>
-    <div class="container_sub " style="margin: 2%; left: 1%; ">
-        <div class="row ">
-            <div class="column ">
-                <figure class="image nohover ">
-                    <a href="img/1.png " target="new "><img src="./img/1.png " style="width:100% ">
-                        <figcaption>
-                    </a>
-                    <p style="font-size: 90%; ">Broken Glass </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/2.png " target="new "><img src="./img/2.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Pink Flyod </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/3.png " target="new "><img src="./img/3.png " style="width:100% "></a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Lost in the stars </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/4.png " target="new "><img src="./img/4.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Doodles </p>
-                    </figcaption>
-                </figure>
 
-            </div>
-            <div class="column ">
-                <figure class="image nohover ">
-                    <a href="img/5.png " target="new "><img src="./img/5.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Contrast </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/6.png " target="new "><img src="./img/6.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Depressed </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/7.png " target="new "><img src="./img/7.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Contemplation </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/8.png " target="new "><img src="./img/8.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Smokes All Away </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="column ">
-                <figure class="image nohover ">
-                    <a href="img/9.png " target="new "><img src="./img/9.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; "> Excelsior</p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/10.png " target="new "><img src="./img/10.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Comfort </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/11.png " target="new "><img src="./img/11.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Alone </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover ">
-                    <a href="img/12.png " target="new "><img src="./img/12.png " style="width:100% ">
-                    </a>
-                    <figcaption>
-                        <p style="font-size: 90%; ">Robot </p>
-                    </figcaption>
-                </figure>
 
+
+    <ul class="cards">
+        <li class="cards_item">
+
+            <div class="card_image" id="gourav">
+                <a href="./img/1.png" target="new"><img src="./img/1.png"></a>
             </div>
 
-        </div>
-    </div>
-    <div class="row_name " style="width: 100%; ">
-        <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Drawings: <br>&copy; Gourav Ghosal</h5>
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/2.png" target="new"><img src="./img/2.png"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/3.png" target="new"><img src="./img/3.png"></a>
+            </div>
+
+
+        </li>
+
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/4.png" target="new"><img src="./img/4.png"></a>
+            </div>
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/5.png" target="new"><img src="./img/5.png" alt="5"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/6.png" target="new"><img src="./img/6.png"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/7.png" target="new"><img src="./img/7.png"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/8.png" target="new"><img src="./img/8.png"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/9.png" target="new"><img src="./img/9.png"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/10.jpg" target="new"><img src="./img/10.jpg"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/11.jpg" target="new"><img src="./img/11.jpg"></a>
+            </div>
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/12.jpg" target="new"><img src="./img/12.jpg"></a>
+            </div>
+
+
+        </li>
+
+
+
+    </ul>
+
+    <div class="row_name" style="width: 100%; ">
+        <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Pictures: <br>&copy; Gourav Ghosal</h5>
         <br>
         <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=100007994386888 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Gourav Ghosal</a></li>
-            <li><a href="https://www.instagram.com/g.o.u.r.a.v_221b/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @g.o.u.r.a.v221_b</a></li>
+            <li><a href="https://www.facebook.com/people/Gourav-Ghosal/100007994386888" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Gourav Ghosal</a></li>
+            <li><a href="https://www.instagram.com/g.o.u.r.a.v_221b/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @g.o.u.r.a.v_221b</a></li>
             <li>
-                <a href="https://www.linkedin.com/in/gourav-ghosal/ " target="_blank ">
-                    <i class="fa fa-linkedin-square " aria-hidden="true "></i>Gourav Ghosal</a>
+                <a href="https://www.linkedin.com/in/gourav-ghosal/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>Gourav Ghosal</a>
             </li>
-        </ul>
     </div>
-    <div class="container-fluid ">
-        <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
-        <a href="artist.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
+    <div class="container-fluid">
+        <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="artist.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
     </div>
+    </section>
+    <br>
+    <br>
 
-    <br>
-    <br>
     <footer>
-        <div id="left-footer ">
+        <div id="left-footer">
             <h3>Quick Links</h3>
             <p>
                 <ul>
                     <li>
-                        <a href="index.html ">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
-                    
+
                     <li>
-                        <a href="creative.html ">Writing </a>
+                        <a href="creative.html">Writing </a>
                     </li>
                     <li>
-                        <a href="about.html ">Contact</a>
+                        <a href="about.html">Contact</a>
                     </li>
                 </ul>
             </p>
         </div>
 
-        <div id="right-footer ">
-            <!-- <h3>Follow us on</h3>
-            <div id="social-media-footer ">
+        <div id="right-footer">
+            <h3>Follow us on</h3>
+            <div id="social-media-footer">
                 <ul>
                     <li>
-                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897 ">
-                            <i class="fa fa-facebook "></i>
+                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897">
+                            <i class="fa fa-facebook"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://www.instagram.com/galleria_de_artiste/ ">
-                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                        <a href="https://www.instagram.com/galleria_de_artiste/">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.reddit.com/r/Galleria_de_artiste/ ">
-                            <i class="fa fa-reddit-alien " aria-hidden="true "></i>
+                        <a href="https://www.reddit.com/r/Galleria_de_artiste/">
+                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
+    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="main.js"></script>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 </html>
