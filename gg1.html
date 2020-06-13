@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <style>
+        footer {
+            background: black;
+            padding: 8px;
+            color: #eee;
+            display: flex;
+        }
+        
+        footer a {
+            color: white;
+        }
+        
+        footer #left-footer {
+            flex: 1;
+            border-right: 1px solid rgb(0, 243, 223);
+            padding-left: 32px;
+        }
+        
+        footer #left-footer ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.5;
+        }
+        
+        footer #right-footer {
+            flex: 2;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        footer #social-media-footer a .fa-facebook-official,
+        footer #social-media-footer a .fa-youtube,
+        footer #social-media-footer a .fa-twitter {
+            color: white;
+            transition: 0.4s;
+        }
+        
+        footer #social-media-footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        footer #social-media-footer ul li {
+            font-size: 48px;
+            padding: 16px;
+            transition: 0.5s;
+        }
+        
+        footer #social-media-footer ul li:hover a .fa-twitter {
+            color: rgb(4, 128, 243);
+        }
+        
+        footer #social-media-footer ul li:hover a .fa-facebook {
+            color: #3b5998;
+            transition: 0.7s;
+        }
+        
+        footer #social-media-footer ul li:hover a .fa-instagram {
+            background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.5s;
+        }
+        
+        footer #social-media-footer ul li:hover a .fa-facebook {
+            background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.7s;
+        }
+        
+        footer #social-media-footer ul li:hover a .fa-reddit-alien {
+            color: #FF5700;
+            transition: 0.5s;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <footer>
+        <div id="left-footer">
+            <p>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li><a href="work.html">Catalogue</a></li>
+                    <li><a href="/htmlwr/entry.html">Submissions</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </p>
+
+        </div>
+        <div id="right-footer">
+            <p>
+                <h2>FOLLOW US ON</h2>
+                <ul class="social-media">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+                </ul>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
