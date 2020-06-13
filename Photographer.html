@@ -1,175 +1,264 @@
-<style>
-    figcaption a {
-        text-decoration: none;
-        background: -webkit-linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    figcaption a:hover {
-        text-decoration: none;
-    }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./img/favicon.png">
-    <!-- For apple devices -->
-    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Photographers|Galleria-de-Artiste</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="cards.css">
+        <link rel="icon" type="image/png" href="./img/favicon.png">
+        <!-- For apple devices -->
+        <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <title>Photographers| Galleria-de-Artiste</title>
+    </head>
 </head>
 <style>
-    a:hover {
-        text-decoration: none;
+    .header {
+        text-align: center;
+        padding: 32px;
     }
     
-    @media screen and (min-width: 980px) {
-        .container_sub {
-            display: none;
+    .container_text {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .text {
+        flex: 1;
+        margin-left: 2%;
+    }
+    
+    .text h1 {
+        text-align: left;
+        font-size: 3em;
+    }
+    
+    .card_title {
+        font-family: 'Caveat', 'Baloo Tamma 2', cursive;
+        font-size: xx-large;
+        text-align: center;
+    }
+    
+    .search-bar {
+        flex: 2;
+        margin-left: 2%;
+    }
+    
+    input[type=text] {
+        background: inherit;
+        border-radius: 20px;
+        border: 1px solid black;
+        padding: 0.5em;
+        opacity: 0.8;
+        width: 20%;
+    }
+    
+    input[type=text]:hover {
+        opacity: 1;
+        width: 22%;
+        transition: 0.4s ease-in-out;
+    }
+    /* Create four equal columns that sits next to each other */
+    
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        border: 2px solid black;
+    }
+    
+    .card_image img {
+        height: 300px;
+        width: 500px;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+        .footer {
+            border: 1px solid black;
+        }
+        .card_image img {
+            height: 100%;
+            width: 100%;
+        }
+        .card_title h2 {
+            margin-bottom: 20px;
         }
     }
     
-    @media screen and (max-width: 980px) {
-        .laptop {
-            display: none;
+    li {
+        display: inline;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 90%;
+            max-width: 100%;
         }
-        .image {
-            width: 95%;
-            margin: 1%;
-            border-radius: 7px;
+        input[type=text] {
+            width: 80%;
+            background: inherit;
+            border-radius: 20px;
+            border: 1px solid black;
+            padding: 0.5em;
+            opacity: 0.8;
         }
+    }
+    
+    .made_by {
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 35px;
+        text-align: center;
+    }
+    
+    .container_text {
+        display: inline;
     }
 </style>
 
 <body>
-    <section class="navbar" id="top">
+
+    <section class="navbar">
         <a href="about.html">About</a>
+
         <a href="work.html" class="active">Catalogue</a>
         <a href="index.html">Home</a>
     </section>
 
     <!-- Header -->
-    <div class="header"><br>
+    <div class="header">
+        <br>
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <br>
-    <div class="container-fluid col-xs-2" style="margin-left: -2px;">
-        <h1 id="art" style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Photographers: <br>
-            <h3>(Click on card to see more:)</h3>
-        </h1>
+
+    <div class="container_text">
+        <div class="text">
+            <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Photographers:</h1>
+            <h4>(Click on the cards to see more)</h4>
+        </div>
+        <br>
+        <div class="search-bar">
+            <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Photographers">
+        </div>
+
     </div>
-    <section class="laptop">
-        <div class="container-fluid col-sm-12 ">
-            <figure class="image" id="Width">
-                <a href="gallery_kumar.html"><img src="./img/kumarphoto10.jpeg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="gallery.html">Aayush</a></p>
-                </figcaption>
-            </figure>
-            <figure class="image" id="Width">
-                <a href="gallery_debosmita.html"><img src="./img/Deb11.jpg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="gallery_debosmita.html">Debosmita</a></p>
-                </figcaption>
-            </figure>
-
-        </div>
-        <div class="container-fluid col-sm-12 ">
-            <figure class="image" id="Width">
-                <a href="gallery_arko.html"><img src="./img/arko_ganga.jpg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="gallery_arko.html">Arkojit</a></p>
-                </figcaption>
-            </figure>
-
-            <figure class="image" id="Width">
-                <a href="gallery_aheli.html"><img src="./img/Aheli1.jpeg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p>
-                        <a href="gallery_aheli.html">Aheli </a>
-                    </p>
-                </figcaption>
-            </figure>
-
-        </div>
-        <div class="container-fluid col-sm-12 ">
-            <figure class="image" id="Width">
-                <a href="gallery_parthib.html"><img src="./img/parthibphoto10.jpeg" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p><a href="gallery_parthib.html">Parthib</a></p>
-                </figcaption>
-            </figure>
-
-            <figure class="image" id="Width" style="visibility: hidden;">
-                <a href="#"><img src="#" class="img-responsive img-thumbnail"></a>
-                <figcaption class="content">
-                    <p>
-                        <a href="#"> </a>
-                    </p>
-                </figcaption>
-            </figure>
-
-        </div>
-    </section>
-    <div class="container_sub" style="margin: 2%; left: 1%;">
-        <div class="row">
-            <div class="column">
-                <figure class="image nohover">
-                    <a href="gallery_kumar.html"><img src="./img/kumarphoto4.jpeg" style="width:100%"></a>
-                    <figcaption>
-
-                        <p style="font-size: 90%;">Aayush </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="gallery_arko.html"><img src="./img/arko_ganga.jpg" style="width:100%"></a>
-                    <figcaption>
-
-                        <p style="font-size: 90%;">Arkojit </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="gallery_debosmita.html"><img src="./img/Deb11.jpg" style="width:100%"></a>
-                    <figcaption>
-
-                        <p style="font-size: 90%;">Debosmita </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="gallery_aheli.html"><img src="./img/Aheli1.jpeg" style="width:100%"></a>
-                    <figcaption>
-
-                        <p style="font-size: 90%;">Aheli </p>
-                    </figcaption>
-                </figure>
-                <figure class="image nohover">
-                    <a href="gallery_parthib.html"><img src="./img/parthibphoto10.jpeg" style="width:100%"></a>
-                    <figcaption>
-
-                        <p style="font-size: 90%;">Parthib </p>
-                    </figcaption>
-                </figure>
-
+    <ul class="cards" id="wrapper">
+        <!-- Aayush -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_kumar.html" style="text-decoration: none;"><img src="./img/kumarphoto10.jpeg"></a>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Aayush</h2>
+                    <a href="gallery_kumar.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_kumar.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
             </div>
+        </li>
+        <!-- Arkojit -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_arko.html" style="text-decoration: none;"><img src="./img/arko_ganga.jpg"></a>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Arkojit</h2>
 
-        </div>
+                    <a href="gallery_arko.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_arko.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
+            </div>
+        </li>
+        <!-- Debosmita -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_debosmita.html" style="text-decoration: none;"><img src="./img/Deb11.jpg"></a>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Debosmita</h2>
+
+                    <a href="gallery_debosmita.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_debosmita.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
+            </div>
+        </li>
+        <!-- Aheli -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_aheli.html" style="text-decoration: none;"><img src="./img/Aheli1.jpeg"></a>
+                </div>
+                <div class="card_content" style="height: 100%;">
+                    <h2 class="card_title">Aheli</h2>
+
+                    <a href="gallery_aheli.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_aheli.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Parhib -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_parthib.html" style="text-decoration: none;"><img src="./img/parthibphoto10.jpeg"></a>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Parthib</h2>
+
+                    <a href="gallery_parthib.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_parthib.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
+            </div>
+        </li>
+        <!-- Arkadeep -->
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <a href="gallery_arkadeep.html" style="text-decoration: none;"><img src="./img/arkadeepphoto3.jpeg"></a>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Arkadeep</h2>
+
+                    <a href="gallery_arkadeep.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
+                    <a href="gallery_arkadeep.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+                </div>
+            </div>
+        </li>
+    </ul>
     </div>
-    <a href="work.html"><button class="btn btn-success btn-lg col-xs-6"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
-    <br>
-    <br>
+    <div class="container-fluid">
+        <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="work.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+    </div><br><br>
+
     <footer>
         <div id="left-footer">
             <h3>Quick Links</h3>
@@ -177,14 +266,12 @@
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
-                    </li>
+                    </li><br>
 
                     <li>
                         <a href="creative.html">Writing </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">Contact</a>
+                    </li><br>
+                    <a href="about.html">Contact</a>
                     </li>
                 </ul>
             </p>
@@ -214,11 +301,31 @@
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
-
+    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="main.js"></script>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    function searchFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myinput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('wrapper');
+        li = ul.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++) {
+            h2 = li[i].getElementsByTagName('h2')[0];
+            if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "block";
+            } else {
+                li[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 </html>
