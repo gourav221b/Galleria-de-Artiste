@@ -53,7 +53,7 @@
         <li class="cards_item">
 
             <div class="card_image" id="arkadeep">
-                <a href="./img/arkadeep1.jpeg" target="new"><img src="./img/arkadeep1.jpeg"></a>
+                <a href="./img/arkadeep1.jpeg" target="new"><img id="img1" data-img="./img/arkadeep1.jpeg"></a>
             </div>
 
 
@@ -61,13 +61,13 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/arkadeep2.jpeg" target="new"><img src="./img/arkadeep2.jpeg"></a>
+                <a href="./img/arkadeep2.jpeg" target="new"><img id="img2" data-img="./img/arkadeep2.jpeg"></a>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image" id="arkadeep">
-                <a href="./img/arkadeep3.jpeg" target="new"><img src="./img/arkadeep3.jpeg"></a>
+                <a href="./img/arkadeep3.jpeg" target="new"><img id="img3" data-img="./img/arkadeep3.jpeg"></a>
             </div>
 
 
@@ -75,7 +75,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/arkadeep4.jpeg" target="new"><img src="./img/arkadeep4.jpeg"></a>
+                <a href="./img/arkadeep4.jpeg" target="new"><img id="img4" data-img="./img/arkadeep4.jpeg"></a>
             </div>
         </li>
 
@@ -85,7 +85,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/arkadeep5.jpeg" target="new"><img src="./img/arkadeep5.jpeg"></a>
+                <a href="./img/arkadeep5.jpeg" target="new"><img id="img5" data-img="./img/arkadeep5.jpeg"></a>
             </div>
         </li>
 
@@ -139,6 +139,32 @@
         </div>
     </footer>
 </body>
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(document.querySelector('#img1'));
+    observer.observe(document.querySelector('#img2'));
+    observer.observe(document.querySelector('#img3'));
+    observer.observe(document.querySelector('#img4'));
+    observer.observe(document.querySelector('#img5'));
+</script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

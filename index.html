@@ -130,12 +130,12 @@
             <h3>Browse Through </h3>
             <p>All Our Listings</p>
             <div class="fakeimg " id="art " style="height:auto ">
-                <a href="artist.html "><img class="fake " src="./img/art.png " alt="art "></div><br></a>
+                <a href="artist.html "><img id="img1" class="fake " data-img="./img/art.png " alt="art "></div><br></a>
             <div class="fakeimg " id="photo " style="height:auto ">
-                <a href="gallery.html "><img class="fake " src="./img/photography.png " alt="photo "></a>
+                <a href="gallery.html "><img id="img2" class="fake " data-img="./img/photography.png " alt="photo "></a>
             </div><br>
             <div class="fakeimg " id="photo " style="height:auto ">
-                <a href="creative.html "><img class="fake " src="./img/Black and White Vintage Writer Business Card.png " alt="photo "></a>
+                <a href="creative.html "><img id="img3" class="fake " data-img="./img/Black and White Vintage Writer Business Card.png " alt="photo "></a>
             </div><br>
             <div class="share_side ">
 
@@ -179,7 +179,7 @@
             <h2>Galleria de Artiste</h2>
             <h5>A place where <em>Artists</em> of every stage, format are welcome. </h5>
             <div class="contain ">
-                <img src="./img/indextop.jpg " class="index " alt="index " style="width:100%; ">
+                <img id="img4" data-img="./img/indextop.jpg " class="index " alt="index " style="width:100%; ">
                 <div class="content ">
 
                 </div>
@@ -188,7 +188,7 @@
             <h2>Our Art Section</h2>
             <h5>Painting, Sketches by New, Emerging, Artists</h5><br>
             <div class="contain ">
-                <a href="artist.html "><img src="./img/index2-removebg-preview.png " class="index " alt="index"></a>
+                <a href="artist.html "><img id="img5" data-img="./img/index2-removebg-preview.png " class="index " alt="index"></a>
                 <div class="content ">
 
                 </div>
@@ -197,14 +197,14 @@
             <h2>Our Photography Section</h2>
             <h5>Photography By Our Best Photographers</h5><br>
             <div class="contain ">
-                <a href="Photographer.html "><img src="./img/photogallery.png " class="index " alt="index"></a>
+                <a href="Photographer.html "><img id="img6" data-img="./img/photogallery.png " class="index " alt="index"></a>
             </div>
             <br>
             <br>
             <h2>Our Creative Writing Section</h2>
             <h5>Articles by our Best Writers</h5><br>
             <div class="contain " id="#index1 ">
-                <a href="creative.html "><img src="./img/index3.jpg " id="#index1 " class="index " alt="index "></a>
+                <a href="creative.html "><img id="img7" data-img="./img/index3.jpg " id="#index1 " class="index " alt="index "></a>
             </div>
             <br>
             <div class="newsletter">
@@ -274,15 +274,41 @@
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
-
-
-    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
-
-    <script src="main.js"></script>
-
-
-
-
 </body>
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(document.querySelector('#img1'));
+    observer.observe(document.querySelector('#img2'));
+    observer.observe(document.querySelector('#img3'));
+    observer.observe(document.querySelector('#img4'));
+    observer.observe(document.querySelector('#img5'));
+    observer.observe(document.querySelector('#img6'));
+    observer.observe(document.querySelector('#img7'));
+</script>
+<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
+<script src="main.js"></script>
+
+
+
+
+
 
 </html>

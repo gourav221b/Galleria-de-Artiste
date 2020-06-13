@@ -49,6 +49,12 @@
         width: 100%;
         border: 2px solid black;
     }
+    
+    .fade {
+        opacity: 1;
+        transform: translate(0%);
+        transition: 500ms;
+    }
     /* Responsive layout - makes a two column-layout instead of four columns */
     
     @media screen and (max-width: 800px) {
@@ -97,7 +103,7 @@
     <ul class="cards">
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/typewriter.jpeg"></div>
+                <div class="card_image"><img id="img1" data-img="./img/typewriter.jpeg"></div>
                 <div class="card_content">
                     <h2 class="card_title">Stories</h2>
                     <p class="card_text">Browse through the collection of stories of various genres and immerse yourself into the world of escape - <em>fiction</em><br> <br></p>
@@ -108,7 +114,7 @@
         </li>
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/pen.jpeg"></div>
+                <div class="card_image"><img id="img2" data-img="./img/pen.jpeg"></div>
                 <div class="card_content">
                     <h2 class="card_title">Poems</h2>
                     <p class="card_text"><q style="font-size: 110%;">Genuine poetry can communicate before it is understood.</q>
@@ -120,7 +126,7 @@
         </li>
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/article.jpg"></div>
+                <div class="card_image"><img id="img3" data-img="./img/article.jpg"></div>
                 <div class="card_content">
                     <h2 class="card_title">Articles</h2>
                     <p class="card_text">Life is not just a bed of roses. The article section brings to light<br> some of the talked, and some <em>less talked</em> issues. Find out more</p><br><br>
@@ -131,7 +137,7 @@
         </li>
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/desk.jpg"></div>
+                <div class="card_image"><img id="img4" data-img="./img/desk.jpg"></div>
                 <div class="card_content" style="height: 100%;">
                     <h2 class="card_title">Quotes</h2>
                     <p class="card_text">Sometimes, when long paragraphs don't provide the help, The short quotations, words of wisdom,speak louder.</p>
@@ -142,7 +148,7 @@
         </li>
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/abstract.jpg"></div>
+                <div class="card_image"><img id="img5" data-img="./img/abstract.jpg"></div>
                 <div class="card_content">
                     <h2 class="card_title">Abstracts</h2>
                     <p class="card_text">Life always doesnot have to be meaningful. Sometimes it can be just a bunch of unorganized thoughts, provoking happiness. We present the <em><b>Abstracts Section</b></em></p>
@@ -153,7 +159,7 @@
         </li>
         <li class="cards_item">
             <div class="card">
-                <div class="card_image"><img src="./img/submission.jpeg"></div>
+                <div class="card_image"><img id="img6" data-img="./img/submission.jpeg"></div>
                 <div class="card_content">
                     <h2 class="card_title">Submit Your Entries</h2>
                     <p class="card_text">Want to See your Writing Published?<br> <em><b>This is </b></em> the Place to GO!!</p>
@@ -212,13 +218,38 @@
         </div>
     </footer>
     <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.25
+        };
+        let callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let imageUrl = entry.target.getAttribute('data-img');
+                    if (imageUrl) {
+                        entry.target.src = imageUrl;
+                        observer.unobserve(entry.target);
+                    }
+                }
+
+            });
+        }
+        let observer = new IntersectionObserver(callback, options);
+        observer.observe(document.querySelector('#img1'));
+        observer.observe(document.querySelector('#img2'));
+        observer.observe(document.querySelector('#img3'));
+        observer.observe(document.querySelector('#img4'));
+        observer.observe(document.querySelector('#img5'));
+        observer.observe(document.querySelector('#img6'));
+    </script>
     <script src="main.js"></script>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 </body>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 </html>

@@ -113,25 +113,25 @@
         <div class="row">
             <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Pictures by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;"> Aayush kumar </span></div>
             <div class="column">
-                <img src="./img/kumarphoto1.jpeg" style="width:100%">
-                <img src="./img/kumarphoto2.jpeg" style="width:100%">
-                <img src="./img/kumarphoto3.jpeg" style="width:100%">
-                <img src="./img/kumarphoto4.jpeg" style="width:100%">
-                <img src="./img/kumarphoto5.jpeg" style="width:100%">
-                <img src="./img/kumarphoto6.jpeg" style="width:100%">
-                <img src="./img/kumarphoto7.jpeg" style="width:100%">
-                <img src="./img/kumarphoto14.jpeg" style="width:100%">
+                <img id="img1" data-img="./img/kumarphoto1.jpeg" style="width:100%">
+                <img id="img2" data-img="./img/kumarphoto2.jpeg" style="width:100%">
+                <img id="img3" data-img="./img/kumarphoto3.jpeg" style="width:100%">
+                <img id="img4" data-img="./img/kumarphoto4.jpeg" style="width:100%">
+                <img id="img5" data-img="./img/kumarphoto5.jpeg" style="width:100%">
+                <img id="img6" data-img="./img/kumarphoto6.jpeg" style="width:100%">
+                <img id="img7" data-img="./img/kumarphoto7.jpeg" style="width:100%">
+                <img id="img8" data-img="./img/kumarphoto14.jpeg" style="width:100%">
             </div>
             <div class="column">
-                <img src="./img/kumarphoto8.jpeg" style="width:100%">
-                <img src="./img/kumarphoto9.jpeg" style="width:100%">
-                <img src="./img/kumarphoto10.jpeg" style="width:100%">
-                <img src="./img/kumarphoto11.jpg" style="width:100%">
-                <img src="./img/kumarphoto12.jpg" style="width:100%">
-                <img src="./img/kumarphoto13.jpg" style="width:100%">
+                <img id="img9" data-img="./img/kumarphoto8.jpeg" style="width:100%">
+                <img id="img10" data-img="./img/kumarphoto9.jpeg" style="width:100%">
+                <img id="img11" data-img="./img/kumarphoto10.jpeg" style="width:100%">
+                <img id="img12" data-img="./img/kumarphoto11.jpg" style="width:100%">
+                <img id="img13" data-img="./img/kumarphoto12.jpg" style="width:100%">
+                <img id="img14" data-img="./img/kumarphoto13.jpg" style="width:100%">
 
-                <img src="./img/kumarphoto15.jpeg" style="width:100%">
-                <img src="./img/kumarphoto16.jpeg" style="width:100%">
+                <img id="img15" data-img="./img/kumarphoto15.jpeg" style="width:100%">
+                <img id="img16" data-img="./img/kumarphoto16.jpeg" style="width:100%">
             </div>
             <!-- <div class="column">
                
@@ -202,6 +202,42 @@
 
 
 </body>
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(document.querySelector('#img1'));
+    observer.observe(document.querySelector('#img2'));
+    observer.observe(document.querySelector('#img3'));
+    observer.observe(document.querySelector('#img4'));
+    observer.observe(document.querySelector('#img5'));
+    observer.observe(document.querySelector('#img6'));
+    observer.observe(document.querySelector('#img7'));
+    observer.observe(document.querySelector('#img8'));
+    observer.observe(document.querySelector('#img9'));
+    observer.observe(document.querySelector('#img10'));
+    observer.observe(document.querySelector('#img11'));
+    observer.observe(document.querySelector('#img12'));
+    observer.observe(document.querySelector('#img13'));
+    observer.observe(document.querySelector('#img14'));
+    observer.observe(document.querySelector('#img15'));
+    observer.observe(document.querySelector('#img16'));
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

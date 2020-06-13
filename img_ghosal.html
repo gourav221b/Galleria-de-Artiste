@@ -199,7 +199,7 @@
         <li class="cards_item">
 
             <div class="card_image" id="gourav">
-                <a href="./img/1.png" target="new"><img src="./img/1.png"></a>
+                <a href="./img/1.png" target="new"><img id="img1" data-img="./img/1.png"></a>
             </div>
 
 
@@ -207,7 +207,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/2.png" target="new"><img src="./img/2.png"></a>
+                <a href="./img/2.png" target="new"><img id="img2" data-img="./img/2.png"></a>
             </div>
 
 
@@ -215,7 +215,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/3.png" target="new"><img src="./img/3.png"></a>
+                <a href="./img/3.png" target="new"><img id="img3" data-img="./img/3.png"></a>
             </div>
 
 
@@ -224,22 +224,14 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/4.png" target="new"><img src="./img/4.png"></a>
+                <a href="./img/4.png" target="new"><img id="img4" data-img="./img/4.png"></a>
             </div>
 
         </li>
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/5.png" target="new"><img src="./img/5.png" alt="5"></a>
-            </div>
-
-
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="./img/6.png" target="new"><img src="./img/6.png"></a>
+                <a href="./img/5.png" target="new"><img id="img5" data-img="./img/5.png" alt="5"></a>
             </div>
 
 
@@ -247,7 +239,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/7.png" target="new"><img src="./img/7.png"></a>
+                <a href="./img/6.png" target="new"><img id="img6" data-img="./img/6.png"></a>
             </div>
 
 
@@ -255,7 +247,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/8.png" target="new"><img src="./img/8.png"></a>
+                <a href="./img/7.png" target="new"><img id="img7" data-img="./img/7.png"></a>
             </div>
 
 
@@ -263,7 +255,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/9.png" target="new"><img src="./img/9.png"></a>
+                <a href="./img/8.png" target="new"><img id="img8" data-img="./img/8.png"></a>
             </div>
 
 
@@ -271,7 +263,7 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/10.jpg" target="new"><img src="./img/10.jpg"></a>
+                <a href="./img/9.png" target="new"><img id="img9" data-img="./img/9.png"></a>
             </div>
 
 
@@ -279,14 +271,22 @@
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/11.jpg" target="new"><img src="./img/11.jpg"></a>
+                <a href="./img/10.jpg" target="new"><img id="img10" data-img="./img/10.jpg"></a>
+            </div>
+
+
+        </li>
+        <li class="cards_item">
+
+            <div class="card_image">
+                <a href="./img/11.jpg" target="new"><img id="img11" data-img="./img/11.jpg"></a>
             </div>
 
         </li>
         <li class="cards_item">
 
             <div class="card_image">
-                <a href="./img/12.jpg" target="new"><img src="./img/12.jpg"></a>
+                <a href="./img/12.jpg" target="new"><img id="img12" data-img="./img/12.jpg"></a>
             </div>
 
 
@@ -359,14 +359,47 @@
             <p>This website is developed by Gourav Ghosal.</p>
         </div>
     </footer>
-    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="main.js"></script>
-
 </body>
+<script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="main.js"></script>
+
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(document.querySelector('#img1'));
+    observer.observe(document.querySelector('#img2'));
+    observer.observe(document.querySelector('#img3'));
+    observer.observe(document.querySelector('#img4'));
+    observer.observe(document.querySelector('#img5'));
+    observer.observe(document.querySelector('#img6'));
+    observer.observe(document.querySelector('#img7'));
+    observer.observe(document.querySelector('#img8'));
+    observer.observe(document.querySelector('#img9'));
+    observer.observe(document.querySelector('#img10'));
+    observer.observe(document.querySelector('#img11'));
+    observer.observe(document.querySelector('#img12'));
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
 
 </html>
