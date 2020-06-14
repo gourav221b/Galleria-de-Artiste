@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <!-- For apple devices -->
     <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
@@ -36,6 +37,8 @@
 
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="5ZwSU9sS"></script>
     <section class="navbar">
         <a href="about.html">About</a>
 
@@ -53,6 +56,7 @@
 
             <div class="card_image" id="anupama">
                 <a href="./img/anu1.jpeg" target="new"><img id="img1" src="./img/anu1.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu1.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -61,12 +65,14 @@
 
             <div class="card_image">
                 <a href="./img/anu2.jpeg" target="new"><img id="img2" src="./img/anu2.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu2.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image" id="anupama">
                 <a href="./img/anu3.jpeg" target="new"><img id="img2" src="./img/anu3.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu3.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -75,12 +81,14 @@
 
             <div class="card_image">
                 <a href="./img/anu4.jpeg" target="new"><img id="img3" src="./img/anu4.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu4.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image" id="anupama">
                 <a href="./img/anu5.jpeg" target="new"><img id="img5" src="./img/anu5.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu5.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -89,19 +97,22 @@
 
             <div class="card_image">
                 <a href="./img/anu6.jpeg" target="new"><img id="img5" src="./img/anu6.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu6.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image">
                 <a href="./img/anu7.jpeg" target="new"><img id="img6" src="./img/anu7.jpeg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/anu7.jpeg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
 
 
     </ul>
     <div class="row_name " style="width: 100%; ">
-        <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Drawings: <br>&copy; Anupama Dey</h5>
+        <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> If you like the artist leave a like!<span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389" data-brdr_c="#000000" data-f_family="Courier New"
+                data-ef_voting="push" data-rich_snippet="true" data-identifier="anupama" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br> Drawings: <br>&copy; Anupama Dey</h5>
         <br>
         <ul>
 
@@ -122,7 +133,7 @@
         <div id="left-footer ">
             <h3>Quick Links</h3>
             <p>
-                <ul>
+                <ul style="list-style: none;">
                     <li>
                         <a href="index.html ">Home</a>
                     </li>
@@ -160,7 +171,7 @@
                     </li>
                 </ul>
             </div>
-            
+
         </div> -->
     </footer>
 </body>
@@ -191,7 +202,17 @@
     observer.observe(document.querySelector('#img6'));
     observer.observe(document.querySelector('#img7'));
 </script>
-
+<script>
+    (function(d, e, s) {
+        if (d.getElementById("likebtn_wjs")) return;
+        a = d.createElement(e);
+        m = d.getElementsByTagName(e)[0];
+        a.async = 1;
+        a.id = "likebtn_wjs";
+        a.src = s;
+        m.parentNode.insertBefore(a, m)
+    })(document, "script", "//w.likebtn.com/js/w/widget.js");
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>

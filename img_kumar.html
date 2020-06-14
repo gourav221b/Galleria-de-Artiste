@@ -37,6 +37,8 @@
 
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="5ZwSU9sS"></script>
     <section class="navbar" id="top">
         <a href="about.html">About</a>
 
@@ -54,6 +56,7 @@
 
             <div class="card_image" id="kumar">
                 <a href="./img/kumar1.jpg" target="new"><img src="./img/kumar1.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar1.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -62,12 +65,14 @@
 
             <div class="card_image">
                 <a href="./img/kumar2.jpg" target="new"><img src="./img/kumar2.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar2.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image" id="kumar">
                 <a href="./img/kumar 3.jpg" target="new"><img src="./img/kumar 3.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar 3.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -76,12 +81,14 @@
 
             <div class="card_image">
                 <a href="./img/kumar 4.jpg" target="new"><img src="./img/kumar 4.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar 4.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
         <li class="cards_item">
 
             <div class="card_image" id="kumar">
                 <a href="./img/kumar 5.jpg" target="new"><img src="./img/kumar 5.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar 5.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
 
 
@@ -90,12 +97,29 @@
 
             <div class="card_image">
                 <a href="./img/kumar6.jpg" target="new"><img src="./img/kumar6.jpg"></a>
+                <div class="fb-like" data-href="https://galleria-de-artiste.netlify.app/img/kumar6.jpg" data-width="80" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
             </div>
         </li>
 
 
-    </ul>
+    </ul><br>
+    <div class="row_name" style="width: 100%; ">
+        <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> If you like the artist leave a like!<span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389" data-brdr_c="#000000" data-f_family="Courier New"
+                data-ef_voting="push" data-rich_snippet="true" data-identifier="aayush" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br>Drawings: <br>&copy; Aayush Kumar</h5>
+        <br>
+        <ul>
+            <li><a href="https://www.facebook.com/search/top/?q=aayush%20kumar" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Aayush Kumar</a></li>
+            <li><a href="https://www.instagram.com/masterbroda04/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @masterbroda04</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/aayush-kumar-630ab11a7/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>Aayush Kumar</a>
+            </li>
+    </div>
     <br>
+    <div class="container-fluid">
+        <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="artist.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+    </div>
     <br>
 
     <footer>
@@ -143,6 +167,17 @@
         </div>
     </footer>
 </body>
+<script>
+    (function(d, e, s) {
+        if (d.getElementById("likebtn_wjs")) return;
+        a = d.createElement(e);
+        m = d.getElementsByTagName(e)[0];
+        a.async = 1;
+        a.id = "likebtn_wjs";
+        a.src = s;
+        m.parentNode.insertBefore(a, m)
+    })(document, "script", "//w.likebtn.com/js/w/widget.js");
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
