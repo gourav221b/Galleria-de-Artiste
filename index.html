@@ -104,7 +104,10 @@
         .row {
             flex-direction: column-reverse;
         }
-        .side {
+        .side h2,
+        .side h3,
+        .side p,
+        .side .fakeimg {
             display: none;
         }
         .share_side {
@@ -178,7 +181,7 @@
                 </div>
             </div>
             <div class="counter">
-                <h3>Page Views:</h3>
+                <h1 style="font-size: 100%;">Page Views:</h1>
                 <!-- Start of WebFreeCounter Code -->
                 <a href="#"><img src="https://www.webfreecounter.com/hit.php?id=geaofkk&nd=9&style=5" border="0" alt="web counter"></a>
                 <!-- End of WebFreeCounter Code -->
@@ -238,6 +241,8 @@
 
                 </form>
             </div>
+            <h4> If you like our site, please leave a like to show your support ! &nbsp; <span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389"
+                    data-brdr_c="#000000" data-f_family="Courier New" data-ef_voting="push" data-rich_snippet="true" data-identifier="gg1" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br></h4>
         </div>
     </div>
     <footer>
@@ -311,6 +316,18 @@
     observer.observe(document.querySelector('#img6'));
     observer.observe(document.querySelector('#img7'));
 </script>
+<script>
+    (function(d, e, s) {
+        if (d.getElementById("likebtn_wjs")) return;
+        a = d.createElement(e);
+        m = d.getElementsByTagName(e)[0];
+        a.async = 1;
+        a.id = "likebtn_wjs";
+        a.src = s;
+        m.parentNode.insertBefore(a, m)
+    })(document, "script", "//w.likebtn.com/js/w/widget.js");
+</script>
+
 
 
 <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
