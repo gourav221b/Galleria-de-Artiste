@@ -189,6 +189,9 @@
             flex: 50%;
             max-width: 50%;
         }
+        .xlarge-font {
+            font-size: 300%;
+        }
     }
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
     
@@ -233,7 +236,7 @@
             </div>
 
             <div class="card column-33">
-                <img id="img1" data-img="./images/light-bulb.jpg" alt="Avatar" style="width:100%">
+                <img id="img1" src="/images/light.jpg" alt="Avatar" style="width:100%">
                 <div class="container1">
                     <h2><b>The idea:</b></h2>
                     <h4>The goal was to bring under one roof, various talents, everyone is trying to showcase.</h4>
@@ -246,7 +249,7 @@
     <div class="container" style="background-color:#f1ecec; opacity: 0.9; border-radius: 20px;">
         <div class="row">
             <div class="card column-33">
-                <img id="img2s" data-img="./images/woman-5161274_960_720.png" alt="Avatar" style="width:100%">
+                <img id="img2s" src="/images/woman-5161274_960_720.png" alt="Avatar" style="width:100%">
                 <div class="container1">
                     <h2><b>We Feature</b></h2>
                     <h4>Showcasing various talents, we start with sketches, paintings, Photography and Coming up in a few days, Creative writings.</h4>
@@ -277,7 +280,7 @@
                 <a href="about (2).html" target="_blank"><button class=" button btn btn-lg btn-success"> Click here to give Feedback</button></a>
             </div>
             <div class="card column-33">
-                <img id="img3" data-img="./img/ghosal.jpg" alt="Avatar" style="width:100%">
+                <img id="img3" src="./img/ghosal.jpg" alt="Avatar" style="width:100%">
                 <div class="container1">
                     <h2><b>Gourav</b></h2>
                     <h4>Contact:</h4>
@@ -382,28 +385,6 @@
         </div>
     </footer>
 </body>
-<script>
-    let options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25
-    };
-    let callback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let imageUrl = entry.target.getAttribute('data-img');
-                if (imageUrl) {
-                    entry.target.src = imageUrl;
-                    observer.unobserve(entry.target);
-                }
-            }
 
-        });
-    }
-    let observer = new IntersectionObserver(callback, options);
-    observer.observe(document.querySelector('#img1'));
-    observer.observe(document.querySelector('#img2'));
-    observer.observe(document.querySelector('#img3'));
-</script>
 
 </html>
