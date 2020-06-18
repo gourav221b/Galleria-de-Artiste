@@ -31,6 +31,10 @@
         flex-direction: row;
     }
     
+    .cards_item {
+        align-self: center;
+    }
+    
     .text {
         flex: 1;
         margin-left: 2%;
@@ -85,6 +89,48 @@
     .card_image img {
         height: 600px;
         width: 500px;
+    }
+    
+    #artist_gourav,
+    #artist_hridya,
+    #artist_swastik,
+    #artist_aayush,
+    #artist_arya,
+    #artist_sandi,
+    #artist_riyanka,
+    #artist_anupama,
+    #artist_godhuli,
+    #artist_prodipto,
+    #artist_arpita,
+    #artist_parthib,
+    #artist_arkadeep,
+    #artist_shambhabi,
+    #artist_rudranshu,
+    #artist_jeet,
+    #buttons,
+    #next {
+        display: none;
+    }
+    
+    .pagination {
+        padding: 8px;
+        text-align: center;
+        font-weight: bold;
+        background-color: transparent;
+    }
+    
+    .pagination a {
+        border-top: 3px solid white;
+        display: inline-block;
+        padding: 8px 16px;
+        transition: 0.4s;
+        color: #000000;
+        border: transparent;
+    }
+    
+    .pagination a:hover {
+        border-top: 3px solid #000;
+        transition: 0.5s;
     }
     /* Responsive layout - makes a two column-layout instead of four columns */
     
@@ -151,272 +197,1080 @@
 
         <a href="work.html" class="active">Catalogue</a>
         <a href="index.html">Home</a>
+        <img src="./img/favicon.png" class="logo">
     </section>
 
     <!-- Header -->
-    <div class="header">
+    <div class="header" id="top">
         <br>
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
+    <!-- SECTION MAIN -->
+    <section id="artist_main">
+        <div class="container_text">
+            <div class="text">
+                <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Artists:</h1>
+                <h4>(Click on the cards to see more)</h4>
+            </div>
+            <br>
+            <div class="search-bar">
+                <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
 
-    <div class="container_text">
-        <div class="text">
-            <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Artists:</h1>
-            <h4>(Click on the cards to see more)</h4>
+            </div>
+
         </div>
+
+        <ul class="cards" id="wrapper">
+            <!-- gourav -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/2.png"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Gourav</h2>
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="gourav()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="gourav()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Hridya -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/hridya2.png"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Hridya</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="hri()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="hri()">See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Swastik -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/CyberElon.jpg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Swastik</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="swastik()"  >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="swastik()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Aayush -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/kumar 3.jpg"></a>
+                    </div>
+                    <div class="card_content" style="height: 100%;">
+                        <h2 class="card_title">Aayush</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="aayush()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="aayush()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Arya -->
+
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/arjo1.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Arya</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="arya()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="arya()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Sandy -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/sandi1.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Sayandip</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="sandi()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="sandi()">See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Riyanka -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/riyanka1.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Riyanka</h2>
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="riyanka()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="riyanka()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Anupama -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/anu6.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Anupama</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="anupama()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="anupama()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+
+
+
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/godhuli4.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Godhuli</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"  onclick="godhuli()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="godhuli()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Prodipta-->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/prodipto1.jpeg"></a>
+                    </div>
+                    <div class="card_content" style="height: 100%;">
+                        <h2 class="card_title">Prodipta</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="prodipto()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="prodipto()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Arpita-->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/arpita1.jpg"></a>
+                    </div>
+                    <div class="card_content" style="height: 100%;">
+                        <h2 class="card_title">Arpita</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="arpita()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arpita()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Parhib -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/parthib3.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Parthib</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="parthib()" >See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="parthib()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Arkadeep -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/arkadeep3.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Arkadeep</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="arkadeep()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arkadeep()" >See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Shambhabi -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/sambhabi1.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Shambhabi</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="shambhabi()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="shambhabi()">See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Rudranshu -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/Rudranshu1.jpeg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Rudranshu</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="rudranshu()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="rudranshu()">See More</button></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Jeet -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <a style="text-decoration: none;"><img src="./img/jeet6.jpg"></a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Jeet</h2>
+
+                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="jeet()">See More</button></a>
+                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="jeet()">See More</button></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        </div>
+        <div class="container-fluid">
+            <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+            <a href="work.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+        </div>
+    </section>
+    <!-- SECTION GOURAV -->
+    <section id="artist_gourav">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="gourav">
+                    <a href="./img/1.png" target="new"><img id="gourav1" data-img="./img/1.png"></a>
+
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/2.png" target="new"><img id="gourav2" data-img="./img/2.png"></a>
+
+
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/3.png" target="new"><img id="gourav3" data-img="./img/3.png"></a>
+
+
+
+            </li>
+
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/4.png" target="new"><img id="gourav4" data-img="./img/4.png"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/5.png" target="new"><img id="gourav5" data-img="./img/5.png" alt="5"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/6.png" target="new"><img id="gourav6" data-img="./img/6.png"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/7.png" target="new"><img id="gourav7" data-img="./img/7.png"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/8.png" target="new"><img id="gourav8" data-img="./img/8.png"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/9.png" target="new"><img id="gourav9" data-img="./img/9.png"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/10.jpg" target="new"><img id="gourav10" data-img="./img/10.jpg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/11.jpg" target="new"><img id="gourav11" data-img="./img/11.jpg"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/12.jpg" target="new"><img id="gourav12" data-img="./img/12.jpg"></a>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Gourav Ghosal</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/people/Gourav-Ghosal/100007994386888" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Gourav Ghosal</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/g.o.u.r.a.v_221b/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @g.o.u.r.a.v_221b</a></li>
+                <br>
+                <li>
+                    <a href="https://www.linkedin.com/in/gourav-ghosal/" target="_blank">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>Gourav Ghosal</a>
+                </li>
+        </div>
+
+    </section>
+    <!-- SECTION HRIDYA -->
+    <section id="artist_hridya">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="hridya">
+                    <a href="./img/hridya1.png" target="new"><img id="hri1" data-img="./img/hridya1.png"></a>
+
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/hridya2.png" target="new"><img id="hri2" data-img="./img/hridya2.png"></a>
+
+
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/hridya3.png" target="new"><img id="hri3" data-img="./img/hridya3.png"></a>
+
+                </div>
+
+
+            </li>
+
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/hridya4.png" target="new"><img id="hri4" data-img="./img/hridya4.png"></a>
+
+                </div>
+
+            </li>
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);">Drawings: <br>&copy; Hridya Varier</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/hridya.varier" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true" style="color: royalblue;"></i> Hridya Varier</a></li>
+                <br>
+
+                <li><a href="https://www.youtube.com/channel/UCJQ6c4_g5V6tW3CA-1iGR5w" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"style="color: red;"></i> VARIER'S KITCHEN</a></li>
+        </div>
+    </section>
+    <!-- SECTION Swastik -->
+    <section id="artist_swastik">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="swastik">
+                    <a href="./img/CyberElon.jpg" target="new"><img id="swastik1" data-img="./img/CyberElon.jpg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/BlackAdam1.jpg" target="new"><img id="swastik2" data-img="./img/BlackAdam1.jpg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/Symbiote_vs_Virus.jpg" target="new"><img id="swastik3" data-img="./img/Symbiote_vs_Virus.jpg"></a>
+
+
+
+            </li>
+
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/FalconAndWinter.jpg" target="new"><img id="swastik4" data-img="./img/FalconAndWinter.jpg"></a>
+
+
+            </li>
+        </ul>
         <br>
-        <div class="search-bar">
-            <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
-            <!-- <select>
-            <option disabled hidden selected> Click to see Artist List</option>
-            <option> </option>
-            <option>Gourav </option>
-            <option>Hridya</option>
-            <option>Swastik</option>
-            <option>Aayush</option>
-            <option>Arya</option>
-            <option>Sayandip </option>
-            <option>Riyanka</option>
-            <option>Anupama</option>
-            <option>Godhulli</option>
-            <option>Prodipto</option>
-            <option>Parthib</option>
-            <option>Arkadeep</option>
-            <option>Shambhabi</option>
-            </select> -->
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Swastik Swarup Das</h5>
+            <br>
+            <ul>
+
+                <li>
+                    <a href="https://www.instagram.com/realsundancekid/" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>@realsundancekid
+
+
+                    </a>
+                </li>
+            </ul>
         </div>
+    </section>
+    <!-- SECTION AAyush -->
+    <section id="artist_aayush">
+        <ul class="cards">
+            <li class="cards_item">
 
-    </div>
-    <ul class="cards" id="wrapper">
-        <!-- gourav -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_ghosal.html" style="text-decoration: none;"><img src="./img/2.png"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Gourav</h2>
-                    <a href="img_ghosal.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_ghosal.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Hridya -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_varier.html" style="text-decoration: none;"><img src="./img/hridya2.png"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Hridya</h2>
+                <div class="card_image" id="kumar">
+                    <a href="./img/kumar1.jpg" target="new"><img id="aayush1" data-img="./img/kumar1.jpg"></a>
 
-                    <a href="img_varier.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_varier.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Swastik -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_swastik.html" style="text-decoration: none;"><img src="./img/CyberElon.jpg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Swastik</h2>
 
-                    <a href="img_swastik.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_swastik.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Aayush -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_kumar.html" style="text-decoration: none;"><img src="./img/kumar 3.jpg"></a>
-                </div>
-                <div class="card_content" style="height: 100%;">
-                    <h2 class="card_title">Aayush</h2>
 
-                    <a href="img_kumar.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_kumar.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Arya -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_nag.html" style="text-decoration: none;"><img src="./img/arjo1.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Arya</h2>
+            </li>
+            <li class="cards_item">
 
-                    <a href="img_nag.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_nag.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Sandy -->
-        <li class="cards_item">
-            <div class="card">
                 <div class="card_image">
-                    <a href="img_sandi.html" style="text-decoration: none;"><img src="./img/sandi1.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Sayandip</h2>
+                    <a href="./img/kumar2.jpg" target="new"><img id="aayush2" data-img="./img/kumar2.jpg"></a>
 
-                    <a href="img_sandi.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_sandi.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Riyanka -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_riyanka.html" style="text-decoration: none;"><img src="./img/riyanka1.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Riyanka</h2>
-                    <a href="img_riyanka.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_riyanka.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Anupama -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_anupama.html" style="text-decoration: none;"><img src="./img/anu6.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Anupama</h2>
+            </li>
+            <li class="cards_item">
 
-                    <a href="img_anupama.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_anupama.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Godhuli -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_godhuli.html" style="text-decoration: none;"><img src="./img/godhuli4.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Godhuli</h2>
+                <div class="card_image" id="kumar">
+                    <a href="./img/kumar 3.jpg" target="new"><img id="aayush3" data-img="./img/kumar 3.jpg"></a>
 
-                    <a href="img_godhuli.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_godhuli.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Prodipta-->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_prodipto.html" style="text-decoration: none;"><img src="./img/prodipto1.jpeg"></a>
-                </div>
-                <div class="card_content" style="height: 100%;">
-                    <h2 class="card_title">Prodipta</h2>
 
-                    <a href="img_prodipto.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_prodipto.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Arpita-->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_arpita.html" style="text-decoration: none;"><img src="./img/arpita1.jpg"></a>
-                </div>
-                <div class="card_content" style="height: 100%;">
-                    <h2 class="card_title">Arpita</h2>
 
-                    <a href="img_arpita.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_arpita.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Parhib -->
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image">
-                    <a href="img_parthib.html" style="text-decoration: none;"><img src="./img/parthib3.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Parthib</h2>
+            </li>
+            <li class="cards_item">
 
-                    <a href="img_parthib.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_parthib.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Arkadeep -->
-        <li class="cards_item">
-            <div class="card">
                 <div class="card_image">
-                    <a href="img_arkadeep.html" style="text-decoration: none;"><img src="./img/arkadeep3.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Arkadeep</h2>
+                    <a href="./img/kumar 4.jpg" target="new"><img id="aayush4" data-img="./img/kumar 4.jpg"></a>
 
-                    <a href="img_arkadeep.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_arkadeep.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Shambhabi -->
-        <li class="cards_item">
-            <div class="card">
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="kumar">
+                    <a href="./img/kumar 5.jpg" target="new"><img id="aayush5" data-img="./img/kumar 5.jpg"></a>
+
+
+            </li>
+            <li class="cards_item">
+
                 <div class="card_image">
-                    <a href="img_shambhabi.html" style="text-decoration: none;"><img src="./img/sambhabi1.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Shambhabi</h2>
+                    <a href="./img/kumar6.jpg" target="new"><img id="aayush6" data-img="./img/kumar6.jpg"></a>
 
-                    <a href="img_shambhabi.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_shambhabi.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Rudranshu -->
-        <li class="cards_item">
-            <div class="card">
+            </li>
+
+
+        </ul><br>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> <br>Drawings: <br>&copy; Aayush Kumar</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/search/top/?q=aayush%20kumar" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Aayush Kumar</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/masterbroda04/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @masterbroda04</a></li>
+                <br>
+                <li>
+                    <a href="https://www.linkedin.com/in/aayush-kumar-630ab11a7/" target="_blank">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>Aayush Kumar</a>
+                </li>
+        </div>
+    </section>
+    <!-- SECTION Arya -->
+    <section id="artist_arya">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card_image" id="arjo">
+                    <a href="./img/arjo1.jpeg" target="new"><img id="arjo1" data-img="./img/arjo1.jpeg"></a>
+
+
+            </li>
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Arya Nag</h5>
+            <br>
+            <ul>
+
+                <li><a href="https://www.instagram.com/arjoo0/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @arjoo0 </a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION sandi -->
+    <section id="artist_sandi">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="sandi">
+                    <a href="./img/sandi1.jpeg" target="new"><img id="sandi1" data-img="./img/sandi1.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
                 <div class="card_image">
-                    <a href="img_rudranshu.html" style="text-decoration: none;"><img src="./img/Rudranshu1.jpeg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Rudranshu</h2>
+                    <a href="./img/sandi2.jpeg" target="new"><img id="sandi2" data-img="./img/sandi2.jpeg"></a>
 
-                    <a href="img_rudranshu.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_rudranshu.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
-                </div>
-            </div>
-        </li>
-        <!-- Jeet -->
-        <li class="cards_item">
-            <div class="card">
+            </li>
+            <li class="cards_item">
+
                 <div class="card_image">
-                    <a href="img_jeet.html" style="text-decoration: none;"><img src="./img/jeet6.jpg"></a>
-                </div>
-                <div class="card_content">
-                    <h2 class="card_title">Jeet</h2>
+                    <a href="./img/sandi3.jpeg" target="new"><img id="sandi3" data-img="./img/sandi3.jpeg"></a>
 
-                    <a href="img_jeet.html" style="text-decoration: none;"><button class="btn card_btn" >See More</button></a>
-                    <a href="img_jeet.html" style="text-decoration: none;"><button class="btn1 card_btn" >See More</button></a>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/sandi4.jpeg" target="new"><img id="sandi4" data-img="./img/sandi4.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/sandi5.jpeg" target="new"><img id="sandi5" data-img="./img/sandi5.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/sandi6.jpeg" target="new"><img id="sandi6" data-img="./img/sandi6.jpeg"></a>
+
+            </li>
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Sayandip Saha</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/sayandip.saha.96995" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true" style="color: royalblue;"></i> Sayandip Saha</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/sandi_on_insta/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @sandi_on_insta</a></li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION Riyanka -->
+    <section id="artist_riyanka">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="riyanka">
+                    <a href="./img/riyanka1.jpeg" target="new"><img id="riyanka1" data-img="./img/riyanka1.jpeg"></a>
+
+
+
+            </li>
+
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings:<br>&copy; Riyanka Kundu</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/riyanka.kundu.9 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Riyanka Kundu</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/_d_o_r_a_e_m_e_g_h_a_/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @_d_o_r_a_e_m_e_g_h_a_ </a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION ANUPAMA -->
+    <section id="artist_anupama">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="anupama">
+                    <a href="./img/anu1.jpeg" target="new"><img id="anupama1" data-img="./img/anu1.jpeg"></a>
+
                 </div>
-            </div>
-        </li>
-    </ul>
-    </div>
-    <div class="container-fluid">
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/anu2.jpeg" target="new"><img id="anupama2" data-img="./img/anu2.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="anupama">
+                    <a href="./img/anu3.jpeg" target="new"><img id="anupama3" data-img="./img/anu3.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/anu4.jpeg" target="new"><img id="anupama4" data-img="./img/anu4.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="anupama">
+                    <a href="./img/anu5.jpeg" target="new"><img id="anupama5" data-img="./img/anu5.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/anu6.jpeg" target="new"><img id="anupama6" data-img="./img/anu6.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/anu7.jpeg" target="new"><img id="anupama7" data-img="./img/anu7.jpeg"></a>
+
+            </li>
+
+
+        </ul>
+        <div class="row_name " style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Drawings: <br>&copy; Anupama Dey</h5>
+            <br>
+            <ul>
+
+                <li><a href="https://www.instagram.com/artttastic_/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @artttastic_
+    
+                </a></li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION GODHULI -->
+    <section id="artist_godhuli">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="godhuli">
+                    <a href="./img/godhuli1.jpeg" target="new"><img id="godhuli1" data-img="./img/godhuli1.jpeg"></a>
+                </div>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/godhuli2.jpeg" target="new"><img id="godhuli2" data-img="./img/godhuli2.jpeg"></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="godhuli">
+                    <a href="./img/godhuli3.jpeg" target="new"><img id="godhuli3" data-img="./img/godhuli3.jpeg"></a>
+                </div>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/godhuli4.jpeg" target="new"><img id="godhuli4" data-img="./img/godhuli4.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="godhuli">
+                    <a href="./img/godhuli5.jpeg" target="new"><img id="godhuli5" data-img="./img/godhuli5.jpeg"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/godhuli6.jpeg" target="new"><img id="godhuli6" data-img="./img/godhuli6.jpeg"></a>
+                </div>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/godhuli7.jpeg" target="new"><img id="godhuli7" data-img="./img/godhuli7.jpeg"></a>
+                </div>
+            </li>
+
+
+        </ul>
+        <div class="row_name " style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); ">Drawings: <br>&copy; Godhuli Mondal</h5>
+            <br>
+            <ul style="list-style: none; ">
+
+                <li><a href="https://www.instagram.com/godhulove25/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @godhulove25</a></li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION PRODIPTO-->
+    <section id="artist_prodipto">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="prodipto">
+                    <a href="./img/prodipto1.jpeg" target="new"><img id="prodipta1" data-img="./img/prodipto1.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/prodipto2.jpeg" target="new"><img id="prodipta2" data-img="./img/prodipto2.jpeg"></a>
+
+            </li>
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Prodipta Ghosh</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/prodipta.ghosh.710" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Prodipta Ghosh</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/prodipta_optimistic/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @prodipta_optimistic</a></li>
+                <br>
+                <li><a href="https://www.youtube.com/channel/UCj1Ih1kjcZ3Ndtb22uKovSA" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i> SOHURE</a></li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION ARPITA -->
+    <section id="artist_arpita">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="arpita">
+                    <a href="./img/arpita1.jpg" target="new"><img id="arpita1" data-img="./img/arpita1.jpg"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="arpita">
+                    <a href="./img/arpita2.jpg" target="new"><img id="arpita2" data-img="./img/arpita2.jpg"></a>
+
+
+            </li>
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Arpita Sharma</h5>
+            <br>
+
+        </div>
+    </section>
+    <!-- SECTION PARTHIB-->
+    <section id="artist_parthib">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/parthib1.jpeg" target="new"><img id="parthib1" data-img="./img/parthib1.jpeg"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/parthib2.jpeg" target="new"><img id="parthib2" data-img="./img/parthib2.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/parthib3.jpeg" target="new"><img id="parthib3" data-img="./img/parthib3.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/parthib4.jpeg" target="new"><img id="parthib4" data-img="./img/parthib4.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/parthib5.jpeg" target="new"><img id="parthib5" data-img="./img/parthib5.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/parthib6.jpeg" target="new"><img id="parthib6" data-img="./img/parthib6.jpeg"></a>
+
+            </li>
+
+
+        </ul>
+        <br>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Parthib Dutta</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/rakhi.kanjilal.5" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Parthib Duta</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/dutta.parthib/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @dutta.parthib </a></li>
+
+
+            </ul>
+        </div>
+    </section>
+    <!-- SECTION ARKADEEP -->
+    <section id="artist_arkadeep">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="arkadeep">
+                    <a href="./img/arkadeep1.jpeg" target="new"><img id="arkadeep1" data-img="./img/arkadeep1.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/arkadeep2.jpeg" target="new"><img id="arkadeep2" data-img="./img/arkadeep2.jpeg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="arkadeep">
+                    <a href="./img/arkadeep3.jpeg" target="new"><img id="arkadeep3" data-img="./img/arkadeep3.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/arkadeep4.jpeg" target="new"><img id="arkadeep4" data-img="./img/arkadeep4.jpeg"></a>
+
+            </li>
+
+
+
+
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/arkadeep5.jpeg" target="new"><img id="arkadeep5" data-img="./img/arkadeep5.jpeg"></a>
+
+            </li>
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Arkadeep Sen</h5>
+            <br>
+            <ul>
+                <li><a href="https://www.facebook.com/arkadeep.sen.923/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Arkadeep Sen</a></li>
+                <br>
+                <li><a href="https://www.instagram.com/rolla_costa_/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @rolla_costa_</a></li>
+
+        </div>
+    </section>
+    <!-- SECTION SHAMBHABI -->
+    <section id="artist_shambhabi">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="shambhabi">
+                    <a href="./img/sambhabi1.jpeg" target="new"><img id="shambhabi1" data-img="./img/sambhabi1.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="shambhabi">
+                    <a href="./img/sambhabi1.jpeg" target="new"><img id="shambhabi2" data-img="./img/shambhabi2.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="shambhabi">
+                    <a href="./img/sambhabi1.jpeg" target="new"><img id="shambhabi3" data-img="./img/shambhabi3.jpeg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="shambhabi">
+                    <a href="./img/sambhabi1.jpeg" target="new"><img id="shambhabi4" data-img="./img/shambhabi4.jpeg"></a>
+
+            </li>
+
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings: <br>&copy; Shambhabi Hazra Chowdhury</h5>
+                <br>
+
+        </div>
+    </section>
+    <!-- SECTION RUDRANSHU -->
+    <section id="artist_rudranshu">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="riyanka">
+                    <a href="./img/Rudranshu1.jpeg" target="new"><img id="rudranshu1" data-img="./img/Rudranshu1.jpeg"></a>
+
+
+
+
+        </ul>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Drawings:<br>&copy; Rudranshu Sen</h5>
+            <br>
+
+        </div>
+    </section>
+    <!-- SECTION JEET -->
+    <section id="artist_jeet">
+        <ul class="cards">
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/jeet1.jpg" target="new"><img id="jeet1" data-img="./img/jeet1.jpg"></a>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/jeet2.jpg" target="new"><img id="jeet2" data-img="./img/jeet2.jpg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/jeet3.jpg" target="new"><img id="jeet3" data-img="./img/jeet3.jpg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/jeet4.jpg" target="new"><img id="jeet4" data-img="./img/jeet4.jpg"></a>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image" id="parthib">
+                    <a href="./img/jeet5.jpg" target="new"><img id="jeet5" data-img="./img/jeet5.jpg"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/jeet6.jpg" target="new"><img id="jeet6" data-img="./img/jeet6.jpg"></a>
+
+            </li>
+
+
+        </ul>
+        <br>
+        <div class="row_name" style="width: 100%; ">
+            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);">Drawings: <br>&copy; Jeet Sen</h5>
+            <br>
+
+        </div>
+    </section>
+    <div class="container-fluid" id="buttons">
         <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
-        <a href="work.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
-    </div><br><br>
+        <a href="artist.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+    </div>
+    <br><br>
 
     <footer>
         <div id="left-footer">
@@ -467,10 +1321,11 @@
 
 <script>
     function searchFunction() {
-        var input, filter, ul, li, a, i;
+        var input, filter, ul, ul2, li, a, i;
         input = document.getElementById('myinput');
         filter = input.value.toUpperCase();
-        ul = document.getElementById('wrapper');
+        ul = document.getElementsById('wrapper');
+
         li = ul.getElementsByTagName('li');
 
         for (i = 0; i < li.length; i++) {
@@ -481,10 +1336,136 @@
                 li[i].style.display = 'none';
 
             }
+            if (h2.innerHTML.toUpperCase().indexOf(filter) = -1) {
+
+            }
         }
     }
 </script>
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
 
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    // GOURAV
+    observer.observe(document.querySelector('#gourav1'));
+    observer.observe(document.querySelector('#gourav2'));
+    observer.observe(document.querySelector('#gourav3'));
+    observer.observe(document.querySelector('#gourav4'));
+    observer.observe(document.querySelector('#gourav5'));
+    observer.observe(document.querySelector('#gourav6'));
+    observer.observe(document.querySelector('#gourav7'));
+    observer.observe(document.querySelector('#gourav8'));
+    observer.observe(document.querySelector('#gourav9'));
+    observer.observe(document.querySelector('#gourav10'));
+    observer.observe(document.querySelector('#gourav11'));
+    observer.observe(document.querySelector('#gourav12'));
+    // HRIDYA
+    observer.observe(document.querySelector('#hri1'));
+    observer.observe(document.querySelector('#hri2'));
+    observer.observe(document.querySelector('#hri3'));
+    observer.observe(document.querySelector('#hri4'));
+    // SWASTIK
+    observer.observe(document.querySelector('#swastik1'));
+    observer.observe(document.querySelector('#swastik2'));
+    observer.observe(document.querySelector('#swastik3'));
+    observer.observe(document.querySelector('#swastik4'));
+    // AAYUSH
+    observer.observe(document.querySelector('#aayush1'));
+    observer.observe(document.querySelector('#aayush2'));
+    observer.observe(document.querySelector('#aayush3'));
+    observer.observe(document.querySelector('#aayush4'));
+    observer.observe(document.querySelector('#aayush5'));
+    observer.observe(document.querySelector('#aayush6'));
+    // ARJO
+    observer.observe(document.querySelector('#arjo1'));
+    //SAYANDIP
+    observer.observe(document.querySelector('#sandi1'));
+    observer.observe(document.querySelector('#sandi2'));
+    observer.observe(document.querySelector('#sandi3'));
+    observer.observe(document.querySelector('#sandi4'));
+    observer.observe(document.querySelector('#sandi5'));
+    observer.observe(document.querySelector('#sandi6'));
+    // RIYANKA
+    observer.observe(document.querySelector('#riyanka1'));
+    // ANUPAMA
+    observer.observe(document.querySelector('#anupama1'));
+    observer.observe(document.querySelector('#anupama2'));
+    observer.observe(document.querySelector('#anupama3'));
+    observer.observe(document.querySelector('#anupama4'));
+    observer.observe(document.querySelector('#anupama5'));
+    observer.observe(document.querySelector('#anupama6'));
+    observer.observe(document.querySelector('#anupama7'));
+    // GODHULI
+    observer.observe(document.querySelector('#godhuli1'));
+    observer.observe(document.querySelector('#godhuli2'));
+    observer.observe(document.querySelector('#godhuli3'));
+    observer.observe(document.querySelector('#godhuli4'));
+    observer.observe(document.querySelector('#godhuli5'));
+    observer.observe(document.querySelector('#godhuli6'));
+    observer.observe(document.querySelector('#godhuli7'));
+    // PRODIPTA
+    observer.observe(document.querySelector('#prodipta1'));
+    observer.observe(document.querySelector('#prodipta2'));
+    // ARPITA
+    observer.observe(document.querySelector('#arpita1'));
+    observer.observe(document.querySelector('#arpita2'));
+    // PARTHIB
+    observer.observe(document.querySelector('#parthib1'));
+    observer.observe(document.querySelector('#parthib2'));
+    observer.observe(document.querySelector('#parthib3'));
+    observer.observe(document.querySelector('#parthib4'));
+    observer.observe(document.querySelector('#parthib5'));
+    observer.observe(document.querySelector('#parthib6'));
+    // ARKADEEP
+    observer.observe(document.querySelector('#arkadeep1'));
+    observer.observe(document.querySelector('#arkadeep2'));
+    observer.observe(document.querySelector('#arkadeep3'));
+    observer.observe(document.querySelector('#arkadeep4'));
+    observer.observe(document.querySelector('#arkadeep5'));
+    // SHAMBHABI
+    observer.observe(document.querySelector('#shambhabi1'));
+    observer.observe(document.querySelector('#shambhabi2'));
+    observer.observe(document.querySelector('#shambhabi3'));
+    observer.observe(document.querySelector('#shambhabi4'));
+    // RUDRANSHU
+    observer.observe(document.querySelector('#rudranshu1'));
+
+    // JEET
+    observer.observe(document.querySelector('#jeet1'));
+    observer.observe(document.querySelector('#jeet2'));
+    observer.observe(document.querySelector('#jeet3'));
+    observer.observe(document.querySelector('#jeet4'));
+    observer.observe(document.querySelector('#jeet5'));
+    observer.observe(document.querySelector('#jeet6'));
+</script>
+
+<script>
+    (function(d, e, s) {
+        if (d.getElementById("likebtn_wjs")) return;
+        a = d.createElement(e);
+        m = d.getElementsByTagName(e)[0];
+        a.async = 1;
+        a.id = "likebtn_wjs";
+        a.src = s;
+        m.parentNode.insertBefore(a, m)
+    })(document, "script", "//w.likebtn.com/js/w/widget.js");
+</script>
+<script src="artistnew.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
