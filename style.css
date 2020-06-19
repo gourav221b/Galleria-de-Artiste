@@ -307,6 +307,10 @@ footer a {
     list-style: none;
 }
 
+.left-footer h2 {
+    margin-left: 2%;
+}
+
 .left-footer li a:hover {
     color: blue;
     transition: 0.7s;
