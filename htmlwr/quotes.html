@@ -174,6 +174,35 @@
             height: auto;
         }
     }
+    /* PAGINATIONS */
+    
+    .pagination {
+        padding: 8px;
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+    }
+    
+    .pagination>a {
+        border-top: transparent;
+        display: inline-block;
+        padding: 8px 16px;
+        transition: 0.4s;
+        color: #000000;
+    }
+    
+    .pagination a:hover {
+        text-decoration: none;
+        border-top: 3px solid black;
+    }
+    
+    #next {
+        display: none;
+    }
+    
+    #prev {
+        display: flex;
+    }
 </style>
 
 <body>
@@ -196,12 +225,13 @@
     <div class="name_header">
         <br>
         <h3> Quotes by:</h3>
+
         <ul class="cards">
             <li class="cards_item">
                 <div class="card">
 
                     <div class="card_content">
-                        <h2 class="card_title"><a href="#hridya">Hridya Varier</a></h2>
+                        <h2 class="card_title"><a href="#hridya" onclick="first(); scroll(0,0);">Hridya Varier</a></h2>
 
                     </div>
 
@@ -211,7 +241,7 @@
                 <div class="card">
 
                     <div class="card_content">
-                        <h2 class="card_title"><a href="#rajroopa">Rajroopa Karmakar</a></h2>
+                        <h2 class="card_title"><a href="#rajroopa" onclick="second();scroll(0,0);">Rajroopa Karmakar</a></h2>
 
                     </div>
 
@@ -221,7 +251,7 @@
 
                 <div class="card">
                     <div class="card_content">
-                        <h2 class="card_title"><a href="#gourav">Gourav Ghosal</a></h2>
+                        <h2 class="card_title"><a href="#gourav" onclick="second()">Gourav Ghosal</a></h2>
 
                     </div>
 
@@ -230,230 +260,11 @@
         </ul>
     </div>
 
-
-    <ul class="cards">
-        <li class="cards_item">
-
-            <div class="card_image" id="hridya">
-                <a href="../quotes/1.jpg" target="new"><img id="img1" data-img="../quotes/1.jpg"></a>
-            </div>
-
-
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/3.jpg" target="new"><img id="img2" data-img="../quotes/3.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/4.jpg" target="new"><img id="img3" data-img="../quotes/4.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/5.webp" target="new"><img id="img4" data-img="../quotes/5.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/6.webp" target="new"><img id="img5" data-img="../quotes/6.webp" alt="6"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/7.jpg" target="new"><img id="img6" data-img="../quotes/7.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/8.jpg" target="new"><img id="img7" data-img="../quotes/8.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/9.webp" target="new"><img id="img8" data-img="../quotes/9.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/10.webp" target="new"><img id="img9" data-img="../quotes/10.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/11.jpg" target="new"><img id="img10" data-img="../quotes/11.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/12.webp" target="new"><img id="img11" data-img="../quotes/12.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/13.jpg" target="new"><img id="img12" data-img="../quotes/13.jpg"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/14.webp" target="new"><img id="img13" data-img="../quotes/14.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/15.webp" target="new"><img id="img14" data-img="../quotes/15.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/16.webp" target="new"><img id="img15" data-img="../quotes/16.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <a href="../quotes/18.webp" target="new">
-                <div class="card_image"><img id="img16" data-img="../quotes/18.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/19.jpg." target="new"></a><img id="img17" data-img="../quotes/19.jpg"></div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/20.webp" target="new"><img id="img18" data-img="../quotes/20.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/21.webp" target="new"></a><img id="img19" data-img="../quotes/21.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <a href="../quotes/22.jpg" target="new"><img id="img20" data-img="../quotes/22.jpg"></div>
-            </a>
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/23.webp" target="new"><img id="img21" data-img="../quotes/23.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/24.webp" target="new"><img id="img22" data-img="../quotes/24.webp "></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/25.webp" target="new"><img id="img23" data-img="../quotes/25.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/26.webp" target="new"><img id="img24" data-img="../quotes/26.webp"></a>
-            </div>
-
-            </div>
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/27.jpg" target="new"><img id="img25" data-img="../quotes/27.jpg "></a>
-            </div>
-
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/28.jpg" target="new"><img id="img26" data-img="../quotes/28.jpg"></a>
-            </div>
-
-
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/29.webp" target="new"><img id="img27" data-img="../quotes/29.webp "></a>
-            </div>
-
-
-        </li>
-        <li class="cards_item">
-
-            <div class="card_image">
-                <a href="../quotes/30.webp" target="new"><img id="img28" data-img="../quotes/30.webp"></a>
-            </div>
+    <div id="prev">
+        <ul class="cards">
             <li class="cards_item">
-
-                <div class="card_image">
-                    <a href="../quotes/31.webp"><img id="img29" data-img="../quotes/31.webp"></a>
+                <div class="card_image" id="hridya">
+                    <a href="../quotes/1.jpg" target="new"><img id="img1" data-img="../quotes/1.jpg"></a>
                 </div>
 
 
@@ -461,193 +272,398 @@
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="../quotes/32.jpg"><img id="img30" data-img="../quotes/32.jpg"></a>
+                    <a href="../quotes/3.jpg" target="new"><img id="img2" data-img="../quotes/3.jpg"></a>
                 </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/4.jpg" target="new"><img id="img3" data-img="../quotes/4.jpg"></a>
+                </div>
+
+
+            </li>
+
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/5.webp" target="new"><img id="img4" data-img="../quotes/5.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/6.webp" target="new"><img id="img5" data-img="../quotes/6.webp" alt="6"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/7.jpg" target="new"><img id="img6" data-img="../quotes/7.jpg"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/8.jpg" target="new"><img id="img7" data-img="../quotes/8.jpg"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/9.webp" target="new"><img id="img8" data-img="../quotes/9.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/10.webp" target="new"><img id="img9" data-img="../quotes/10.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/11.jpg" target="new"><img id="img10" data-img="../quotes/11.jpg"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/12.webp" target="new"><img id="img11" data-img="../quotes/12.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/13.jpg" target="new"><img id="img12" data-img="../quotes/13.jpg"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/14.webp" target="new"><img id="img13" data-img="../quotes/14.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/15.webp" target="new"><img id="img14" data-img="../quotes/15.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/16.webp" target="new"><img id="img15" data-img="../quotes/16.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <a href="../quotes/18.webp" target="new">
+                    <div class="card_image"><img id="img16" data-img="../quotes/18.webp"></a>
+
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/19.jpg." target="new"></a><img id="img17" data-img="../quotes/19.jpg">
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/20.webp" target="new"><img id="img18" data-img="../quotes/20.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/21.webp" target="new"></a><img id="img19" data-img="../quotes/21.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card_image">
+                    <a href="../quotes/22.jpg" target="new"><img id="img20" data-img="../quotes/22.jpg">
+                    </a>
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/23.webp" target="new"><img id="img21" data-img="../quotes/23.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/24.webp" target="new"><img id="img22" data-img="../quotes/24.webp "></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/25.webp" target="new"><img id="img23" data-img="../quotes/25.webp"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/26.webp" target="new"><img id="img24" data-img="../quotes/26.webp"></a>
+
+
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/27.jpg" target="new"><img id="img25" data-img="../quotes/27.jpg "></a>
+                </div>
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/28.jpg" target="new"><img id="img26" data-img="../quotes/28.jpg"></a>
+                </div>
+
+
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="../quotes/29.webp" target="new"><img id="img27" data-img="../quotes/29.webp "></a>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div id="next">
+            <ul class="cards">
                 <li class="cards_item">
                     <div class="card_image">
-                        <a href="../quotes/33.webp"><img id="img31" data-img="../quotes/33.webp"></a>
-                    </div>
-                </li>
-                <li class="cards_item">
-
-                    <div class="card_image">
-                        <a href="../quotes/34.webp"><img id="img32" data-img="../quotes/34.webp"></a>
-                    </div>
-                </li>
-                <li class="cards_item">
-
-                    <div class="card_image">
-                        <a href="../quotes/35.jpg"><img id="img33" data-img="../quotes/35.jpg"></a>
-                    </div>
-                </li>
-                <li class="cards_item">
-
-                    <div class="card_image">
-                        <a href="../quotes/36.jpg"><img id="img34" data-img="../quotes/36.jpg"></a>
-                    </div>
-
-
-                </li>
-                <li class="cards_item">
-
-                    <div class="card_image">
-                        <a href="../quotes/37.jpg"><img id="img35" data-img="../quotes/37.jpg"></a>
+                        <a href="../quotes/30.webp" target="new"><img id="img28" data-img="../quotes/30.webp"></a>
                     </div>
                     <li class="cards_item">
 
                         <div class="card_image">
-                            <a href="../quotes/38.webp"><img id="img36" data-img="../quotes/38.webp"></a>
+                            <a href="../quotes/31.webp"><img id="img29" data-img="../quotes/31.webp"></a>
                         </div>
-                    </li>
 
-                    <li class="cards_item">
-
-                        <div class="card_image" id="rajroopa">
-                            <a href="../quotes/raj2.png"><img id="img37" data-img="../quotes/raj2.png "></a>
-                        </div>
 
                     </li>
                     <li class="cards_item">
 
                         <div class="card_image">
-                            <a href="../quotes/raj3.jpg"><img id="img38" data-img="../quotes/raj3.jpg"></a>
+                            <a href="../quotes/32.jpg"><img id="img30" data-img="../quotes/32.jpg"></a>
                         </div>
+                        <li class="cards_item">
+                            <div class="card_image">
+                                <a href="../quotes/33.webp"><img id="img31" data-img="../quotes/33.webp"></a>
+                            </div>
+                        </li>
+                        <li class="cards_item">
 
-                    </li>
-                    <li class="cards_item">
+                            <div class="card_image">
+                                <a href="../quotes/34.webp"><img id="img32" data-img="../quotes/34.webp"></a>
+                            </div>
+                        </li>
+                        <li class="cards_item">
 
-                        <div class="card_image">
-                            <a href="../quotes/raj4.jpg"><img id="img39" data-img="../quotes/raj4.jpg"></a>
+                            <div class="card_image">
+                                <a href="../quotes/35.jpg"><img id="img33" data-img="../quotes/35.jpg"></a>
+                            </div>
+                        </li>
+                        <li class="cards_item">
 
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/sunrise.jpg"><img id="img40" data-img="../quotes/sunrise.jpg "></a>
-                        </div>
-
-
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image" id="gourav">
-                            <a href="../quotes/death.jpg"><img id="img41" data-img="../quotes/death.jpg"></a>
-                        </div>
-
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/couple.png"><img id="img42" data-img="../quotes/couple.png"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../images/raj5.jpg"><img id="img43" data-img="../images/raj5.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../images/candle.jpg"><img id="img44" data-img="../images/candle.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../images/ruins.jpg"><img id="img45" data-img="../images/ruins.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/freedom.png"><img id="img46" data-img="../quotes/freedom.png"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/ammunition.jpg"><img id="img47" data-img="../quotes/ammunition.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/gourav4.jpg"><img id="img48" data-img="../quotes/gourav4.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/hands.jpg"><img id="img49" data-img="../quotes/hands.jpg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/roads.jpeg"><img id="img50" data-img="../quotes/roads.jpeg"></a>
-                        </div>
-                    </li>
-                    <li class="cards_item">
-
-                        <div class="card_image">
-                            <a href="../quotes/true you.jpg"><img id="img51" data-img="../quotes/true you.jpg"></a>
-                        </div>
-                    </li>
+                            <div class="card_image">
+                                <a href="../quotes/36.jpg"><img id="img34" data-img="../quotes/36.jpg"></a>
+                            </div>
 
 
+                        </li>
+                        <li class="cards_item">
 
-    </ul>
+                            <div class="card_image">
+                                <a href="../quotes/37.jpg"><img id="img35" data-img="../quotes/37.jpg"></a>
+                            </div>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/38.webp"><img id="img36" data-img="../quotes/38.webp"></a>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/raj2.png"><img id="img37" data-img="../quotes/raj2.png "></a>
+                                </div>
+
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/raj3.jpg"><img id="img38" data-img="../quotes/raj3.jpg"></a>
+                                </div>
+
+                            </li>
+                            <li class="cards_item" id="rajroopa">
+
+                                <div class="card_image">
+                                    <a href="../quotes/raj4.jpg"><img id="img39" data-img="../quotes/raj4.jpg"></a>
+
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/sunrise.jpg"><img id="img40" data-img="../quotes/sunrise.jpg "></a>
+                                </div>
+
+
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image" id="gourav">
+                                    <a href="../quotes/death.jpg"><img id="img41" data-img="../quotes/death.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/couple.png"><img id="img42" data-img="../quotes/couple.png"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../images/raj5.jpg"><img id="img43" data-img="../images/raj5.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../images/candle.jpg"><img id="img44" data-img="../images/candle.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../images/ruins.jpg"><img id="img45" data-img="../images/ruins.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/freedom.png"><img id="img46" data-img="../quotes/freedom.png"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/ammunition.jpg"><img id="img47" data-img="../quotes/ammunition.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/gourav4.jpg"><img id="img48" data-img="../quotes/gourav4.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/hands.jpg"><img id="img49" data-img="../quotes/hands.jpg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/roads.jpeg"><img id="img50" data-img="../quotes/roads.jpeg"></a>
+                                </div>
+                            </li>
+                            <li class="cards_item">
+
+                                <div class="card_image">
+                                    <a href="../quotes/true you.jpg"><img id="img51" data-img="../quotes/true you.jpg"></a>
+                                </div>
+                            </li>
+            </ul>
+        </div>
+        <div class="pagination" id="pagination">
+            <a href="# " onclick="first()">Prev</a>
+            <a href="# " onclick="first()">1</a>
+            <a href="# " onclick="second()">2</a>
+            <a href="# " onclick="second()">Next</a>
+        </div>
     </div>
     <div class="container-fluid">
-        <a href="#top"><button class="btns "><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
-        <a href="/creative.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+        <a href="#top"><button class="btns" style="border: 2px solid #000;"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
+        <a href="/creative.html"><button class="btns"style="border: 2px solid #000;"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
     </div>
     <br>
     <footer>
-        <div id="left-footer">
-            <h3>Quick Links</h3>
+        <div class="left-footer ">
+            <br>
+            <h2 style="color: white; ">Quick Links</h2>
             <p>
                 <ul>
-                    <li>
-                        <a href="/index.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="/creative.html">Writing </a>
-                    </li>
-
-                    <li>
-                        <a href="/about.html">Contact</a>
-                    </li>
+                    <li><a href="index.html ">Home</a></li><br>
+                    <li><a href="work.html ">Catalogue</a></li><br>
+                    <li><a href="about.html ">Contact</a></li><br>
                 </ul>
             </p>
         </div>
-        <div id="right-footer">
-            <h3>Follow us on</h3>
-            <div id="social-media-footer">
+        <div class="right-footer ">
+            <br>
+            <h3>Follow Us On</h3>
+            <p>
                 <ul>
-                    <li>
-                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/galleria_de_artiste/">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.reddit.com/r/Galleria_de_artiste/">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                        </a>
-                    </li>
+                    <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897 "><i class="fa fa-facebook "></i></a></li>
+                    &nbsp;
+                    <li><a href="https://www.instagram.com/galleria_de_artiste/ "><i class="fa fa-instagram "></i></a></li>&nbsp;
+                    <li><a href="https://www.reddit.com/r/Galleria_de_artiste/ "><i class="fa fa-reddit-alien "></i></a></li>&nbsp;
+
                 </ul>
-            </div>
-            <p>This website is developed by Gourav Ghosal.</p>
+                <p>This website is developed by Gourav Ghosal</p>
+            </p>
         </div>
     </footer>
     <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -728,6 +744,7 @@
     observer.observe(document.querySelector('#img50'));
     observer.observe(document.querySelector('#img51'));
 </script>
+<script src="/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
