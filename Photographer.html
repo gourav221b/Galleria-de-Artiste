@@ -19,879 +19,899 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Photography| Galleria-de-Artiste</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169711560-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-169711560-1');
+        </script>
+
     </head>
-</head>
-<style>
-    .header {
-        text-align: center;
-        padding: 32px;
-    }
-    
-    .container_text {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .text {
-        flex: 1;
-        margin-left: 2%;
-    }
-    
-    .text h1 {
-        text-align: left;
-        font-size: 3em;
-    }
-    
-    .card_title {
-        font-family: 'Caveat', 'Baloo Tamma 2', cursive;
-        font-size: xx-large;
-        text-align: center;
-    }
-    
-    .search-bar {
-        flex: 2;
-        margin-left: 2%;
-    }
-    
-    input[type=text] {
-        background: inherit;
-        border-radius: 20px;
-        border: 1px solid black;
-        padding: 0.5em;
-        opacity: 0.8;
-        width: 20%;
-    }
-    
-    input[type=text]:hover {
-        opacity: 1;
-        width: 22%;
-        transition: 0.4s ease-in-out;
-    }
-    /* Create four equal columns that sits next to each other */
-    
-    .column {
-        -ms-flex: 25%;
-        /* IE10 */
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-    }
-    
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-        border: 10px solid black;
-    }
-    
-    .card_image img {
-        height: 300px;
-        width: 500px;
-    }
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    
-    @media screen and (max-width: 800px) {
-        .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
+    <style>
+        .header {
+            text-align: center;
+            padding: 32px;
         }
-        .footer {
-            border: 1px solid black;
+        
+        .container_text {
+            display: flex;
+            flex-direction: row;
         }
-        .card_image img {
-            height: 100%;
-            width: 100%;
+        
+        .text {
+            flex: 1;
+            margin-left: 2%;
         }
-        .card_title h2 {
-            margin-bottom: 20px;
+        
+        .text h1 {
+            text-align: left;
+            font-size: 3em;
         }
-    }
-    
-    li {
-        display: inline;
-    }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    
-    @media screen and (max-width: 600px) {
-        .column {
-            -ms-flex: 100%;
-            flex: 90%;
-            max-width: 100%;
+        
+        .card_title {
+            font-family: 'Caveat', 'Baloo Tamma 2', cursive;
+            font-size: xx-large;
+            text-align: center;
         }
+        
+        .search-bar {
+            flex: 2;
+            margin-left: 2%;
+        }
+        
         input[type=text] {
-            width: 80%;
             background: inherit;
             border-radius: 20px;
             border: 1px solid black;
             padding: 0.5em;
             opacity: 0.8;
+            width: 20%;
         }
+        
         input[type=text]:hover {
             opacity: 1;
-            width: 90%;
+            width: 22%;
             transition: 0.4s ease-in-out;
         }
-    }
-    
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        transform: scale(0.98);
-        -webkit-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
-        -moz-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
-        box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
-    }
-    
-    .row_name ul a {
-        text-decoration: none;
-        list-style: none;
-        color: #000000;
-    }
-    
-    .row_name ul a:hover {
-        text-decoration: none;
-        font-size: 1.3em;
-    }
-    
-    .row_name ul li:hover a .fa-facebook {
-        color: #3b5998;
-        transition: 0.7s;
-    }
-    
-    .row_name ul li:hover a .fa-instagram {
-        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: 0.5s;
-    }
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    
-    @media screen and (max-width: 800px) {
+        /* Create four equal columns that sits next to each other */
+        
         .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
         }
-    }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    
-    @media screen and (max-width: 600px) {
-        .column {
-            -ms-flex: 100%;
-            flex: 90%;
-            max-width: 100%;
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            border: 10px solid black;
         }
-    }
-    
-    .made_by {
-        font-weight: 400;
-        font-size: 13px;
-        margin-top: 35px;
-        text-align: center;
-    }
-    
-    .container_text {
-        display: inline;
-    }
-    
-    #photographer_aayush,
-    #photographer_arko,
-    #photographer_debosmita,
-    #photographer_aheli,
-    #photographer_parthib,
-    #photographer_arkadeep,
-    #photographer_aa,
-    #photographer_shambhabi,
-    #photographer_deadshot,
-    #buttons {
-        display: none;
-    }
-</style>
+        
+        .card_image img {
+            height: 300px;
+            width: 500px;
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+            .footer {
+                border: 1px solid black;
+            }
+            .card_image img {
+                height: 100%;
+                width: 100%;
+            }
+            .card_title h2 {
+                margin-bottom: 20px;
+            }
+            .name_header {
+                margin-left: 10px;
+                width: 80%;
+                margin-right: 10px;
+            }
+        }
+        
+        li {
+            display: inline;
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 90%;
+                max-width: 100%;
+            }
+            input[type=text] {
+                width: 80%;
+                background: inherit;
+                border-radius: 20px;
+                border: 1px solid black;
+                padding: 0.5em;
+                opacity: 0.8;
+            }
+            input[type=text]:hover {
+                opacity: 1;
+                width: 90%;
+                transition: 0.4s ease-in-out;
+            }
+            .column img {
+                border: 3px solid black;
+            }
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            transform: scale(0.98);
+            -webkit-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+            -moz-box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+            box-shadow: 0px 3px 21px 5px rgba(0, 0, 0, 0.36);
+        }
+        
+        .row_name ul a {
+            text-decoration: none;
+            list-style: none;
+            color: #000000;
+        }
+        
+        .row_name ul a:hover {
+            text-decoration: none;
+            font-size: 1.3em;
+        }
+        
+        .row_name ul li:hover a .fa-facebook {
+            color: #3b5998;
+            transition: 0.7s;
+        }
+        
+        .row_name ul li:hover a .fa-instagram {
+            background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.5s;
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 90%;
+                max-width: 100%;
+            }
+        }
+        
+        .made_by {
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 35px;
+            text-align: center;
+        }
+        
+        .container_text {
+            display: inline;
+        }
+        
+        #photographer_aayush,
+        #photographer_arko,
+        #photographer_debosmita,
+        #photographer_aheli,
+        #photographer_parthib,
+        #photographer_arkadeep,
+        #photographer_aa,
+        #photographer_shambhabi,
+        #photographer_deadshot,
+        #buttons {
+            display: none;
+        }
+    </style>
 
-<body>
+    <body>
 
-    <section class="navbar">
-        <a href="about.html">About</a>
+        <section class="navbar">
+            <a href="about.html">About</a>
 
-        <a href="work.html" class="active">Catalogue</a>
-        <a href="index.html">Home</a>
-    </section>
+            <a href="work.html" class="active">Catalogue</a>
+            <a href="index.html">Home</a>
+        </section>
 
-    <!-- Header -->
-    <div class="header" id="top">
-        <br>
-        <br>
-        <h1><b>Galleria de Artiste</b></h1>
-
-    </div>
-    <!-- SECTION MAIN -->
-    <section id="photographer_main">
-        <div class="container_text">
-            <div class="text">
-                <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Photographers:</h1>
-                <h4>(Click on the cards to see more)</h4>
-            </div>
+        <!-- Header -->
+        <div class="header" id="top">
             <br>
-            <div class="search-bar">
-                <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
-
-            </div>
-
-        </div>
-
-        <ul class="cards" id="wrapper">
-            <!-- Aayush -->
-            <li class="cards_item">
-                <div class="card">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/kumarphoto10.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Aayush</h2>
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="Aayush()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn" onclick="Aayush()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Arkojit -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/arko_memorial.jpeg "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Arkojit</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="arko()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="arko()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Debosmita -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/Deb11.jpg "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Debosmita</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="debosmita()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="debosmita()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Aheli -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/Aheli1.jpeg "></a>
-                    </div>
-                    <div class="card_content " style="height: 100%; ">
-                        <h2 class="card_title ">Aheli</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="aheli()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="aheli()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Parthib -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/parthibphoto10.jpeg "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Parthib</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="Parthib()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Parthib()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Arkadeep -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/arkadeepphoto3.jpg "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Arkadeep</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="Arkadeep()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Arkadeep()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Aparajita And Ajita -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/aa3.JPG "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Ajita And Aparajita</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="aa()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="aa()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- SHAMABHABI -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/Shambhabiphoto2.jpeg "></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Shambhabi</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="Shambhabi()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Shambhabi()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- DEADSHOT -->
-            <li class="cards_item ">
-                <div class="card ">
-                    <div class="card_image ">
-                        <a style="text-decoration: none; "><img src="./img/deadshot13.jpg"></a>
-                    </div>
-                    <div class="card_content ">
-                        <h2 class="card_title ">Deadshot</h2>
-
-                        <a style="text-decoration: none; "><button class="btn card_btn " onclick="deadshot()" >See More</button></a>
-                        <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="deadshot()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        </div>
-        <div class="container-fluid ">
-            <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
-            <a href="work.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
-        </div>
-    </section>
-    <!-- SECTION AAYUSH -->
-    <section id="photographer_aayush">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Aayush kumar </span></div>
-                <div class="column">
-                    <a href="./img/kumarphoto1.jpeg"><img id="aayush1" data-img="./img/kumarphoto1.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto2.jpeg"><img id="aayush2" data-img="./img/kumarphoto2.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto3.jpeg"><img id="aayush3" data-img="./img/kumarphoto3.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto4.jpeg"><img id="aayush4" data-img="./img/kumarphoto4.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/kumarphoto5.jpeg"> <img id="aayush5" data-img="./img/kumarphoto5.jpeg " style="width:100% ">
-                        <a href="./img/kumarphoto6.jpeg"> <img id="aayush6" data-img="./img/kumarphoto6.jpeg " style="width:100% "></a>
-                        <a href="./img/kumarphoto7.jpeg"> <img id="aayush7" data-img="./img/kumarphoto7.jpeg " style="width:100% "></a>
-                        <a href="./img/kumarphoto14.jpeg"> <img id="aayush8" data-img="./img/kumarphoto14.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/kumarphoto8.jpeg"> <img id="aayush9" data-img="./img/kumarphoto8.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto9.jpeg"> <img id="aayush10" data-img="./img/kumarphoto9.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto10.jpeg"> <img id="aayush11" data-img="./img/kumarphoto10.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto11.jpg"> <img id="aayush12" data-img="./img/kumarphoto11.jpg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/kumarphoto12.jpg"> <img id="aayush13" data-img="./img/kumarphoto12.jpg " style="width:100% "></a>
-                    <a href="./img/kumarphoto13.jpg"> <img id="aayush14" data-img="./img/kumarphoto13.jpg " style="width:100% "></a>
-
-                    <a href="./img/kumarphoto15.jpeg"> <img id="aayush15" data-img="./img/kumarphoto15.jpeg " style="width:100% "></a>
-                    <a href="./img/kumarphoto16.jpeg"> <img id="aayush16" data-img="./img/kumarphoto16.jpeg " style="width:100% "></a>
-                </div>
-                <!-- <div class="column ">
-                   
-    
-                </div> -->
-
-            </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); ">Pictures: <br>&copy; Aayush Kumar</h5>
             <br>
-            <ul>
-                <li><a href="https://www.facebook.com/search/top/?q=aayush%20kumar " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Aayush Kumar</a></li><br>
-                <li><a href="https://www.instagram.com/masterbroda04/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @masterbroda04</a></li><br>
-                <li>
-                    <a href="https://www.linkedin.com/in/aayush-kumar-630ab11a7/ " target="_blank ">
-                        <i class="fa fa-linkedin-square " aria-hidden="true "></i>Aayush Kumar</a>
+            <h1><b>Galleria de Artiste</b></h1>
+
+        </div>
+        <!-- SECTION MAIN -->
+        <section id="photographer_main">
+            <div class="container_text">
+                <div class="text">
+                    <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Photographers:</h1>
+                    <h4>(Click on the cards to see more)</h4>
+                </div>
+                <br>
+                <div class="search-bar">
+                    <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
+
+                </div>
+
+            </div>
+
+            <ul class="cards" id="wrapper">
+                <!-- Aayush -->
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/kumarphoto10.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Aayush</h2>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="Aayush()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn" onclick="Aayush()" >See More</button></a>
+                        </div>
+                    </div>
                 </li>
-        </div>
+                <!-- Arkojit -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/arko_memorial.jpeg "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Arkojit</h2>
 
-    </section>
-    <!-- SECTION ARKOJIT -->
-    <section id="photographer_arko">
-        <div class="container_main" style="margin: 1%; ">
-            <div class="row">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Arkojit Debnath </span></div>
-                <div class="column">
-                    <a href="./img/arko_2.jpg"><img id="arko1" data-img="./img/arko_2.jpg " style="width:100% "></a>
-                    <a href="./img/arko_clgst.jpeg"><img id="arko2" data-img="./img/arko_clgst.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/arko_ganga.jpeg"><img id="arko3" data-img="./img/arko_ganga.jpeg " style="width:100% "></a>
-                    <a href="./img/arko_memorial.jpeg"><img id="arko4" data-img="./img/arko_memorial.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/arko_thakurbari.jpeg"><img id="arko5" src="./img/arko_thakurbari.jpeg" style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/arko_tram.jpeg"><img id="arko6" src="./img/arko_tram.jpeg" style="width:100% "></a>
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="arko()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="arko()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Debosmita -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/Deb11.jpg "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Debosmita</h2>
 
-                </div>
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="debosmita()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="debosmita()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Aheli -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/Aheli1.jpeg "></a>
+                        </div>
+                        <div class="card_content " style="height: 100%; ">
+                            <h2 class="card_title ">Aheli</h2>
 
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="aheli()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="aheli()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
 
-            </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Arkojit Debnath</h5>
-            <br>
-            <ul>
-                <li><a href="https://www.facebook.com/arkojit.debnath " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Arkojit Debnath</a></li><br>
-                <li><a href="https://www.instagram.com/chobigraphy_18/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@chobigraphy_18 </a></li>
+                <!-- Parthib -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/parthibphoto10.jpeg "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Parthib</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="Parthib()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Parthib()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Arkadeep -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/arkadeepphoto3.jpg "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Arkadeep</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="Arkadeep()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Arkadeep()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Aparajita And Ajita -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/aa3.JPG "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Ajita And Aparajita</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="aa()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="aa()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- SHAMABHABI -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/Shambhabiphoto2.jpeg "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Shambhabi</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="Shambhabi()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="Shambhabi()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- DEADSHOT -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/deadshot13.jpg"></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Deadshot</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="deadshot()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="deadshot()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
             </ul>
-        </div>
-    </section>
-    <!-- SECTION DEBOSMITA -->
-    <section id="photographer_debosmita">
-        <div class="container_main" style="margin: 1%; ">
-            <div class="row">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Debosmita Bhattacharjee</span></div>
-                <div class="column">
-                    <a href="./img/Deb1.jpeg"><img id="deb1" data-img="./img/Deb1.jpeg " style="width:100% "></a>
-                    <a href="./img/Deb2.jpeg"><img id="deb2" data-img="./img/Deb2.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/Deb3.jpeg"><img id="deb3" data-img="./img/Deb3.jpeg " style="width:100% "></a>
-                    <a href="./img/Deb4.jpeg"><img id="deb4" data-img="./img/Deb4.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/Deb5.jpeg"><img id="deb5" data-img="./img/Deb5.jpeg " style="width:100% "></a>
-                    <a href="./img/Deb6.jpeg"><img id="deb6" data-img="./img/Deb6.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/Deb7.jpeg"><img id="deb7" data-img="./img/Deb7.jpeg " style="width:100% "></a>
-                    <a href="./img/Deb8.jpeg"><img id="deb8" data-img="./img/Deb8.jpeg " style="width:100% "></a>
-
-                    <a href="./img/Deb9.jpeg"><img id="deb9" data-img="./img/Deb9.jpeg " style="width:100% "></a>
-                    <a href="./img/Deb11.jpg"><img id="deb10" data-img="./img/Deb11.jpg " style="width:100% "></a>
-                </div>
-
-
 
             </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Debosmita Bhattacharjee</h5>
-            <br>
-            <ul>
-                <li><a href="https://www.facebook.com/debosmita.bhattacharjee.961 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i>Debosmita Bhattacharjee</a></li><br>
-                <li><a href="https://www.instagram.com/debosmita.kol/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@debosmita.kol</a></li>
-
-        </div>
-    </section>
-    <!-- SECTION Aheli -->
-    <section id="photographer_aheli">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row ">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Aheli Bhattacharjee </span></div>
-                <div class="column ">
-                    <a href="./img/Aheli1.jpeg"><img id="aheli1" data-img="./img/Aheli1.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/Aheli2.jpeg"><img id="aheli2" data-img="./img/Aheli2.jpeg " style="width:100% "></a>
-
-                </div>
-                <div class="column ">
-                    <a href="./img/Aheli3.jpeg"> <img id="aheli3" data-img="./img/Aheli3.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/Aheli4.jpeg"> <img id="aheli4" data-img="./img/Aheli4.jpeg " style="width:100% "></a>
-
-
-                </div>
-
-
+            <div class="container-fluid ">
+                <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
+                <a href="work.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
             </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Aheli Bhattacharjee</h5>
-            <br>
-            <ul>
-                <li><a href="https://www.facebook.com/aheli22 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Aheli Bhattacharjee</a></li><br>
-                <li><a href="https://www.instagram.com/ahxli._/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@ahxli._ </a></li>
+        </section>
+        <!-- SECTION AAYUSH -->
+        <section id="photographer_aayush">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row">
+                    <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Aayush kumar </span></div>
+                    <div class="column">
+                        <a href="./img/kumarphoto1.jpeg"><img id="aayush1" data-img="./img/kumarphoto1.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto2.jpeg"><img id="aayush2" data-img="./img/kumarphoto2.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto3.jpeg"><img id="aayush3" data-img="./img/kumarphoto3.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto4.jpeg"><img id="aayush4" data-img="./img/kumarphoto4.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/kumarphoto5.jpeg"> <img id="aayush5" data-img="./img/kumarphoto5.jpeg " style="width:100% ">
+                            <a href="./img/kumarphoto6.jpeg"> <img id="aayush6" data-img="./img/kumarphoto6.jpeg " style="width:100% "></a>
+                            <a href="./img/kumarphoto7.jpeg"> <img id="aayush7" data-img="./img/kumarphoto7.jpeg " style="width:100% "></a>
+                            <a href="./img/kumarphoto14.jpeg"> <img id="aayush8" data-img="./img/kumarphoto14.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/kumarphoto8.jpeg"> <img id="aayush9" data-img="./img/kumarphoto8.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto9.jpeg"> <img id="aayush10" data-img="./img/kumarphoto9.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto10.jpeg"> <img id="aayush11" data-img="./img/kumarphoto10.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto11.jpg"> <img id="aayush12" data-img="./img/kumarphoto11.jpg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/kumarphoto12.jpg"> <img id="aayush13" data-img="./img/kumarphoto12.jpg " style="width:100% "></a>
+                        <a href="./img/kumarphoto13.jpg"> <img id="aayush14" data-img="./img/kumarphoto13.jpg " style="width:100% "></a>
 
-        </div>
-    </section>
-    <!-- SECTION PARTHIB -->
-    <section id="photographer_parthib">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row ">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Parthib Dutta </span></div>
-                <div class="column ">
-                    <a href="./img/parthibphoto1.jpeg"><img id="parthib1" data-img="./img/parthibphoto1.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto2.jpeg"><img id="parthib2" data-img="./img/parthibphoto2.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto3.jpeg"><img id="parthib3" data-img="./img/parthibphoto3.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/parthibphoto4.jpeg"><img id="parthib4" data-img="./img/parthibphoto4.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto5.jpeg"><img id="parthib5" data-img="./img/parthibphoto5.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto6.jpeg"><img id="parthib6" data-img="./img/parthibphoto6.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/parthibphoto7.jpeg"><img id="parthib7" data-img="./img/parthibphoto7.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto8.jpeg"><img id="parthib8" data-img="./img/parthibphoto8.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto9.jpeg"><img id="parthib9" data-img="./img/parthibphoto9.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/parthibphoto10.jpeg"><img id="parthib10" data-img="./img/parthibphoto10.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto11.jpeg"><img id="parthib11" data-img="./img/parthibphoto11.jpeg " style="width:100% "></a>
-                    <a href="./img/parthibphoto12.jpeg"><img id="parthib12" data-img="./img/parthibphoto12.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/parthibphoto13.jpeg"><img id="parthib13" data-img="./img/parthibphoto13.jpeg " style="width:100% "></a>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Parthib Dutta</h5>
-            <br>
-            <ul>
-                <li><a href="https://www.facebook.com/rakhi.kanjilal.5 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Parthib Dutta</a></li>
-                <li><a href="https://www.instagram.com/dutta.parthib/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @dutta.parthib</a></li>
-
-        </div>
-    </section>
-    <!-- SECTION ARKADEEP -->
-    <section id="photographer_arkadeep">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row ">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Arkadeep Sen </span></div>
-                <div class="column ">
-                    <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep1" data-img="./img/arkadeepphoto1.jpeg " style="width:100% "></a>
-                    <a href="./img/arkadeepphoto2.jpeg"><img id="arkadeep2" data-img="./img/arkadeepphoto2.jpeg " style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/arkadeepphoto3.jpg"><img id="arkadeep3" data-img="./img/arkadeepphoto3.jpg " style="width:100% "></a>
-                    <a href="./img/arkadeepphoto4.jpg"><img id="arkadeep4" data-img="./img/arkadeepphoto4.jpg " style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep5" data-img="./img/arkadeepphoto5.jpg " style="width:100% "></a>
-                    <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep6" data-img="./img/arkadeepphoto6.jpg " style="width:100% "></a>
-
-                </div>
-
-
-            </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Arkadeep Sen</h5>
-            <br>
-            <ul>
-                <li><a href="https://www.facebook.com/arkadeep.sen.923/ " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Arkadeep Sen</a></li><br>
-                <li><a href="https://www.instagram.com/rolla_costa_/?hl=en " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @rolla_costa_</a></li>
-
-        </div>
-    </section>
-    <!-- SECTION AJITA APARAJITA -->
-    <section id="photographer_aa">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row ">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Ajita And Aparajita </span></div>
-                <div class="column ">
-                    <a href="./img/aa1.jpg"><img id="aa1" data-img="./img/aa1.jpg" style="width:100% "></a>
-                    <a href="./img/aa2.jpg"><img id="aa2" data-img="./img/aa2.jpg" style="width:100% "></a>
-                    <a href="./img/aa3.jpg"><img id="aa3" data-img="./img/aa3.jpg" style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/aa4.jpg"><img id="aa4" data-img="./img/aa4.jpg" style="width:100% "></a>
-                    <a href="./img/aa5.jpg"><img id="aa5" data-img="./img/aa5.jpg" style="width:100% "></a>
-                    <a href="./img/aa6.jpg"><img id="aa6" data-img="./img/aa6.jpg" style="width:100% "></a>
-                </div>
-                <div class="column ">
-                    <a href="./img/aa7.jpg"><img id="aa7" data-img="./img/aa7.jpg" style="width:100% "></a>
-                    <a href="./img/aa8.jpg"><img id="aa8" data-img="./img/aa8.jpg" style="width:100% "></a>
-                    <a href="./img/aa9.jpg"><img id="aa9" data-img="./img/aa9.jpg" style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/aa10.jpg"><img id="aa10" data-img="./img/aa10.jpg" style="width:100% "></a>
-                    <a href="./img/aa11.jpg"><img id="aa11" data-img="./img/aa11.jpg" style="width:100% "></a>
-                    <a href="./img/aa12.jpg"><img id="aa12" data-img="./img/aa12.jpg" style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/aa13.jpg"><img id="aa13" data-img="./img/aa13.jpg" style="width:100% "></a>
-
-                </div>
-                <!-- <div class="column ">
+                        <a href="./img/kumarphoto15.jpeg"> <img id="aayush15" data-img="./img/kumarphoto15.jpeg " style="width:100% "></a>
+                        <a href="./img/kumarphoto16.jpeg"> <img id="aayush16" data-img="./img/kumarphoto16.jpeg " style="width:100% "></a>
+                    </div>
+                    <!-- <div class="column ">
                    
     
                 </div> -->
 
+                </div>
             </div>
-        </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); ">If you like the Photographer leave a like! <span class="likebtn-wrapper " data-theme="custom " data-btn_size="31
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); ">Pictures: <br>&copy; Aayush Kumar</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/search/top/?q=aayush%20kumar " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Aayush Kumar</a></li><br>
+                    <li><a href="https://www.instagram.com/masterbroda04/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @masterbroda04</a></li><br>
+                    <li>
+                        <a href="https://www.linkedin.com/in/aayush-kumar-630ab11a7/ " target="_blank ">
+                            <i class="fa fa-linkedin-square " aria-hidden="true "></i>Aayush Kumar</a>
+                    </li>
+            </div>
+
+        </section>
+        <!-- SECTION ARKOJIT -->
+        <section id="photographer_arko">
+            <div class="container_main" style="margin: 1%; ">
+                <div class="row">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Arkojit Debnath </span></div>
+                    <div class="column">
+                        <a href="./img/arko_2.jpg"><img id="arko1" data-img="./img/arko_2.jpg " style="width:100% "></a>
+                        <a href="./img/arko_clgst.jpeg"><img id="arko2" data-img="./img/arko_clgst.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/arko_ganga.jpeg"><img id="arko3" data-img="./img/arko_ganga.jpeg " style="width:100% "></a>
+                        <a href="./img/arko_memorial.jpeg"><img id="arko4" data-img="./img/arko_memorial.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/arko_thakurbari.jpeg"><img id="arko5" src="./img/arko_thakurbari.jpeg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/arko_tram.jpeg"><img id="arko6" src="./img/arko_tram.jpeg" style="width:100% "></a>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Arkojit Debnath</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/arkojit.debnath " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Arkojit Debnath</a></li><br>
+                    <li><a href="https://www.instagram.com/chobigraphy_18/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@chobigraphy_18 </a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- SECTION DEBOSMITA -->
+        <section id="photographer_debosmita">
+            <div class="container_main" style="margin: 1%; ">
+                <div class="row">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Debosmita Bhattacharjee</span></div>
+                    <div class="column">
+                        <a href="./img/Deb1.jpeg"><img id="deb1" data-img="./img/Deb1.jpeg " style="width:100% "></a>
+                        <a href="./img/Deb2.jpeg"><img id="deb2" data-img="./img/Deb2.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Deb3.jpeg"><img id="deb3" data-img="./img/Deb3.jpeg " style="width:100% "></a>
+                        <a href="./img/Deb4.jpeg"><img id="deb4" data-img="./img/Deb4.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Deb5.jpeg"><img id="deb5" data-img="./img/Deb5.jpeg " style="width:100% "></a>
+                        <a href="./img/Deb6.jpeg"><img id="deb6" data-img="./img/Deb6.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Deb7.jpeg"><img id="deb7" data-img="./img/Deb7.jpeg " style="width:100% "></a>
+                        <a href="./img/Deb8.jpeg"><img id="deb8" data-img="./img/Deb8.jpeg " style="width:100% "></a>
+
+                        <a href="./img/Deb9.jpeg"><img id="deb9" data-img="./img/Deb9.jpeg " style="width:100% "></a>
+                        <a href="./img/Deb11.jpg"><img id="deb10" data-img="./img/Deb11.jpg " style="width:100% "></a>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Debosmita Bhattacharjee</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/debosmita.bhattacharjee.961 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i>Debosmita Bhattacharjee</a></li><br>
+                    <li><a href="https://www.instagram.com/debosmita.kol/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@debosmita.kol</a></li>
+
+            </div>
+        </section>
+        <!-- SECTION Aheli -->
+        <section id="photographer_aheli">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Aheli Bhattacharjee </span></div>
+                    <div class="column ">
+                        <a href="./img/Aheli1.jpeg"><img id="aheli1" data-img="./img/Aheli1.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Aheli2.jpeg"><img id="aheli2" data-img="./img/Aheli2.jpeg " style="width:100% "></a>
+
+                    </div>
+                    <div class="column ">
+                        <a href="./img/Aheli3.jpeg"> <img id="aheli3" data-img="./img/Aheli3.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Aheli4.jpeg"> <img id="aheli4" data-img="./img/Aheli4.jpeg " style="width:100% "></a>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Aheli Bhattacharjee</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/aheli22 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Aheli Bhattacharjee</a></li><br>
+                    <li><a href="https://www.instagram.com/ahxli._/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@ahxli._ </a></li>
+
+            </div>
+        </section>
+        <!-- SECTION PARTHIB -->
+        <section id="photographer_parthib">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Parthib Dutta </span></div>
+                    <div class="column ">
+                        <a href="./img/parthibphoto1.jpeg"><img id="parthib1" data-img="./img/parthibphoto1.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto2.jpeg"><img id="parthib2" data-img="./img/parthibphoto2.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto3.jpeg"><img id="parthib3" data-img="./img/parthibphoto3.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/parthibphoto4.jpeg"><img id="parthib4" data-img="./img/parthibphoto4.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto5.jpeg"><img id="parthib5" data-img="./img/parthibphoto5.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto6.jpeg"><img id="parthib6" data-img="./img/parthibphoto6.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/parthibphoto7.jpeg"><img id="parthib7" data-img="./img/parthibphoto7.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto8.jpeg"><img id="parthib8" data-img="./img/parthibphoto8.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto9.jpeg"><img id="parthib9" data-img="./img/parthibphoto9.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/parthibphoto10.jpeg"><img id="parthib10" data-img="./img/parthibphoto10.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto11.jpeg"><img id="parthib11" data-img="./img/parthibphoto11.jpeg " style="width:100% "></a>
+                        <a href="./img/parthibphoto12.jpeg"><img id="parthib12" data-img="./img/parthibphoto12.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/parthibphoto13.jpeg"><img id="parthib13" data-img="./img/parthibphoto13.jpeg " style="width:100% "></a>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Parthib Dutta</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/rakhi.kanjilal.5 " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Parthib Dutta</a></li>
+                    <li><a href="https://www.instagram.com/dutta.parthib/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @dutta.parthib</a></li>
+
+            </div>
+        </section>
+        <!-- SECTION ARKADEEP -->
+        <section id="photographer_arkadeep">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Arkadeep Sen </span></div>
+                    <div class="column ">
+                        <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep1" data-img="./img/arkadeepphoto1.jpeg " style="width:100% "></a>
+                        <a href="./img/arkadeepphoto2.jpeg"><img id="arkadeep2" data-img="./img/arkadeepphoto2.jpeg " style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/arkadeepphoto3.jpg"><img id="arkadeep3" data-img="./img/arkadeepphoto3.jpg " style="width:100% "></a>
+                        <a href="./img/arkadeepphoto4.jpg"><img id="arkadeep4" data-img="./img/arkadeepphoto4.jpg " style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep5" data-img="./img/arkadeepphoto5.jpg " style="width:100% "></a>
+                        <a href="./img/arkadeepphoto1.jpeg"><img id="arkadeep6" data-img="./img/arkadeepphoto6.jpg " style="width:100% "></a>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Arkadeep Sen</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/arkadeep.sen.923/ " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i> Arkadeep Sen</a></li><br>
+                    <li><a href="https://www.instagram.com/rolla_costa_/?hl=en " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i> @rolla_costa_</a></li>
+
+            </div>
+        </section>
+        <!-- SECTION AJITA APARAJITA -->
+        <section id="photographer_aa">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Ajita And Aparajita </span></div>
+                    <div class="column ">
+                        <a href="./img/aa1.jpg"><img id="aa1" data-img="./img/aa1.jpg" style="width:100% "></a>
+                        <a href="./img/aa2.jpg"><img id="aa2" data-img="./img/aa2.jpg" style="width:100% "></a>
+                        <a href="./img/aa3.jpg"><img id="aa3" data-img="./img/aa3.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/aa4.jpg"><img id="aa4" data-img="./img/aa4.jpg" style="width:100% "></a>
+                        <a href="./img/aa5.jpg"><img id="aa5" data-img="./img/aa5.jpg" style="width:100% "></a>
+                        <a href="./img/aa6.jpg"><img id="aa6" data-img="./img/aa6.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column ">
+                        <a href="./img/aa7.jpg"><img id="aa7" data-img="./img/aa7.jpg" style="width:100% "></a>
+                        <a href="./img/aa8.jpg"><img id="aa8" data-img="./img/aa8.jpg" style="width:100% "></a>
+                        <a href="./img/aa9.jpg"><img id="aa9" data-img="./img/aa9.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/aa10.jpg"><img id="aa10" data-img="./img/aa10.jpg" style="width:100% "></a>
+                        <a href="./img/aa11.jpg"><img id="aa11" data-img="./img/aa11.jpg" style="width:100% "></a>
+                        <a href="./img/aa12.jpg"><img id="aa12" data-img="./img/aa12.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/aa13.jpg"><img id="aa13" data-img="./img/aa13.jpg" style="width:100% "></a>
+
+                    </div>
+                    <!-- <div class="column ">
+                   
+    
+                </div> -->
+
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); ">If you like the Photographer leave a like! <span class="likebtn-wrapper " data-theme="custom " data-btn_size="31
                             " data-f_size="15 " data-icon_size="24 " data-icon_l="hrt6 " data-icon_l_c="#383838 " data-icon_l_c_v="#ed0389 " data-brdr_c="#000000 " data-f_family="Courier New " data-ef_voting="push " data-rich_snippet="true " data-identifier="A&A "
-                    data-dislike_enabled="false " data-icon_dislike_show="false "></span><br> Pictures: <br>&copy; Ajita And Aparajita</h5>
-            <br>
+                        data-dislike_enabled="false " data-icon_dislike_show="false "></span><br> Pictures: <br>&copy; Ajita And Aparajita</h5>
+                <br>
 
-        </div>
-    </section>
-    <!-- SECTION SHAMBHABI -->
-    <section id="photographer_shambhabi">
-        <div class="container_main" style="margin: 1%;">
-            <div class="row">
-                <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Pictures by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;">Shambhabi Hazra Chowdhury </span></div>
-                <div class="column">
-                    <a href="./img/Shambhabiphoto1.jpg"><img src="./img/Shambhabiphoto1.jpg" style="width:100%"></a>
+            </div>
+        </section>
+        <!-- SECTION SHAMBHABI -->
+        <section id="photographer_shambhabi">
+            <div class="container_main" style="margin: 1%;">
+                <div class="row">
+                    <div class="name_header" style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive;  "> Pictures by: &copy<span style="color: white; font-family:'Shadows Into Light',cursive;">Shambhabi Hazra Chowdhury </span></div>
+                    <div class="column">
+                        <a href="./img/Shambhabiphoto1.jpg"><img src="./img/Shambhabiphoto1.jpg" style="width:100%"></a>
 
-                </div>
-                <div class="column">
-                    <a href="./img/Shambhabiphoto2.jpeg"><img src="./img/Shambhabiphoto2.jpeg" style="width:100%"></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/Shambhabiphoto2.jpeg"><img src="./img/Shambhabiphoto2.jpeg" style="width:100%"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row_name" style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Pictures: <br>&copy; Shambhabi Hazra Chowdhury</h5>
-            <br>
+            <div class="row_name" style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425);"> Pictures: <br>&copy; Shambhabi Hazra Chowdhury</h5>
+                <br>
 
 
-        </div>
-    </section>
-    <!-- SECTION DEADSHOT -->
-    <section id="photographer_deadshot">
-        <div class="container_main " style="margin: 1%; ">
-            <div class="row ">
-                <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Deadshot </span></div>
-                <div class="column">
-                    <a href="./img/deadshot1.jpeg"><img id="dead1" data-img="./img/deadshot1.jpeg" src="./img/deadshot1.jpeg" style="width:100% "></a>
-                    <a href="./img/deadshot2.jpeg"><img id="dead2" data-img="./img/deadshot2.jpeg" src="./img/deadshot2.jpeg" style="width:100% "></a>
-                    <a href="./img/deadshot3.png"><img id="dead3" data-img="./img/deadshot3.png" style="width:100% " src="./img/deadshot3.png"></a>
-                    <a href="./img/deadshot4.jpg"><img id="dead4" data-img="./img/deadshot4.jpg" src="./img/deadshot4.jpg" style="width:100% "></a>
-                </div>
-                <div class="column">
-                    <a href="./img/deadshot5.jpg"><img id="dead5" data-img="./img/deadshot5.jpg" src="./img/deadshot5.jpg" style="width:100% "></a>
-                    <a href="./img/deadshot6.jpg"><img id="dead6" data-img="./img/deadshot6.jpg" src="./img/deadshot6.jpg" style="width:100% "></a>
+            </div>
+        </section>
+        <!-- SECTION DEADSHOT -->
+        <section id="photographer_deadshot">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Deadshot </span></div>
+                    <div class="column">
+                        <a href="./img/deadshot1.jpeg"><img id="dead1" data-img="./img/deadshot1.jpeg" src="./img/deadshot1.jpeg" style="width:100% "></a>
+                        <a href="./img/deadshot2.jpeg"><img id="dead2" data-img="./img/deadshot2.jpeg" src="./img/deadshot2.jpeg" style="width:100% "></a>
+                        <a href="./img/deadshot3.png"><img id="dead3" data-img="./img/deadshot3.png" style="width:100% " src="./img/deadshot3.png"></a>
+                        <a href="./img/deadshot4.jpg"><img id="dead4" data-img="./img/deadshot4.jpg" src="./img/deadshot4.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/deadshot5.jpg"><img id="dead5" data-img="./img/deadshot5.jpg" src="./img/deadshot5.jpg" style="width:100% "></a>
+                        <a href="./img/deadshot6.jpg"><img id="dead6" data-img="./img/deadshot6.jpg" src="./img/deadshot6.jpg" style="width:100% "></a>
 
-                    <a href="./img/deadshot7.HEIC"><img id="dead7" data-img="./img/deadshot7.HEIC" src="./img/deadshot7.HEIC" style="width:100% "></a>
-                    <a href="./img/deadshot9.jpg"> <img id="dead9" data-img="./img/deadshot9.jpg" src="./img/deadshot9.jpg" style="width:100%"></a>
-                </div>
-                <div class="column">
-                    <a href="./img/deadshot10.jpg"><img id="dead10" data-img="./img/deadshot10.jpg" src="./img/deadshot10.jpg" style="width:100% "></a>
+                        <a href="./img/deadshot7.HEIC"><img id="dead7" data-img="./img/deadshot7.HEIC" src="./img/deadshot7.HEIC" style="width:100% "></a>
+                        <a href="./img/deadshot9.jpg"> <img id="dead9" data-img="./img/deadshot9.jpg" src="./img/deadshot9.jpg" style="width:100%"></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/deadshot10.jpg"><img id="dead10" data-img="./img/deadshot10.jpg" src="./img/deadshot10.jpg" style="width:100% "></a>
 
-                    <a href="./img/deadshot11.jpg"><img id="dead11" data-img="./img/deadshot11.jpg" src="./img/deadshot11.jpg" style="width:100% "></a>
-                    <a href="./img/deadshot12.jpg"><img id="dead12" data-img="./img/deadshot12.jpg" src="./img/deadshot12.jpg" style="width:100% "></a>
-                    <a href="./img/deadshot13.jpg"><img id=" dead13 " data-img="./img/deadshot13.jpg" src="./img/deadshot13.jpg" style="width:100% "></a>
-                </div>
-                <div class="column">
+                        <a href="./img/deadshot11.jpg"><img id="dead11" data-img="./img/deadshot11.jpg" src="./img/deadshot11.jpg" style="width:100% "></a>
+                        <a href="./img/deadshot12.jpg"><img id="dead12" data-img="./img/deadshot12.jpg" src="./img/deadshot12.jpg" style="width:100% "></a>
+                        <a href="./img/deadshot13.jpg"><img id="dead13" data-img="./img/deadshot13.jpg" src="./img/deadshot13.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
 
-                    <a href="./img/deadshot14.jpg"><img id="dead14" data-img="./img/deadshot14.jpg" style="width:100% " src="./img/deadshot14.jpg"></a>
-                    <a href="./img/deadshot15.jpeg"><img id="dead15" data-img="./img/deadshot15.jpeg" style="width:100% " src="./img/deadshot15.jpeg"></a>
-                    <a href="./img/deadshot16.jpg"><img id="dead16" data-img="./img/deadshot16.jpg" style="width:100% " src="./img/deadshot16.jpg"></a>
+                        <a href="./img/deadshot14.jpg"><img id="dead14" data-img="./img/deadshot14.jpg" style="width:100% " src="./img/deadshot14.jpg"></a>
+                        <a href="./img/deadshot15.jpeg"><img id="dead15" data-img="./img/deadshot15.jpeg" style="width:100% " src="./img/deadshot15.jpeg"></a>
+                        <a href="./img/deadshot16.jpg"><img id="dead16" data-img="./img/deadshot16.jpg" style="width:100% " src="./img/deadshot16.jpg"></a>
+                    </div>
                 </div>
             </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Deadshot</h5>
+                <br></div>
+
+        </section>
+        <div class="container-fluid " id="buttons">
+            <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
+            <a href="Photographer.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
         </div>
-        <div class="row_name " style="width: 100%; ">
-            <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Deadshot</h5>
-            <br></div>
+        <br><br>
 
-    </section>
-    <div class="container-fluid " id="buttons">
-        <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
-        <a href="Photographer.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
-    </div>
-    <br><br>
+        <footer>
+            <div class="left-footer ">
+                <br>
+                <h2 style="color: white; ">Quick Links</h2>
+                <p>
+                    <ul>
+                        <li><a href="index.html ">Home</a></li><br>
+                        <li><a href="work.html ">Catalogue</a></li><br>
+                        <li><a href="about.html ">Contact</a></li><br>
+                    </ul>
+                </p>
+            </div>
+            <div class="right-footer ">
+                <br>
+                <h3>Follow Us On</h3>
+                <p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897 "><i class="fa fa-facebook "></i></a></li>
+                        &nbsp;
+                        <li><a href="https://www.instagram.com/galleria_de_artiste/ "><i class="fa fa-instagram "></i></a></li>&nbsp;
+                        <li><a href="https://www.reddit.com/r/Galleria_de_artiste/ "><i class="fa fa-reddit-alien "></i></a></li>&nbsp;
 
-    <footer>
-        <div class="left-footer ">
-            <br>
-            <h2 style="color: white; ">Quick Links</h2>
-            <p>
-                <ul>
-                    <li><a href="index.html ">Home</a></li><br>
-                    <li><a href="work.html ">Catalogue</a></li><br>
-                    <li><a href="about.html ">Contact</a></li><br>
-                </ul>
-            </p>
-        </div>
-        <div class="right-footer ">
-            <br>
-            <h3>Follow Us On</h3>
-            <p>
-                <ul>
-                    <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897 "><i class="fa fa-facebook "></i></a></li>
-                    &nbsp;
-                    <li><a href="https://www.instagram.com/galleria_de_artiste/ "><i class="fa fa-instagram "></i></a></li>&nbsp;
-                    <li><a href="https://www.reddit.com/r/Galleria_de_artiste/ "><i class="fa fa-reddit-alien "></i></a></li>&nbsp;
+                    </ul>
+                    <p>This website is developed by Gourav Ghosal <br><span>&copy; Galleria-de-Artiste 2020</span></p>
+                </p>
+            </div>
+        </footer>
 
-                </ul>
-                <p>This website is developed by Gourav Ghosal <br><span>&copy; Galleria-de-Artiste 2020</span></p>
-            </p>
-        </div>
-    </footer>
+        <script data-ad-client="ca-pub-4551353942364047 " async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js "></script>
+        <script src="main.js "></script>
 
-    <script data-ad-client="ca-pub-4551353942364047 " async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js "></script>
-    <script src="main.js "></script>
+    </body>
 
-</body>
+    <script>
+        function searchFunction() {
+            var input, filter, ul, ul2, li, a, i;
+            input = document.getElementById('myinput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementsById('wrapper');
 
-<script>
-    function searchFunction() {
-        var input, filter, ul, ul2, li, a, i;
-        input = document.getElementById('myinput');
-        filter = input.value.toUpperCase();
-        ul = document.getElementsById('wrapper');
+            li = ul.getElementsByTagName('li');
 
-        li = ul.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                h2 = li[i].getElementsByTagName('h2')[0];
+                if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "block ";
+                } else {
+                    li[i].style.display = 'none';
 
-        for (i = 0; i < li.length; i++) {
-            h2 = li[i].getElementsByTagName('h2')[0];
-            if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "block ";
-            } else {
-                li[i].style.display = 'none';
+                }
+                if (h2.innerHTML.toUpperCase().indexOf(filter) = -1) {
 
-            }
-            if (h2.innerHTML.toUpperCase().indexOf(filter) = -1) {
-
-            }
-        }
-    }
-</script>
-<script>
-    let options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25
-    };
-    let callback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let imageUrl = entry.target.getAttribute('data-img');
-                if (imageUrl) {
-                    entry.target.src = imageUrl;
-                    observer.unobserve(entry.target);
                 }
             }
+        }
+    </script>
+    <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.25
+        };
+        let callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let imageUrl = entry.target.getAttribute('data-img');
+                    if (imageUrl) {
+                        entry.target.src = imageUrl;
+                        observer.unobserve(entry.target);
+                    }
+                }
 
-        });
-    }
-    let observer = new IntersectionObserver(callback, options);
-    // AAYUSH
-    observer.observe(document.querySelector('#aayush1'));
-    observer.observe(document.querySelector('#aayush2'));
-    observer.observe(document.querySelector('#aayush3'));
-    observer.observe(document.querySelector('#aayush4'));
-    observer.observe(document.querySelector('#aayush5'));
-    observer.observe(document.querySelector('#aayush6'));
-    observer.observe(document.querySelector('#aayush7'));
-    observer.observe(document.querySelector('#aayush8'));
-    observer.observe(document.querySelector('#aayush9'));
-    observer.observe(document.querySelector('#aayush10'));
-    observer.observe(document.querySelector('#aayush11'));
-    observer.observe(document.querySelector('#aayush12'));
-    observer.observe(document.querySelector('#aayush13'));
-    observer.observe(document.querySelector('#aayush14'));
-    observer.observe(document.querySelector('#aayush15'));
-    observer.observe(document.querySelector('#aayush16'));
-    // ARKO
-    observer.observe(document.querySelector('#arko1'));
-    observer.observe(document.querySelector('#arko2'));
-    observer.observe(document.querySelector('#arko3'));
-    observer.observe(document.querySelector('#arko4'));
-    // Debosmita
-    observer.observe(document.querySelector('#deb1'));
-    observer.observe(document.querySelector('#deb2'));
-    observer.observe(document.querySelector('#deb3'));
-    observer.observe(document.querySelector('#deb4'));
-    observer.observe(document.querySelector('#deb5'));
-    observer.observe(document.querySelector('#deb6'));
-    observer.observe(document.querySelector('#deb7'));
-    observer.observe(document.querySelector('#deb8'));
-    observer.observe(document.querySelector('#deb9'));
-    observer.observe(document.querySelector('#deb10'));
-    // Aheli
-    observer.observe(document.querySelector('#aheli1'));
-    observer.observe(document.querySelector('#aheli2'));
-    observer.observe(document.querySelector('#aheli3'));
-    observer.observe(document.querySelector('#aheli4'));
+            });
+        }
+        let observer = new IntersectionObserver(callback, options);
+        // AAYUSH
+        observer.observe(document.querySelector('#aayush1'));
+        observer.observe(document.querySelector('#aayush2'));
+        observer.observe(document.querySelector('#aayush3'));
+        observer.observe(document.querySelector('#aayush4'));
+        observer.observe(document.querySelector('#aayush5'));
+        observer.observe(document.querySelector('#aayush6'));
+        observer.observe(document.querySelector('#aayush7'));
+        observer.observe(document.querySelector('#aayush8'));
+        observer.observe(document.querySelector('#aayush9'));
+        observer.observe(document.querySelector('#aayush10'));
+        observer.observe(document.querySelector('#aayush11'));
+        observer.observe(document.querySelector('#aayush12'));
+        observer.observe(document.querySelector('#aayush13'));
+        observer.observe(document.querySelector('#aayush14'));
+        observer.observe(document.querySelector('#aayush15'));
+        observer.observe(document.querySelector('#aayush16'));
+        // ARKO
+        observer.observe(document.querySelector('#arko1'));
+        observer.observe(document.querySelector('#arko2'));
+        observer.observe(document.querySelector('#arko3'));
+        observer.observe(document.querySelector('#arko4'));
+        // Debosmita
+        observer.observe(document.querySelector('#deb1'));
+        observer.observe(document.querySelector('#deb2'));
+        observer.observe(document.querySelector('#deb3'));
+        observer.observe(document.querySelector('#deb4'));
+        observer.observe(document.querySelector('#deb5'));
+        observer.observe(document.querySelector('#deb6'));
+        observer.observe(document.querySelector('#deb7'));
+        observer.observe(document.querySelector('#deb8'));
+        observer.observe(document.querySelector('#deb9'));
+        observer.observe(document.querySelector('#deb10'));
+        // Aheli
+        observer.observe(document.querySelector('#aheli1'));
+        observer.observe(document.querySelector('#aheli2'));
+        observer.observe(document.querySelector('#aheli3'));
+        observer.observe(document.querySelector('#aheli4'));
 
-    // PARTHIB
-    observer.observe(document.querySelector('#parthib1'));
-    observer.observe(document.querySelector('#parthib2'));
-    observer.observe(document.querySelector('#parthib3'));
-    observer.observe(document.querySelector('#parthib4'));
-    observer.observe(document.querySelector('#parthib5'));
-    observer.observe(document.querySelector('#parthib6'));
-    observer.observe(document.querySelector('#parthib7'));
-    observer.observe(document.querySelector('#parthib8'));
-    observer.observe(document.querySelector('#parthib9'));
-    observer.observe(document.querySelector('#parthib10'));
-    observer.observe(document.querySelector('#parthib11'));
-    observer.observe(document.querySelector('#parthib12'));
-    observer.observe(document.querySelector('#parthib13'));
-    // ARKADEEP
-    observer.observe(document.querySelector('#arkadeep1'));
-    observer.observe(document.querySelector('#arkadeep2'));
-    observer.observe(document.querySelector('#arkadeep3'));
-    observer.observe(document.querySelector('#arkadeep4'));
-    observer.observe(document.querySelector('#arkadeep5'));
-    observer.observe(document.querySelector('#arkadeep6'));
-    // AA
-    observer.observe(document.querySelector('#aa1'));
-    observer.observe(document.querySelector('#aa2'));
-    observer.observe(document.querySelector('#aa3'));
-    observer.observe(document.querySelector('#aa4'));
-    observer.observe(document.querySelector('#aa5'));
-    observer.observe(document.querySelector('#aa6'));
-    observer.observe(document.querySelector('#aa7'));
-    observer.observe(document.querySelector('#aa8'));
-    observer.observe(document.querySelector('#aa9'));
-    observer.observe(document.querySelector('#aa10'));
-    observer.observe(document.querySelector('#aa11'));
-    observer.observe(document.querySelector('#aa12'));
-    observer.observe(document.querySelector('#aa13'));
-    // DEADSHOT
-    observer.observe(document.querySelector('#dead1'));
-    observer.observe(document.querySelector('#dead2'));
-    observer.observe(document.querySelector('#dead3'));
-    observer.observe(document.querySelector('#dead4'));
-    observer.observe(document.querySelector('#dead5'));
-    observer.observe(document.querySelector('#dead6'));
+        // PARTHIB
+        observer.observe(document.querySelector('#parthib1'));
+        observer.observe(document.querySelector('#parthib2'));
+        observer.observe(document.querySelector('#parthib3'));
+        observer.observe(document.querySelector('#parthib4'));
+        observer.observe(document.querySelector('#parthib5'));
+        observer.observe(document.querySelector('#parthib6'));
+        observer.observe(document.querySelector('#parthib7'));
+        observer.observe(document.querySelector('#parthib8'));
+        observer.observe(document.querySelector('#parthib9'));
+        observer.observe(document.querySelector('#parthib10'));
+        observer.observe(document.querySelector('#parthib11'));
+        observer.observe(document.querySelector('#parthib12'));
+        observer.observe(document.querySelector('#parthib13'));
+        // ARKADEEP
+        observer.observe(document.querySelector('#arkadeep1'));
+        observer.observe(document.querySelector('#arkadeep2'));
+        observer.observe(document.querySelector('#arkadeep3'));
+        observer.observe(document.querySelector('#arkadeep4'));
+        observer.observe(document.querySelector('#arkadeep5'));
+        observer.observe(document.querySelector('#arkadeep6'));
+        // AA
+        observer.observe(document.querySelector('#aa1'));
+        observer.observe(document.querySelector('#aa2'));
+        observer.observe(document.querySelector('#aa3'));
+        observer.observe(document.querySelector('#aa4'));
+        observer.observe(document.querySelector('#aa5'));
+        observer.observe(document.querySelector('#aa6'));
+        observer.observe(document.querySelector('#aa7'));
+        observer.observe(document.querySelector('#aa8'));
+        observer.observe(document.querySelector('#aa9'));
+        observer.observe(document.querySelector('#aa10'));
+        observer.observe(document.querySelector('#aa11'));
+        observer.observe(document.querySelector('#aa12'));
+        observer.observe(document.querySelector('#aa13'));
+        // DEADSHOT
+        observer.observe(document.querySelector('#dead1'));
+        observer.observe(document.querySelector('#dead2'));
+        observer.observe(document.querySelector('#dead3'));
+        observer.observe(document.querySelector('#dead4'));
+        observer.observe(document.querySelector('#dead5'));
+        observer.observe(document.querySelector('#dead6'));
 
-    observer.observe(document.querySelector('#dead8'));
-    observer.observe(document.querySelector('#dead9'));
-    observer.observe(document.querySelector('#dead10'));
-    observer.observe(document.querySelector('#dead11'));
-    observer.observe(document.querySelector('#dead12'));
-    observer.observe(document.querySelector('#dead13'));
-    observer.observe(document.querySelector('#dead14'));
-    observer.observe(document.querySelector('#dead15'));
-    observer.observe(document.querySelector('#dead16'));
-</script>
+        observer.observe(document.querySelector('#dead8'));
+        observer.observe(document.querySelector('#dead9'));
+        observer.observe(document.querySelector('#dead10'));
+        observer.observe(document.querySelector('#dead11'));
+        observer.observe(document.querySelector('#dead12'));
+        observer.observe(document.querySelector('#dead13'));
+        observer.observe(document.querySelector('#dead14'));
+        observer.observe(document.querySelector('#dead15'));
+        observer.observe(document.querySelector('#dead16'));
+    </script>
 
-<script>
-    (function(d, e, s) {
-        if (d.getElementById("likebtn_wjs ")) return;
-        a = d.createElement(e);
-        m = d.getElementsByTagName(e)[0];
-        a.async = 1;
-        a.id = "likebtn_wjs ";
-        a.src = s;
-        m.parentNode.insertBefore(a, m)
-    })(document, "script ", "//w.likebtn.com/js/w/widget.js ");
-</script>
-<script src="main.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script>
+        (function(d, e, s) {
+            if (d.getElementById("likebtn_wjs ")) return;
+            a = d.createElement(e);
+            m = d.getElementsByTagName(e)[0];
+            a.async = 1;
+            a.id = "likebtn_wjs ";
+            a.src = s;
+            m.parentNode.insertBefore(a, m)
+        })(document, "script ", "//w.likebtn.com/js/w/widget.js ");
+    </script>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
 
-<script data-cfasync="false " type="text/javascript " src="form-submission-handler.js "></script>
+    <script data-cfasync="false " type="text/javascript " src="form-submission-handler.js "></script>
 
 </html>
