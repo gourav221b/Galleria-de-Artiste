@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+    <!-- Title Page-->
+    <title>Contact| Galleria-de-Artiste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .btns {
+            color: white;
+            border: 2px solid rgb(15, 15, 15);
+        }
+        
+        .btns:hover {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+        }
+        
+        #send_work {
+            background-color: rgb(235, 235, 235);
+            padding: 4% 0 2% 4%;
+            align-items: flex-end;
+        }
+        
+        #send_work span {
+            text-decoration: none;
+            color: rgb(8, 8, 8);
+            text-align: end;
+            font-size: 150%;
+        }
+        
+        #send_work a:hover {
+            text-decoration: none;
+            color: rgb(79, 9, 241);
+            opacity: 1;
+            transition: 0.4s;
+        }
+        
+        #fname,
+        #lname,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: rgb(3, 165, 230);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            border: 1px solid #000000;
+        }
+        
+        input[type=submit]:hover {
+            background-color: rgb(3, 165, 230);
+            opacity: 1;
+            transition: 0.3s;
+        }
+        /* Style the container/contact section */
+        
+        .container {
+            border-radius: 5px;
+            background-color: transparent;
+            padding: 10px;
+        }
+        /* Create two columns that float next to eachother */
+        
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .wrapper--w780 {
+            display: none;
+        }
+        
+        .emailcontact {
+            font-family: 'Roboto', cursive;
+        }
+        
+        #emailcontact,
+        #emailcontact1 {
+            font-family: 'Roboto', sans-serif;
+            line-height: 80%;
+            text-align: justify;
+            background-color: rgb(231, 226, 231);
+            padding: 4%;
+        }
+        
+        #emailcontact h2 a {
+            text-decoration: none;
+            color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 80%;
+        }
+        
+        #emailcontact h2 a:hover {
+            text-decoration: underline;
+            color: #0747be;
+            transition: 0.4s;
+        }
+        
+        #emailcontact1 h2 a {
+            text-decoration: none;
+            color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 80%;
+        }
+        
+        #emailcontact1 h2 a:hover {
+            text-decoration: none;
+            color: #000000;
+            transition: 0.4s;
+            font-size: 90%;
+        }
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+            #emailcontact,
+            #emailcontact1 {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="navbar">
+        <a href="contact.html">Contact</a>
+        <a href="about.html" class="active">About</a>
+        <a href="work.html">Catalogue</a>
+        <a href="index.html ">Home</a>
+        <img src="./img/favicon.png" class="logo">
+
+    </section>
+    <!-- Header -->
+    <div class="header">
+        <br>
+        <h1><b>Galleria de Artiste</b></h1>
+    </div>
+    <div class="container">
+        <div style="text-align:center">
+            <h1 style="font-family: 'Aladin','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact Us</h1>
+            <p>Say hello to this little dog, and leave us a message:</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="/img/english-cocker-spaniel-puppy-sitting-on-ground-beside-grass-1254140.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <form method="POST" data-netlify="true">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="e.g johndoe@yopmail.com">
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Write your message" style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <br><br>
+
+        <div id="emailcontact">
+            <h1 style="font-family: 'Aladin','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><i class="fa fa-envelope" aria-hidden="true"></i> Send Us an Email:</h1>
+            <br>
+            <h2>For submissions or queries of any sort:</h2><br>
+            <h2><a href="mailto:technical221b@gmail.com"><i class="fa fa-reply-all" aria-hidden="true"></i> technical221b@gmail.com</a></h2><br>
+
+        </div>
+        <br>
+        <div id="send_work">
+            <h1 style="font-family: 'Aladin','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><i class="fa fa-paper-plane" aria-hidden="true"></i> If you wish to send us your works:</h1><br>
+            <span><a href="/htmlwr/entry.html">Click here</a> to send your work.</span>
+        </div>
+        <br>
+        <div id="emailcontact1">
+            <h1 style="font-family: 'Aladin','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><i class="fa fa-envelope" aria-hidden="true"></i> Connect With Us on Social Media</h1>
+            <br>
+
+            <h2><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Galleria-de-Artiste</a></h2><br>
+            <h2><a href="https://www.instagram.com/galleria_de_artiste/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> galleria_de_artiste</a></h2><br>
+            <h2><a href="https://www.reddit.com/r/Galleria_de_artiste/" target="_blank"><i class="fa fa-reddit-alien" aria-hidden="true"></i> Galleria-de-Artiste</a></h2><br>
+        </div>
+
+        <!-- go back -->
+        <br>
+        <br>
+        <div class="container-fluid">
+            <a href="index.html" style="text-decoration: none; font-family: serif;"><button class="btns_arr" style="border-radius: 10px; background-color: black; color: white; width: auto;height: 130%; "> Go back to Home page</button></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <div class="left-footer">
+            <br>
+            <h2 style="color: white;">Quick Links</h2>
+            <p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Catalogue</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="right-footer">
+            <br>
+            <h3>Follow Us On</h3>
+            <p>
+                <ul>
+                    <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897"><i class="fa fa-facebook"></i></a></li>
+                    &nbsp;
+                    <li><a href="https://www.instagram.com/galleria_de_artiste/"><i class="fa fa-instagram"></i></a></li>&nbsp;
+                    <li><a href="https://www.reddit.com/r/Galleria_de_artiste/"><i class="fa fa-reddit-alien"></i></a></li>&nbsp;
+
+                </ul>
+                <p>This website is developed by Gourav Ghosal <br><span>&copy; Galleria-de-Artiste 2020</span></p>
+            </p>
+        </div>
+    </footer>
+
+
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
