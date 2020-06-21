@@ -215,7 +215,7 @@
         <a href="about.html">About</a>
         <a href="work.html" class="active">Catalogue</a>
         <a href="index.html">Home</a>
-        <img src="./img/favicon.png" class="logo">
+        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
     </section>
 
     <!-- Header -->
@@ -1344,7 +1344,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li><br>
                     <li><a href="work.html">Catalogue</a></li><br>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About</a></li><br>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </p>
@@ -1371,23 +1371,18 @@
 
 <script>
     function searchFunction() {
-        var input, filter, ul, ul2, li, a, i;
+        var input, filter, ul, li, a, i;
         input = document.getElementById('myinput');
         filter = input.value.toUpperCase();
-        ul = document.getElementsById('wrapper');
-
+        ul = document.getElementById('wrapper');
         li = ul.getElementsByTagName('li');
 
         for (i = 0; i < li.length; i++) {
-            h2 = li[i].getElementsByTagName('h2')[0];
-            if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "block";
+            a = li[i].getElementsByTagName('h2')[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = 'block';
             } else {
                 li[i].style.display = 'none';
-
-            }
-            if (h2.innerHTML.toUpperCase().indexOf(filter) = -1) {
-
             }
         }
     }

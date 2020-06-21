@@ -239,6 +239,7 @@
             <a href="about.html">About</a>
             <a href="work.html" class="active">Catalogue</a>
             <a href="index.html">Home</a>
+            <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
         </section>
 
         <!-- Header -->
@@ -257,7 +258,7 @@
                 </div>
                 <br>
                 <div class="search-bar">
-                    <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
+                    <input type="text" name="search" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Photographers">
 
                 </div>
 
@@ -456,12 +457,14 @@
                             <a href="./img/kumarphoto6.jpeg"> <img id="aayush6" data-img="./img/kumarphoto6.jpeg " style="width:100% "></a>
                             <a href="./img/kumarphoto7.jpeg"> <img id="aayush7" data-img="./img/kumarphoto7.jpeg " style="width:100% "></a>
                             <a href="./img/kumarphoto14.jpeg"> <img id="aayush8" data-img="./img/kumarphoto14.jpeg " style="width:100% "></a>
+                            <a href="./img/kumarphoto18.jpeg"> <img id="aayush18" data-img="./img/kumarphoto18.jpeg " style="width:100% "></a>
                     </div>
                     <div class="column">
                         <a href="./img/kumarphoto8.jpeg"> <img id="aayush9" data-img="./img/kumarphoto8.jpeg " style="width:100% "></a>
                         <a href="./img/kumarphoto9.jpeg"> <img id="aayush10" data-img="./img/kumarphoto9.jpeg " style="width:100% "></a>
                         <a href="./img/kumarphoto10.jpeg"> <img id="aayush11" data-img="./img/kumarphoto10.jpeg " style="width:100% "></a>
                         <a href="./img/kumarphoto11.jpg"> <img id="aayush12" data-img="./img/kumarphoto11.jpg " style="width:100% "></a>
+                        <a href="./img/kumarphoto17.jpeg"> <img id="aayush17" data-img="./img/kumarphoto17.jpeg " style="width:100% "></a>
                     </div>
                     <div class="column">
                         <a href="./img/kumarphoto12.jpg"> <img id="aayush13" data-img="./img/kumarphoto12.jpg " style="width:100% "></a>
@@ -470,10 +473,7 @@
                         <a href="./img/kumarphoto15.jpeg"> <img id="aayush15" data-img="./img/kumarphoto15.jpeg " style="width:100% "></a>
                         <a href="./img/kumarphoto16.jpeg"> <img id="aayush16" data-img="./img/kumarphoto16.jpeg " style="width:100% "></a>
                     </div>
-                    <!-- <div class="column ">
-                   
-    
-                </div> -->
+
 
                 </div>
             </div>
@@ -842,7 +842,12 @@
             </div>
             <div class="row_name " style="width: 100%; ">
                 <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Aditya Chatterjee</h5>
-                <br></div>
+                <br>
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-official " aria-hidden="true "></i> Aditya Chatterjee</a></li><br>
+
+                </ul>
+            </div>
 
         </section>
         <!-- SECTION kritika -->
@@ -864,6 +869,8 @@
         <div class="container-fluid " id="buttons">
             <a href="#top "><button class="btns "><i class="fa fa-long-arrow-up " aria-hidden="true "></i> Back to top</button></a>
             <a href="Photographer.html "><button class="btns "><i class="fa fa-arrow-left " aria-hidden="true "></i>Go Back</button></a>
+
+
         </div>
         <br><br>
 
@@ -899,189 +906,187 @@
         <script data-ad-client="ca-pub-4551353942364047 " async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js "></script>
         <script src="main.js "></script>
 
-    </body>
 
-    <script>
-        function searchFunction() {
-            var input, filter, ul, ul2, li, a, i;
-            input = document.getElementById('myinput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementsById('wrapper');
 
-            li = ul.getElementsByTagName('li');
+        <script>
+            function searchFunction() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById('myinput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById('wrapper');
+                li = ul.getElementsByTagName('li');
 
-            for (i = 0; i < li.length; i++) {
-                h2 = li[i].getElementsByTagName('h2')[0];
-                if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "block ";
-                } else {
-                    li[i].style.display = 'none';
-
-                }
-                if (h2.innerHTML.toUpperCase().indexOf(filter) = -1) {
-
-                }
-            }
-        }
-    </script>
-    <script>
-        let options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.25
-        };
-        let callback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    let imageUrl = entry.target.getAttribute('data-img');
-                    if (imageUrl) {
-                        entry.target.src = imageUrl;
-                        observer.unobserve(entry.target);
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName('h2')[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = 'block';
+                    } else {
+                        li[i].style.display = 'none';
                     }
                 }
+            }
+        </script>
+        <script>
+            let options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.25
+            };
+            let callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let imageUrl = entry.target.getAttribute('data-img');
+                        if (imageUrl) {
+                            entry.target.src = imageUrl;
+                            observer.unobserve(entry.target);
+                        }
+                    }
 
-            });
-        }
-        let observer = new IntersectionObserver(callback, options);
-        // AAYUSH
-        observer.observe(document.querySelector('#aayush1'));
-        observer.observe(document.querySelector('#aayush2'));
-        observer.observe(document.querySelector('#aayush3'));
-        observer.observe(document.querySelector('#aayush4'));
-        observer.observe(document.querySelector('#aayush5'));
-        observer.observe(document.querySelector('#aayush6'));
-        observer.observe(document.querySelector('#aayush7'));
-        observer.observe(document.querySelector('#aayush8'));
-        observer.observe(document.querySelector('#aayush9'));
-        observer.observe(document.querySelector('#aayush10'));
-        observer.observe(document.querySelector('#aayush11'));
-        observer.observe(document.querySelector('#aayush12'));
-        observer.observe(document.querySelector('#aayush13'));
-        observer.observe(document.querySelector('#aayush14'));
-        observer.observe(document.querySelector('#aayush15'));
-        observer.observe(document.querySelector('#aayush16'));
-        // ARKO
-        observer.observe(document.querySelector('#arko1'));
-        observer.observe(document.querySelector('#arko2'));
-        observer.observe(document.querySelector('#arko3'));
-        observer.observe(document.querySelector('#arko4'));
-        // Debosmita
-        observer.observe(document.querySelector('#deb1'));
-        observer.observe(document.querySelector('#deb2'));
-        observer.observe(document.querySelector('#deb3'));
-        observer.observe(document.querySelector('#deb4'));
-        observer.observe(document.querySelector('#deb5'));
-        observer.observe(document.querySelector('#deb6'));
-        observer.observe(document.querySelector('#deb7'));
-        observer.observe(document.querySelector('#deb8'));
-        observer.observe(document.querySelector('#deb9'));
-        observer.observe(document.querySelector('#deb10'));
-        // Aheli
-        observer.observe(document.querySelector('#aheli1'));
-        observer.observe(document.querySelector('#aheli2'));
-        observer.observe(document.querySelector('#aheli3'));
-        observer.observe(document.querySelector('#aheli4'));
+                });
+            }
+            let observer = new IntersectionObserver(callback, options);
+            // AAYUSH
+            observer.observe(document.querySelector('#aayush1'));
+            observer.observe(document.querySelector('#aayush2'));
+            observer.observe(document.querySelector('#aayush3'));
+            observer.observe(document.querySelector('#aayush4'));
+            observer.observe(document.querySelector('#aayush5'));
+            observer.observe(document.querySelector('#aayush6'));
+            observer.observe(document.querySelector('#aayush7'));
+            observer.observe(document.querySelector('#aayush8'));
+            observer.observe(document.querySelector('#aayush9'));
+            observer.observe(document.querySelector('#aayush10'));
+            observer.observe(document.querySelector('#aayush11'));
+            observer.observe(document.querySelector('#aayush12'));
+            observer.observe(document.querySelector('#aayush13'));
+            observer.observe(document.querySelector('#aayush14'));
+            observer.observe(document.querySelector('#aayush15'));
+            observer.observe(document.querySelector('#aayush16'));
+            observer.observe(document.querySelector('#aayush17'));
+            observer.observe(document.querySelector('#aayush18'));
+            // ARKO
+            observer.observe(document.querySelector('#arko1'));
+            observer.observe(document.querySelector('#arko2'));
+            observer.observe(document.querySelector('#arko3'));
+            observer.observe(document.querySelector('#arko4'));
+            // Debosmita
+            observer.observe(document.querySelector('#deb1'));
+            observer.observe(document.querySelector('#deb2'));
+            observer.observe(document.querySelector('#deb3'));
+            observer.observe(document.querySelector('#deb4'));
+            observer.observe(document.querySelector('#deb5'));
+            observer.observe(document.querySelector('#deb6'));
+            observer.observe(document.querySelector('#deb7'));
+            observer.observe(document.querySelector('#deb8'));
+            observer.observe(document.querySelector('#deb9'));
+            observer.observe(document.querySelector('#deb10'));
+            // Aheli
+            observer.observe(document.querySelector('#aheli1'));
+            observer.observe(document.querySelector('#aheli2'));
+            observer.observe(document.querySelector('#aheli3'));
+            observer.observe(document.querySelector('#aheli4'));
 
-        // PARTHIB
-        observer.observe(document.querySelector('#parthib1'));
-        observer.observe(document.querySelector('#parthib2'));
-        observer.observe(document.querySelector('#parthib3'));
-        observer.observe(document.querySelector('#parthib4'));
-        observer.observe(document.querySelector('#parthib5'));
-        observer.observe(document.querySelector('#parthib6'));
-        observer.observe(document.querySelector('#parthib7'));
-        observer.observe(document.querySelector('#parthib8'));
-        observer.observe(document.querySelector('#parthib9'));
-        observer.observe(document.querySelector('#parthib10'));
-        observer.observe(document.querySelector('#parthib11'));
-        observer.observe(document.querySelector('#parthib12'));
-        observer.observe(document.querySelector('#parthib13'));
-        // ARKADEEP
-        observer.observe(document.querySelector('#arkadeep1'));
-        observer.observe(document.querySelector('#arkadeep2'));
-        observer.observe(document.querySelector('#arkadeep3'));
-        observer.observe(document.querySelector('#arkadeep4'));
-        observer.observe(document.querySelector('#arkadeep5'));
-        observer.observe(document.querySelector('#arkadeep6'));
-        // AA
-        observer.observe(document.querySelector('#aa1'));
-        observer.observe(document.querySelector('#aa2'));
-        observer.observe(document.querySelector('#aa3'));
-        observer.observe(document.querySelector('#aa4'));
-        observer.observe(document.querySelector('#aa5'));
-        observer.observe(document.querySelector('#aa6'));
-        observer.observe(document.querySelector('#aa7'));
-        observer.observe(document.querySelector('#aa8'));
-        observer.observe(document.querySelector('#aa9'));
-        observer.observe(document.querySelector('#aa10'));
-        observer.observe(document.querySelector('#aa11'));
-        observer.observe(document.querySelector('#aa12'));
-        observer.observe(document.querySelector('#aa13'));
-        // DEADSHOT
-        observer.observe(document.querySelector('#dead1'));
-        observer.observe(document.querySelector('#dead2'));
-        observer.observe(document.querySelector('#dead3'));
-        observer.observe(document.querySelector('#dead4'));
-        observer.observe(document.querySelector('#dead5'));
-        observer.observe(document.querySelector('#dead6'));
+            // PARTHIB
+            observer.observe(document.querySelector('#parthib1'));
+            observer.observe(document.querySelector('#parthib2'));
+            observer.observe(document.querySelector('#parthib3'));
+            observer.observe(document.querySelector('#parthib4'));
+            observer.observe(document.querySelector('#parthib5'));
+            observer.observe(document.querySelector('#parthib6'));
+            observer.observe(document.querySelector('#parthib7'));
+            observer.observe(document.querySelector('#parthib8'));
+            observer.observe(document.querySelector('#parthib9'));
+            observer.observe(document.querySelector('#parthib10'));
+            observer.observe(document.querySelector('#parthib11'));
+            observer.observe(document.querySelector('#parthib12'));
+            observer.observe(document.querySelector('#parthib13'));
+            // ARKADEEP
+            observer.observe(document.querySelector('#arkadeep1'));
+            observer.observe(document.querySelector('#arkadeep2'));
+            observer.observe(document.querySelector('#arkadeep3'));
+            observer.observe(document.querySelector('#arkadeep4'));
+            observer.observe(document.querySelector('#arkadeep5'));
+            observer.observe(document.querySelector('#arkadeep6'));
+            // AA
+            observer.observe(document.querySelector('#aa1'));
+            observer.observe(document.querySelector('#aa2'));
+            observer.observe(document.querySelector('#aa3'));
+            observer.observe(document.querySelector('#aa4'));
+            observer.observe(document.querySelector('#aa5'));
+            observer.observe(document.querySelector('#aa6'));
+            observer.observe(document.querySelector('#aa7'));
+            observer.observe(document.querySelector('#aa8'));
+            observer.observe(document.querySelector('#aa9'));
+            observer.observe(document.querySelector('#aa10'));
+            observer.observe(document.querySelector('#aa11'));
+            observer.observe(document.querySelector('#aa12'));
+            observer.observe(document.querySelector('#aa13'));
+            // DEADSHOT
+            observer.observe(document.querySelector('#dead1'));
+            observer.observe(document.querySelector('#dead2'));
+            observer.observe(document.querySelector('#dead3'));
+            observer.observe(document.querySelector('#dead4'));
+            observer.observe(document.querySelector('#dead5'));
+            observer.observe(document.querySelector('#dead6'));
 
-        observer.observe(document.querySelector('#dead8'));
-        observer.observe(document.querySelector('#dead9'));
-        observer.observe(document.querySelector('#dead10'));
-        observer.observe(document.querySelector('#dead11'));
-        observer.observe(document.querySelector('#dead12'));
-        observer.observe(document.querySelector('#dead13'));
-        observer.observe(document.querySelector('#dead14'));
-        observer.observe(document.querySelector('#dead15'));
-        observer.observe(document.querySelector('#dead16'));
-        // ADITYA
-        observer.observe(document.querySelector('#aditya1'));
-        observer.observe(document.querySelector('#aditya2'));
-        observer.observe(document.querySelector('#aditya3'));
-        observer.observe(document.querySelector('#aditya4'));
-        observer.observe(document.querySelector('#aditya5'));
-        observer.observe(document.querySelector('#aditya6'));
+            observer.observe(document.querySelector('#dead8'));
+            observer.observe(document.querySelector('#dead9'));
+            observer.observe(document.querySelector('#dead10'));
+            observer.observe(document.querySelector('#dead11'));
+            observer.observe(document.querySelector('#dead12'));
+            observer.observe(document.querySelector('#dead13'));
+            observer.observe(document.querySelector('#dead14'));
+            observer.observe(document.querySelector('#dead15'));
+            observer.observe(document.querySelector('#dead16'));
+            // ADITYA
+            observer.observe(document.querySelector('#aditya1'));
+            observer.observe(document.querySelector('#aditya2'));
+            observer.observe(document.querySelector('#aditya3'));
+            observer.observe(document.querySelector('#aditya4'));
+            observer.observe(document.querySelector('#aditya5'));
+            observer.observe(document.querySelector('#aditya6'));
 
-        observer.observe(document.querySelector('#aditya8'));
-        observer.observe(document.querySelector('#aditya9'));
-        observer.observe(document.querySelector('#aditya10'));
-        observer.observe(document.querySelector('#aditya11'));
-        observer.observe(document.querySelector('#aditya12'));
-        observer.observe(document.querySelector('#aditya13'));
-        observer.observe(document.querySelector('#aditya14'));
-        observer.observe(document.querySelector('#aditya15'));
-        observer.observe(document.querySelector('#aditya16'));
-        observer.observe(document.querySelector('#aditya17'));
-        // ARPAN
-        observer.observe(document.querySelector('#arpan1'));
-        observer.observe(document.querySelector('#arpan2'));
-        observer.observe(document.querySelector('#arpan3'));
-        observer.observe(document.querySelector('#arpan4'));
-        observer.observe(document.querySelector('#arpan5'));
-        observer.observe(document.querySelector('#arpan6'));
+            observer.observe(document.querySelector('#aditya8'));
+            observer.observe(document.querySelector('#aditya9'));
+            observer.observe(document.querySelector('#aditya10'));
+            observer.observe(document.querySelector('#aditya11'));
+            observer.observe(document.querySelector('#aditya12'));
+            observer.observe(document.querySelector('#aditya13'));
+            observer.observe(document.querySelector('#aditya14'));
+            observer.observe(document.querySelector('#aditya15'));
+            observer.observe(document.querySelector('#aditya16'));
+            observer.observe(document.querySelector('#aditya17'));
+            // ARPAN
+            observer.observe(document.querySelector('#arpan1'));
+            observer.observe(document.querySelector('#arpan2'));
+            observer.observe(document.querySelector('#arpan3'));
+            observer.observe(document.querySelector('#arpan4'));
+            observer.observe(document.querySelector('#arpan5'));
+            observer.observe(document.querySelector('#arpan6'));
 
-        observer.observe(document.querySelector('#arpan8'));
-        observer.observe(document.querySelector('#arpan9'));
-        observer.observe(document.querySelector('#arpan10'));
-        observer.observe(document.querySelector('#arpan11'));
-        // Kritika
-        observer.observe(document.querySelector('#kritika1'));
-    </script>
+            observer.observe(document.querySelector('#arpan8'));
+            observer.observe(document.querySelector('#arpan9'));
+            observer.observe(document.querySelector('#arpan10'));
+            observer.observe(document.querySelector('#arpan11'));
+            // Kritika
+            observer.observe(document.querySelector('#kritika1'));
+        </script>
 
-    <script>
-        (function(d, e, s) {
-            if (d.getElementById("likebtn_wjs ")) return;
-            a = d.createElement(e);
-            m = d.getElementsByTagName(e)[0];
-            a.async = 1;
-            a.id = "likebtn_wjs ";
-            a.src = s;
-            m.parentNode.insertBefore(a, m)
-        })(document, "script ", "//w.likebtn.com/js/w/widget.js ");
-    </script>
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+        <script>
+            (function(d, e, s) {
+                if (d.getElementById("likebtn_wjs ")) return;
+                a = d.createElement(e);
+                m = d.getElementsByTagName(e)[0];
+                a.async = 1;
+                a.id = "likebtn_wjs ";
+                a.src = s;
+                m.parentNode.insertBefore(a, m)
+            })(document, "script ", "//w.likebtn.com/js/w/widget.js ");
+        </script>
+        <script src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
 
-    <script data-cfasync="false " type="text/javascript " src="form-submission-handler.js "></script>
+        <script data-cfasync="false " type="text/javascript " src="form-submission-handler.js "></script>
+    </body>
 
 </html>

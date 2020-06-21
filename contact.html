@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
         .btns {
             color: white;
             border: 2px solid rgb(15, 15, 15);
@@ -174,11 +175,11 @@
 <body>
 
     <section class="navbar">
-        <a href="contact.html">Contact</a>
-        <a href="about.html" class="active">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
         <a href="work.html">Catalogue</a>
         <a href="index.html ">Home</a>
-        <img src="./img/favicon.png" class="logo">
+        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
 
     </section>
     <!-- Header -->
@@ -196,7 +197,10 @@
                 <img src="/img/english-cocker-spaniel-puppy-sitting-on-ground-beside-grass-1254140.jpg" style="width:100%">
             </div>
             <div class="column">
-                <form method="POST" data-netlify="true">
+                <form method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <p class="hidden" style="visibility: hidden;">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
                     <label for="lname">Last Name</label>

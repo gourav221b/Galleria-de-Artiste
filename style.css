@@ -46,9 +46,8 @@ body {
 }
 
 .logo {
-    width: 11%;
+    width: 40%;
     height: auto;
-    margin: 1% 2%;
 }
 
 .logo:hover {
@@ -67,6 +66,7 @@ body {
     float: right;
     font-family: 'Caveat', cursive;
     right: 2%;
+    background: transparent;
 }
 
 .navbar a {
@@ -94,6 +94,16 @@ body {
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
     transition: 0.5s;
+}
+
+.navbar #logo {
+    display: inline;
+    background: transparent;
+    float: left;
+    height: auto;
+    margin-left: 2%;
+    top: 1%;
+    padding: 0;
 }
 
 .container-fluid {
@@ -384,7 +394,7 @@ footer a {
     transition: 0.5s;
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width:480px) {
     .logo {
         display: none;
     }
@@ -558,6 +568,23 @@ display: flex; */
     border: 3px solid white;
     transition: 0.5s ease-in-out;
     color: white;
+}
+
+@media screen and (max-width:970px) {
+    .navbar #logo {
+        display: inline-block;
+        background: transparent;
+        /* float: ; */
+        height: auto;
+        margin: 0;
+        top: 0;
+        padding: 0;
+    }
+    .logo {
+        top: 0;
+        transform: scale(0.7);
+        transform: translateY(-50%);
+    }
 }
 
 @media screen and (max-width: 480px) {
