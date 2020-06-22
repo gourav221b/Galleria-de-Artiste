@@ -118,11 +118,17 @@
     }
     
     @media screen and (max-width:700px) {
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
         .row {
             flex-direction: column;
         }
         .side {
             order: 2;
+            width: 96%;
         }
         .side h2,
         .side h3,

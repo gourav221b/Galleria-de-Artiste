@@ -391,6 +391,7 @@ function jeet() {
 function Aayush() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
     document.getElementById("photographer_aheli").style.display = "none";
@@ -410,6 +411,10 @@ function Aayush() {
 function arko() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
     document.getElementById("photographer_aheli").style.display = "none";
@@ -428,6 +433,8 @@ function arko() {
 function debosmita() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_aheli").style.display = "none";
@@ -446,6 +453,8 @@ function debosmita() {
 function aheli() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -464,6 +473,8 @@ function aheli() {
 function Parthib() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -482,6 +493,8 @@ function Parthib() {
 function Arkadeep() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -500,6 +513,8 @@ function Arkadeep() {
 function aa() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -518,6 +533,8 @@ function aa() {
 function Shambhabi() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -537,6 +554,8 @@ function Shambhabi() {
 function deadshot() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -556,6 +575,8 @@ function deadshot() {
 function kritika() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -576,6 +597,8 @@ function kritika() {
 function arpan() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -596,6 +619,8 @@ function arpan() {
 function aditya() {
     scroll(0, 0);
     document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "none";
     document.getElementById("photographer_aayush").style.display = "none";
     document.getElementById("photographer_arko").style.display = "none";
     document.getElementById("photographer_debosmita").style.display = "none";
@@ -606,6 +631,48 @@ function aditya() {
     document.getElementById("photographer_arpan").style.display = "none";
     document.getElementById("photographer_kritika").style.display = "none";
     document.getElementById("photographer_aditya").style.display = "block";
+    document.getElementById("photographer_deadshot").style.display = " none";
+
+    document.getElementById("photographer_shambhabi").style.display = "none";
+    document.getElementById("buttons").style.display = " flex";
+}
+
+function dodo() {
+    scroll(0, 0);
+    document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "block";
+    document.getElementById("photographer_debadyuti").style.display = "none";
+    document.getElementById("photographer_aayush").style.display = "none";
+    document.getElementById("photographer_arko").style.display = "none";
+    document.getElementById("photographer_debosmita").style.display = "none";
+    document.getElementById("photographer_aheli").style.display = "none";
+    document.getElementById("photographer_parthib").style.display = "none";
+    document.getElementById("photographer_arkadeep").style.display = "none";
+    document.getElementById("photographer_aa").style.display = "none";
+    document.getElementById("photographer_arpan").style.display = "none";
+    document.getElementById("photographer_kritika").style.display = "none";
+    document.getElementById("photographer_aditya").style.display = "none";
+    document.getElementById("photographer_deadshot").style.display = " none";
+
+    document.getElementById("photographer_shambhabi").style.display = "none";
+    document.getElementById("buttons").style.display = " flex";
+}
+
+function debadyuti() {
+    scroll(0, 0);
+    document.getElementById("photographer_main").style.display = "none";
+    document.getElementById("photographer_dodo").style.display = "none";
+    document.getElementById("photographer_debadyuti").style.display = "block";
+    document.getElementById("photographer_aayush").style.display = "none";
+    document.getElementById("photographer_arko").style.display = "none";
+    document.getElementById("photographer_debosmita").style.display = "none";
+    document.getElementById("photographer_aheli").style.display = "none";
+    document.getElementById("photographer_parthib").style.display = "none";
+    document.getElementById("photographer_arkadeep").style.display = "none";
+    document.getElementById("photographer_aa").style.display = "none";
+    document.getElementById("photographer_arpan").style.display = "none";
+    document.getElementById("photographer_kritika").style.display = "none";
+    document.getElementById("photographer_aditya").style.display = "none";
     document.getElementById("photographer_deadshot").style.display = " none";
 
     document.getElementById("photographer_shambhabi").style.display = "none";

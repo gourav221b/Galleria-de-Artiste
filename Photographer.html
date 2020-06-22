@@ -100,6 +100,22 @@
             height: 300px;
             width: 500px;
         }
+        
+        .row_name ul {
+            margin-left: 2%;
+        }
+        
+        .row_name ul li a .fa-facebook {
+            color: #405de6;
+        }
+        
+        .row_name ul li a .fa-linkedin {
+            color: #405de6;
+        }
+        
+        .row_name ul li a:hover {
+            transition: 0.7s ease-in;
+        }
         /* Responsive layout - makes a two column-layout instead of four columns */
         
         @media screen and (max-width: 800px) {
@@ -227,6 +243,8 @@
         #photographer_arpan,
         #photographer_kritika,
         #photographer_aditya,
+        #photographer_dodo,
+        #photographer_debadyuti,
         #buttons {
             display: none;
         }
@@ -405,6 +423,20 @@
                         </div>
                     </div>
                 </li>
+                <!-- DODO -->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/dodo1.jpeg"></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Kousheya</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="dodo()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="dodo()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
                 <!-- SHAMABHABI -->
                 <li class="cards_item ">
                     <div class="card ">
@@ -430,6 +462,20 @@
 
                             <a style="text-decoration: none; "><button class="btn card_btn " onclick="kritika()" >See More</button></a>
                             <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="kritika()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- DEBADYUTI-->
+                <li class="cards_item ">
+                    <div class="card ">
+                        <div class="card_image ">
+                            <a style="text-decoration: none; "><img src="./img/debadyuti1.png "></a>
+                        </div>
+                        <div class="card_content ">
+                            <h2 class="card_title ">Debadyuti</h2>
+
+                            <a style="text-decoration: none; "><button class="btn card_btn " onclick="debadyuti()" >See More</button></a>
+                            <a style="text-decoration: none; "><button class="btn1 card_btn " onclick="debadyuti()" >See More</button></a>
                         </div>
                     </div>
                 </li>
@@ -496,7 +542,7 @@
                 <div class="row">
                     <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Arkojit Debnath </span></div>
                     <div class="column">
-                        <a href="./img/arko_2.jpg"><img id="arko1" data-img="./img/arko_2.jpg " style="width:100% "></a>
+                        <a href="./img/dodo1.jpeg"><img id="arko1" data-img="./img/arko_2.jpg " style="width:100% "></a>
                         <a href="./img/arko_clgst.jpeg"><img id="arko2" data-img="./img/arko_clgst.jpeg " style="width:100% "></a>
                     </div>
                     <div class="column">
@@ -850,18 +896,69 @@
             </div>
 
         </section>
+        <!-- SECTION DODO -->
+        <section id="photographer_dodo">
+            <div class="container_main" style="margin: 1%; ">
+                <div class="row">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Kousheya Das </span></div>
+                    <div class="column">
+                        <a href="./img/dodo1.jpeg"><img id="arko1" data-img="./img/dodo1.jpeg" src="./img/dodo1.jpeg" style="width:100% "></a>
+                        <a href="./img/dodo2.jpeg"><img id="arko2" data-img="./img/dodo2.jpeg " src="./img/dodo2.jpeg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/dodo3.jpg"><img id="arko3" data-img="./img/dodo3.jpg " src="./img/dodo3.jpg" style="width:100% "></a>
+
+
+                    </div>
+                    <div class="column">
+                        <a href="./img/dodo4.jpg"><img id="arko4" data-img="./img/dodo4.jpg " src="./img/dodo4.jpg" style="width:100% "></a>
+                    </div>
+                    <div class="column">
+                        <a href="./img/dodo6.jpeg"><img id="arko6" src="./img/dodo6.jpeg" src="./img/dodo6.jpeg" style="width:100% "></a>
+                        <a href="./img/dodo5.jpeg"><img id="arko5" src="./img/dodo5.jpeg" src="./img/dodo5.jpeg" style="width:100% "></a>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row_name" style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Kousheya Das</h5>
+                <br>
+                <ul>
+                    <li><a href="https://www.facebook.com/kousheyadas " target="_blank "><i class="fa fa-facebook-official " aria-hidden="true "></i>Kousheya Das</a></li><br>
+                    <li><a href="https://www.instagram.com/_dodo584_/ " target="_blank "><i class="fa fa-instagram " aria-hidden="true "></i>@_dodo584_</a></li>
+                </ul>
+            </div>
+        </section>
         <!-- SECTION kritika -->
         <section id="photographer_kritika">
             <div class="container_main " style="margin: 1%; ">
                 <div class="row ">
                     <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Kritika Anand </span></div>
                     <div class="column ">
-                        <a href="./img/kritika1.jpg"><img id="kritika1" data-img="./img/kritika1.jpg " style="width:100% " src="./img/kritika1.jpg "></a>
+                        <a href="./img/debadyuti1.png"><img id="kritika1" data-img="./img/kritika1.jpg " style="width:100% " src="./img/kritika1.jpg "></a>
                     </div>
                 </div>
             </div>
             <div class="row_name " style="width: 100%; ">
                 <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Kritika Anand</h5>
+                <br> s
+
+            </div>
+        </section>
+        <!-- SECTION Debadyuti -->
+        <section id="photographer_debadyuti">
+            <div class="container_main " style="margin: 1%; ">
+                <div class="row ">
+                    <div class="name_header " style="width: 100%; background-color: black; height: 5vh; color: white; font-family: 'Times New Roman', cursive; "> Pictures by: &copy<span style="color: white; font-family: 'Shadows Into Light',cursive; "> Debadyuti Paul </span></div>
+                    <div class="column ">
+                        <a href="./img/debadyuti1.png"><img id="debadyuti1" data-img="./img/debadyuti1.png " style="width:100% " src="./img/debadyuti1.png "></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row_name " style="width: 100%; ">
+                <h5 style="margin-left: 2%; font-family: 'Josefin Sans', sans-serif; background-color: rgba(255, 255, 255, 0.425); "> Pictures: <br>&copy; Debadyuti Paul</h5>
                 <br> s
 
             </div>
@@ -964,6 +1061,7 @@
             observer.observe(document.querySelector('#aayush16'));
             observer.observe(document.querySelector('#aayush17'));
             observer.observe(document.querySelector('#aayush18'));
+            observer.observe(document.querySelector('#aayush19'));
             // ARKO
             observer.observe(document.querySelector('#arko1'));
             observer.observe(document.querySelector('#arko2'));
@@ -1070,6 +1168,15 @@
             observer.observe(document.querySelector('#arpan11'));
             // Kritika
             observer.observe(document.querySelector('#kritika1'));
+            // DODO
+            observer.observe(document.querySelector('#dodo1'));
+            observer.observe(document.querySelector('#dodo2'));
+            observer.observe(document.querySelector('#dodo3'));
+            observer.observe(document.querySelector('#dodo4'));
+            observer.observe(document.querySelector('#dodo5'));
+            observer.observe(document.querySelector('#dodo6'));
+            // Debadyuti
+            observer.observe(document.querySelector('#debadyuti1'));
         </script>
 
         <script>
