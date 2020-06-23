@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Arriving Soon|Galleria-de-Artiste</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Raleway:wght@600;900&display=swap');
+    body {
+        overflow-x: hidden;
+    }
+    
+    .blog {
+        padding: 80px;
+        text-align: center;
+        background: linear-gradient(0deg, #000000, #000210, #002000);
+        background: url(./img/bloghead.jpg);
+        color: white;
+        opacity: 1;
+        /* -webkit-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -2px 3px 20px 16px rgba(0, 0, 0, 0.75); */
+        height: 100%;
+        background-size: cover;
+        background-clip: border-box;
+        background-attachment: fixed;
+        font-family: 'Times New Roman', Times, serif;
+        filter: grayscale(30%);
+    }
+    
+    .blog h1,
+    .blog p {
+        text-shadow: 2px 2px 3px black, 0 0 25px rgb(17, 17, 17), 0 0 10px rgb(2, 2, 39);
+        font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        vertical-align: middle;
+        line-height: 12vh;
+    }
+    
+    .blog h1 {
+        font-size: 500%;
+    }
+    
+    .blog p {
+        font-size: 400%;
+    }
+    
+    .newsletter h2 {
+        font-family: 'Lora', serif;
+        font-style: italic;
+    }
+    
+    .gform {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20%;
+        vertical-align: middle;
+    }
+    
+    input[type=email],
+    input[type=submit] {
+        border: 3px solid white;
+        text-decoration: none;
+        font-family: cursive;
+        padding: 2em;
+        text-align: center;
+        background: transparent;
+        font-size: 100%;
+        margin-top: 2%;
+        color: #ffffff;
+        font-family: 'Lora', cursive;
+        height: 50px;
+    }
+    
+    input[type=email]::placeholder {
+        color: white;
+    }
+    
+    input[type=email] {
+        color: #ffffff;
+        width: 50%;
+        margin: 2%;
+    }
+    
+    input[type=email]:hover {
+        background: #ffffff;
+        color: #000000;
+        opacity: 0.7;
+        transition: 0.4s;
+    }
+    
+    input[type=email]:focus {
+        background: #ffffff;
+        color: #000000;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
+    input[type=submit] {
+        line-height: 50%;
+        background: #ffffff;
+        color: #000000;
+    }
+    
+    input[type=submit]:hover {
+        background: transparent;
+        color: #ffffff;
+        transition: all 0.4s;
+    }
+    
+     ::placeholder {
+        color: #ffffff;
+        text-shadow: 2px 2px 3px black, 0 0 25px rgb(255, 253, 253), 0 0 10px rgb(2, 2, 39);
+    }
+    
+    .btns_arr {
+        width: auto;
+    }
+    
+    .form-title {
+        text-align: center;
+        color: #ffffff;
+        margin-top: 5%;
+    }
+    
+    @media screen and (max-width: 400px) {
+        .blog,
+        .blog h1 {
+            width: 100%;
+        }
+        .blog {
+            margin: 0;
+            padding: 0;
+        }
+        .gform {
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .newsletter h2 {
+            font-size: 110%;
+        }
+        input[type=email],
+        input[type=submit] {
+            width: auto;
+            left: 20%;
+        }
+    }
+    
+    @media screen and (max-width: 980px) {
+        .laptop {
+            display: none;
+        }
+        .image {
+            width: 95%;
+            margin: 1%;
+            border-radius: 7px;
+        }
+    }
+</style>
+
+
+<body>
+    <section class="navbar" id="top">
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="work.html" class="active">Catalog</a>
+        <a href="index.html">Home</a>
+        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+    </section>
+
+    <!-- Header -->
+    <div class="header"><br>
+        <h1><b>Galleria de Artiste</b></h1>
+
+    </div>
+
+    <div class="blog"><br>
+        <h1><b>COMING SOON!</b></h1><br>
+        <p>With awesome recipies, tutorials and more!</p>
+        <div class="newsletter">
+            <h2 style="text-shadow: 2px 2px 3px black, 0 0 25px rgb(17, 17, 17), 0 0 10px rgb(2, 2, 39);">Want to be the first to know when page is live?</h2>
+            <form class="gform" method="POST" data-netlify="true">
+                <input type="email" name="email" placeholder="Enter your email here" required/>
+                <input type="submit" value="Notify me">
+            </form><br><br>
+        </div>
+        <a href="work.html"><button class="btns_arr"> Back to browse </button></a>
+        <br>
+        <br>
+    </div>
+
+
+
+    <footer>
+        <div class="left-footer">
+            <br>
+            <h2 style="color: white;">Quick Links</h2>
+            <p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="right-footer">
+            <br>
+            <h3>Follow Us On</h3>
+            <p>
+                <ul>
+                    <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897"><i class="fa fa-facebook"></i></a></li>
+                    &nbsp;
+                    <li><a href="https://www.instagram.com/galleria_de_artiste/"><i class="fa fa-instagram"></i></a></li>&nbsp;
+                    <li><a href="https://www.reddit.com/r/Galleria_de_artiste/"><i class="fa fa-reddit-alien"></i></a></li>&nbsp;
+
+                </ul>
+                <p>This website is developed by Gourav Ghosal <br><span>&copy; Galleria-de-Artiste 2020</span></p>
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

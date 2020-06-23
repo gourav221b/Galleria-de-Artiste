@@ -29,6 +29,7 @@ function showDivs(n) {
 })(document, "script", "//w.likebtn.com/js/w/widget.js");
 
 
+
 // ARTISTS AND PHOTOGRAPHERS
 // ARTIST
 
@@ -51,6 +52,8 @@ function gourav() {
     document.getElementById("artist_jeet").style.display = "none";
     document.getElementById("artist_gourav").style.display = " block";
     document.getElementById("buttons").style.display = " flex";
+
+
     scroll(0, 0);
 }
 

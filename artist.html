@@ -34,6 +34,32 @@
     </head>
 </head>
 <style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border-radius: 50%;
+        outline: none;
+        background-color: rgb(12, 109, 236);
+        opacity: 0.9;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        padding: 15px;
+    }
+    
+    #myBtn:hover {
+        background-color: #555;
+        opacity: 1;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #top {
+        scroll-behavior: smooth;
+    }
+    
     .header {
         text-align: center;
         padding: 32px;
@@ -130,25 +156,12 @@
         display: none;
     }
     
-    .pagination {
-        padding: 8px;
-        text-align: center;
-        font-weight: bold;
-        background-color: transparent;
+    .row_name ul {
+        margin-left: 2%;
     }
     
-    .pagination a {
-        border-top: 3px solid white;
-        display: inline-block;
-        padding: 8px 16px;
-        transition: 0.4s;
-        color: #000000;
-        border: transparent;
-    }
-    
-    .pagination a:hover {
-        border-top: 3px solid #000;
-        transition: 0.5s;
+    .row_name ul li a:hover {
+        transition: 0.6s;
     }
     /* Responsive layout - makes a two column-layout instead of four columns */
     
@@ -213,7 +226,7 @@
     <section class="navbar">
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        <a href="work.html" class="active">Catalogue</a>
+        <a href="work.html" class="active">Catalog</a>
         <a href="index.html">Home</a>
         <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
     </section>
@@ -224,6 +237,7 @@
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
     <!-- SECTION MAIN -->
     <section id="artist_main">
         <div class="container_text">
@@ -1000,31 +1014,37 @@
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="./img/godhuli7.jpeg" target="new"><img id="godhuli7" data-img="./img/godhuli7.jpeg"></a>
+                    <a href="./img/godhuli7.jpeg" target="new"><img id="godhuli7" data-img="./img/godhuli7.jpeg" src="./img/godhuli7.jpeg"></a>
                 </div>
             </li>
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="./img/godhuli9.jpeg" target="new"><img id="godhuli9" data-img="./img/godhuli9.jpeg"></a>
+                    <a href="./img/godhuli8.jpeg" target="new"><img id="godhuli8" data-img="./img/godhuli8.jpeg" src="./img/godhuli8.jpeg"></a>
                 </div>
             </li>
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="./img/godhuli10.jpeg" target="new"><img id="godhuli10" data-img="./img/godhuli10.jpeg"></a>
+                    <a href="./img/godhuli9.jpeg" target="new"><img id="godhuli9" data-img="./img/godhuli9.jpeg" src="./img/godhuli9.jpeg"></a>
                 </div>
             </li>
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="./img/godhuli11.jpeg" target="new"><img id="godhuli11" data-img="./img/godhuli11.jpeg"></a>
+                    <a href="./img/godhuli10.jpeg" target="new"><img id="godhuli10" data-img="./img/godhuli10.jpeg" src="./img/godhuli10.jpeg"></a>
                 </div>
             </li>
             <li class="cards_item">
 
                 <div class="card_image">
-                    <a href="./img/godhuli12.jpeg" target="new"><img id="godhuli12" data-img="./img/godhuli12.jpeg"></a>
+                    <a href="./img/godhuli11.jpeg" target="new"><img id="godhuli11" data-img="./img/godhuli11.jpeg" src="./img/godhuli11.jpeg"></a>
+                </div>
+            </li>
+            <li class="cards_item">
+
+                <div class="card_image">
+                    <a href="./img/godhuli12.jpeg" target="new"><img id="godhuli12" data-img="./img/godhuli12.jpeg" src="./img/godhuli12.jpeg"></a>
                 </div>
             </li>
 
@@ -1378,7 +1398,7 @@
             <p>
                 <ul>
                     <li><a href="index.html">Home</a></li><br>
-                    <li><a href="work.html">Catalogue</a></li><br>
+                    <li><a href="work.html">Catalog</a></li><br>
                     <li><a href="about.html">About</a></li><br>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -1421,6 +1441,26 @@
             }
         }
     }
+    // var mybutton = document.getElementById("myBtn");
+
+    // // When the user scrolls down 20px from the top of the document, show the button
+    // window.onscroll = function() {
+    //     scrollFunction()
+    // };
+
+    // function scrollFunction() {
+    //     if ((document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) && (document.body.scrollTop < 200 || document.documentElement.scrollTop < 200)) {
+    //         mybutton.style.display = "block";
+    //     } else {
+    //         mybutton.style.display = "none";
+    //     }
+    // }
+
+    // // When the user clicks on the button, scroll to the top of the document
+    // function topFunction() {
+    //     document.body.scrollTop = 0;
+    //     document.documentElement.scrollTop = 0;
+    // }
 </script>
 <script>
     let options = {
@@ -1559,7 +1599,7 @@
         m.parentNode.insertBefore(a, m)
     })(document, "script", "//w.likebtn.com/js/w/widget.js");
 </script>
-<script src="main.js></script>
+<script src="main.js"></script>
 <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
 
 <script data-cfasync="false " type="text/javascript " src="form-submission-handler.js "></script>
