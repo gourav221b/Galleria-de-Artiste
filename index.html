@@ -117,6 +117,15 @@
         margin: 5%;
     }
     
+    .upcoming {
+        filter: grayscale();
+    }
+    
+    .upcoming:hover {
+        filter: grayscale(40%);
+        transition: filter 2s ease;
+    }
+    
     @media screen and (max-width:700px) {
         body {
             overflow-x: hidden;
@@ -161,7 +170,7 @@
     </div>
     <div class="row ">
         <div class="side ">
-            <h2>Our Work:</h2>
+            <h2>The Catalog:</h2>
             <h3>Browse Through </h3>
             <p>All Our Listings</p>
             <div class="fakeimg " id="art " style="height:auto ">
@@ -171,6 +180,13 @@
             </div><br>
             <div class="fakeimg " id="photo " style="height:auto ">
                 <a href="creative.html "><img id="img3" class="fake " data-img="./img/black_and_white_vint_W1Iaj.jpg " alt="photo "></a>
+            </div><br>
+            <h2 style="font-family: 'Caveat','Segoe UI',cursive;">Upcoming Sections</h2>
+            <div class="fakeimg upcoming" id="photo " style="height:auto ">
+                <a href="music.html"><img id="img8" class="fake " data-img="/img/musicblog - Copy.jpg" alt="photo "></a>
+            </div><br>
+            <div class="fakeimg upcoming " id="photo " style="height:auto ">
+                <a href="foodblog.html "><img id="img9" class="fake " data-img="/img/foodblog - Copy.jpg " alt="photo "></a>
             </div><br>
             <div class="share_side ">
 
@@ -329,6 +345,8 @@
     observer.observe(document.querySelector('#img5'));
     observer.observe(document.querySelector('#img6'));
     observer.observe(document.querySelector('#img7'));
+    observer.observe(document.querySelector('#img8'));
+    observer.observe(document.querySelector('#img9'));
 </script>
 <script>
     (function(d, e, s) {
