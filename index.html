@@ -9,10 +9,11 @@
     <meta property="og:description" content="A platform for all types of Art">
     <meta property="og:image" content="https://scontent.fccu1-1.fna.fbcdn.net/v/t1.0-9/95863772_2656969971246123_6509166221491961856_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=dLkm7RFRaUMAX__L9nc&_nc_ht=scontent.fccu1-1.fna&oh=8a428f7f7e752b0690d3940a2555e54f&oe=5F046B94">
     <meta property="og:url" content="https://galleria-de-artiste.netlify.app/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
 
     <link rel="canonical" href="https://galleria-de-artiste.netlify.app/">
     <link rel="icon" type="image/png" href="./img/favicon.png">
@@ -23,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <title>Galleria de Artiste| A page for all forms of creativity. Visit today!</title>
     <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -44,6 +46,10 @@
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+    html {
+        scroll-behavior: smooth !important;
+    }
+    
     .index {
         width: 95%;
         margin: 0 auto;
@@ -53,9 +59,20 @@
         box-shadow: 0px 2px 25px 4px rgba(0, 0, 0, 0.75);
     }
     
+     ::selection {
+        color: #f1f1f1;
+        background: #000000;
+    }
+    
     h2 {
         text-shadow: -3px 2px 19px rgba(150, 150, 150, 0.82);
         font-family: 'Exo 2', sans-serif;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row-reverse;
+        min-width: 0;
     }
     
     .btns {
@@ -63,6 +80,11 @@
         margin: 0 auto;
         background-color: #05cfd6;
         color: white;
+    }
+    
+    .side {
+        position: sticky;
+        height: auto;
     }
     
     .btns:hover {
@@ -102,15 +124,12 @@
         border: 2px solid rgb(0, 0, 0);
         background: #065a74ec;
         background: -webkit-linear-gradient(0deg, #00b4db, #0083b0);
+        font-size: 1.2em;
     }
     
     input[type=submit]:hover {
         opacity: 0.8;
-        background: #065a74ec;
-        background: -webkit-linear-gradient(0deg, #1cb5e0, #000046);
-        border-radius: 30px;
         transition: 0.3s;
-        font-size: 1.2em;
     }
     
     .counter {
@@ -126,6 +145,282 @@
         transition: filter 2s ease;
     }
     
+    .swiper-container {
+        width: auto;
+        height: 100%;
+        background: transparent;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: 700px !important;
+        margin-top: -100px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% !important;
+        background-attachment: fixed;
+    }
+    
+    .swiper-pagination {
+        transform: translateY(-150%);
+    }
+    
+    .swiper-button-prev {
+        color: rgb(243, 8, 8);
+        border-radius: 50%;
+        padding: 2.1em;
+        border: 3px solid white;
+        text-align: center;
+        opacity: 0.7;
+    }
+    
+    .swiper-button-next {
+        color: rgb(243, 8, 8);
+        border-radius: 50%;
+        border: 3px solid white;
+        padding: 2.1em;
+        text-align: center;
+        opacity: 0.7;
+    }
+    
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        /* background: #f1f1f1; */
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+    .swiper-button-prev:hover {
+        animation: left_bounce 0.6s infinite;
+    }
+    
+    .swiper-button-next:hover {
+        animation: right_bounce 0.6s infinite;
+    }
+    
+    @keyframes left_bounce {
+        0% {
+            transform: translateX(0);
+            opacity: 0.5;
+            background-color: #ffffff;
+        }
+        50% {
+            transform: translateX(-10%);
+            background: transparent;
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes right_bounce {
+        0% {
+            background-color: #ffffff;
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+    }
+    
+    #slide1 {
+        background: url(/img/galleria.jpg);
+    }
+    
+    #slide2 {
+        background: url(/img/catalog.jpg)
+    }
+    
+    #slide3 {
+        background: url(/img/creator.jpg);
+        filter: background contrast(20%);
+        filter: text brightness(120%);
+    }
+    
+    #slide4 {
+        background: url(/img/social.jpg);
+    }
+    
+    .text {
+        font-family: 'Caveat', cursive;
+        color: white;
+        font-size: 300%;
+        margin: 4%;
+    }
+    
+    .text h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0 1px 7px rgb(0, 0, 0), 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    }
+    
+    .text p {
+        font-size: 90%;
+        text-shadow: 0 1px 0 rgb(0, 0, 0), 0 2px 0 #242424, 0 3px 0 rgb(0, 0, 0);
+    }
+    
+    .btns_arr {
+        width: 30%;
+        transform: scale(1.3);
+        font-family: 'Lora', Arial, Helvetica, sans-serif;
+    }
+    
+    #social {
+        color: white;
+        text-shadow: 4px 4px 12px black;
+        opacity: 0.9;
+    }
+    
+    #social:hover {
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    #social a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #social .fa-facebook {
+        color: #1056ec;
+    }
+    
+    #social .fa-facebook:hover {
+        color: #1056ec;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-instagram {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    #social .fa-instagram:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-reddit-alien {
+        color: orangered;
+    }
+    
+    #social .fa-reddit-alien:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-reddit-alien {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    .main {
+        height: auto !important;
+        position: sticky;
+    }
+    
+    .mainsection {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        font-family: 'Lora', sans-serif;
+        height: auto;
+        background: transparent;
+    }
+    
+    .mainsection h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        display: inline-block;
+        border-left: 3px solid black;
+        padding-left: 10px;
+        width: auto;
+        text-align: left;
+    }
+    
+    .mainsection p {
+        text-align: justify;
+    }
+    
+    .mainsection p::first-letter {
+        text-transform: uppercase;
+        font-size: 150%;
+    }
+    
+    .mainsection h1:hover {
+        border-left: inset 5px solid rgb(255, 255, 255);
+        padding-left: 15px;
+        /* background-color: #b1aaaa; */
+        color: rgb(0, 0, 0);
+        transition: all 0.5s;
+        width: auto;
+    }
+    
+    .section {
+        margin: 6%;
+        background: rgba(238, 235, 235, 0.3);
+        padding: 5%;
+    }
+    
+    .section h2 {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .section ul,
+    .section ol {
+        margin-left: 20%;
+    }
+    
+    #speak {
+        font-family: monospace;
+        font-size: 130%;
+    }
+    
+    .mainsection .newsletter {
+        margin: 10%;
+    }
+    
+    .mainsection:first-child {
+        margin-top: 0;
+    }
+    
+    .section .sectionimg {
+        width: 100%;
+        height: auto;
+    }
+    
+    #section4 a {
+        text-decoration: underline;
+        color: black;
+    }
+    
     @media screen and (max-width:700px) {
         body {
             overflow-x: hidden;
@@ -139,20 +434,44 @@
             order: 2;
             width: 96%;
         }
-        .side h2,
-        .side h3,
-        .side p,
-        .side .fakeimg {
-            display: none;
+        .mainsection {
+            width: 100%;
+            text-align: justify;
         }
-        .share_side {
-            display: inline-block;
+        .section {
+            margin: 10%;
+        }
+    }
+    
+    @media screen and (max-width:900px) {
+        .swiper-slide {
+            height: auto !important;
+        }
+        .text {
+            font-size: 130%;
+            padding: 4%;
+            line-height: 200%;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            transform: scale(0.7);
+            border: unset;
+        }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            border: none;
+        }
+        .swiper-button-prev {
+            transform: translateX(-30%);
+        }
+        .swiper-button-next {
+            transform: translateX(30%);
         }
     }
 </style>
 
 
-<body>
+<body onload="scroll(0,0);">
 
 
     <section class="navbar">
@@ -166,9 +485,52 @@
     <!-- Header -->
     <div class="header"><br>
         <h1><b>Galleria de Artiste</b></h1>
-
     </div>
-    <div class="row ">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1">
+                <div class="text">
+                    <h1>Galleria De Artiste</h1>
+                    <p>A new approach to<br> talent exhibition</p>
+                    <a href="#main"><button class="btns_arr"> Explore Us</button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide2">
+                <div class="text">
+                    <h1>Featured Items:</h1>
+
+                    <p>Immerse yourself in a world full of art, creativity, photography<br> and so much more.</p>
+                    <a href="work.html"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide3">
+                <div class="text">
+                    <h1>Are you a creator?</h1>
+                    <p>Looking for a platform to put your creativity on exhibition</p>
+                    <p>Wait no more, click below to contact us or send us your work</p>
+                    <a href="contact.html"><button class="btns_arr"> Contact Us</button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide4">
+                <div class="text">
+                    <h1>Follow Us on:</h1>
+                    <p id="social">
+                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897"><i class="fa fa-facebook"> </i> Galleria-de-Artiste</a><br><a href="https://www.instagram.com/galleria_de_artiste/"><i class="fa fa-instagram"></i> galleria_de_artiste
+                        </a> <br>
+                        <a href="https://www.reddit.com/r/Galleria_de_artiste/"><i class="fa fa-reddit-alien"></i>r/Galleria_de_artiste</a></p>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="row">
         <div class="side ">
             <h2>The Catalog:</h2>
             <h3>Browse Through </h3>
@@ -183,10 +545,10 @@
             </div><br>
             <h2 style="font-family: 'Caveat','Segoe UI',cursive;">Upcoming Sections</h2>
             <div class="fakeimg upcoming" id="photo " style="height:auto ">
-                <a href="music.html"><img id="img8" class="fake " data-img="/img/musicblog - Copy.jpg" alt="photo "></a>
+                <a href="music.html" title="COMING SOON!"><img id="img8" class="fake " data-img="/img/musicblog - Copy.jpg" src="/img/musicblog - Copy.jpg" alt="photo "></a>
             </div><br>
             <div class="fakeimg upcoming " id="photo " style="height:auto ">
-                <a href="foodblog.html "><img id="img9" class="fake " data-img="/img/foodblog - Copy.jpg " alt="photo "></a>
+                <a href="foodblog.html " title="COMING SOON!"><img id="img9" class="fake " data-img="/img/foodblog - Copy.jpg " src=" /img/foodblog - Copy.jpg " alt="photo "></a>
             </div><br>
             <div class="share_side ">
 
@@ -223,72 +585,136 @@
                         <img src="https://img.icons8.com/plasticine/100/000000/whatsapp.png " alt="whatsapp " /></a>
 
                 </div>
+
+
+
             </div>
-            <div class="counter">
-                <h1 style="font-size: 100%;">Page Views:</h1>
-                <!-- Start of WebFreeCounter Code -->
-                <!-- <a href="#"><img src="https://www.webfreecounter.com/hit.php?id=geaofkk&nd=9&style=5" border="0" alt="web counter"></a> -->
-                <div id="sfcjhhh5a3wd2q92953q1bxclbaa2fkklhm"></div>
-                <!-- End of WebFreeCounter Code -->
-            </div>
+
 
         </div>
-        <div class="main ">
-            <h2>Galleria de Artiste</h2>
-            <h5>A place where <em>Artists</em> of every stage, format are welcome. </h5>
-            <div class="contain ">
-                <img id="img4" data-img="./img/indextop.jpg " class="index " alt="index " style="width:100%; ">
-                <div class="content ">
+        <div class="main" id="main">
+            <div class="mainsection">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block; width: 100%; height: auto;" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <div class="section" id="section1" style="margin-top: -30px;">
+                    <h1> Galleria-De-Artiste </h1>
+                    <p>
+                        With Corona Virus taking over the world like aliens in a sci-fi movie, all of us have been confined to our homes. The trouble began when mental ill-health began to strike. We started getting hit by:
+                        <ol>
+                            <li>Stress</li>
+                            <li>Anxiety</li>
+                            <li>Depression</li>
+                            <li>Boredom</li>
+                            <li>Unwillingness to work</li>
+                        </ol>
 
+                        With Doctors, Policemen, being our Avengers, and fighting against the virus, we the people, sitting at home on our couches have nothing better to do.
+                    </p>
+                    <p>
+                        In the meantime, during these 3 difficult months, we have also witnessed many people trying their best to sharpen or build up skills. It could be anything, from drawing a simple sketch to designing a complicated website(wink wink). That is where Galleria-De-Artiste
+                        comes in.<br><a href="#section2" style="text-decoration: underline;">Read below</a> to know more!
+                    </p>
+                    <img src="./img/indextop.jpg" alt="gallery" class="sectionimg">
                 </div>
-            </div>
-            <br>
-            <h2>Our Art Section</h2>
-            <h5>Painting, Sketches by New, Emerging, Artists</h5><br>
-            <div class="contain ">
-                <a href="artist.html "><img id="img5" data-img="./img/index2-removebg-preview.png " class="index " alt="index"></a>
-                <div class="content ">
 
+                <div class="section" id="section2">
+                    <h1> What we provide? </h1>
+                    <p>We do provide a platform so that budding talents can put their talents on exhibition.<br> Currently We showcase :
+                        <ul>
+                            <li>Artworks</li>
+                            <li>Photography</li>
+                            <li>Creative Writing:
+                                <ol>
+                                    <li>Stories</li>
+                                    <li>Poems</li>
+                                    <li>Articles</li>
+                                    <li>Quotes</li>
+                                    <li>Abstract Writing</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        And coming up soon :
+                        <ul>
+                            <li>Musics (Original, covers,Instrumentals)</li>
+                            <li>Food Blog ( Yeah, why not! Cooking is also an art)</li>
+                        </ul>
+                    </p>
                 </div>
-            </div>
-            <br>
-            <h2>Our Photography Section</h2>
-            <h5>Photography By Our Best Photographers</h5><br>
-            <div class="contain ">
-                <a href="Photographer.html"><img id="img6" data-img="./img/photogallery.png " class="index " alt="index"></a>
-            </div>
-            <br>
-            <br>
-            <h2>Our Creative Writing Section</h2>
-            <h5>Articles by our Best Writers</h5><br>
-            <div class="contain " id="#index1 ">
-                <a href="creative.html"><img id="img7" data-img="./img/index3.jpg " id="#index1 " class="index " alt="index "></a>
-            </div>
-            <br>
-            <div class="newsletter">
-                <div class="news_head">
-                    <h2>Subscribe to our newsletter</h2>
-                    <p> To receive updates about us, Simply fill this form and help us grow</p>
+                <div class="section" id="section3">
+                    <h1> Why choose us? </h1>
+                    <p>
+                        It would be better to make this an interactive part.<br><br>
+                        <span id="speak">Person1:</span>"So basically your site is like a social media platform?"<br>
+                        <span id="speak">Galleria-de-Artiste:</span>" Not necessarily, we donot have many elements of social media platforms."<br><br>
+
+                        <span id="speak">Person1:</span>"So what makes you special?"<br>
+                        <span id="speak">Galleria-de-Artiste:</span>" We donot house any kind of toxicity amongst our community! Our creators feel safe and encouraged to engage with us."<br><br>
+
+                        <span id="speak">Person1:</span>"Okay! But what benefit does your audience get from you?"<br>
+                        <span id="speak">Galleria-De-Artiste:</span>"By seeing the enriching environment here, the audience feels a rush of dopamine and serotonin runnning through themselves, and feel encouraged to work towards their talents too!"<br>
+
+
+                    </p>
                 </div>
-                <form class="gform" action="https://script.google.com/macros/s/AKfycbwUf6Eo2qVGjji0BJjw6k2ZV-oHwgJfXf_H6oi9miGL9n5A9EY/exec">
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name" placeholder="Name" required /><br>
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" placeholder="Email Address" required/><br>
-                    <label for="checkbox"><input type="checkbox"  class="check" checked=true/>Regular Newsletter</label><br>
+                <div class="section" id="section4">
+                    <h1> How To Contact Us? </h1>
+                    <img src="./img/contact.jpg" alt='contact' class="sectionimg">
+                    <p>
+                        There are a few ways, you can communicate with us.
+                        <br><br>
+
+                        <h2>From The Website itself:</h2>
+                        <ul>
+                            <li>The <a href="/contact.html"> 'Contact Us'</a> Page </li>
+                            <li>The <a href="/htmlwr/entry.html">'Submit you work'</a> Page</li>
+                        </ul>
+                        <br><br>
+                        <h2>Email us at: </h2>
+                        <ul>
+                            <li> <a href="mailto:technical221b@gmail.com">technical221b@gmail.com</a> </li>
+                        </ul><br><br>
+                        <h2>Social media: </h2><br>
+                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897"><i class="fa fa-facebook"> </i> Galleria-de-Artiste</a><br><a href="https://www.instagram.com/galleria_de_artiste/"><i class="fa fa-instagram"></i> galleria_de_artiste
+                        </a> <br>
+                        <a href="https://www.reddit.com/r/Galleria_de_artiste/"><i class="fa fa-reddit-alien"></i>r/Galleria_de_artiste</a></p>
+
+                    <br>
+                </div>
+                <div class="newsletter">
                     <div class="news_head">
-                        <input type="submit" value="Subscribe" onclick="alert('Your feedback is being recorded, kindly wait while we process your answer.Thank you !');" />
+                        <h2>Subscribe to our newsletter</h2>
+                        <p> To receive updates about us, Simply fill this form and help us grow</p>
                     </div>
-                    <div style="display:none" class="thankyou_message">
-                        <!-- You can customize the thankyou message by editing the code below -->
-                        <h2 id="demo" style="color: rgb(0, 0, 0);">
-                        </h2>
-                    </div>
+                    <form class="gform" action="https://script.google.com/macros/s/AKfycbwUf6Eo2qVGjji0BJjw6k2ZV-oHwgJfXf_H6oi9miGL9n5A9EY/exec">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Name" required /><br>
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required/><br>
+                        <label for="checkbox"><input type="checkbox"  class="check" checked=true/>Regular Newsletter</label><br>
+                        <div class="news_head">
+                            <input type="submit" value="Subscribe" onclick="alert('Your feedback is being recorded, kindly wait while we process your answer.Thank you !');" />
+                        </div>
+                        <div style="display:none" class="thankyou_message">
 
-                </form>
+                            <h2 id="demo" style="color: rgb(0, 0, 0);">
+                            </h2>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="section" style="margin-top: 4%;">
+                    <h4> If you liked our site, please leave a like ! &nbsp; <span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389" data-brdr_c="#000000"
+                            data-f_family="Courier New" data-ef_voting="push" data-rich_snippet="true" data-identifier="gg1" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br></h4>
+                </div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block; width: 100%; height: auto;" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
-            <h4> If you liked our site, please leave a like ! &nbsp; <span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389" data-brdr_c="#000000"
-                    data-f_family="Courier New" data-ef_voting="push" data-rich_snippet="true" data-identifier="gg1" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br></h4>
         </div>
     </div>
     <footer>
@@ -320,6 +746,33 @@
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            enabled: true,
+            delay: 3000,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+    });
+</script>
+
 <script>
     let options = {
         root: null,
