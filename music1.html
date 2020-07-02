@@ -297,16 +297,8 @@
         width: 90%;
         margin: 0 auto;
         display: block;
-    }
-    
-    .mainsection p {
         text-align: justify;
         font-family: 'Lora', sans-serif;
-    }
-    
-    .mainsection p::first-letter {
-        text-transform: uppercase;
-        font-size: 150%;
     }
     
     .swiper-container2 {
@@ -320,6 +312,7 @@
         margin-top: unset;
         margin: auto auto;
         height: 300px !important;
+        background-attachment: fixed;
     }
     
     .swiper-container2 .swiper-pagination-black {
@@ -330,6 +323,7 @@
     .mainsection h1 {
         font-family: 'Roboto Condensed', sans-serif;
         text-transform: uppercase;
+        text-align: left;
         margin-bottom: 18px;
         display: inline-block;
         border-left: 3px solid black;
@@ -340,7 +334,6 @@
     
     @media screen and (max-width:700px) {
         body {
-            overflow-x: hidden;
             margin: 0;
             padding: 0;
             width: 100%;
@@ -397,8 +390,8 @@
     <section class="navbar">
         <a href="contact.html">Contact</a>
         <a href="about.html ">About</a>
-        <a href="work.html ">Catalog </a>
-        <a href="index.html " class="active ">Home</a>
+        <a href="work.html " class="active ">Catalog </a>
+        <a href="index.html ">Home</a>
         <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
     </section>
 
@@ -486,28 +479,28 @@
     <!-- Swiper -->
     <div class="swiper-container2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/drums.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
                 <div class="text">
                     <h1>Instrumentals</h1>
-                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                    <a href="musicinstrument.html"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/mic.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/mic.jpg);">
                 <div class="text">
                     <h1>Vocals</h1>
-                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                    <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/beatbox.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/beatbox.jpg);">
                 <div class="text">
                     <h1>Beatboxing</h1>
-                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                    <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/dj.jpg);">
                 <div class="text">
                     <h1>Dj Music</h1>
-                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                    <a href="musicinstrument.html#best"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
 
@@ -519,25 +512,25 @@
     <div class="mainsection" id="instrumental">
         <h1> Instrumentals:</h1>
     </div>
-    <!-- Swiper -->
+    <!-- Swiper INSTRUMENTAL-->
     <div class="swiper-container2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/drums.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
                 <div class="text">
                     <h1>Drums</h1>
                     <a href="/musicinstrument.html#drums"><button class="btns_arr"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/guitar.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/guitar.jpg);">
                 <div class="text">
                     <h1>Guitar</h1>
                     <a href="/musicinstrument.html#guitar"><button class="btns_arr"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/piano.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/piano.jpg);">
                 <div class="text">
                     <h1>Piano</h1>
                     <a href="/musicinstrument.html#piano"><button class="btns_arr"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/violin.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/violin.jpg);">
                 <div class="text">
                     <h1>Violin</h1>
                     <a href="/musicinstrument.html#violin"><button class="btns_arr"> Explore </button></a></div>
@@ -550,25 +543,25 @@
     <div class="mainsection" id="songs">
         <h1> Songs:</h1>
     </div>
-    <!-- Swiper -->
+    <!-- Swiper  VOCALS-->
     <div class="swiper-container2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/band.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/band.jpg);">
                 <div class="text">
                     <h1>Band Music</h1>
                     <a href="/musicsong.html#band"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/solo.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/solo.jpg);">
                 <div class="text">
                     <h1>Solo songs</h1>
                     <a href="/musicsong.html#solo"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/originalsong.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/originalsong.jpg);">
                 <div class="text">
                     <h1>Originals</h1>
                     <a href="/musicsong.html#original"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/covermusic.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/covermusic.jpg);">
                 <div class="text">
                     <h1>Cover songs</h1>
                     <a href="/musicsong.html#cover"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
@@ -581,25 +574,25 @@
     <div class="mainsection" id="beatbox">
         <h1> Beatboxing:</h1>
     </div>
-    <!-- Swiper -->
+    <!-- Swiper BEATBOX -->
     <div class="swiper-container2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
                 <div class="text">
                     <h1>Sayandip Saha</h1>
-                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
                 <div class="text">
                     <h1>Beatboxer 2</h1>
-                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
                 <div class="text">
                     <h1>Beatboxer 3</h1>
-                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
 
@@ -610,31 +603,31 @@
     <div class="mainsection" id="dj">
         <h1>Dance to the beat</h1>
     </div>
-    <!-- Swiper -->
+    <!-- Swiper DJ -->
     <div class="swiper-container2">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/dj1.jpg);">
                 <div class="text">
                     <h1>Dj Yudi</h1>
-                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/dj2.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/dj2.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/dj3.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/dj3.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/dj.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
 
@@ -645,8 +638,8 @@
 
 
 
-    <div class="buttons">
-        <a href="#main"><button class="btns" >&#8593;Go to top</button></a>
+    <div class="buttons" style="margin-left: 20px;">
+        <a href="#main"><button class="btns" style="transform: scale(1.39);" >&#8593;Go to top</button></a>
     </div>
     <br>
 
@@ -679,91 +672,52 @@
             </p>
         </div>
     </footer>
-</body>
-<script src="https://unpkg.com/swiper/js/swiper.js"></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        loop: true,
-        speed: 1000,
-        autoplay: {
-            enabled: true,
-            delay: 3000,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-        },
 
-    });
-    var swiper = new Swiper('.swiper-container2', {
-
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 30,
-
-
-        // freeMode: true,
-        pagination: {
-            el: '.swiper-pagination-black',
-
-            clickable: true,
-            dynamicBullets: true,
-        },
-        mousewheel: true,
-        keyboard: true,
-
-    });
-</script>
-
-
-<script>
-    let options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25
-    };
-    let callback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let imageUrl = entry.target.getAttribute('data-img');
-                if (imageUrl) {
-                    entry.target.src = imageUrl;
-                    observer.unobserve(entry.target);
-                }
-            }
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                enabled: true,
+                delay: 3000,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
 
         });
-    }
-    let observer = new IntersectionObserver(callback, options);
-    observer.observe(document.querySelector('#img1'));
-    observer.observe(document.querySelector('#img2'));
-    observer.observe(document.querySelector('#img3'));
-    observer.observe(document.querySelector('#img4'));
-    observer.observe(document.querySelector('#img5'));
-    observer.observe(document.querySelector('#img6'));
-    observer.observe(document.querySelector('#img7'));
-    observer.observe(document.querySelector('#img8'));
-    observer.observe(document.querySelector('#img9'));
-</script>
+        var swiper = new Swiper('.swiper-container2', {
+
+            loop: true,
+            speed: 400,
+            slidesPerView: "auto",
+            spaceBetween: 30,
 
 
+            // freeMode: true,
+            pagination: {
+                el: '.swiper-pagination-black',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            mousewheel: true,
+            keyboard: true,
 
-
-<script src="main.js"></script>
-
-
-
-
-
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
 
 </html>
