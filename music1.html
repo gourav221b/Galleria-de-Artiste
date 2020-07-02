@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Galleria-De-Artiste">
+    <meta name="google-site-verification" content="BSN7YHB9WxmjiaklAD_zTeqY-MScOzC0HUcrJbdRfEc" />
+    <meta property="og:description" content="A platform for all types of Art">
+    <meta property="og:image" content="https://scontent.fccu1-1.fna.fbcdn.net/v/t1.0-9/95863772_2656969971246123_6509166221491961856_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=dLkm7RFRaUMAX__L9nc&_nc_ht=scontent.fccu1-1.fna&oh=8a428f7f7e752b0690d3940a2555e54f&oe=5F046B94">
+    <meta property="og:url" content="https://galleria-de-artiste.netlify.app/">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="canonical" href="https://galleria-de-artiste.netlify.app/">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="./img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <title>Music Gallery|Originals,covers, instrumentals|Galleria de Artiste</title>
+    <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169711560-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169711560-1');
+    </script>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+    html {
+        scroll-behavior: smooth !important;
+    }
+    
+    .index {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 2px 25px 4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 2px 25px 4px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 25px 4px rgba(0, 0, 0, 0.75);
+    }
+    
+     ::selection {
+        color: #f1f1f1;
+        background: #000000;
+    }
+    
+    h2 {
+        text-shadow: -3px 2px 19px rgba(150, 150, 150, 0.82);
+        font-family: 'Exo 2', sans-serif;
+    }
+    
+    .row {
+        display: flex !important;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row-reverse;
+        min-width: 0;
+    }
+    
+    .btns {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #fdfdfd;
+        color: rgb(0, 0, 0);
+        border: 3px solid #000000;
+        border-radius: 0px;
+    }
+    
+    .side {
+        width: 30%;
+        height: auto;
+    }
+    
+    form {
+        border: 3px solid #f1f1f1;
+        font-family: Arial;
+        background-color: #f1f1f1;
+    }
+    
+    .news_head {
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
+    
+    input[type=text],
+    input[type=email],
+    input[type=submit] {
+        width: 90%;
+        padding: 12px;
+        margin: 2% auto;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    input[type=checkbox] {
+        margin: 1em 0.3em;
+    }
+    
+    input[type=submit] {
+        margin: 0 auto;
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(0, 0, 0);
+        background: #065a74ec;
+        background: -webkit-linear-gradient(0deg, #00b4db, #0083b0);
+        font-size: 1.2em;
+    }
+    
+    input[type=submit]:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+    }
+    
+    .counter {
+        margin: 5%;
+    }
+    
+    .upcoming {
+        filter: grayscale();
+    }
+    
+    .upcoming:hover {
+        filter: grayscale(40%);
+        transition: filter 2s ease;
+    }
+    
+    .swiper-container {
+        width: auto;
+        height: auto;
+        background: transparent;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: 700px !important;
+        margin-top: -100px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% !important;
+        background-attachment: fixed;
+    }
+    
+    .swiper-button-prev {
+        color: rgb(243, 8, 8);
+        border-radius: 50%;
+        padding: 2.1em;
+        border: 3px solid white;
+        text-align: center;
+        opacity: 0.7;
+    }
+    
+    .swiper-button-next {
+        color: rgb(243, 8, 8);
+        border-radius: 50%;
+        border: 3px solid white;
+        padding: 2.1em;
+        text-align: center;
+        opacity: 0.7;
+    }
+    
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        /* background: #f1f1f1; */
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+    .swiper-button-prev:hover {
+        animation: left_bounce 0.6s infinite;
+    }
+    
+    .swiper-button-next:hover {
+        animation: right_bounce 0.6s infinite;
+    }
+    
+    @keyframes left_bounce {
+        0% {
+            transform: translateX(0);
+            opacity: 0.5;
+            background-color: #ffffff;
+        }
+        50% {
+            transform: translateX(-10%);
+            background: transparent;
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes right_bounce {
+        0% {
+            background-color: #ffffff;
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 0.5;
+        }
+    }
+    
+    #slide1 {
+        background: url(/img/guitar.jpg);
+    }
+    
+    #slide2 {
+        background: url(/img/drums.jpg)
+    }
+    
+    #slide3 {
+        background: url(/img/mic.jpg);
+        filter: background contrast(20%);
+        filter: text brightness(120%);
+    }
+    
+    #slide4 {
+        background: url(/img/beatbox.jpg);
+    }
+    
+    #slide5 {
+        background: url(/img/dj.jpg);
+    }
+    
+    #slide6 {
+        background: url(/img/creator.jpg);
+    }
+    
+    #slide7 {
+        background: url(/img/social.jpg);
+    }
+    
+    .text {
+        font-family: 'Caveat', cursive;
+        color: white;
+        font-size: 300%;
+        margin: 4%;
+    }
+    
+    .swiper-container2 .text {
+        font-size: 100%;
+    }
+    
+    .swiper-container2 .text .btns_arr {
+        width: auto;
+        margin-top: 10px;
+    }
+    
+    .text h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0 1px 7px rgb(0, 0, 0), 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    }
+    
+    .text p {
+        font-size: 90%;
+        text-shadow: 0 1px 0 rgb(0, 0, 0), 0 2px 0 #242424, 0 3px 0 rgb(0, 0, 0);
+    }
+    
+    .btns_arr {
+        width: 30%;
+        transform: scale(1.3);
+        font-family: 'Lora', Arial, Helvetica, sans-serif;
+    }
+    
+    #social {
+        color: white;
+        text-shadow: 4px 4px 12px black;
+        opacity: 0.9;
+    }
+    
+    #social:hover {
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    #social a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #social .fa-facebook {
+        color: #1056ec;
+    }
+    
+    #social .fa-facebook:hover {
+        color: #1056ec;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-instagram {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    #social .fa-instagram:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-reddit-alien {
+        color: orangered;
+    }
+    
+    #social .fa-reddit-alien:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    #social .fa-reddit-alien {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    
+    .mainsection {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .mainsection p {
+        text-align: justify;
+        font-family: 'Lora', sans-serif;
+    }
+    
+    .mainsection p::first-letter {
+        text-transform: uppercase;
+        font-size: 150%;
+    }
+    
+    .swiper-container2 {
+        height: auto;
+        width: 90%;
+        margin: 0 4%;
+        margin-bottom: 2%;
+    }
+    
+    .swiper-container2 .swiper-wrapper .swiper-slide {
+        margin-top: unset;
+        margin: auto auto;
+        height: 300px !important;
+    }
+    
+    .swiper-container2 .swiper-pagination-black {
+        margin: 2% 50%;
+        transform: translateX(50%);
+    }
+    
+    .mainsection h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        display: inline-block;
+        border-left: 3px solid black;
+        padding-left: 10px;
+        width: auto;
+        text-align: left;
+    }
+    
+    @media screen and (max-width:700px) {
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .mainsection {
+            width: 100%;
+            text-align: justify;
+        }
+        .section {
+            margin: 10%;
+        }
+    }
+    
+    @media screen and (max-width:900px) {
+        .swiper-slide {
+            height: auto !important;
+        }
+        .text {
+            font-size: 130%;
+            padding: 4%;
+            line-height: 200%;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            transform: scale(0.7);
+            border: unset;
+        }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            border: none;
+        }
+        .swiper-button-prev {
+            transform: translateX(-30%);
+        }
+        .swiper-button-next {
+            transform: translateX(30%);
+        }
+    }
+</style>
+
+
+<body onload="scroll(0,0);">
+
+
+    <section class="navbar">
+        <a href="contact.html">Contact</a>
+        <a href="about.html ">About</a>
+        <a href="work.html ">Catalog </a>
+        <a href="index.html " class="active ">Home</a>
+        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+    </section>
+
+    <!-- Header -->
+    <div class="header"><br>
+        <h1><b>Galleria de Artiste</b></h1>
+    </div>
+    <!-- Swiper1 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1">
+                <div class="text">
+                    <h1> Music Gallery</h1>
+                    <p>A new initiative of Galleria-De-Artiste</p>
+                    <a href="#main"><button class="btns_arr"> Explore Us</button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide2">
+                <div class="text">
+                    <h1>instrumentals</h1>
+
+                    <p>Original music, Covers of famous songs</p>
+                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide3">
+                <div class="text">
+                    <h1>Songs</h1>
+                    <p>Originals/ Covers by new and Talented Singers</p>
+
+                    <a href="#songs"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide4">
+                <div class="text">
+                    <h1>Beatboxing</h1>
+                    <p>Need we say more?</p>
+
+                    <a href="#beatboxing"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide5">
+                <div class="text">
+                    <h1>Dance to the beats</h1>
+                    <p>Awesome, Dj music, EDM,will make you miss the dance floor more than ever</p>
+
+                    <a href="#dj"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide6">
+                <div class="text">
+                    <h1>Are you a creator?</h1>
+                    <p>Looking for a platform to put your creativity on exhibition</p>
+                    <p>Wait no more, click below to contact us or send us your work</p>
+                    <a href="contact.html" target="_blank"><button class="btns_arr"> Contact Us</button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide7">
+                <div class="text">
+                    <h1>Follow Us on:</h1>
+                    <p id="social">
+                        <a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897" target="_blank"><i class="fa fa-facebook"> </i> Galleria-de-Artiste</a><br><a href="https://www.instagram.com/galleria_de_artiste/" target="_blank"><i class="fa fa-instagram"></i> galleria_de_artiste
+                        </a> <br>
+                        <a href="https://www.reddit.com/r/Galleria_de_artiste/" target="_blank"><i class="fa fa-reddit-alien"></i>r/Galleria_de_artiste</a></p>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="mainsection" id="main">
+        <h1> THE MUSIC GALLERY</h1>
+        <p> We maynot be Spotify or Saavn, But we do host Musicians Who donot have much of a platform to Share their music with the world!<br> We really hope you love them and show your support</p>
+    </div>
+    <br>
+
+    <div class="mainsection">
+        <h1> Browse by Type:</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/img/drums.jpg);">
+                <div class="text">
+                    <h1>Instrumentals</h1>
+                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/mic.jpg);">
+                <div class="text">
+                    <h1>Vocals</h1>
+                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/beatbox.jpg);">
+                <div class="text">
+                    <h1>Beatboxing</h1>
+                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
+                <div class="text">
+                    <h1>Dj Music</h1>
+                    <a href="#instrumental"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-black"></div>
+
+    </div>
+    <div class="mainsection" id="instrumental">
+        <h1> Instrumentals:</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/img/drums.jpg);">
+                <div class="text">
+                    <h1>Drums</h1>
+                    <a href="/musicinstrument.html#drums"><button class="btns_arr"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/guitar.jpg);">
+                <div class="text">
+                    <h1>Guitar</h1>
+                    <a href="/musicinstrument.html#guitar"><button class="btns_arr"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/piano.jpg);">
+                <div class="text">
+                    <h1>Piano</h1>
+                    <a href="/musicinstrument.html#piano"><button class="btns_arr"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/violin.jpg);">
+                <div class="text">
+                    <h1>Violin</h1>
+                    <a href="/musicinstrument.html#violin"><button class="btns_arr"> Explore </button></a></div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-black"></div>
+    </div>
+    <div class="mainsection" id="songs">
+        <h1> Songs:</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/img/band.jpg);">
+                <div class="text">
+                    <h1>Band Music</h1>
+                    <a href="/musicsong.html#band"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/solo.jpg);">
+                <div class="text">
+                    <h1>Solo songs</h1>
+                    <a href="/musicsong.html#solo"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/originalsong.jpg);">
+                <div class="text">
+                    <h1>Originals</h1>
+                    <a href="/musicsong.html#original"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/covermusic.jpg);">
+                <div class="text">
+                    <h1>Cover songs</h1>
+                    <a href="/musicsong.html#cover"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-black"></div>
+    </div>
+    <div class="mainsection" id="beatbox">
+        <h1> Beatboxing:</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+                <div class="text">
+                    <h1>Beatboxing</h1>
+                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-black"></div>
+    </div>
+    <div class="mainsection" id="dj">
+        <h1>Dance to the beat</h1>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
+                <div class="text">
+                    <h1>Dj Abc</h1>
+                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/dj2.jpg);">
+                <div class="text">
+                    <h1>Dj Abc</h1>
+                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/dj3.jpg);">
+                <div class="text">
+                    <h1>Dj Abc</h1>
+                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
+                <div class="text">
+                    <h1>Dj Abc</h1>
+                    <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-black"></div>
+    </div>
+
+
+
+    <div class="buttons">
+        <a href="#main"><button class="btns" style="width: auto; margin: 0 5%; transform: scale(1.48);">&#8593;Go to top</button></a>
+    </div>
+    <br>
+
+
+    <footer>
+        <div class="left-footer">
+            <br>
+            <h2 style="color: white;">Quick Links</h2>
+            <p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="right-footer">
+            <br>
+            <h3>Follow Us On</h3>
+            <p>
+                <ul>
+                    <li><a href="https://www.facebook.com/Galleria-de-Artiste-110796264001897"><i class="fa fa-facebook"></i></a></li>
+                    &nbsp;
+                    <li><a href="https://www.instagram.com/galleria_de_artiste/"><i class="fa fa-instagram"></i></a></li>&nbsp;
+                    <li><a href="https://www.reddit.com/r/Galleria_de_artiste/"><i class="fa fa-reddit-alien"></i></a></li>&nbsp;
+
+                </ul>
+                <p>This website is developed by Gourav Ghosal <br><span>&copy; Galleria-de-Artiste 2020</span></p>
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            enabled: true,
+            delay: 3000,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+    });
+    var swiper = new Swiper('.swiper-container2', {
+
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        // freeMode: true,
+        pagination: {
+            el: '.swiper-pagination-black',
+
+            clickable: true,
+            dynamicBullets: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+
+    });
+</script>
+
+
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+
+        });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(document.querySelector('#img1'));
+    observer.observe(document.querySelector('#img2'));
+    observer.observe(document.querySelector('#img3'));
+    observer.observe(document.querySelector('#img4'));
+    observer.observe(document.querySelector('#img5'));
+    observer.observe(document.querySelector('#img6'));
+    observer.observe(document.querySelector('#img7'));
+    observer.observe(document.querySelector('#img8'));
+    observer.observe(document.querySelector('#img9'));
+</script>
+
+
+
+
+<script src="main.js"></script>
+
+
+
+
+
+
+</html>
