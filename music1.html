@@ -69,79 +69,13 @@
         font-family: 'Exo 2', sans-serif;
     }
     
-    .row {
-        display: flex !important;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        flex-direction: row-reverse;
-        min-width: 0;
-    }
-    
     .btns {
-        width: 90%;
+        width: auto;
         margin: 0 auto;
         background-color: #fdfdfd;
         color: rgb(0, 0, 0);
         border: 3px solid #000000;
         border-radius: 0px;
-    }
-    
-    .side {
-        width: 30%;
-        height: auto;
-    }
-    
-    form {
-        border: 3px solid #f1f1f1;
-        font-family: Arial;
-        background-color: #f1f1f1;
-    }
-    
-    .news_head {
-        padding: 20px;
-        background-color: #f1f1f1;
-    }
-    
-    input[type=text],
-    input[type=email],
-    input[type=submit] {
-        width: 90%;
-        padding: 12px;
-        margin: 2% auto;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-    
-    input[type=checkbox] {
-        margin: 1em 0.3em;
-    }
-    
-    input[type=submit] {
-        margin: 0 auto;
-        color: rgb(255, 255, 255);
-        border: 2px solid rgb(0, 0, 0);
-        background: #065a74ec;
-        background: -webkit-linear-gradient(0deg, #00b4db, #0083b0);
-        font-size: 1.2em;
-    }
-    
-    input[type=submit]:hover {
-        opacity: 0.8;
-        transition: 0.3s;
-    }
-    
-    .counter {
-        margin: 5%;
-    }
-    
-    .upcoming {
-        filter: grayscale();
-    }
-    
-    .upcoming:hover {
-        filter: grayscale(40%);
-        transition: filter 2s ease;
     }
     
     .swiper-container {
@@ -287,6 +221,10 @@
         margin-top: 10px;
     }
     
+    .swiper-container2 .swiper-slide {
+        width: 35%;
+    }
+    
     .text h1 {
         font-family: 'Roboto Condensed', sans-serif;
         text-transform: uppercase;
@@ -405,6 +343,7 @@
             overflow-x: hidden;
             margin: 0;
             padding: 0;
+            width: 100%;
         }
         .mainsection {
             width: 100%;
@@ -416,13 +355,22 @@
     }
     
     @media screen and (max-width:900px) {
-        .swiper-slide {
-            height: auto !important;
+        .swiper-container .swiper-slide {
+            height: 350px !important;
+        }
+        .swiper-container2 .swiper-slide {
+            width: 95% !important;
+            overflow-x: hidden;
         }
         .text {
             font-size: 130%;
             padding: 4%;
             line-height: 200%;
+        }
+        .mainsection,
+        .btns {
+            margin: 10px;
+            width: 90%;
         }
         .swiper-button-prev,
         .swiper-button-next {
@@ -638,7 +586,19 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
                 <div class="text">
-                    <h1>Beatboxing</h1>
+                    <h1>Sayandip Saha</h1>
+                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+                <div class="text">
+                    <h1>Beatboxer 2</h1>
+                    <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url(/img/beatbox1.jpg);">
+                <div class="text">
+                    <h1>Beatboxer 3</h1>
                     <a href="/musicbeatbox.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
@@ -655,7 +615,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
                 <div class="text">
-                    <h1>Dj Abc</h1>
+                    <h1>Dj Yudi</h1>
                     <a href="/musicdj.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
@@ -686,7 +646,7 @@
 
 
     <div class="buttons">
-        <a href="#main"><button class="btns" style="width: auto; margin: 0 5%; transform: scale(1.48);">&#8593;Go to top</button></a>
+        <a href="#main"><button class="btns" >&#8593;Go to top</button></a>
     </div>
     <br>
 
@@ -748,8 +708,10 @@
     var swiper = new Swiper('.swiper-container2', {
 
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: "auto",
         spaceBetween: 30,
+
+
         // freeMode: true,
         pagination: {
             el: '.swiper-pagination-black',
