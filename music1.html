@@ -9,10 +9,10 @@
     <meta property="og:description" content="A platform for all types of Art">
     <meta property="og:image" content="https://scontent.fccu1-1.fna.fbcdn.net/v/t1.0-9/95863772_2656969971246123_6509166221491961856_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=dLkm7RFRaUMAX__L9nc&_nc_ht=scontent.fccu1-1.fna&oh=8a428f7f7e752b0690d3940a2555e54f&oe=5F046B94">
     <meta property="og:url" content="https://galleria-de-artiste.netlify.app/">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="/swiper.css">
+    <link rel="stylesheet" href="/swiper.min.css">
+    <script src="/swiper.js"></script>
+    <script src="/swiper.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <link rel="canonical" href="https://galleria-de-artiste.netlify.app/">
@@ -361,10 +361,13 @@
             padding: 4%;
             line-height: 200%;
         }
-        .mainsection,
-        .btns {
+        .mainsection {
             margin: 10px;
             width: 90%;
+        }
+        .btns {
+            margin: 3% auto;
+            width: 50%;
         }
         .swiper-button-prev,
         .swiper-button-next {
@@ -550,22 +553,22 @@
             <div class="swiper-slide  " style="background: url(/img/band.jpg);">
                 <div class="text">
                     <h1>Band Music</h1>
-                    <a href="/musicsong.html#band"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+                    <a href="/arrivesoon.html"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
             <div class="swiper-slide  " style="background: url(/img/solo.jpg);">
                 <div class="text">
                     <h1>Solo songs</h1>
-                    <a href="/musicsong.html#solo"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
             <div class="swiper-slide  " style="background: url(/img/originalsong.jpg);">
                 <div class="text">
                     <h1>Originals</h1>
-                    <a href="/musicsong.html#original"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
             <div class="swiper-slide  " style="background: url(/img/covermusic.jpg);">
                 <div class="text">
                     <h1>Cover songs</h1>
-                    <a href="/musicsong.html#cover"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
+                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
             </div>
 
         </div>
@@ -673,9 +676,8 @@
             </p>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="/swiper.js"></script>
+    <script src="/swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             navigation: {
@@ -687,6 +689,7 @@
             autoplay: {
                 enabled: true,
                 delay: 3000,
+                disableOnInteraction: false,
             },
             keyboard: {
                 enabled: true,
@@ -706,8 +709,6 @@
             slidesPerView: "auto",
             spaceBetween: 30,
 
-
-            // freeMode: true,
             pagination: {
                 el: '.swiper-pagination-black',
                 clickable: true,

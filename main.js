@@ -58,6 +58,9 @@ var x = setInterval(function() {
     }
 }, 1000);
 
+function goback() {
+    window.history.back();
+}
 
 // ARTISTS AND PHOTOGRAPHERS
 // ARTIST
