@@ -13,9 +13,6 @@
     <meta property="og:description" content="A platform for all types of Art">
     <meta property="og:image" content="https://scontent.fccu1-1.fna.fbcdn.net/v/t1.0-9/95863772_2656969971246123_6509166221491961856_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=dLkm7RFRaUMAX__L9nc&_nc_ht=scontent.fccu1-1.fna&oh=8a428f7f7e752b0690d3940a2555e54f&oe=5F046B94">
     <meta property="og:url" content="https://galleria-de-artiste.netlify.app/">
-
-
-
     <link rel="canonical" href="https://galleria-de-artiste.netlify.app/">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <!-- For apple devices -->
@@ -29,7 +26,6 @@
     <!-- APlayer CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" />
     <link rel="stylesheet" href="style.css">
-
     <title>Galleria de Artiste| A page for all forms of creativity. Visit today! Art, Photography, Creative Writing, Music, Foodblog ! Visit Now!!</title>
     <script data-ad-client="ca-pub-4551353942364047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -100,9 +96,22 @@
         padding: 0;
     }
     
-    .main img {
+    .main img,
+    .main .frame {
         width: 100%;
         min-height: 250px;
+    }
+    
+    .main .frame {
+        border-radius: 20px;
+    }
+    
+    @media screen and (min-width:900px) {
+        .main .frame {
+            width: 100%;
+            margin-right: 3%;
+            padding: 4%;
+        }
     }
     
     .main {
@@ -260,7 +269,33 @@
                     <p>Anupama Dey</p>
                 </div>
             </div>
+            <!-- PIANO SECTION -->
+            <div class="row" id="piano">
+                <div class="col-md-12">
+                    <h3>Piano Covers</h3>
+                </div>
+                <div class="col-md-4">
+                    <iframe class="frame" src="https://www.youtube.com/embed/eIIorgJIwRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Jaan Nisaar (Kedarnath) Epic piano Cover.</h4>
+                    <p>Christyle-illusion</p>
+                </div>
+                <div class="col-md-4">
+                    <iframe class="frame" src="https://www.youtube.com/embed/p1nGDIcbNmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Titanic piano cover (My heart will go on)|Céline Dion|</h4>
+                    <p>Christyle-illusion</p>
+                </div>
+                <div class="col-md-4">
+                    <iframe class="frame" src="https://www.youtube.com/embed/Y4wHn9Keiqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Emptiness-Tune mere jaana,piano Cover</h4>
+                    <p>Christyle-illusion</p>
+                </div>
+                <div class="col-md-4">
+                    <iframe class="frame" src="https://www.youtube.com/embed/AIq73YIIAxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Tujhe Kitna chahein aur hum|Solo piano cover|Arijit Singh, jubin nautiyal|</h4>
+                    <p>Christyle-illusion</p>
+                </div>
 
+            </div>
 
             <!-- DJ SECTIONS -->
             <div class="row" id="beat">

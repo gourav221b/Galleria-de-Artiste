@@ -400,6 +400,11 @@
         margin-left: 20%;
     }
     
+    .newsletter {
+        margin-bottom: 5px !important;
+        padding-bottom: 0;
+    }
+    
     #speak {
         font-family: monospace;
         font-size: 130%;
@@ -704,7 +709,7 @@
 
                     </form>
                 </div>
-                <div class="section" style="margin-top: 4%;">
+                <div class="section" id="likes">
                     <h4> If you liked our site, please leave a like ! &nbsp; <span class="likebtn-wrapper" data-theme="custom" data-btn_size="31" data-f_size="15" data-icon_size="24" data-icon_l="hrt6" data-icon_l_c="#383838" data-icon_l_c_v="#ed0389" data-brdr_c="#000000"
                             data-f_family="Courier New" data-ef_voting="push" data-rich_snippet="true" data-identifier="gg1" data-dislike_enabled="false" data-icon_dislike_show="false"></span><br></h4>
                 </div>
@@ -754,6 +759,7 @@
         autoplay: {
             enabled: true,
             delay: 3000,
+            disableOnInteraction: false,
         },
         keyboard: {
             enabled: true,
