@@ -50,12 +50,13 @@ body {
 }
 
 .logo {
-    width: 40%;
+    width: 30%;
     height: auto;
+    margin: -1px;
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition: 0.4s ease-in-out;
 }
 
@@ -595,7 +596,7 @@ display: flex; */
     /* start of phone styles */
     .navbar {
         width: 100%;
-        display: block;
+        display: inline-block;
     }
     .header {
         background-image: url(./img/landscape-4387209_1280.jpg);
