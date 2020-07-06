@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/swiper.min.css">
     <script src="/swiper.js"></script>
     <script src="/swiper.min.js"></script>
+    <link href="/dataaos.css" rel="stylesheet">
+    <script src="/dataaos.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <link rel="canonical" href="https://galleria-de-artiste.netlify.app/">
@@ -477,11 +479,11 @@
     </div>
     <br>
 
-    <div class="mainsection">
+    <div class="mainsection" data-aos="fade-up">
         <h1> Browse by Type:</h1>
     </div>
     <!-- Swiper -->
-    <div class="swiper-container2">
+    <div class="swiper-container2" data-aos="fade-up">
         <div class="swiper-wrapper">
             <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
                 <div class="text">
@@ -513,11 +515,11 @@
         <div class="swiper-pagination-black"></div>
 
     </div>
-    <div class="mainsection" id="instrumental">
+    <div class="mainsection" id="instrumental" data-aos="fade-up">
         <h1> Instrumentals:</h1>
     </div>
     <!-- Swiper INSTRUMENTAL-->
-    <div class="swiper-container2">
+    <div class="swiper-container2" data-aos="fade-up">
         <div class="swiper-wrapper">
             <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
                 <div class="text">
@@ -544,7 +546,7 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination-black"></div>
     </div>
-    <div class="mainsection" id="songs">
+    <div class="mainsection" data-aos="fade-up" id="songs" data-aos="fade-up">
         <h1> Songs:</h1>
     </div>
     <!-- Swiper  VOCALS-->
@@ -575,11 +577,11 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination-black"></div>
     </div>
-    <div class="mainsection" id="beatbox">
+    <div class="mainsection" data-aos="fade-up" id="beatbox">
         <h1> Beatboxing:</h1>
     </div>
     <!-- Swiper BEATBOX -->
-    <div class="swiper-container2">
+    <div class="swiper-container2" data-aos="fade-up">
         <div class="swiper-wrapper">
             <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
                 <div class="text">
@@ -587,9 +589,9 @@
                     <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
+            <div class="swiper-slide  " style="background: url(/img/aritrosaha.png);">
                 <div class="text">
-                    <h1>Beatboxer 2</h1>
+                    <h1>Aritro Saha</h1>
                     <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
@@ -604,34 +606,34 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination-black"></div>
     </div>
-    <div class="mainsection" id="dj">
+    <div class="mainsection" data-aos="fade-up" id="dj">
         <h1>Dance to the beat</h1>
     </div>
     <!-- Swiper DJ -->
-    <div class="swiper-container2">
+    <div class="swiper-container2" data-aos="fade-up">
         <div class="swiper-wrapper">
-            <div class="swiper-slide  " style="background: url(/img/dj1.jpg);">
+            <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
                 <div class="text">
                     <h1>Dj Yudi</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide  " style="background: url(/img/dj2.jpg);">
+            <div class="swiper-slide" style="background: url(/img/dj2.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide  " style="background: url(/img/dj3.jpg);">
+            <div class="swiper-slide" style="background: url(/img/dj3.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
-            <div class="swiper-slide  " style="background: url(/img/dj.jpg);">
+            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
                 <div class="text">
                     <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
                 </div>
             </div>
 
@@ -643,7 +645,7 @@
 
 
     <div class="buttons" style="margin-left: 20px;">
-        <a href="#main"><button class="btns" style="transform: scale(1.39);" >&#8593;Go to top</button></a>
+        <a href="#main"><button class="btns" style="transform: scale(1.39);">&#8593;Go to top</button></a>
     </div>
     <br>
 
@@ -678,6 +680,9 @@
     </footer>
     <script src="/swiper.js"></script>
     <script src="/swiper.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             navigation: {
