@@ -1,5 +1,19 @@
 AOS.init();
 
+function openSide() {
+    document.getElementById("menu").style.width = "150px";
+    document.getElementById("content").style.marginLeft = "150px";
+    document.getElementById("hamburger-menu").style.visibility = "hidden";
+    document.getElementById("logo").style.display = "inline-block";
+    console.log("open success");
+}
+
+function closeSide() {
+    document.getElementById("menu").style.width = "0";
+    document.getElementById("content").style.marginLeft = "0";
+    document.getElementById("hamburger-menu").style.visibility = "visible";
+    console.log("close success");
+}
 var slideIndex = 1;
 showDivs(slideIndex);
 

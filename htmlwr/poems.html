@@ -294,12 +294,21 @@
 
 <body>
     <section class="navbar">
-        <a href="/contact.html">Contact</a>
-        <a href="/about.html">About</a>
-        <a href="/work.html" class="active">Catalog</a>
-        <a href="/index.html ">Home</a>
-        <a href="/index.html" id="logo"><img src="/img/favicon.png" class="logo"></a>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
 
+        <div class="menu" id="menu">
+            <a href="/index.html" id="logo"><img src="/img/favicon.png" class="logo"></a>
+            <span id="sidenav-text">Galleria-De-Artiste</span><br>
+            <a href="/index.html " class="active ">Home</a>
+            <a href="/work.html ">Catalog </a>
+            <a href="/about.html ">About</a>
+            <a href="/contact.html">Contact</a>
+            <br>
+
+            <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+            <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+        </div>
     </section>
     <!-- Header -->
     <div class="header">
@@ -310,7 +319,7 @@
     <body>
 
         <div id="tops">
-            <div class="cardleft">
+            <div class="cardleft" id="content">
                 <h3 style="font-family: 'Bubblegum Sans', cursive; padding: 0.5em;">Popular Authors</h3>
                 <div class="img"><a href="#gourav" style="text-decoration: none; color: black;">Gourav</a></div>
                 <br>
@@ -320,7 +329,7 @@
             </div>
         </div>
 
-        <div class="wrapper">
+        <div class="wrapper" id="content">
             <div class="left-col">
                 <br>
                 <div class="cardleft">
@@ -782,6 +791,7 @@
                 </p>
             </div>
         </footer>
+        <script src="/main.js"></script>
     </body>
 
 </html>

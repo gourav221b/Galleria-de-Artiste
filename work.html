@@ -62,12 +62,23 @@
 
 
     <body>
+
         <section class="navbar">
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            <a href="work.html" class="active">Catalog</a>
-            <a href="index.html">Home</a>
-            <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
+
+            <div class="menu" id="menu">
+                <a href="/index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+                <span id="sidenav-text">Galleria-De-Artiste</span><br>
+                <a href="index.html " class="active ">Home</a>
+                <a href="work.html ">Catalog </a>
+                <a href="about.html ">About</a>
+                <a href="contact.html">Contact</a>
+                <br>
+
+                <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+                <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+            </div>
         </section>
 
         <!-- Header -->
@@ -75,76 +86,78 @@
             <h1><b>Galleria de Artiste</b></h1>
             <br><br><br><br>
         </div>
-        <h3 class="swiper-text"> Swipe to Browse <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>
-        <div class="swiper-container">
+        <div id="content">
+            <h3 class="swiper-text"> Swipe to Browse <i class="fa fa-arrow-right" aria-hidden="true"></i></h3>
+            <div class="swiper-container">
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./images/paint.jpg" alt="brush">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./images/paint.jpg" alt="brush">
+                        </div>
+                        <div class="details">
+                            <h3>Art Section</h3><span>Sketches, drawings, digital art </span>
+                            <br><br><br>
+                            <a style="text-align: center;" href="artist.html">SEE MORE</a>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Art Section</h3><span>Sketches, drawings, digital art </span>
-                        <br><br><br>
-                        <a style="text-align: center;" href="artist.html">SEE MORE</a>
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./images/camera.jpeg" alt="camera">
+                        </div>
+                        <div class="details">
+                            <h3>Photography Section</h3><span>Moments captured by the lens</span>
+                            <br><br><br>
+                            <a style="text-align: center;" href="Photographer.html">SEE MORE</a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./images/camera.jpeg" alt="camera">
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./img/typewriter.jpeg" alt="writing">
+                        </div>
+                        <div class="details">
+                            <h3>writing Section</h3><span>Stories, poems, articles, quotes and much more </span>
+                            <br><br>
+                            <a style="text-align: center;" href="creative.html">SEE MORE</a>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Photography Section</h3><span>Moments captured by the lens</span>
-                        <br><br><br>
-                        <a style="text-align: center;" href="Photographer.html">SEE MORE</a>
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./img/foodblog.jpg" alt="food blog">
+                        </div>
+                        <div class="details">
+                            <h3>Food Blog</h3><span>Because cooking is also an art </span>
+                            <br><br>
+                            <a style="text-align: center;" href="foodblog.html">SEE MORE</a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./img/typewriter.jpeg" alt="writing">
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./img/person-singing-1370545.jpg" alt="food blog">
+                        </div>
+                        <div class="details">
+                            <h3>Music Gallery</h3><span>Original Music, Covers, Instrumentals, beatbox and much more </span>
+                            <br><br>
+                            <a style="text-align: center;" href="music.html">SEE MORE</a>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>writing Section</h3><span>Stories, poems, articles, quotes and much more </span>
-                        <br><br>
-                        <a style="text-align: center;" href="creative.html">SEE MORE</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./img/foodblog.jpg" alt="food blog">
-                    </div>
-                    <div class="details">
-                        <h3>Food Blog</h3><span>Because cooking is also an art </span>
-                        <br><br>
-                        <a style="text-align: center;" href="foodblog.html">SEE MORE</a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./img/person-singing-1370545.jpg" alt="food blog">
-                    </div>
-                    <div class="details">
-                        <h3>Music Gallery</h3><span>Original Music, Covers, Instrumentals, beatbox and much more </span>
-                        <br><br>
-                        <a style="text-align: center;" href="music.html">SEE MORE</a>
-                    </div>
-                </div>
 
 
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="./images/submission.jpeg" alt="submission">
+                    <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="./images/submission.jpeg" alt="submission">
+                        </div>
+                        <div class="details">
+                            <h3>Submission Page</h3><span>Submit your works and get a chance to be featured here </span>
+                            <br><br>
+                            <a style="text-align: center;" href="/htmlwr/entry.html">SEE MORE</a>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Submission Page</h3><span>Submit your works and get a chance to be featured here </span>
-                        <br><br>
-                        <a style="text-align: center;" href="/htmlwr/entry.html">SEE MORE</a>
-                    </div>
-                </div>
 
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
         <br>
         <footer>
@@ -178,6 +191,7 @@
 
 
     </body>
+    <script src="/main.js"></script>
     <script type="text/javascript" src="swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {

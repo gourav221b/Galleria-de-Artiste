@@ -102,11 +102,21 @@
 <body>
 
     <section class="navbar">
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="work.html" class="active">Catalog</a>
-        <a href="index.html">Home</a>
-        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
+
+        <div class="menu" id="menu">
+            <a href="/index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+            <span id="sidenav-text">Galleria-De-Artiste</span><br>
+            <a href="index.html " class="active ">Home</a>
+            <a href="work.html ">Catalog </a>
+            <a href="about.html ">About</a>
+            <a href="contact.html">Contact</a>
+            <br>
+
+            <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+            <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+        </div>
     </section>
 
     <!-- Header -->
@@ -115,7 +125,7 @@
         <h1><b>Galleria de Artiste</b></h1>
 
     </div>
-    <ul class="cards">
+    <ul class="cards" id="content">
         <li class="cards_item">
             <div class="card">
                 <div class="card_image"><img id="img1" data-img="./img/typewriter.jpeg"></div>

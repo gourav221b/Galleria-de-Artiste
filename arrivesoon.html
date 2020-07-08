@@ -38,13 +38,24 @@
 
 
 <body>
-    <section class="navbar" id="top">
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="work.html" class="active">Catalog</a>
-        <a href="index.html">Home</a>
-        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+    <section class="navbar">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
+
+        <div class="menu" id="menu">
+            <a href="/index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+            <span id="sidenav-text">Galleria-De-Artiste</span><br>
+            <a href="index.html " class="active ">Home</a>
+            <a href="work.html ">Catalog </a>
+            <a href="about.html ">About</a>
+            <a href="contact.html">Contact</a>
+            <br>
+
+            <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+            <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+        </div>
     </section>
+
 
     <!-- Header -->
     <div class="header"><br>
@@ -52,7 +63,7 @@
 
     </div>
     <br><br>
-    <p class="code"> Arriving Soon</p>
+    <p class="code" id="content"> Arriving Soon</p>
 
     <br>
     <div class="container-fluid">
@@ -90,6 +101,7 @@
         </div>
     </footer>
 </body>
+<script src="main.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

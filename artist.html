@@ -154,7 +154,6 @@
     #artist_shambhabi,
     #artist_rudranshu,
     #artist_jeet,
-    #buttons,
     #next {
         display: none;
     }
@@ -224,14 +223,24 @@
     }
 </style>
 
-<body>
+<body onload="scroll(0,0);">
 
     <section class="navbar">
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-        <a href="work.html" class="active">Catalog</a>
-        <a href="index.html">Home</a>
-        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
+
+        <div class="menu" id="menu">
+            <a href="/index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+            <span id="sidenav-text">Galleria-De-Artiste</span><br>
+            <a href="index.html " class="active ">Home</a>
+            <a href="work.html ">Catalog </a>
+            <a href="about.html ">About</a>
+            <a href="contact.html">Contact</a>
+            <br>
+
+            <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+            <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+        </div>
     </section>
 
     <!-- Header -->
@@ -241,270 +250,268 @@
 
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
-    <!-- SECTION MAIN -->
-    <section id="artist_main">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <div class="container_text">
-            <div class="text">
-                <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Artists:</h1>
-                <h4>(Click on the cards to see more)</h4>
-            </div>
-            <br>
-            <div class="search-bar">
-                <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
-
-            </div>
-
-        </div>
-
-        <ul class="cards" id="wrapper">
-            <!-- gourav -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/2.png"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Gourav</h2>
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="gourav()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="gourav()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Hridya -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/hridya2.png"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Hridya</h2>
-
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="hri()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="hri()">See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Swastik -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/CyberElon.jpg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Swastik</h2>
-
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="swastik()"  >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="swastik()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
+    <div id="content">
+        <!-- SECTION MAIN -->
+        <section id="artist_main">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-            <!-- Aayush -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/kumar 3.jpg"></a>
-                    </div>
-                    <div class="card_content" style="height: 100%;">
-                        <h2 class="card_title">Aayush</h2>
-
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="aayush()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="aayush()" >See More</button></a>
-                    </div>
+            <div class="container_text">
+                <div class="text">
+                    <h1 style="text-shadow: 2px 2px 3px rgb(255, 255, 255), 0 0 25px rgb(0, 0, 5), 0 0 10px rgb(218, 209, 212);"> Artists:</h1>
+                    <h4>(Click on the cards to see more)</h4>
                 </div>
-            </li>
+                <br>
+                <div class="search-bar">
+                    <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="&#128269; Search For Artists">
 
-            <!-- Arya -->
-
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/arjo1.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Arya</h2>
-
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="arya()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="arya()" >See More</button></a>
-                    </div>
                 </div>
-            </li>
-            <!-- Sandy -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/sandi1.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Sayandip</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="sandi()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="sandi()">See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Riyanka -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/riyanka1.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Riyanka</h2>
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="riyanka()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="riyanka()" >See More</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Anupama -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/anu6.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Anupama</h2>
+            </div>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="anupama()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="anupama()" >See More</button></a>
+            <ul class="cards" id="wrapper">
+                <!-- gourav -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/2.png"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Gourav</h2>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="gourav()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="gourav()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+                <!-- Hridya -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/hridya2.png"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Hridya</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="hri()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="hri()">See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Swastik -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/CyberElon.jpg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Swastik</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="swastik()"  >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="swastik()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <!-- Aayush -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/kumar 3.jpg"></a>
+                        </div>
+                        <div class="card_content" style="height: 100%;">
+                            <h2 class="card_title">Aayush</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="aayush()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="aayush()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Arya -->
+
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/arjo1.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Arya</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="arya()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="arya()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Sandy -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/sandi1.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Sayandip</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="sandi()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="sandi()">See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Riyanka -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/riyanka1.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Riyanka</h2>
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="riyanka()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="riyanka()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Anupama -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/anu6.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Anupama</h2>
+
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="anupama()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="anupama()" >See More</button></a>
+                        </div>
+                    </div>
+                </li>
 
 
-            <!-- GODHULI -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/godhuli13.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Godhuli</h2>
+                <!-- GODHULI -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/godhuli13.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Godhuli</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn"  onclick="godhuli()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="godhuli()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn"  onclick="godhuli()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="godhuli()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <!-- Prodipta-->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/prodipto1.jpeg"></a>
-                    </div>
-                    <div class="card_content" style="height: 100%;">
-                        <h2 class="card_title">Prodipta</h2>
+                </li>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <!-- Prodipta-->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/prodipto1.jpeg"></a>
+                        </div>
+                        <div class="card_content" style="height: 100%;">
+                            <h2 class="card_title">Prodipta</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="prodipto()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="prodipto()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="prodipto()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="prodipto()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Arpita-->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/arpita1.jpg"></a>
-                    </div>
-                    <div class="card_content" style="height: 100%;">
-                        <h2 class="card_title">Arpita</h2>
+                </li>
+                <!-- Arpita-->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/arpita1.jpg"></a>
+                        </div>
+                        <div class="card_content" style="height: 100%;">
+                            <h2 class="card_title">Arpita</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="arpita()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arpita()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="arpita()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arpita()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Parhib -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/parthib3.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Parthib</h2>
+                </li>
+                <!-- Parhib -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/parthib3.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Parthib</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn"onclick="parthib()" >See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="parthib()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn"onclick="parthib()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="parthib()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Arkadeep -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/arkadeep3.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Arkadeep</h2>
+                </li>
+                <!-- Arkadeep -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/arkadeep3.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Arkadeep</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="arkadeep()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arkadeep()" >See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="arkadeep()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn"onclick="arkadeep()" >See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Shambhabi -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/sambhabi1.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Shambhabi</h2>
+                </li>
+                <!-- Shambhabi -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/sambhabi1.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Shambhabi</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="shambhabi()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="shambhabi()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="shambhabi()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="shambhabi()">See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Rudranshu -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/Rudranshu1.jpeg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Rudranshu</h2>
+                </li>
+                <!-- Rudranshu -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/Rudranshu1.jpeg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Rudranshu</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="rudranshu()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="rudranshu()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="rudranshu()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="rudranshu()">See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Jeet -->
-            <li class="cards_item">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <div class="card_image">
-                        <a style="text-decoration: none;"><img src="./img/jeet6.jpg"></a>
-                    </div>
-                    <div class="card_content">
-                        <h2 class="card_title">Jeet</h2>
+                </li>
+                <!-- Jeet -->
+                <li class="cards_item">
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="card_image">
+                            <a style="text-decoration: none;"><img src="./img/jeet6.jpg"></a>
+                        </div>
+                        <div class="card_content">
+                            <h2 class="card_title">Jeet</h2>
 
-                        <a style="text-decoration: none;"><button class="btn card_btn" onclick="jeet()">See More</button></a>
-                        <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="jeet()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn card_btn" onclick="jeet()">See More</button></a>
+                            <a style="text-decoration: none;"><button class="btn1 card_btn" onclick="jeet()">See More</button></a>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
 
-        </div>
-        <div class="container-fluid">
-            <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
-            <a href="work.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
-        </div>
+    </div>
+
     </section>
     <!-- SECTION GOURAV -->
     <section id="artist_gourav">
@@ -1467,6 +1474,8 @@
     <div class="container-fluid" id="buttons">
         <a href="#top"><button class="btns"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> Back to top</button></a>
         <a href="artist.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button></a>
+        <br><a href="work.html"><button class="btns"><i class="fa fa-arrow-left" aria-hidden="true"></i> Catalog</button></a>
+    </div>
     </div>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4551353942364047" data-ad-slot="6714831091"></ins>

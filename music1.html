@@ -228,9 +228,13 @@
     }
     
     .text h1 {
+        background-color: #ffffff;
+        color: #000000;
+        mix-blend-mode: screen;
         font-family: 'Roboto Condensed', sans-serif;
         text-transform: uppercase;
-        text-shadow: 0 1px 7px rgb(0, 0, 0), 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+        padding: 0.13em;
+        text-shadow: 0 1px 7px rgb(255, 255, 255), 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
     }
     
     .text p {
@@ -394,11 +398,21 @@
 
 
     <section class="navbar">
-        <a href="contact.html">Contact</a>
-        <a href="about.html ">About</a>
-        <a href="work.html " class="active ">Catalog </a>
-        <a href="index.html ">Home</a>
-        <a href="index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span id="hamburger-icon" onclick="openSide(); ">&#9776; </span></div>
+
+        <div class="menu" id="menu">
+            <a href="/index.html" id="logo"><img src="./img/favicon.png" class="logo"></a>
+            <span id="sidenav-text">Galleria-De-Artiste</span><br>
+            <a href="index.html " class="active ">Home</a>
+            <a href="work.html ">Catalog </a>
+            <a href="about.html ">About</a>
+            <a href="contact.html">Contact</a>
+            <br>
+
+            <div class="closebutton"><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></div>
+            <!-- ADDED FOR HAMBURGER EXCLUSICVE -->
+        </div>
     </section>
 
     <!-- Header -->
@@ -473,179 +487,181 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-    <div class="mainsection" id="main">
-        <h1> THE MUSIC GALLERY</h1>
-        <p> We maynot be Spotify or Saavn, But we do host Musicians Who donot have much of a platform to Share their music with the world!<br> We really hope you love them and show your support</p>
-    </div>
-    <br>
+    <div id="content">
+        <div class="mainsection" id="main">
+            <h1> THE MUSIC GALLERY</h1>
+            <p> We maynot be Spotify or Saavn, But we do host Musicians Who donot have much of a platform to Share their music with the world!<br> We really hope you love them and show your support</p>
+        </div>
+        <br>
 
-    <div class="mainsection" data-aos="fade-up">
-        <h1> Browse by Type:</h1>
-    </div>
-    <!-- Swiper -->
-    <div class="swiper-container2" data-aos="fade-up">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
-                <div class="text">
-                    <h1>Instrumentals</h1>
-                    <a href="musicinstrument.html"><button class="btns_arr"> Explore </button></a>
+        <div class="mainsection" data-aos="fade-up">
+            <h1> Browse by Type:</h1>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container2" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
+                    <div class="text">
+                        <h1>Instrumentals</h1>
+                        <a href="musicinstrument.html"><button class="btns_arr"> Explore </button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/mic.jpg);">
-                <div class="text">
-                    <h1>Vocals</h1>
-                    <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/mic.jpg);">
+                    <div class="text">
+                        <h1>Vocals</h1>
+                        <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/beatbox.jpg);">
-                <div class="text">
-                    <h1>Beatboxing</h1>
-                    <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/beatbox.jpg);">
+                    <div class="text">
+                        <h1>Beatboxing</h1>
+                        <a href="musicinstrument.html#coming_soon"><button class="btns_arr"> Explore </button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/dj.jpg);">
-                <div class="text">
-                    <h1>Dj Music</h1>
-                    <a href="musicinstrument.html#best"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/dj.jpg);">
+                    <div class="text">
+                        <h1>Dj Music</h1>
+                        <a href="musicinstrument.html#best"><button class="btns_arr"> Explore </button></a>
+                    </div>
                 </div>
+
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-black"></div>
 
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination-black"></div>
-
-    </div>
-    <div class="mainsection" id="instrumental" data-aos="fade-up">
-        <h1> Instrumentals:</h1>
-    </div>
-    <!-- Swiper INSTRUMENTAL-->
-    <div class="swiper-container2" data-aos="fade-up">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
-                <div class="text">
-                    <h1>Drums</h1>
-                    <a href="/musicinstrument.html#drums"><button class="btns_arr"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/guitar.jpg);">
-                <div class="text">
-                    <h1>Guitar</h1>
-                    <a href="/musicinstrument.html#guitar"><button class="btns_arr"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/piano.jpg);">
-                <div class="text">
-                    <h1>Piano</h1>
-                    <a href="/musicinstrument.html#piano"><button class="btns_arr"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/violin.jpg);">
-                <div class="text">
-                    <h1>Violin</h1>
-                    <a href="/musicinstrument.html#violin"><button class="btns_arr"> Explore </button></a></div>
-            </div>
-
+        <div class="mainsection" id="instrumental" data-aos="fade-up">
+            <h1> Instrumentals:</h1>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination-black"></div>
-    </div>
-    <div class="mainsection" data-aos="fade-up" id="songs" data-aos="fade-up">
-        <h1> Songs:</h1>
-    </div>
-    <!-- Swiper  VOCALS-->
-    <div class="swiper-container2">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide  " style="background: url(/img/band.jpg);">
-                <div class="text">
-                    <h1>Band Music</h1>
-                    <a href="/arrivesoon.html"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/solo.jpg);">
-                <div class="text">
-                    <h1>Solo songs</h1>
-                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/originalsong.jpg);">
-                <div class="text">
-                    <h1>Originals</h1>
-                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/covermusic.jpg);">
-                <div class="text">
-                    <h1>Cover songs</h1>
-                    <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
-            </div>
+        <!-- Swiper INSTRUMENTAL-->
+        <div class="swiper-container2" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide  " style="background: url(/img/drums.jpg);">
+                    <div class="text">
+                        <h1>Drums</h1>
+                        <a href="/musicinstrument.html#drums"><button class="btns_arr"> Explore </button></a></div>
+                </div>
+                <div class="swiper-slide  " style="background: url(/img/guitar.jpg);">
+                    <div class="text">
+                        <h1>Guitar</h1>
+                        <a href="/musicinstrument.html#guitar"><button class="btns_arr"> Explore </button></a></div>
+                </div>
+                <div class="swiper-slide  " style="background: url(/img/piano.jpg);">
+                    <div class="text">
+                        <h1>Piano</h1>
+                        <a href="/musicinstrument.html#piano"><button class="btns_arr"> Explore </button></a></div>
+                </div>
+                <div class="swiper-slide  " style="background: url(/img/violin.jpg);">
+                    <div class="text">
+                        <h1>Violin</h1>
+                        <a href="/musicinstrument.html#violin"><button class="btns_arr"> Explore </button></a></div>
+                </div>
 
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-black"></div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination-black"></div>
-    </div>
-    <div class="mainsection" data-aos="fade-up" id="beatbox">
-        <h1> Beatboxing:</h1>
-    </div>
-    <!-- Swiper BEATBOX -->
-    <div class="swiper-container2" data-aos="fade-up">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
-                <div class="text">
-                    <h1>Sayandip Saha</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
-                </div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/aritrosaha.png);">
-                <div class="text">
-                    <h1>Aritro Saha</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
-                </div>
-            </div>
-            <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
-                <div class="text">
-                    <h1>Beatboxer 3</h1>
-                    <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
-                </div>
-            </div>
-
+        <div class="mainsection" data-aos="fade-up" id="songs" data-aos="fade-up">
+            <h1> Songs:</h1>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination-black"></div>
-    </div>
-    <div class="mainsection" data-aos="fade-up" id="dj">
-        <h1>Dance to the beat</h1>
-    </div>
-    <!-- Swiper DJ -->
-    <div class="swiper-container2" data-aos="fade-up">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
-                <div class="text">
-                    <h1>Dj Yudi</h1>
-                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+        <!-- Swiper  VOCALS-->
+        <div class="swiper-container2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide  " style="background: url(/img/band.jpg);">
+                    <div class="text">
+                        <h1>Band Music</h1>
+                        <a href="/arrivesoon.html"><button class="btns_arr" style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
                 </div>
-            </div>
-            <div class="swiper-slide" style="background: url(/img/dj2.jpg);">
-                <div class="text">
-                    <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/solo.jpg);">
+                    <div class="text">
+                        <h1>Solo songs</h1>
+                        <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
                 </div>
-            </div>
-            <div class="swiper-slide" style="background: url(/img/dj3.jpg);">
-                <div class="text">
-                    <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/originalsong.jpg);">
+                    <div class="text">
+                        <h1>Originals</h1>
+                        <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
                 </div>
-            </div>
-            <div class="swiper-slide" style="background: url(/img/dj.jpg);">
-                <div class="text">
-                    <h1>Dj Abc</h1>
-                    <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                <div class="swiper-slide  " style="background: url(/img/covermusic.jpg);">
+                    <div class="text">
+                        <h1>Cover songs</h1>
+                        <a href="/arrivesoon.html"><button class="btns_arr"style="background:rgba(150, 150, 150, 0.82)"> Explore </button></a></div>
                 </div>
-            </div>
 
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-black"></div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination-black"></div>
-    </div>
+        <div class="mainsection" data-aos="fade-up" id="beatbox">
+            <h1> Beatboxing:</h1>
+        </div>
+        <!-- Swiper BEATBOX -->
+        <div class="swiper-container2" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
+                    <div class="text">
+                        <h1>Sayandip Saha</h1>
+                        <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide  " style="background: url(/img/aritrosaha.png);">
+                    <div class="text">
+                        <h1>Aritro Saha</h1>
+                        <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide  " style="background: url(/img/beatbox1.jpg);">
+                    <div class="text">
+                        <h1>Beatboxer 3</h1>
+                        <a href="/musicinstrument.html#beat"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-black"></div>
+        </div>
+        <div class="mainsection" data-aos="fade-up" id="dj">
+            <h1>Dance to the beat</h1>
+        </div>
+        <!-- Swiper DJ -->
+        <div class="swiper-container2" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: url(/img/dj1.jpg);">
+                    <div class="text">
+                        <h1>Dj Yudi</h1>
+                        <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background: url(/img/dj2.jpg);">
+                    <div class="text">
+                        <h1>Dj Abc</h1>
+                        <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background: url(/img/dj3.jpg);">
+                    <div class="text">
+                        <h1>Dj Abc</h1>
+                        <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background: url(/img/dj.jpg);">
+                    <div class="text">
+                        <h1>Dj Abc</h1>
+                        <a href="/musicinstrument.html#dj"><button class="btns_arr"> Explore </button></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-black"></div>
+        </div>
 
 
 
-    <div class="buttons" style="margin-left: 20px;">
-        <a href="#main"><button class="btns" style="transform: scale(1.39);">&#8593;Go to top</button></a>
+        <div class="buttons" style="margin-left: 20px;">
+            <a href="#main"><button class="btns" style="transform: scale(1.39);">&#8593;Go to top</button></a>
+        </div>
     </div>
     <br>
 
