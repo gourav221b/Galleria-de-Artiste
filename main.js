@@ -1,5 +1,10 @@
 AOS.init();
 
+$(window).on("load", function() {
+    $(".loader-container").fadeOut(1000);
+    $("body").scroll(0);
+});
+
 function openSide() {
     document.getElementById("menu").style.width = "150px";
     document.getElementById("content").style.marginLeft = "150px";
