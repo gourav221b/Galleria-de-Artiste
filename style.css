@@ -28,6 +28,20 @@ body {
     overflow-x: hidden;
 }
 
+body,
+html {
+    animation: content_reveal 1s ease;
+}
+
+@keyframes content_reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .header {
     padding: 80px;
     text-align: center;
