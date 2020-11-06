@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta property="og:title" content="Galleria-De-Artiste">
+    <meta name="google-site-verification" content="BSN7YHB9WxmjiaklAD_zTeqY-MScOzC0HUcrJbdRfEc" />
+    <meta property="og:description" content="A platform for all types of Creativity">
+    <meta property="og:image" itemprop="image" content="https://gallerianew.netlify.app/images/sharer.png">
+    <meta property="og:url" content="https://gallerianew.netlify.app/">
+    <link rel="shortcut icon" href="/images/faviconbg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/feature.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" />
+    <title>Get Featured Today|Galleria De Artiste </title>
+
+    <style>
+        #mail>p {
+            margin-top: 20px;
+            font-size: 20px;
+            border: 2px solid;
+            color: #ffffff;
+            padding: 1em;
+        }
+        
+        .icon_wrapper>img {
+            animation: fly 4s linear;
+        }
+        
+        @keyframes fly {
+            0% {
+                transform: translate(-70%, 70%) scale(0.5);
+            }
+            100% {
+                transform: translate(0%, 0%) scale(1);
+            }
+            /* 100% {
+                transform: translate(70%, -70%) scale(0.5);
+            } */
+        }
+        
+        @media screen and(max-width:600px) {
+            .icon_wrapper>img {
+                animation: fly 5s linear;
+            }
+        }
+        
+        #mail>p>a {
+            margin: 0;
+            text-decoration: none;
+            color: #ec0f6b;
+            transition: 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        
+        #mail>p>a:hover {
+            color: #DAA520;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="goto" onclick="location.replace('#top')">
+        <i class="fa fa-angle-up"></i> </div>
+    <nav id="navbar">
+    </nav>
+    <header id="header">
+        <div class="text">
+            <div class="heading">
+                SHARE YOUR WORK WITH US
+            </div>
+            <div class="para">
+                Galleria-De-Artiste is more than just a website featuring art. It is a community, a child born out of the grievances of many new creators over the unavailability of exclusive platforms for their work.
+            </div>
+
+        </div>
+        <div class="image">
+            <img class="lazy" data-src="/images/undraw_add_file_4gfw.svg" alt="banner_image">
+        </div>
+    </header>
+    <section class="main">
+        <section class="div_big div1">
+            <div class="heading">
+                <p class="text_head">GET FEATURED TODAY</p>
+            </div>
+        </section>
+        <section class="div_big featureForm">
+            <div class="icon_wrapper">
+                <img src="/images/mail.svg" alt="">
+            </div>
+            <form class="gform" action="https://script.google.com/macros/s/AKfycbzTY8QuGjCiZyHeMutbaCpuZ8tRplLxnjN97SDltM33l7fmeFLa/exec" method="POST">
+                <div class="name" id="floating-label-wrap">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My name is" name="name" id="name_input" required>
+                </div>
+                <div class="email" id="floating-label-wrap">
+                    <label for="email"></label>
+                    <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+                </div>
+                <div class="telephone" id="floating-label-wrap">
+                    <label for="telephone"></label>
+                    <input type="text" placeholder="My number is (Optional)" name="telephone" id="telephone_input">
+                </div>
+                <div class="subject" id="floating-label-wrap">
+                    <label for="subject"> </label>
+                    <select placeholder="Subject line" name="subject" id="subject_input" required>
+                  <option disabled hidden selected>Chosen Field of Interest</option>
+                  <option>A piece of Art</option>
+                  <option>A Photograph</option>
+                  <option>A Story</option>
+                  <option>A Poem</option>
+                  <option>An Article</option>
+                  <option>A Quote</option>
+                  <option>An Abstract</option>
+                  <option>A Music Piece</option>
+                </select>
+                </div>
+                <div class="message" id="floating-label-wrap">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder=" Optional Message" id="message_input" cols="30" rows="5"></textarea>
+                </div>
+                <div class="link" id="floating-label-wrap">
+                    <label for="name"></label>
+                    <input type="link" placeholder="Here is a Google Drive Link of my Work" name="link" required>
+                </div>
+                <div class="submit">
+                    <button value="Send Message" id="form_button" onclick="alert('Your request is being processed, please stay on the page till you see another popup-box or a message. Thank You!')">Send Message</button>
+
+                </div>
+                <div style="display:none" class="thankyou_message">
+                    <h2 id="demo" style="color: rgb(255, 255, 255);"></h2>
+                </div>
+
+            </form>
+        </section>
+        <section class="div_big" id="mail">
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i><br> DIFFICULTY WITH DRIVE LINKS? MAIL US AT &nbsp; &nbsp;<a href="mailto:technical221b@gmail.com">technical221b@gmail.com</a></p>
+        </section>
+    </section>
+    <hr>
+    <section class="footerContainer"></section>
+    <script src="/js/main.js"></script>
+    <script src="/js/form-submission-handler.js"></script>
+    <script>
+        const featured = document.querySelector("#featured");
+        featured.classList.add('active');
+    </script>
+</body>
+
+</html>

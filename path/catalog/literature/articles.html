@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0,content=width=100% ">
+    <meta property="og:title" content="Galleria-De-Artiste">
+    <meta name="google-site-verification" content="BSN7YHB9WxmjiaklAD_zTeqY-MScOzC0HUcrJbdRfEc" />
+    <meta property="og:description" content="A platform for all types of Creativity">
+    <meta property="og:image" itemprop="image" content="https://gallerianew.netlify.app/images/sharer.png">
+    <meta property="og:url" content="https://gallerianew.netlify.app/">
+    <link rel="shortcut icon" href="/images/faviconbg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" />
+
+    <title>Articles|Literature|Galleria De Artiste </title>
+    <style>
+        #first>img {
+            width: 20%;
+            height: auto;
+            margin-top: -20px;
+        }
+        
+        hr {
+            margin: 40px auto;
+        }
+        
+        .col {
+            display: flex;
+        }
+        
+        .col1 {
+            width: 45%;
+            margin: 20px;
+            font-size: 15px;
+            font-family: Roboto, sans-serif;
+            text-align: justify;
+        }
+        
+        .col1:first-of-type::first-letter {
+            font-size: 50px;
+            font-family: serif;
+        }
+        
+        .col1>p:nth-of-type(2n) {
+            margin-top: 30px;
+        }
+        
+        .article_row {
+            display: flex;
+            flex-direction: column !important;
+            width: 70vw;
+        }
+        
+        .article_row>img {
+            width: 100%;
+            height: auto;
+        }
+        
+        li {
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .col {
+                flex-direction: column;
+            }
+            .article_row {
+                display: flex;
+                flex-direction: column !important;
+                width: 90vw;
+            }
+            .col {
+                flex-direction: column;
+            }
+            .col>p {
+                font-size: 15px;
+            }
+            .col1 {
+                width: 90%;
+            }
+            .col1>p:nth-of-type(2n) {
+                margin-top: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="goto" onclick="location.replace('#top')">
+        <i class="fa fa-angle-up"></i> </div>
+
+    <nav id="navbar">
+    </nav>
+    <header id="header">
+        <div class="text">
+            <div class="heading">
+                ARTICLES
+            </div>
+            <div class="para">
+                Galleria-De-Artiste is more than just a website featuring art. It is a community, a child born out of the grievances of many new creators over the unavailability of exclusive platforms for their work.
+            </div>
+
+        </div>
+        <div class="image">
+            <img src="/images/undraw_team_spirit_hrr4.svg" alt="banner_image">
+        </div>
+    </header>
+    <section class="main">
+        <section class="div_big div1">
+            <div class="heading">
+                <p class="text_head">ARTICLES</p>
+            </div>
+        </section>
+        <section class="div_big div4" id="articleDiv">
+        </section>
+    </section>
+    <section class="footerContainer"></section>
+
+
+    <script src="/js/main.js"></script>
+    <script src="/js/article.js"></script>
+    <script src="/js/active.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+</body>
+
+</html>

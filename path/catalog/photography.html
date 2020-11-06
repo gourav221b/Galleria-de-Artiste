@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0,content=width=100% ">
+    <meta property="og:title" content="Galleria-De-Artiste">
+    <meta property="og:description" content="A platform for all types of Creativity">
+    <meta property="og:image" itemprop="image" content="https://gallerianew.netlify.app/images/sharer.png">
+    <meta property="og:url" content="https://gallerianew.netlify.app/">
+    <link rel="shortcut icon" href="/images/faviconbg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" />
+    <title>Photography Gallery|Galleria De Artiste </title>
+    <style>
+        .main,
+        .divCard {
+            width: 90vw;
+        }
+        
+        .card {
+            height: 100%;
+            width: auto;
+            flex: 30%;
+            margin: 4%;
+            box-shadow: none;
+        }
+        
+        .card #first {
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+        }
+        
+        .card img {
+            width: 55%;
+            height: auto;
+        }
+        
+        .btn_card {
+            width: auto;
+        }
+        
+        @media screen and (max-width:480px) {
+            .cardContent #first {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .cardContent .btn_card {
+                font-size: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="goto" onclick="location.replace('#top')">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <nav id="navbar">
+    </nav>
+    <header id="header">
+        <div class="text">
+            <div class="heading">
+                PHOTOGRAPHERS OF THE GALLERIA
+            </div>
+            <div class="para">
+                <blockquote> You don’t make a photograph just with a camera. You bring to the act of photography all the pictures you have seen, the books you have read, the music you have heard, the people you have loved. <br>
+                    <cite style="text-transform: uppercase;"> -Ansel Adams</cite>
+                </blockquote>
+            </div>
+
+        </div>
+        <div class="image">
+
+            <img class="lazy" data-src="/images/undraw_making_art_759c.svg" alt="banner_image">
+        </div>
+    </header>
+    <section class="main">
+        <section class="div_big div1">
+            <div class="heading">
+                <p class="text_head">PHOTOGRAPHERS</p>
+            </div>
+        </section>
+        <section class=" div_big divCard" id="divCard">
+        </section>
+    </section>
+    <hr>
+
+    <section class="footerContainer"></section>
+
+
+    <script src="/js/photo.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/active.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.querySelector(".divCard");
+            li = ul.document.querySelectorAll(".card");
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("p")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
