@@ -118,6 +118,11 @@ var items = [{
         "Number": "4",
         "Type": "Digital Art",
         "thumbnail": "/images/swastik/art/BlackAdam1.jpg"
+    }, {
+        "Name": "trisha",
+        "Number": "24",
+        "Type": "Paintings",
+        "thumbnail": "/images/trisha/art/12.jpeg"
     }
 
 
