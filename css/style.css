@@ -27,7 +27,6 @@
         color: #ffffff;
         overflow-x: hidden;
         word-wrap: break-word;
-        /* transform: scale(1); */
     }
     
     body,
@@ -324,7 +323,6 @@
         text-transform: capitalize;
         text-align: justify;
         font-size: 110%;
-        width: 80%;
     }
     
     .btn {
@@ -1024,8 +1022,7 @@
             position: absolute;
             top: 30%;
             text-decoration: none;
-            font-size: 30px;
-            margin-left: 120px;
+            font-size: 120%;
             height: auto;
         }
         .div_big {
@@ -1085,20 +1082,9 @@
     @media screen and (max-width:480px) {
         header {
             height: 100vh;
-            width: 100vw;
-        }
-        #navbar {
-            width: 100vw;
         }
         .text {
             width: 100%;
-        }
-        .brand>span>a {
-            font-size: 17px;
-            margin-left: -10px;
-        }
-        .headerbutton:nth-of-type(2n) {
-            margin-top: -10px;
         }
         .text_head::after,
         .text_head::before {
@@ -1133,30 +1119,9 @@
             font-size: 150%;
             margin: 1px;
         }
-        .main {
-            width: 90vw;
-            margin: 0 6vw;
-        }
-        .first-about {
-            font-size: 12px;
-        }
-        .div3 {
-            display: none;
-        }
-        .left_footer .first {
-            font-size: 2px;
-        }
-        .left_footer,
-        .middle_footer,
-        .right_footer {
-            margin-left: -16px;
-        }
     }
     
     @media screen and (max-width:600px) {
-        .brand {
-            font-size: 30px;
-        }
         footer {
             flex-direction: column;
         }
